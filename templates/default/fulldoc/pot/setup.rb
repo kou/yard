@@ -26,13 +26,20 @@ def generate_pot(relative_base_path)
     options[:locations].uniq.each do |path, line|
       pot << "#: #{relative_base_path}/#{path}:#{line}\n"
     end
-    escaped_message = message.gsub(/\"/, "\\\"")
+    escaped_message = escape_message(message)
     escaped_message = escaped_message.gsub(/\n/, "\\\\n\"\n\"")
     pot << "msgid \"#{escaped_message}\"\n"
     pot << "msgstr \"\"\n"
     pot << "\n"
   end
   pot
+end
+
+def escape_message(message)
+  message.gsub(/(\\|")/) do
+    special_character = $1
+    "\\#{special_character}"
+  end
 end
 
 def add_message(text)
