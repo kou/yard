@@ -19,7 +19,13 @@ def generate_pot(relative_base_path)
   files.each do |file|
     extract_paragraphs(file)
   end
-  @messages.each do |message, options|
+  sorted_messages = @messages.sort_by do |message, options|
+    sorted_locations = (options[:locations] || []).sort_by do |location|
+      location
+    end
+    sorted_locations.first
+  end
+  sorted_messages.each do |message, options|
     options[:comments].compact.uniq.each do |comment|
       pot << "# #{comment}\n" unless comment.empty?
     end
