@@ -86,21 +86,20 @@ def extract_documents(object)
 end
 
 def extract_paragraphs(file)
-  content = (file.contents || File.read(file.filename))
-  line_no = 0
   paragraph = []
-  paragraph_start_line = line_no
-  content.each_line do |line|
-    line_no += 1
-    case line
-    when /\A\r?\n\z/
-      next if paragraph.empty?
-      message = add_message(paragraph.join("\n"))
-      message[:locations] << [file.filename, paragraph_start_line]
-      paragraph.clear
-    else
-      paragraph_start_line = line_no if paragraph.empty?
-      paragraph << line.chomp
+  paragraph_start_line = 0
+  File.open(file.filename) do |input|
+    input.each_line do |line|
+      case line
+      when /\A\r?\n\z/
+        next if paragraph.empty?
+        message = add_message(paragraph.join("\n"))
+        message[:locations] << [file.filename, paragraph_start_line]
+        paragraph.clear
+      else
+        paragraph_start_line = input.lineno if paragraph.empty?
+        paragraph << line.chomp
+      end
     end
   end
   unless paragraph.empty?
