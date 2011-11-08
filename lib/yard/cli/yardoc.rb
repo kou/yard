@@ -155,6 +155,10 @@ module YARD
       # @since 0.7.0
       attr_accessor :has_markup
 
+      # @return [Array<String>] a list of locale path.
+      # @since 0.7.3
+      attr_accessor :locale_paths
+
       # Creates a new instance of the commandline utility
       def initialize
         super
@@ -185,6 +189,7 @@ module YARD
         @list = false
         @save_yardoc = true
         @has_markup = false
+        @locale_paths = []
 
         if defined?(::Encoding) && ::Encoding.respond_to?(:default_external=)
           ::Encoding.default_external, ::Encoding.default_internal = 'utf-8', 'utf-8'
@@ -206,6 +211,8 @@ module YARD
           # fail early if arguments are not valid
           return unless parse_arguments(*args)
         end
+
+        I18N.setup(locale_paths)
 
         checksums = nil
         if use_cache
@@ -503,6 +510,10 @@ module YARD
 
         opts.on('--exclude REGEXP', 'Ignores a file if it matches path match (regexp)') do |path|
           self.excluded << path
+        end
+
+        opts.on('--locale-path PATH', 'Adds a PATH to translation data search path') do |path|
+          self.locale_paths << path
         end
       end
       
