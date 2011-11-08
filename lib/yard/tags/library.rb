@@ -41,6 +41,8 @@ module YARD
     # @see DefaultFactory
     # @see Library.define_tag
     class Library
+      include I18N::Translation
+
       class << self
         attr_reader :labels
 
@@ -162,35 +164,35 @@ module YARD
         self.factory = factory
       end
 
-      define_tag "Abstract",           :abstract
-      define_tag "API Visibility",     :api
-      define_tag "Attribute (macro)",  :attribute,   :with_types
-      define_tag "Attribute",          :attr,        :with_types_and_name
-      define_tag "Attribute Getter",   :attr_reader, :with_types_and_name
-      define_tag "Attribute Setter",   :attr_writer, :with_types_and_name
-      define_tag "Author",             :author
-      define_tag "Deprecated",         :deprecated
-      define_tag "Example",            :example,     :with_title_and_text
-      define_tag "End Grouping",       :endgroup
-      define_tag "Grouping",           :group
-      define_tag "Macro",              :macro,       :with_types_and_name
-      define_tag "Method (macro)",     :method,      :with_title_and_text
-      define_tag "Note",               :note
-      define_tag "Options Hash",       :option,      :with_options
-      define_tag "Overloads",          :overload,    OverloadTag
-      define_tag "Parameters",         :param,       :with_types_and_name
-      define_tag "Private",            :private
-      define_tag "Raises",             :raise,       :with_types
-      define_tag "Returns",            :return,      :with_types
-      define_tag "Scope (macro)",      :scope
-      define_tag "See Also",           :see,         :with_name
-      define_tag "Since",              :since
-      define_tag "Todo Item",          :todo
-      define_tag "Version",            :version
-      define_tag "Visibility (macro)", :visibility
-      define_tag "Yields",             :yield,       :with_types
-      define_tag "Yield Parameters",   :yieldparam,  :with_types_and_name
-      define_tag "Yield Returns",      :yieldreturn, :with_types
+      define_tag N_("Abstract"),           :abstract
+      define_tag N_("API Visibility"),     :api
+      define_tag N_("Attribute (macro)"),  :attribute,   :with_types
+      define_tag N_("Attribute"),          :attr,        :with_types_and_name
+      define_tag N_("Attribute Getter"),   :attr_reader, :with_types_and_name
+      define_tag N_("Attribute Setter"),   :attr_writer, :with_types_and_name
+      define_tag N_("Author"),             :author
+      define_tag N_("Deprecated"),         :deprecated
+      define_tag N_("Example"),            :example,     :with_title_and_text
+      define_tag N_("End Grouping"),       :endgroup
+      define_tag N_("Grouping"),           :group
+      define_tag N_("Macro"),              :macro,       :with_types_and_name
+      define_tag N_("Method (macro)"),     :method,      :with_title_and_text
+      define_tag N_("Note"),               :note
+      define_tag N_("Options Hash"),       :option,      :with_options
+      define_tag N_("Overloads"),          :overload,    OverloadTag
+      define_tag N_("Parameters"),         :param,       :with_types_and_name
+      define_tag N_("Private"),            :private
+      define_tag N_("Raises"),             :raise,       :with_types
+      define_tag N_("Returns"),            :return,      :with_types
+      define_tag N_("Scope (macro)"),      :scope
+      define_tag N_("See Also"),           :see,         :with_name
+      define_tag N_("Since"),              :since
+      define_tag N_("Todo Item"),          :todo
+      define_tag N_("Version"),            :version
+      define_tag N_("Visibility (macro)"), :visibility
+      define_tag N_("Yields"),             :yield,       :with_types
+      define_tag N_("Yield Parameters"),   :yieldparam,  :with_types_and_name
+      define_tag N_("Yield Returns"),      :yieldreturn, :with_types
 
       self.visible_tags = [:abstract, :deprecated, :note, :todo, :example, :overload,
         :param, :option, :yield, :yieldparam, :yieldreturn, :return, :raise,
