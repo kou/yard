@@ -56,9 +56,19 @@ module YARD
     end
 
     module Translation
+      class << self
+        def included(base)
+          base.extend(self)
+        end
+      end
+
       module_function
       def _(message)
         FastGettext::Translation._(message)
+      end
+
+      def N_(message)
+        message
       end
     end
   end
