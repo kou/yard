@@ -1,5 +1,5 @@
 <% if instance_meths.size > 0 %>
-Instance methods:
+<%= _("Instance methods:") %>
 -----------------
 
 <%= indent wrap(instance_meths.map {|o| o.name.to_s }.join(", "), 68) %>

@@ -111,6 +111,8 @@ def groups(list, type = "Method")
   scopes(others) {|items, scope| yield(items, "#{scope.to_s.capitalize} #{type} Summary") }
 end
 
+N_("Class")
+N_("Instance")
 def scopes(list)
   [:class, :instance].each do |scope|
     items = list.select {|m| m.scope == scope }
