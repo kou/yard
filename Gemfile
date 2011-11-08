@@ -18,6 +18,10 @@ group :server do
   gem 'rack'
 end
 
+group :i18n do
+  gem 'fast_gettext'
+end
+
 #group :parser do
 # gem 'ripper' if RUBY_VERSION >= '1.8.7' && RUBY_PLATFORM != "java"
 #end

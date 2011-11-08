@@ -228,6 +228,7 @@ module YARD
   autoload :RegistryStore,  __p('registry_store')
   autoload :StubProxy,      __p('serializers/yardoc_serializer')
   autoload :Verifier,       __p('verifier')
+  autoload :I18N,           __p('i18n')
 end
 
 undef __p
