@@ -1,6 +1,6 @@
 <% found_method = false %>
 <% inherited_attr_list do |superclass, attribs| %>
-  <% if attr_listing.size == 0 && !found_method %><h2>Instance Attribute Summary</h2><% end %>
+  <% if attr_listing.size == 0 && !found_method %><h2><%= _("Instance Attribute Summary") %></h2><% end %>
   <% found_method = true %>
   <h3 class="inherited">Attributes <%= superclass.type == :class ? 'inherited' : 'included' %> from <%= linkify superclass %></h3>
   <p class="inherited"><%= attribs.map do |method|

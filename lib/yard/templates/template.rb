@@ -19,11 +19,14 @@ module YARD
 
       self.extra_includes = []
 
+      include I18N::Translation
       include ErbCache
       include Helpers::BaseHelper
       include Helpers::MethodHelper
 
       module ClassMethods
+        include I18N::Translation
+
         attr_accessor :path, :full_path
 
         def full_paths
