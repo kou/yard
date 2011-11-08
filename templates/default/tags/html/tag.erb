@@ -1,4 +1,4 @@
-<h3><%= @label ? @label : YARD::Tags::Library.labels[@name] %>:</h3>
+<h3><%= @label ? @label : _(YARD::Tags::Library.labels[@name]) %>:</h3>
 <ul class="<%= @name %>">
   <% object.tags(@name).each do |tag| %>
     <li>
