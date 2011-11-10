@@ -4,54 +4,54 @@ module YARD
   module I18N
     class << self
       def setup(locale_paths=[])
-        available_locales = []
-        repository_options = []
-
-        locale_paths = locale_paths.uniq
-        locale_paths.each do |locale_path|
-          names = []
-          Dir.glob(File.join(locale_path, "*", "*.po")).each do |po|
-            names << File.basename(po, ".po")
-            available_locales << File.basename(File.dirname(po))
-          end
-          names.uniq.each do |name|
-            repository_options << [
-              name,
-              {
-                :path => locale_path,
-                :type => :po,
-              }
-            ]
-          end
+        collector = LocaleInfoCollector.new
+        locale_paths.uniq.each do |locale_path|
+          collector.collect(locale_path, "*")
         end
         yard_locale_path = File.join(YARD::ROOT, "..", "locale")
-        Dir.glob(File.join(yard_locale_path, "*", "yard.po")).each do |po|
-          available_locales << File.basename(File.dirname(po))
-        end
-        FastGettext.available_locales = available_locales.uniq
-        repository_options << [
-          "yard",
-          {
-            :path => yard_locale_path,
-            :type => :po,
-          }
-        ]
-        repository_options << [
-          "logger",
-          {
-            :type => :logger,
-            :callback => lambda do |key|
-              puts "missing translation: #{key.inspect}"
-            end
-          }
-        ]
-        repositories = repository_options.map do |name, options|
-          FastGettext::TranslationRepository.build(name, options)
-        end
+        collector.collect(yard_locale_path, "yard")
+
+        FastGettext.available_locales = collector.available_locales
+
+        repositories = collector.repositories
         FastGettext.add_text_domain("combined",
                                     :type => :chain,
                                     :chain => repositories)
         FastGettext.text_domain = "combined"
+      end
+    end
+
+    class LocaleInfoCollector
+      def initialize
+        @available_locales = []
+        @repository_options = []
+      end
+
+      def collect(base_dir, name)
+        detected_names = []
+        Dir.glob(File.join(base_dir, "*", "#{name}.po")).each do |po|
+          detected_names << File.basename(po, ".po")
+          @available_locales << File.basename(File.dirname(po))
+        end
+        detected_names.uniq.each do |detected_name|
+          @repository_options << [
+            detected_name,
+            {
+              :path => base_dir,
+              :type => :po,
+            }
+          ]
+        end
+
+        def available_locales
+          @available_locales.uniq
+        end
+
+        def repositories
+          @repository_options.map do |name, options|
+            FastGettext::TranslationRepository.build(name, options)
+          end
+        end
       end
     end
 
