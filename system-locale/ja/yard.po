@@ -1,0 +1,165 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YARD 0.7.3\n"
+"POT-Creation-Date: 2011-11-11 00:07+0900\n"
+"PO-Revision-Date: 2011-11-11 00:45+0900\n"
+"Last-Translator: Kouhei Sutou <kou@clear-code.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: lib/yard/tags/library.rb:166
+msgid "Abstract"
+msgstr "概要"
+
+#: lib/yard/tags/library.rb:167
+msgid "API Visibility"
+msgstr "APIの可視性"
+
+#: lib/yard/tags/library.rb:168
+msgid "Attribute (macro)"
+msgstr "属性（マクロ）"
+
+#: lib/yard/tags/library.rb:169
+msgid "Attribute"
+msgstr "属性"
+
+#: lib/yard/tags/library.rb:170
+msgid "Attribute Getter"
+msgstr "属性ゲッター"
+
+#: lib/yard/tags/library.rb:171
+msgid "Attribute Setter"
+msgstr "属性セッター"
+
+#: lib/yard/tags/library.rb:172
+msgid "Author"
+msgstr "作者"
+
+#: lib/yard/tags/library.rb:173
+msgid "Deprecated"
+msgstr "被推奨"
+
+#: lib/yard/tags/library.rb:174
+msgid "Example"
+msgstr "例"
+
+#: lib/yard/tags/library.rb:175
+msgid "End Grouping"
+msgstr ""
+
+#: lib/yard/tags/library.rb:176
+msgid "Grouping"
+msgstr ""
+
+#: lib/yard/tags/library.rb:177
+msgid "Macro"
+msgstr ""
+
+#: lib/yard/tags/library.rb:178
+msgid "Method (macro)"
+msgstr ""
+
+#: lib/yard/tags/library.rb:179
+msgid "Note"
+msgstr ""
+
+#: lib/yard/tags/library.rb:180
+msgid "Options Hash"
+msgstr ""
+
+#: lib/yard/tags/library.rb:181
+msgid "Overloads"
+msgstr ""
+
+#: lib/yard/tags/library.rb:182
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: lib/yard/tags/library.rb:183
+msgid "Private"
+msgstr ""
+
+#: lib/yard/tags/library.rb:184
+msgid "Raises"
+msgstr "発生する例外"
+
+#: lib/yard/tags/library.rb:185
+msgid "Returns"
+msgstr "戻り値"
+
+#: lib/yard/tags/library.rb:186
+msgid "Scope (macro)"
+msgstr ""
+
+#: lib/yard/tags/library.rb:187
+msgid "See Also"
+msgstr ""
+
+#: lib/yard/tags/library.rb:188
+msgid "Since"
+msgstr "初出"
+
+#: lib/yard/tags/library.rb:189
+msgid "Todo Item"
+msgstr ""
+
+#: lib/yard/tags/library.rb:190
+msgid "Version"
+msgstr ""
+
+#: lib/yard/tags/library.rb:191
+msgid "Visibility (macro)"
+msgstr ""
+
+#: lib/yard/tags/library.rb:192
+msgid "Yields"
+msgstr "yieldするオブジェクト"
+
+#: lib/yard/tags/library.rb:193
+msgid "Yield Parameters"
+msgstr "yieldの引数"
+
+#: lib/yard/tags/library.rb:194
+msgid "Yield Returns"
+msgstr "yieldの戻り値"
+
+#: templates/default/module/html/attribute_details.erb:3
+msgid "%{scope} Attribute Details"
+msgstr "%{scope}属性の詳細"
+
+#: templates/default/module/html/constant_summary.erb:2
+msgid "Constant Summary"
+msgstr "定数の概要"
+
+#: templates/default/module/html/inherited_attributes.erb:6
+msgid "Instance Attribute Summary"
+msgstr "インスタンス属性の概要"
+
+#: templates/default/module/html/method_details_list.erb:3
+msgid "%{scope} Method Details"
+msgstr "%{scope}メソッドの詳細"
+
+#: templates/default/module/html/pre_docstring.erb:1
+msgid "Overview"
+msgstr "概観"
+
+#: templates/default/module/setup.rb:114
+msgid "Class"
+msgstr "クラス"
+
+#: templates/default/module/setup.rb:115
+msgid "Instance"
+msgstr "インスタンス"
+
+#: templates/default/module/text/instance_meths_list.erb:2
+msgid "Instance methods:"
+msgstr "インスタンスメソッド:"
+
+#: templates/default/tags/html/example.erb:3
+#: templates/default/tags/text/example.erb:3
+msgid "Examples:"
+msgstr "例:"
