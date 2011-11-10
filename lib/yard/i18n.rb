@@ -22,6 +22,7 @@ module YARD
         FastGettext.available_locales = available_locales
 
         repositories = collector.repositories
+        repositories << logger_repository
         FastGettext.add_text_domain("combined",
                                     :type => :chain,
                                     :chain => repositories)
@@ -33,6 +34,15 @@ module YARD
         locale = ENV["LC_ALL"] || ENV["LC_MESSAGES"] || ENV["LANG"]
         locale = locale.sub(/(?:_[A-Z]{2})?(?:\..+)?\z/i, "") if locale
         locale
+      end
+
+      def logger_repository
+        callback = lambda do |key|
+          puts "missing translation: #{key.inspect}"
+        end
+        FastGettext::TranslationRepository.build("logger",
+                                                 :type => :logger,
+                                                 :callback => callback)
       end
     end
 
