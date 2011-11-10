@@ -9,4 +9,8 @@ Gemfile.lock
 /doc
 /doc_guide
 /coverage
-
+/system-locale/*.pot
+/system-locale/*/*.po~
+/locale/images/
+/locale/*.pot
+/locale/*/*.po~
