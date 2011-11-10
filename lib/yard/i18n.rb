@@ -10,7 +10,7 @@ module YARD
         locale_paths.uniq.each do |locale_path|
           collector.collect(locale_path, "*")
         end
-        yard_locale_path = File.join(YARD::ROOT, "..", "locale")
+        yard_locale_path = File.join(YARD::ROOT, "..", "system-locale")
         collector.collect(yard_locale_path, "yard")
 
         available_locales = ["en"] | collector.available_locales
