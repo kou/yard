@@ -101,33 +101,47 @@ end
 namespace :i18n do
   supported_locales = ["ja"]
 
-  yard_pot = "locale/yard.pot"
+  base_name = "yard"
+  locale_base_dir = "locale"
+  system_locale_base_dir = "system-locale"
   namespace :pot do
+    yard_pot = "#{locale_base_dir}/#{base_name}.pot"
     YARD::Rake::YardocTask.new(:yard) do |t|
       t.options += ['--output', 'locale', '--format', 'pot']
     end
     file yard_pot => :yard
+
+    system_yard_pot = "#{system_locale_base_dir}/#{base_name}.pot"
+    task :system do
+      targets = FileList["lib/**/*.rb", "templates/**/*.{erb,rb}"]
+      rm_f(system_yard_pot)
+      sh("rgettext", "--output", system_yard_pot, *targets)
+    end
   end
 
   namespace :po do
-    namespace :yard do
-      supported_locales.each do |locale|
-        locale_dir = "locale/#{locale}"
-        yard_po = "#{locale_dir}/yard.po"
+    [[:yard, "locale"],
+     [:system, "system-locale"]].each do |task_namespace, base_dir|
+      namespace task_namespace do
+        supported_locales.each do |locale|
+          locale_dir = "#{base_dir}/#{locale}"
+          po = "#{locale_dir}/#{base_name}.po"
+          pot = "#{base_dir}/#{base_name}.pot"
 
-        directory locale_dir
-        file yard_po => [locale_dir, yard_pot] do
-          if File.exist?(yard_po)
-            sh("msgmerge", "--update", "--sort-by-file", yard_po, yard_pot)
-          else
-            sh("msginit",
-               "--input", yard_pot,
-               "--output", yard_po,
-               "--locale", locale)
+          directory locale_dir
+          file po => [locale_dir, pot] do
+            if File.exist?(po)
+              sh("msgmerge", "--update", "--sort-by-file", po, pot)
+            else
+              sh("msginit",
+                 "--input", pot,
+                 "--output", po,
+                 "--locale", locale)
+            end
           end
-        end
 
-        task locale => yard_po
+          task locale => po
+        end
       end
     end
   end
