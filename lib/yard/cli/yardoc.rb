@@ -159,6 +159,10 @@ module YARD
       # @since 0.7.3
       attr_accessor :locale_paths
 
+      # @return [Array<String>] the default list of locale path.
+      # @since 0.7.3
+      attr_accessor :default_locale_paths
+
       # Creates a new instance of the commandline utility
       def initialize
         super
@@ -190,6 +194,7 @@ module YARD
         @save_yardoc = true
         @has_markup = false
         @locale_paths = []
+        @default_locale_paths = ["locale"]
 
         if defined?(::Encoding) && ::Encoding.respond_to?(:default_external=)
           ::Encoding.default_external, ::Encoding.default_internal = 'utf-8', 'utf-8'
@@ -212,7 +217,7 @@ module YARD
           return unless parse_arguments(*args)
         end
 
-        I18N.setup(locale_paths)
+        I18N.setup(locale_paths + default_locale_paths)
 
         checksums = nil
         if use_cache
