@@ -97,3 +97,38 @@ end
 YARD::Rake::YardocTask.new do |t|
   t.options += ['--title', "YARD #{YARD::VERSION} Documentation"]
 end
+
+namespace :i18n do
+  supported_locales = ["ja"]
+
+  yard_pot = "locale/yard.pot"
+  namespace :pot do
+    YARD::Rake::YardocTask.new(:yard) do |t|
+      t.options += ['--output', 'locale', '--format', 'pot']
+    end
+    file yard_pot => :yard
+  end
+
+  namespace :po do
+    namespace :yard do
+      supported_locales.each do |locale|
+        locale_dir = "locale/#{locale}"
+        yard_po = "#{locale_dir}/yard.po"
+
+        directory locale_dir
+        file yard_po => [locale_dir, yard_pot] do
+          if File.exist?(yard_po)
+            sh("msgmerge", "--update", "--sort-by-file", yard_po, yard_pot)
+          else
+            sh("msginit",
+               "--input", yard_pot,
+               "--output", yard_po,
+               "--locale", locale)
+          end
+        end
+
+        task locale => yard_po
+      end
+    end
+  end
+end
