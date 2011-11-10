@@ -163,6 +163,10 @@ module YARD
       # @since 0.7.3
       attr_accessor :default_locale_paths
 
+      # @return [String] a language for output document.
+      # @since 0.7.3
+      attr_accessor :language
+
       # Creates a new instance of the commandline utility
       def initialize
         super
@@ -195,6 +199,7 @@ module YARD
         @has_markup = false
         @locale_paths = []
         @default_locale_paths = ["locale"]
+        @language = nil
 
         if defined?(::Encoding) && ::Encoding.respond_to?(:default_external=)
           ::Encoding.default_external, ::Encoding.default_internal = 'utf-8', 'utf-8'
@@ -217,7 +222,8 @@ module YARD
           return unless parse_arguments(*args)
         end
 
-        I18N.setup(locale_paths + default_locale_paths)
+        I18N.setup(:locale_paths => locale_paths + default_locale_paths,
+                   :language => language)
 
         checksums = nil
         if use_cache
@@ -520,6 +526,10 @@ module YARD
 
         opts.on('--locale-path PATH', 'Adds a PATH to translation data search path') do |path|
           self.locale_paths << path
+        end
+
+        opts.on('--language LANGUAGE', 'Generates documents for LANGUAGE') do |language|
+          self.language = language
         end
       end
       
