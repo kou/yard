@@ -3,7 +3,9 @@ require "fast_gettext"
 module YARD
   module I18N
     class << self
-      def setup(locale_paths=[])
+      def setup(options={})
+        locale_paths = options[:locale_paths] || ["locale"]
+
         collector = LocaleInfoCollector.new
         locale_paths.uniq.each do |locale_path|
           collector.collect(locale_path, "*")
@@ -11,13 +13,26 @@ module YARD
         yard_locale_path = File.join(YARD::ROOT, "..", "locale")
         collector.collect(yard_locale_path, "yard")
 
-        FastGettext.available_locales = collector.available_locales
+        available_locales = ["en"] | collector.available_locales
+        language = options[:language] || guess_language
+        if language
+          FastGettext.locale = language
+          available_locales |= [language]
+        end
+        FastGettext.available_locales = available_locales
 
         repositories = collector.repositories
         FastGettext.add_text_domain("combined",
                                     :type => :chain,
                                     :chain => repositories)
         FastGettext.text_domain = "combined"
+      end
+
+      private
+      def guess_language
+        locale = ENV["LC_ALL"] || ENV["LC_MESSAGES"] || ENV["LANG"]
+        locale = locale.sub(/(?:_[A-Z]{2})?(?:\..+)?\z/i, "") if locale
+        locale
       end
     end
 
