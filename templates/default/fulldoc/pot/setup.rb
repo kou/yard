@@ -63,6 +63,14 @@ def extract_documents(object)
     end
   end
 
+  if object.group
+    message = add_message(object.group)
+    object.files.each do |path, line|
+      message[:locations] << [path, line]
+    end
+    message[:comments] << object.path unless object.path.empty?
+  end
+
   docstring = object.docstring
   unless docstring.empty?
     message = add_message(docstring)
@@ -72,17 +80,39 @@ def extract_documents(object)
     message[:comments] << object.path unless object.path.empty?
   end
   docstring.tags.each do |tag|
-    next if tag.text.nil?
-    next if tag.text.empty?
-    message = add_message(tag.text)
-    tag.object.files.each do |file|
-      message[:locations] << file
-    end
-    tag_label = "@#{tag.tag_name}"
-    tag_label << " [#{tag.types.join(', ')}]" if tag.types
-    tag_label << " #{tag.name}" if tag.name
-    message[:comments] << tag_label
+    extract_tag_documents(tag)
   end
+end
+
+def extract_tag_documents(tag)
+  extract_tag_name(tag)
+  extract_tag_text(tag)
+end
+
+def extract_tag_name(tag)
+  return if tag.name.nil?
+  return if tag.name.empty?
+  key = "tag|#{tag.tag_name}|#{tag.name}"
+  message = add_message(key)
+  tag.object.files.each do |file|
+    message[:locations] << file
+  end
+  tag_label = "@#{tag.tag_name}"
+  tag_label << " [#{tag.types.join(', ')}]" if tag.types
+  message[:comments] << tag_label
+end
+
+def extract_tag_text(tag)
+  return if tag.text.nil?
+  return if tag.text.empty?
+  message = add_message(tag.text)
+  tag.object.files.each do |file|
+    message[:locations] << file
+  end
+  tag_label = "@#{tag.tag_name}"
+  tag_label << " [#{tag.types.join(', ')}]" if tag.types
+  tag_label << " #{tag.name}" if tag.name
+  message[:comments] << tag_label
 end
 
 def extract_paragraphs(file)
