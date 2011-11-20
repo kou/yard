@@ -106,10 +106,24 @@ namespace :i18n do
   system_locale_base_dir = "system-locale"
   namespace :pot do
     yard_pot = "#{locale_base_dir}/#{base_name}.pot"
-    YARD::Rake::YardocTask.new(:yard) do |t|
-      t.options += ['--output', 'locale', '--format', 'pot']
+    yard_pot_sources = FileList["lib/**/*.rb"]
+    yard_pot_sources.exclude("lib/yard/server/templates/**/*.rb")
+    yard_pot_sources.exclude("lib/yard/rubygems/**/*.rb")
+    yard_pot_files = FileList["docs/*.md", "README.md"]
+    namespace :yard do
+      YARD::Rake::YardocTask.new(:generate) do |t|
+	t.options += ['--no-yardopts',
+		      '--protected', '--no-private',
+		      '--output', 'locale', '--format', 'pot']
+	t.options += yard_pot_sources
+	t.options += ['-']
+	t.options += yard_pot_files
+      end
     end
-    file yard_pot => :yard
+    file yard_pot => (yard_pot_sources + yard_pot_files) do
+      Rake::Task["i18n:pot:yard:generate"].invoke
+    end
+    task :yard => yard_pot
 
     system_yard_pot = "#{system_locale_base_dir}/#{base_name}.pot"
     targets = FileList["lib/**/*.rb", "templates/**/*.{erb,rb}"]
