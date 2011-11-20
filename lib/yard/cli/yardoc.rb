@@ -167,6 +167,10 @@ module YARD
       # @since 0.7.3
       attr_accessor :language
 
+      # @return [Boolean] whether to report missing translations.
+      # @since 0.7.3
+      attr_accessor :report_missing_translations
+
       # Creates a new instance of the commandline utility
       def initialize
         super
@@ -200,6 +204,7 @@ module YARD
         @locale_paths = []
         @default_locale_paths = ["locale"]
         @language = nil
+        @report_missing_translations = false
 
         if defined?(::Encoding) && ::Encoding.respond_to?(:default_external=)
           ::Encoding.default_external, ::Encoding.default_internal = 'utf-8', 'utf-8'
@@ -223,7 +228,8 @@ module YARD
         end
 
         I18N.setup(:locale_paths => locale_paths + default_locale_paths,
-                   :language => language)
+                   :language => language,
+                   :report_missing_translations => report_missing_translations)
 
         checksums = nil
         if use_cache
@@ -530,6 +536,10 @@ module YARD
 
         opts.on('--language LANGUAGE', 'Generates documents for LANGUAGE') do |language|
           self.language = language
+        end
+
+        opts.on('--[no-]report-missing-translations', 'Reports missing translations') do |bool|
+          self.report_missing_translations = bool
         end
       end
       
