@@ -137,7 +137,7 @@ namespace :i18n do
               sh("msginit",
                  "--input", pot,
                  "--output", po,
-                 "--locale", locale)
+                 "--locale", "#{locale}.UTF-8")
             end
           end
 
