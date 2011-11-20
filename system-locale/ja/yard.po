@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YARD 0.7.3\n"
 "POT-Creation-Date: 2011-11-11 00:07+0900\n"
-"PO-Revision-Date: 2011-11-20 17:12+0900\n"
+"PO-Revision-Date: 2011-11-20 17:28+0900\n"
 "Last-Translator: Kouhei Sutou <kou@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -57,23 +57,23 @@ msgstr ""
 
 #: lib/yard/tags/library.rb:177
 msgid "Macro"
-msgstr ""
+msgstr "マクロ"
 
 #: lib/yard/tags/library.rb:178
 msgid "Method (macro)"
-msgstr ""
+msgstr "メソッド（マクロ）"
 
 #: lib/yard/tags/library.rb:179
 msgid "Note"
-msgstr ""
+msgstr "注意"
 
 #: lib/yard/tags/library.rb:180
 msgid "Options Hash"
-msgstr ""
+msgstr "オプションのハッシュ"
 
 #: lib/yard/tags/library.rb:181
 msgid "Overloads"
-msgstr ""
+msgstr "オーバーロード"
 
 #: lib/yard/tags/library.rb:182
 msgid "Parameters"
@@ -81,7 +81,7 @@ msgstr "パラメータ"
 
 #: lib/yard/tags/library.rb:183
 msgid "Private"
-msgstr ""
+msgstr "プライベート"
 
 #: lib/yard/tags/library.rb:184
 msgid "Raises"
@@ -93,11 +93,11 @@ msgstr "戻り値"
 
 #: lib/yard/tags/library.rb:186
 msgid "Scope (macro)"
-msgstr ""
+msgstr "スコープ（マクロ）"
 
 #: lib/yard/tags/library.rb:187
 msgid "See Also"
-msgstr ""
+msgstr "参考"
 
 #: lib/yard/tags/library.rb:188
 msgid "Since"
@@ -105,15 +105,15 @@ msgstr "初出"
 
 #: lib/yard/tags/library.rb:189
 msgid "Todo Item"
-msgstr ""
+msgstr "TODO項目"
 
 #: lib/yard/tags/library.rb:190
 msgid "Version"
-msgstr ""
+msgstr "バージョン"
 
 #: lib/yard/tags/library.rb:191
 msgid "Visibility (macro)"
-msgstr ""
+msgstr "可視性（マクロ）"
 
 #: lib/yard/tags/library.rb:192
 msgid "Yields"
