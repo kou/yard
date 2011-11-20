@@ -81,9 +81,6 @@ module YARD::CodeObjects
         end
 
         case line
-        when /^(\s*#\s*@\S+\s*)(.+?)(\s*)$/
-          prefix, attribute_value, suffix = $1, $2, $3
-          translated_data << "#{prefix}#{_(attribute_value)}#{suffix}"
         when /\A\r?\n\z/
           translated_data << line.chomp
           next if paragraph.empty?
