@@ -82,6 +82,104 @@ module YARD
       end
     end
 
+    class Text
+      def initialize(input, options={})
+        @input = input
+        @options = options
+      end
+
+      def extract_messages
+        paragraph = ""
+        paragraph_start_line = 0
+        line_no = 0
+        in_header = @options[:have_header]
+
+        @input.each_line do |line|
+          line_no += 1
+          if in_header
+            case line
+            when /^#!\S+\s*$/
+              in_header = false unless line_no == 1
+            when /^\s*#\s*@(\S+)\s*(.+?)\s*$/
+              name, value = $1, $2
+              yield(:attribute, name, value, line_no)
+            else
+              in_header = false
+              next if line.chomp.empty?
+            end
+            next if in_header
+          end
+
+          case line
+          when /^\s*$/
+            next if paragraph.empty?
+            yield(:paragraph, paragraph.rstrip, paragraph_start_line)
+            paragraph = ""
+          else
+            paragraph_start_line = line_no if paragraph.empty?
+            paragraph << line
+          end
+        end
+        unless paragraph.empty?
+          yield(:paragraph, paragraph.rstrip, paragraph_start_line)
+        end
+      end
+
+      def translate(&block)
+        paragraph = ""
+        line_no = 0
+        in_header = @options[:have_header]
+
+        @input.each_line do |line|
+          line_no += 1
+          if in_header
+            case line
+            when /^#!\S+\s*$/
+              if line_no == 1
+                yield(:markup, line)
+              else
+                in_header = false
+              end
+            when /^(\s*#\s*@\S+\s*)(.+?)(\s*)$/
+              prefix, value, suffix = $1, $2, $3
+              yield(:attribute, prefix, value, suffix)
+            else
+              in_header = false
+              if line.strip.empty?
+                yield(:empty_line, line)
+                next
+              end
+            end
+            next if in_header
+          end
+
+          case line
+          when /^\s*$/
+            yield(:empty_line, line)
+            next if paragraph.empty?
+            translate_emit_paragraph_event(paragraph, &block)
+            paragraph = ""
+          else
+            paragraph << line
+          end
+        end
+        unless paragraph.empty?
+          translate_emit_paragraph_event(paragraph, &block)
+        end
+      end
+
+      private
+      def translate_emit_paragraph_event(paragraph)
+        match_data = /(\s*)\z/.match(paragraph)
+        if match_data
+          yield(:paragraph, match_data.pre_match)
+          yield(:empty_line, match_data[1])
+        else
+          yield(:paragraph, paragraph)
+        end
+      end
+    end
+
     module Translation
       class << self
         def included(base)
