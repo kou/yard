@@ -61,7 +61,25 @@ module YARD::CodeObjects
     def translate(data)
       translated_data = []
       paragraph = []
+      index = 0
+      in_header = true
+
       data.each_line do |line|
+        index += 1
+        if in_header
+          case line
+          when /^#!\S+\s*$/
+            translated_data << line.chomp if index == 1
+          when /^(\s*#\s*@\S+\s*)(.+?)(\s*)$/
+            prefix, attribute_value, suffix = $1, $2, $3
+            translated_data << "#{prefix}#{_(attribute_value)}#{suffix}".chomp
+          else
+            in_header = false
+            next if line.chomp.empty?
+          end
+          next if in_header
+        end
+
         case line
         when /^(\s*#\s*@\S+\s*)(.+?)(\s*)$/
           prefix, attribute_value, suffix = $1, $2, $3
@@ -75,6 +93,7 @@ module YARD::CodeObjects
           paragraph << line.chomp
         end
       end
+
       unless paragraph.empty?
         translated_data << _(paragraph.join("\n"))
       end
