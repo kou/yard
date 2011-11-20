@@ -22,7 +22,9 @@ module YARD
         FastGettext.available_locales = available_locales
 
         repositories = collector.repositories
-        repositories << logger_repository
+        if options[:report_missing_translations]
+          repositories << logger_repository
+        end
         FastGettext.add_text_domain("combined",
                                     :type => :chain,
                                     :chain => repositories)
