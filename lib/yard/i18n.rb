@@ -94,6 +94,10 @@ module YARD
         FastGettext::Translation._(message)
       end
 
+      def s_(message)
+        FastGettext::Translation.s_(message)
+      end
+
       def N_(message)
         message
       end
