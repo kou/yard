@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YARD 0.7.3\n"
-"POT-Creation-Date: 2011-11-11 00:07+0900\n"
-"PO-Revision-Date: 2011-11-20 17:28+0900\n"
+"POT-Creation-Date: 2011-11-20 19:03+0900\n"
+"PO-Revision-Date: 2011-11-20 19:03+0900\n"
 "Last-Translator: Kouhei Sutou <kou@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11,9 +11,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: lib/yard/tags/library.rb:166
+#: lib/yard/docstring.rb:116
+msgid "."
+msgstr "。"
+
+#: lib/yard/tags/library.rb:166 templates/default/module/html/header.erb:2
+#: templates/default/module/html/item_summary.erb:21
 msgid "Abstract"
-msgstr "概要"
+msgstr "抽象"
 
 #: lib/yard/tags/library.rb:167
 msgid "API Visibility"
@@ -23,7 +28,7 @@ msgstr "APIの可視性"
 msgid "Attribute (macro)"
 msgstr "属性（マクロ）"
 
-#: lib/yard/tags/library.rb:169
+#: lib/yard/tags/library.rb:169 templates/default/module/setup.rb:91
 msgid "Attribute"
 msgstr "属性"
 
@@ -39,7 +44,8 @@ msgstr "属性セッター"
 msgid "Author"
 msgstr "作者"
 
-#: lib/yard/tags/library.rb:173
+#: lib/yard/tags/library.rb:173 templates/default/module/html/header.erb:3
+#: templates/default/module/html/item_summary.erb:22
 msgid "Deprecated"
 msgstr "非推奨"
 
@@ -79,7 +85,8 @@ msgstr "オーバーロード"
 msgid "Parameters"
 msgstr "パラメータ"
 
-#: lib/yard/tags/library.rb:183
+#: lib/yard/tags/library.rb:183 templates/default/module/html/header.erb:4
+#: templates/default/module/html/item_summary.erb:23
 msgid "Private"
 msgstr "プライベート"
 
@@ -127,9 +134,87 @@ msgstr "yieldの引数"
 msgid "Yield Returns"
 msgstr "yieldの戻り値"
 
+#: templates/default/class/html/constructor_details.erb:2
+msgid "Constructor Details"
+msgstr "コンストラクター詳細"
+
+#: templates/default/class/html/constructor_details.erb:4
+msgid "This class inherits a constructor from %{superclass}"
+msgstr "このクラスは%{superclass}からコンストラクターを継承しています。"
+
+#: templates/default/class/html/subclasses.erb:2
+msgid "Direct Known Subclasses"
+msgstr "直接継承している既知のサブクラス"
+
+#: templates/default/docstring/html/abstract.erb:2
+msgid "This %{type} is abstract."
+msgstr "抽象%{type}です。"
+
+#: templates/default/docstring/html/deprecated.erb:1
+msgid "Deprecated."
+msgstr "非推奨です。"
+
+#: templates/default/docstring/html/note.erb:3
+msgid "Note:"
+msgstr "注意:"
+
+#: templates/default/docstring/html/returns_void.erb:1
+msgid "This method returns an undefined value."
+msgstr "このメソッドが返す値は未定義です。"
+
+#: templates/default/docstring/html/todo.erb:3
+msgid "TODO:"
+msgstr "TODO:"
+
+#: templates/default/layout/html/breadcrumb.erb:3
+#: templates/default/layout/html/breadcrumb.erb:8
+msgid "Index"
+msgstr "索引"
+
+#: templates/default/layout/html/breadcrumb.erb:3
+msgid "Index (%{initial})"
+msgstr "索引（%{initial}）"
+
+#: templates/default/layout/html/breadcrumb.erb:6
+msgid "Top Level Namespace"
+msgstr "トップレベル名前空間"
+
+#: templates/default/layout/html/breadcrumb.erb:12
+msgid "no frames"
+msgstr "フレーム無し"
+
 #: templates/default/module/html/attribute_details.erb:3
 msgid "%{scope} Attribute Details"
 msgstr "%{scope}属性の詳細"
+
+#: templates/default/module/html/attribute_summary.erb:2
+#: templates/default/module/html/method_summary.erb:5
+msgid "collapse"
+msgstr ""
+
+#: templates/default/module/html/box_info.erb:4
+msgid "Inherits:"
+msgstr "親クラス:"
+
+#: templates/default/module/html/box_info.erb:14
+msgid "show all"
+msgstr "すべて表示"
+
+#: templates/default/module/html/box_info.erb:19
+msgid "Extended by"
+msgstr "extendしているモジュール"
+
+#: templates/default/module/html/box_info.erb:19
+msgid "Includes"
+msgstr "includeしているモジュール"
+
+#: templates/default/module/html/box_info.erb:27
+msgid "Included in:"
+msgstr "このモジュールをincludeしているオブジェクト: "
+
+#: templates/default/module/html/box_info.erb:32
+msgid "Defined in:"
+msgstr "定義場所:"
 
 #: templates/default/module/html/constant_summary.erb:2
 msgid "Constant Summary"
@@ -139,6 +224,26 @@ msgstr "定数の概要"
 msgid "Instance Attribute Summary"
 msgstr "インスタンス属性の概要"
 
+#: templates/default/module/html/inherited_constants.erb:6
+msgid "Constants included from %{superclass}"
+msgstr "%{superclass}から取り込んだ定数"
+
+#: templates/default/module/html/inherited_constants.erb:6
+msgid "Constants inherited from %{superclass}"
+msgstr "%{superclass}から継承した定数"
+
+#: templates/default/module/html/item_summary.erb:14
+msgid "constructor"
+msgstr "コンストラクター"
+
+#: templates/default/module/html/item_summary.erb:17
+msgid "readonly"
+msgstr "読み込み専用"
+
+#: templates/default/module/html/item_summary.erb:18
+msgid "writeonly"
+msgstr "書き込み専用"
+
 #: templates/default/module/html/method_details_list.erb:3
 msgid "%{scope} Method Details"
 msgstr "%{scope}メソッドの詳細"
@@ -147,11 +252,19 @@ msgstr "%{scope}メソッドの詳細"
 msgid "Overview"
 msgstr "概観"
 
-#: templates/default/module/setup.rb:114
+#: templates/default/module/setup.rb:92
+msgid "Method"
+msgstr "メソッド"
+
+#: templates/default/module/setup.rb:113
+msgid "%{scope} %{type} Summary"
+msgstr "%{scope}%{type}の概要"
+
+#: templates/default/module/setup.rb:116
 msgid "Class"
 msgstr "クラス"
 
-#: templates/default/module/setup.rb:115
+#: templates/default/module/setup.rb:117
 msgid "Instance"
 msgstr "インスタンス"
 
@@ -163,3 +276,7 @@ msgstr "インスタンスメソッド:"
 #: templates/default/tags/text/example.erb:3
 msgid "Examples:"
 msgstr "例:"
+
+#: templates/default/tags/html/see.erb:2
+msgid "See Also:"
+msgstr "参考:"
