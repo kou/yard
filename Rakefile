@@ -112,11 +112,12 @@ namespace :i18n do
     file yard_pot => :yard
 
     system_yard_pot = "#{system_locale_base_dir}/#{base_name}.pot"
-    task :system do
-      targets = FileList["lib/**/*.rb", "templates/**/*.{erb,rb}"]
+    targets = FileList["lib/**/*.rb", "templates/**/*.{erb,rb}"]
+    file system_yard_pot => targets do
       rm_f(system_yard_pot)
       sh("rgettext", "--output", system_yard_pot, *targets)
     end
+    task :system => system_yard_pot
   end
 
   namespace :po do
