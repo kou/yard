@@ -120,6 +120,36 @@ module YARD
           output
         end
 
+        begin
+          "%{key}" % {:key => "value"}
+        rescue ArgumentError
+          class ::KeyError < ::IndexError
+          end
+
+          # Formats templates with parameters. It's the same
+          # feature of Kernel.#format and String#% in Ruby
+          # 1.9. It adds "%{key}" % {:key => "value"} style
+          # feature to Kernel.#format and String#% in Ruby 1.8.
+          #
+          # @param [String] template_message template to
+          #   format parameters.
+          # @param [Array or Hash] parameters values to be formatted.
+          # @return [String] formatted string.
+          def format(template_message, *parameters)
+            if parameters.size == 1 and parameters.first.is_a?(Hash)
+              parameters = parameters.first
+              template_message.gsub(/%{(.+?)}/) do |key|
+                unless parameters.has_key?(key)
+                  raise ::KeyError, "key{#{key}} not found"
+                end
+                parameters[key]
+              end
+            else
+              super
+            end
+          end
+        end
+
         private
 
         # Sets default options on the options hash
