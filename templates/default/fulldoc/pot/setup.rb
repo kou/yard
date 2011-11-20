@@ -97,11 +97,20 @@ def extract_documents(object)
 
   docstring = object.docstring
   unless docstring.empty?
-    message = add_message(docstring)
-    object.files.each do |path, line|
-      message[:locations] << [path, docstring.line || line]
+    text = YARD::I18N::Text.new(StringIO.new(docstring))
+    text.extract_messages do |type, *args|
+      case type
+      when :paragraph
+        paragraph, line_no = *args
+        message = add_message(paragraph.rstrip)
+        object.files.each do |path, line|
+          message[:locations] << [path, (docstring.line || line) + line_no]
+        end
+        message[:comments] << object.path unless object.path.empty?
+      else
+        raise "should not reach here: unexpected type: #{type}"
+      end
     end
-    message[:comments] << object.path unless object.path.empty?
   end
   docstring.tags.each do |tag|
     extract_tag_documents(tag)
@@ -140,24 +149,22 @@ def extract_tag_text(tag)
 end
 
 def extract_paragraphs(file)
-  paragraph = []
-  paragraph_start_line = 0
   File.open(file.filename) do |input|
-    input.each_line do |line|
-      case line
-      when /\A\r?\n\z/
-        next if paragraph.empty?
-        message = add_message(paragraph.join("\n"))
-        message[:locations] << [file.filename, paragraph_start_line]
-        paragraph.clear
+    text = YARD::I18N::Text.new(input, :have_header => true)
+    text.extract_messages do |type, *args|
+      case type
+      when :attribute
+        name, value, line_no = *args
+        message = add_message(value)
+        message[:locations] << [file.filename, line_no]
+        message[:comments] << name
+      when :paragraph
+        paragraph, line_no = *args
+        message = add_message(paragraph.rstrip)
+        message[:locations] << [file.filename, line_no]
       else
-        paragraph_start_line = input.lineno if paragraph.empty?
-        paragraph << line.chomp
+        raise "should not reach here: unexpected type: #{type}"
       end
     end
-  end
-  unless paragraph.empty?
-    message = add_message(paragraph.join("\n"))
-    message[:locations] << [file.filename, paragraph_start_line]
   end
 end

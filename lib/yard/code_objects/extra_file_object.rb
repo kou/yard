@@ -59,42 +59,25 @@ module YARD::CodeObjects
     private
 
     def translate(data)
-      translated_data = []
-      paragraph = []
-      index = 0
-      in_header = true
+      translated_data = ""
 
-      data.each_line do |line|
-        index += 1
-        if in_header
-          case line
-          when /^#!\S+\s*$/
-            translated_data << line.chomp if index == 1
-          when /^(\s*#\s*@\S+\s*)(.+?)(\s*)$/
-            prefix, attribute_value, suffix = $1, $2, $3
-            translated_data << "#{prefix}#{_(attribute_value)}#{suffix}".chomp
-          else
-            in_header = false
-            next if line.chomp.empty?
-          end
-          next if in_header
-        end
-
-        case line
-        when /\A\r?\n\z/
-          translated_data << line.chomp
-          next if paragraph.empty?
-          translated_data << _(paragraph.join("\n"))
-          paragraph.clear
+      text = YARD::I18N::Text.new(data, :have_header => true)
+      text.translate do |type, *args|
+        case type
+        when :attribute
+          prefix, value, suffix = *args
+          translated_data << "#{prefix}#{_(value)}#{suffix}"
+        when :paragraph
+          paragraph, = *args
+          translated_data << _(paragraph)
+        when :empty_line
+          line, = *args
+          translated_data << line
         else
-          paragraph << line.chomp
+          raise "should not reach here: unexpected type: #{type}"
         end
       end
-
-      unless paragraph.empty?
-        translated_data << _(paragraph.join("\n"))
-      end
-      translated_data.join("\n")
+      translated_data
     end
 
     # @param [String] data the file contents

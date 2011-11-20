@@ -138,7 +138,22 @@ module YARD
     # localized docstring.
     # @return [String] the localized docstring.
     def document
-      _(to_s)
+      translated_data = ""
+
+      text = YARD::I18N::Text.new(StringIO.new(self))
+      text.translate do |type, *args|
+        case type
+        when :paragraph
+          paragraph, = *args
+          translated_data << _(paragraph)
+        when :empty_line
+          line, = *args
+          translated_data << line
+        else
+          raise "should not reach here: unexpected type: #{type}"
+        end
+      end
+      translated_data
     end
 
     # Reformats and returns a raw representation of the tag data using the
