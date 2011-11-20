@@ -13,7 +13,7 @@
       <% end %>
       <% if tag.text && !tag.text.empty? %>
         <% unless (@no_types || tag.types.nil? || tag.types.empty?) && @no_names %>&mdash;<% end %>
-        <%= htmlify_line(tag.text) %>
+        <%= htmlify_line(_(tag.text)) %>
       <% end %>
     </li>
   <% end %>
