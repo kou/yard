@@ -4,10 +4,11 @@ module YARD::CodeObjects
   # it implements `path`, `name` and `type`, and therefore should be structurally
   # compatible with most CodeObject interfaces.
   class ExtraFileObject
+    include YARD::I18N::Translation
+
     attr_accessor :filename
     attr_accessor :attributes
     attr_accessor :name
-    attr_accessor :contents
 
     # Creates a new extra file object.
     # @param [String] filename the location on disk of the file
@@ -17,13 +18,27 @@ module YARD::CodeObjects
       self.filename = filename
       self.name = File.basename(filename).gsub(/\.[^.]+$/, '')
       self.attributes = SymbolHash.new(false)
-      parse_contents(contents || File.read(@filename))
+      @original_contents = contents
+      @parsed = false
     end
 
     alias path name
 
     def title
       attributes[:title] || name
+    end
+
+    def contents
+      unless @parsed
+        @contents = parse_contents(@original_contents || File.read(@filename))
+        @parsed = true
+      end
+      @contents
+    end
+
+    def contents=(contents)
+      @parsed = false
+      @original_contents = contents
     end
 
     def inspect
@@ -43,10 +58,33 @@ module YARD::CodeObjects
 
     private
 
+    def translate(data)
+      translated_data = ""
+
+      text = YARD::I18N::Text.new(data, :have_header => true)
+      text.translate do |type, *args|
+        case type
+        when :attribute
+          prefix, value, suffix = *args
+          translated_data << "#{prefix}#{_(value)}#{suffix}"
+        when :paragraph
+          paragraph, = *args
+          translated_data << _(paragraph)
+        when :empty_line
+          line, = *args
+          translated_data << line
+        else
+          raise "should not reach here: unexpected type: #{type}"
+        end
+      end
+      translated_data
+    end
+
     # @param [String] data the file contents
     def parse_contents(data)
       retried = false
       cut_index = 0
+      data = translate(data)
       data = data.split("\n")
       data.each_with_index do |line, index|
         case line
@@ -65,7 +103,7 @@ module YARD::CodeObjects
         end
       end
       data = data[cut_index..-1] if cut_index > 0
-      self.contents = data.join("\n")
+      contents = data.join("\n")
       
       if contents.respond_to?(:force_encoding) && attributes[:encoding]
         begin
@@ -74,12 +112,12 @@ module YARD::CodeObjects
           log.warn "Invalid encoding `#{attributes[:encoding]}' in #{filename}"
         end
       end
+      contents
     rescue ArgumentError => e
       if retried && e.message =~ /invalid byte sequence/
         # This should never happen.
         log.warn "Could not read #{filename}, #{e.message}. You probably want to set `--charset`."
-        self.contents = ''
-        return
+        return ""
       end
       data.force_encoding('binary') if data.respond_to?(:force_encoding)
       retried = true

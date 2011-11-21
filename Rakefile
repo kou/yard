@@ -97,3 +97,67 @@ end
 YARD::Rake::YardocTask.new do |t|
   t.options += ['--title', "YARD #{YARD::VERSION} Documentation"]
 end
+
+namespace :i18n do
+  supported_locales = ["ja"]
+
+  base_name = "yard"
+  locale_base_dir = "locale"
+  system_locale_base_dir = "system-locale"
+  namespace :pot do
+    yard_pot = "#{locale_base_dir}/#{base_name}.pot"
+    yard_pot_sources = FileList["lib/**/*.rb"]
+    yard_pot_sources.exclude("lib/yard/server/templates/**/*.rb")
+    yard_pot_sources.exclude("lib/yard/rubygems/**/*.rb")
+    yard_pot_files = FileList["docs/*.md", "README.md"]
+    namespace :yard do
+      YARD::Rake::YardocTask.new(:generate) do |t|
+	t.options += ['--no-yardopts',
+		      '--protected', '--no-private',
+		      '--output', 'locale', '--format', 'pot']
+	t.options += yard_pot_sources
+	t.options += ['-']
+	t.options += yard_pot_files
+      end
+    end
+    file yard_pot => (yard_pot_sources + yard_pot_files) do
+      Rake::Task["i18n:pot:yard:generate"].invoke
+    end
+    task :yard => yard_pot
+
+    system_yard_pot = "#{system_locale_base_dir}/#{base_name}.pot"
+    targets = FileList["lib/**/*.rb", "templates/**/*.{erb,rb}"]
+    file system_yard_pot => targets do
+      rm_f(system_yard_pot)
+      sh("rgettext", "--output", system_yard_pot, *targets)
+    end
+    task :system => system_yard_pot
+  end
+
+  namespace :po do
+    [[:yard, "locale"],
+     [:system, "system-locale"]].each do |task_namespace, base_dir|
+      namespace task_namespace do
+        supported_locales.each do |locale|
+          locale_dir = "#{base_dir}/#{locale}"
+          po = "#{locale_dir}/#{base_name}.po"
+          pot = "#{base_dir}/#{base_name}.pot"
+
+          directory locale_dir
+          file po => [locale_dir, pot] do
+            if File.exist?(po)
+              sh("msgmerge", "--update", "--sort-by-file", po, pot)
+            else
+              sh("msginit",
+                 "--input", pot,
+                 "--output", po,
+                 "--locale", "#{locale}.UTF-8")
+            end
+          end
+
+          task locale => po
+        end
+      end
+    end
+  end
+end

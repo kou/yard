@@ -1,6 +1,6 @@
 <% scopes(attr_listing) do |list, scope| %>
   <div id="<%= scope %>_attr_details" class="attr_details">
-    <h2><%= scope.to_s.capitalize %> Attribute Details</h2>
+    <h2><%= _("%{scope} Attribute Details") % {:scope => _(scope.to_s.capitalize)} %></h2>
     <% list.each_with_index do |meth, i| %>
       <% rw = meth.attr_info %>
       <span id="<%= anchor_for(rw[:write]) %>"></span>

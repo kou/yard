@@ -13,6 +13,8 @@ module YARD
   # Tags can be nested in a documentation string, though the {Tags::Tag}
   # itself is responsible for parsing the inner tags.
   class Docstring < String
+    include YARD::I18N::Translation
+
     # @return [Array<Tags::RefTag>] the list of reference tags
     attr_reader :ref_tags
 
@@ -100,17 +102,24 @@ module YARD
       line_range ? line_range.first : nil
     end
 
-    # Gets the first line of a docstring to the period or the first paragraph.
+    # Gets the first line of a localized docstring to the period or the first paragraph.
     # @return [String] The first line or paragraph of the docstring; always ends with a period.
     def summary
       return @summary if @summary
       open_parens = ['{', '(', '[']
       close_parens = ['}', ')', ']']
       num_parens = 0
+      period = "."
+      periods = [period]
+      localized_docstring = document
+      if localized_docstring != to_s
+        period = _(".")
+        periods << period
+      end
       idx = length.times do |index|
-        case self[index, 1]
-        when ".", "\r", "\n"
-          next_char = self[index + 1, 1].to_s
+        case localized_docstring[index, 1]
+        when "\r", "\n", *periods
+          next_char = localized_docstring[index + 1, 1].to_s
           if num_parens == 0 && next_char =~ /^\s*$/
             break index - 1
           end
@@ -120,11 +129,33 @@ module YARD
           num_parens -= 1
         end
       end
-      @summary = self[0..idx]
-      @summary += '.' unless @summary.empty?
+      @summary = localized_docstring[0..idx]
+      @summary += period unless @summary.empty?
       @summary
     end
-    
+
+    # Gets a localized docstring. Use String#to_s to get non
+    # localized docstring.
+    # @return [String] the localized docstring.
+    def document
+      translated_data = ""
+
+      text = YARD::I18N::Text.new(StringIO.new(self))
+      text.translate do |type, *args|
+        case type
+        when :paragraph
+          paragraph, = *args
+          translated_data << _(paragraph)
+        when :empty_line
+          line, = *args
+          translated_data << line
+        else
+          raise "should not reach here: unexpected type: #{type}"
+        end
+      end
+      translated_data
+    end
+
     # Reformats and returns a raw representation of the tag data using the
     # current tag and docstring data, not the original text.
     # 
