@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-21 18:58+0900\n"
+"PO-Revision-Date: 2011-11-21 19:44+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12537,22 +12537,26 @@ msgid ""
 "an operation on an object's namespace but the namespace could\n"
 "not be resolved."
 msgstr ""
+"以下の条件の時、例外を発生させる。\n"
+"段階的に処理している間にハンドラーが必要になった時、\n"
+"オブジェクトのnamespaceの操作を実行したが、\n"
+"そのnamespaceの処理が解決しない。"
 
 # YARD::Handlers::NamespaceMissingError#object
 # YARD::Handlers::NamespaceMissingError#object=
 #: ../lib/yard/handlers/base.rb:8
 msgid "The object the error occurred on"
-msgstr ""
+msgstr "エラーが生じたコードオブジェクトを返す。"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/handlers/base.rb:9
 msgid "a code object"
-msgstr ""
+msgstr "コードオブジェクト"
 
 # @return [NamespaceMissingError]
 #: ../lib/yard/handlers/base.rb:11
 msgid "a new instance of NamespaceMissingError"
-msgstr ""
+msgstr "NamespaceMissingErrorの新しいインスタンス"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:15
@@ -12568,11 +12572,18 @@ msgid ""
 "documentation in a very explicit format by treating them as first-\n"
 "class objects in any outputted documentation."
 msgstr ""
+"ハンドラーはYARDがコード生成段階で、\n"
+"プラグイン可能な意味のあるパーサーとなる。\n"
+"それらは、開発者がYARDによって生成された情報の取得を\n"
+"制御可能にする。\n"
+"それらの機能を使う為に、例えば、\n"
+"カスタマイズされたフレームワークを\n"
+"使用できる何らかのRuby DSLを記述するとする。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:26
 msgid "== Overview of a Typical Handler Scenario"
-msgstr ""
+msgstr "== 標準的なハンドラーの処理概要"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:28
@@ -12585,6 +12596,12 @@ msgid ""
 "which case they should be registered by {#register}, a method that\n"
 "sets some basic attributes for the new objects."
 msgstr ""
+"一般的に、ハンドラークラスは文の設定を宣言する。\n"
+"そして、それは {handles} クラス宣言によって処理する。\n"
+"それは、処理の為に {#process} メソッドを実装する。\n"
+"処理中は、通常 {#namespace} , {#owner} , {CodeObjects::Base code objects} や\n"
+"新規作成を含む場合に、それらは、 {#register} によって登録されるべき、\n"
+"メソッドは新しいオブジェクト用にいくつかの基本的属性を設定する。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:36
@@ -12592,11 +12609,15 @@ msgid ""
 "Handlers are usually simple and take up to a page of code to process\n"
 "and register a new object or add new attributes to the current +namespace+."
 msgstr ""
+"ハンドラーは一般的にシンプルで、\n"
+"処理の為にコードのページを取り上げたり、\n"
+"新しくオブジェクトを登録や、\n"
+"現在の +namespace+ に新しい属性を追加したりする。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:39
 msgid "== Setting up a Handler for Use"
-msgstr ""
+msgstr "== ハンドラーを使う為の設定"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:41
@@ -12608,6 +12629,13 @@ msgid ""
 "`Regexp`.\n"
 "Here is a simple example which processes module statements."
 msgstr ""
+"ハンドラーはベースクラスからサブクラス化される時に、\n"
+"自動的に登録される。\n"
+"必要なその他のこととして、\n"
+"ハンドラーがどの文を処理するか指定する。\n"
+"これは、 +handles+ 宣言したと共に、\n"
+"{Parser::Ruby::Legacy::RubyToken} か {String} や `Regexp`を取る。\n"
+"ここは、モジュール文の処理の簡単な例です。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:47
@@ -12628,7 +12656,7 @@ msgstr ""
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:55
 msgid "== Processing Handler Data"
-msgstr ""
+msgstr "== ハンドラーデータ処理"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:57
@@ -12638,11 +12666,15 @@ msgid ""
 "it is important to know where the data is coming from to be able to use\n"
 "it."
 msgstr ""
+"具体的なハンドラーの使い方は、開発者次第で、\n"
+"データ処理の方法のガイドラインは何もない。\n"
+"しかしながら、データを扱う為には、\n"
+"そのデータがどこから来るか知る事が重要となる。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:62
 msgid "=== +statement+ Attribute"
-msgstr ""
+msgstr "=== +statement+ 属性"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:64
@@ -12658,11 +12690,20 @@ msgid ""
 "can be converted to a +String+ using +#to_s+ to parse the data with\n"
 "regular expressions (or other text processing mechanisms), if needed."
 msgstr ""
+"パーサーによって解析されたトークンの設定を\n"
+"{Parser::Ruby::Legacy::Statement} オブジェクトが含んでいる為、\n"
+"+statement+ 属性は関係がある。\n"
+"これは解析や処理される為のデータの主な設定となる。\n"
+"コメントはstatementが {Parser::Ruby::Legacy::Statement#comments} メソッドによって\n"
+"アクセスされる為に付加される、\n"
+"しかし、処理される一般的なデータは +tokens+ 属性の中に存在する。\n"
+"このリストは、データを解析の為 +#to_s+ によって +String+ に変換できる。\n"
+"必要に応じて正規表現を用いる。(又は、他のテキストが処理しているメカニズム)"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:72
 msgid "=== +namespace+ Attribute"
-msgstr ""
+msgstr "=== +namespace+ 属性"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:74
@@ -12671,6 +12712,9 @@ msgid ""
 "object}\n"
 "which represents the current namespace that the parser is in. For instance:"
 msgstr ""
+"+namespace+ 属性は {CodeObjects::NamespaceObject namespace object} となる。\n"
+"それは、そのパーサーの中では現在のnamespaceを表す。\n"
+"例えば:"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:77
@@ -12692,11 +12736,18 @@ msgid ""
 "called on the method, the +namespace+ would be set to the 'MyClass'\n"
 "code object."
 msgstr ""
+"ハンドラーが'class MyClass'文を解析する場合、\n"
+"class My ClassがSomeModuleモジュールの内部に\n"
+"属していることを知ることが必須になる。\n"
+"これは +namespace+ がそのような文の処理をしている時に返す値となる\n"
+"クラスがエントリーされたり、\n"
+"他のハンドラーがメソッドで呼び出された場合、\n"
+"'MyClass'コードオブジェクトの為に +namespace+ は設定される。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:90
 msgid "=== +owner+ Attribute"
-msgstr ""
+msgstr "=== +owner+ 属性"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:92
@@ -12707,6 +12758,13 @@ msgid ""
 "to parse beyond module and class blocks (inside methods, for instance),\n"
 "so the +owner+ attribute would not be limited to modules and classes."
 msgstr ""
+"+owner+ 属性は解析中のコードのフォローという点で、\n"
+"+namespace+ 属性と同様となる。\n"
+"しかしながら、namespaceオブジェクトは、\n"
+"モジュールやクラスとYARDが持っている機能のように、\n"
+"大まかに定義される。\n"
+"モジュールやクラスブロック(例えば、メソッドの内部で)を越えて解析する為、\n"
+"モジュールやクラスの為に +owner+ 属性は制限されない。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:98
@@ -12719,6 +12777,15 @@ msgid ""
 "definitions set inside a method (def x; def y; 2 end end) by adding them\n"
 "to the correct namespace (the class, not the method)."
 msgstr ""
+"これを関連つけて筋道を通すと、上の例が使われる。\n"
+"ハンドラーのメソッドは、組み合わせる為に追加されたり、\n"
+"メソッド本体の内部を解析する場合、\n"
+"+owner+ はメソッドオブジェクトを設定する。\n"
+"しかし、ネームスペースはクラスの設定が残る。\n"
+"これは開発者に以下のことを可能とする。\n"
+"メソッドの内部(def x; def y; 2 end end)で設定する何らかのメソッド定義は、\n"
+"namespaceの修正をそれらに(そのクラスで、メソッドではない)追加する事によって、\n"
+"処理できる。\n"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:105
@@ -12727,11 +12794,15 @@ msgid ""
 "of as the difference between first-class Ruby objects (namespaces) and\n"
 "second-class Ruby objects (methods)."
 msgstr ""
+"要約すると、+namespace+ と +owner+ の違いは、\n"
+"最初のクラスのRubyオブジェクト(namespaces)と、\n"
+"次のクラスのRubyオブジェクト(メソッド)が、\n"
+"異なっていると考えられる。??????(parser)"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:109
 msgid "=== +visibility+ and +scope+ Attributes"
-msgstr ""
+msgstr "=== +visibility+ と +scope+ 属性"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:111
@@ -12741,11 +12812,15 @@ msgid ""
 "(respectively)\n"
 "of the current parsing position."
 msgstr ""
+"大抵は解析されるメソッドの為に必要とされる、\n"
+"+visibility+ と +scope+ 属性は現在の解析している場所の\n"
+"public/protected/privateとclass/instanceの値(それぞれについて)を\n"
+"参照する。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:115
 msgid "== Parsing Blocks in Statements"
-msgstr ""
+msgstr "== 文の中のブロックを解析する"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:117
@@ -12756,6 +12831,11 @@ msgid ""
 "of any statement, be it class definition, module definition, if\n"
 "statement or classic 'Ruby block'."
 msgstr ""
+"文の解析や新しくオブジェクトを作成する事に加えて、\n"
+"いくつかのハンドラーは文のブロック(が一つでもある場合)の\n"
+"内部コードの解析処理を継続するかもしれない。\n"
+"このコンテキストでブロックとは、何らかの文の内部を意味する。\n"
+"それは文やRubyで使われるblockの場合、クラス定義、モジュール定義になる。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:123
@@ -12766,6 +12846,13 @@ msgid ""
 "{#parse_block} method to continue parsing code inside the block, with\n"
 "the +namespace+ now pointing to the class object the handler created."
 msgstr ""
+"例えば、文のクラスが\\\"class MyClass\\\"になるかもしれない\n"
+"そして、ブロックはクラスの内部でメソッドの定義を\n"
+"含んでいる文のリストになるかもしれない。\n"
+"ハンドラーのクラス用に、\n"
+"プログラマーは、{#parse_block} メソッドを実行する。\n"
+"ブロックの内部のコード解析を継続する為に、\n"
+"+namespace+ は、現在、ハンドラーが作成したクラスオブジェクトを指定する。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:129
@@ -12774,6 +12861,10 @@ msgid ""
 "even if statements. For this reason, the block parsing method must be\n"
 "invoked explicitly out of efficiency sake."
 msgstr ""
+"YARDは何らかのブロックの中へ(クラス,モジュール,メソッド,文でさえ)\n"
+"継続する特性がある。\n"
+"従って、メソッドを解析するブロックは、\n"
+"効率良く処理する為、明示的に呼び出されるべきである。"
 
 # @see
 #: ../lib/yard/handlers/base.rb:142
@@ -12791,6 +12882,8 @@ msgid ""
 "Subclass this class to provide a handler for YARD to use\n"
 "during the processing phase."
 msgstr ""
+"YARDが処理段階で使用するハンドラーを提供する為に、\n"
+"このクラスをサブクラス化する。"
 
 # @see
 #: ../lib/yard/handlers/base.rb:142
@@ -12820,24 +12913,24 @@ msgstr ""
 # YARD::Handlers::Base.clear_subclasses
 #: ../lib/yard/handlers/base.rb:151
 msgid "Clear all registered subclasses. Testing purposes only"
-msgstr ""
+msgstr "全ての登録されたサブクラスを消去する。テスト用"
 
 # YARD::Handlers::Base.subclasses
 #: ../lib/yard/handlers/base.rb:157
 msgid "Returns all registered handler subclasses."
-msgstr ""
+msgstr "全ての登録されたサブクラスのハンドラーを返す。"
 
 # @return [Array<Base>]
 #: ../lib/yard/handlers/base.rb:158
 msgid "a list of handlers"
-msgstr ""
+msgstr "ハンドラーのリスト"
 
 # YARD::Handlers::Base.handles
 #: ../lib/yard/handlers/base.rb:168
 msgid ""
 "Declares the statement type which will be processed\n"
 "by this handler."
-msgstr ""
+msgstr "このハンドラーによって処理される文の型を宣言する。"
 
 # YARD::Handlers::Base.handles
 #: ../lib/yard/handlers/base.rb:171
@@ -12849,6 +12942,12 @@ msgid ""
 "the handlers, otherwise the same code will be parsed\n"
 "multiple times and slow YARD down."
 msgstr ""
+"ハンドラーでマッチするものは、一つでなくてもよい。\n"
+"複数のハンドラーで同じ文を処理できる。\n"
+"しかしながら、このケースの場合、\n"
+"注意する必要がある。\n"
+"{#parse_block} はハンドラーの一つによって実行されるだけで、\n"
+"他の同じコードが複数回解析されYARDが遅くなる。"
 
 # @param [Parser::RubyToken, Symbol, String, Regexp] matches
 #: ../lib/yard/handlers/base.rb:185
@@ -12860,6 +12959,10 @@ msgid ""
 "token matches match only the first token of the\n"
 "statement."
 msgstr ""
+"このハンドラーによって処理される宣言がマッチする文。\n"
+"A {String} のマッチは +/\\\\Astring/+ の正規表現と同様となる。\n"
+"(行の最初からマッチ)、\n"
+"そして全てのトークンのマッチは、文の最初のトークンにだけマッチする。"
 
 # @param [Parser::RubyToken, Symbol, String, Regexp]
 #: ../lib/yard/handlers/base.rb:185
@@ -12875,18 +12978,23 @@ msgid ""
 "statement object. Use {handlers} to enumerate the matchers declared\n"
 "for the handler class."
 msgstr ""
+"このクラスは、 {Ruby::Base} や {Ruby::Legacy::Base} によって実装される。\n"
+"他の言語用のbase handler クラスを実装する為には、\n"
+"ハンドラーが与えられた文オブジェクトを処理する場合、\n"
+"trueを返す為にこのメソッドを実装する。\n"
+"ハンドラークラス用のマッチする宣言を列挙するには、{handlers} を使用する。"
 
 # @return [Boolean]
 #: ../lib/yard/handlers/base.rb:198
 msgid ""
 "whether or not this handler object should process\n"
 "the given statement"
-msgstr ""
+msgstr "いずれにせよ、このハンドラーオブジェクトは指定された文を処理するべき"
 
 # @param statement
 #: ../lib/yard/handlers/base.rb:198
 msgid "a statement object or node (depends on language type)"
-msgstr ""
+msgstr "オブジェクトやノードの文(言語タイプに左右される)"
 
 # @see
 #: ../lib/yard/handlers/base.rb:204
@@ -12896,7 +13004,7 @@ msgstr ""
 # @return [Array]
 #: ../lib/yard/handlers/base.rb:204
 msgid "a list of matchers for the handler object."
-msgstr ""
+msgstr "ハンドラーオブジェクト用の照合されるリスト"
 
 # YARD::Handlers::Base.namespace_only
 #: ../lib/yard/handlers/base.rb:209
@@ -12904,13 +13012,15 @@ msgid ""
 "Declares that the handler should only be called when inside a\n"
 "{CodeObjects::NamespaceObject}, not a method body."
 msgstr ""
+"ハンドラーが {CodeObjects::NamespaceObject} 内部の時だけ\n"
+"呼び出される事を宣言する、このメソッドは本体ではない。"
 
 # @return [Boolean]
 #: ../lib/yard/handlers/base.rb:218
 msgid ""
 "whether the handler should only be processed inside\n"
 "a namespace."
-msgstr ""
+msgstr "このハンドラがnamespace内だけで処理されるかどうか"
 
 # YARD::Handlers::Base.in_file
 #: ../lib/yard/handlers/base.rb:223
@@ -12918,11 +13028,13 @@ msgid ""
 "Declares that a handler should only be called when inside a filename\n"
 "by its basename or a regex match for the full path."
 msgstr ""
+"ハンドラーがフルパス用のベースネームや正規表現マッチによって、\n"
+"ファイルネーム内部の時だけ呼び出される事を宣言する。"
 
 # @param [String, Regexp] filename
 #: ../lib/yard/handlers/base.rb:228
 msgid "a matching filename or regex"
-msgstr ""
+msgstr "マッチするファイルネームや正規表現"
 
 # @return [Boolean]
 #: ../lib/yard/handlers/base.rb:235
@@ -12930,6 +13042,8 @@ msgid ""
 "whether the filename matches the declared file\n"
 "match for a handler. If no file match is specified, returns true."
 msgstr ""
+"ファイル名が宣言されたハンドラー用のファイルとマッチするかどうか、\n"
+"ファイルがマッチしない場合は、trueを返す。"
 
 # YARD::Handlers::Base.process
 #: ../lib/yard/handlers/base.rb:250
@@ -12939,6 +13053,12 @@ msgid ""
 "module so that the handler class can be extended with mixins that\n"
 "override the +process+ method without alias chaining."
 msgstr ""
+"+process+ メソッドを生成する、+def process; ...end+ と同等となる。\n"
+"ブロックはこの構文を用い定義するが、\n"
+"ハンドラークラスは\n"
+"+procecc+ メソッドの上書きをエイリアスチェーン無しで\n"
+"mixinを用い拡張できるように\n"
+"無名モジュールの内部でラップされる。"
 
 # @macro
 #: ../lib/yard/handlers/base.rb:261
@@ -12970,7 +13090,7 @@ msgstr ""
 #: ../lib/yard/server/commands/base.rb:74 ../lib/yard/handlers/base.rb:268
 #: ../lib/yard/parser/base.rb:25 ../lib/yard/serializers/base.rb:27
 msgid "a new instance of Base"
-msgstr ""
+msgstr "ベースの新しいインスタンス"
 
 # YARD::Handlers::Base#process
 #: ../lib/yard/handlers/base.rb:274
@@ -12978,6 +13098,8 @@ msgid ""
 "The main handler method called by the parser on a statement\n"
 "that matches the {handles} declaration."
 msgstr ""
+"主なハンドラーのメソッドは {handles} の宣言で\n"
+"マッチするstatementのパーサーによって呼び出される。"
 
 # YARD::Handlers::Base#process
 #: ../lib/yard/handlers/base.rb:277
@@ -12985,6 +13107,8 @@ msgid ""
 "Subclasses should override this method to provide the handling\n"
 "functionality for the class."
 msgstr ""
+"サブクラスはクラス用の処理機能を提供する為に、\n"
+"このメソッドを上書きする。"
 
 # @return [Array<CodeObjects::Base>, CodeObjects::Base, Object]
 #: ../lib/yard/handlers/base.rb:289
@@ -12995,23 +13119,29 @@ msgid ""
 "some cases you may want to explicitly avoid the returning of\n"
 "any objects for post-processing by the register method."
 msgstr ""
+"このメソッドがコードオブジェクト(やそれらのリスト)を返す場合は、\n"
+"それらは、+#register+ メソッドに解析され、基本属性が追加される。\n"
+"何らかのオブジェクトを返すのは必須ではなく、\n"
+"場合によっては、\n"
+"あなたはregisterメソッドによってpost-processing用の\n"
+"何らかのオブジェクトを返すことを明確に無視できる。"
 
 # YARD::Handlers::Base#parse_block
 #: ../lib/yard/handlers/base.rb:294
 msgid "Parses the semantic \"block\" contained in the statement node."
-msgstr ""
+msgstr "文ノードに含まれている意味のある\\\"block\\\"を解析する。"
 
 # @abstract
 #: ../lib/yard/handlers/base.rb:296
 msgid "Subclasses should call {Processor#process parser.process}"
-msgstr ""
+msgstr "{Processor#process parser.process} を呼び出しサブクラス化する。"
 
 # @return [Processor]
 #: ../lib/yard/handlers/base.rb:304
 msgid ""
 "the processor object that manages all global state\n"
 "during handling."
-msgstr ""
+msgstr "全てのグローバルな状態の処理の間に扱うプロセッサーオブジェクト"
 
 # @return [Object]
 #: ../lib/yard/handlers/base.rb:309
@@ -13020,6 +13150,9 @@ msgid ""
 "refers to one semantic language statement, though the strict definition\n"
 "depends on the parser used."
 msgstr ""
+"現在の処理される文オブジェクト。\n"
+"厳格な定義は使われるパーサー次第とはいえ、\n"
+"一般的には、一つの意味のある言語を参照する。"
 
 # YARD::Handlers::Base#globals
 # YARD::Handlers::Processor#globals
@@ -13031,6 +13164,9 @@ msgid ""
 "this attribute. Note that post processing stage spans multiple files.\n"
 "To share state only within a single file, use {#extra_state}"
 msgstr ""
+"ハンドラーはこの属性を通ると全体の後処理環境用の状態を共有できる。\n"
+"留意することとして後処理の状態は、複数ファイルに渡す。\n"
+"単一のファイルの中でだけ状態を共有するには、 {#extra_state} を使用する。"
 
 # YARD::Handlers::Base#extra_state
 # YARD::Handlers::Processor#extra_state
@@ -13045,6 +13181,12 @@ msgid ""
 "your handler might need to save during the parsing of a file. If\n"
 "you need to save state across files, see {#globals}."
 msgstr ""
+"ファイルの内部の別のハンドラーの行き来の状態を共有する。\n"
+"それらは全体のソースファイルの為に全てのハンドラーの行き来の状態を\n"
+"全て維持するという点で {#visibility}, {#scope}, {#namespace}, {#owner}属性と似ている。\n"
+"この属性を使って、あなたのハンドラーが必要とするかもしれないデータを格納し\n"
+"ファイルの解析中に保存する。\n"
+"あなたがファイル全体の状態の保存が必要な場合、 {#globals} を参照。"
 
 # YARD::Handlers::Base#push_state
 #: ../lib/yard/handlers/base.rb:344
@@ -13052,6 +13194,8 @@ msgid ""
 "Executes a given block with specific state values for {#owner},\n"
 "{#namespace} and {#scope}."
 msgstr ""
+"{#owner},{#namespace}と{#scope} 用の特定の状態の値を用い、\n"
+"与えられたブロックを実行する。"
 
 # @param [Proc]
 #: ../lib/yard/handlers/base.rb:355
@@ -13061,12 +13205,12 @@ msgstr ""
 # @param [Proc] block
 #: ../lib/yard/handlers/base.rb:355
 msgid "the block to execute with specific state"
-msgstr ""
+msgstr "与えられた値の状態と共に実行するブロック。"
 
 # @yield
 #: ../lib/yard/handlers/base.rb:355
 msgid "a block to execute with the given state values."
-msgstr ""
+msgstr "状態を指定すると共に実行するブロック。"
 
 # YARD::Handlers::Base#register
 #: ../lib/yard/handlers/base.rb:377
@@ -13077,11 +13221,16 @@ msgid ""
 "source code and {CodeObjects::Base#docstring},\n"
 "but only if they don't exist."
 msgstr ""
+"コードオブジェクトのリストのいくつかの後処理をする。\n"
+"ファイル名、行数、{CodeObjects::Base#dynamic} 、ソースコード、\n"
+"{CodeObjects::Base#docstring}のようなオブジェクトのリストに、\n"
+"基本属性を追加する。\n"
+"しかし、それらが存在しない場合だけです。"
 
 # @param [Array<CodeObjects::Base>] objects
 #: ../lib/yard/handlers/base.rb:388
 msgid "the list of objects to post-process."
-msgstr ""
+msgstr "後処理の為のオブジェクトのリスト"
 
 # @param [Array<CodeObjects::Base>]
 #: ../lib/yard/handlers/base.rb:388 ../lib/yard/templates/engine.rb:100
@@ -13091,7 +13240,7 @@ msgstr ""
 # @return [CodeObjects::Base, Array<CodeObjects::Base>]
 #: ../lib/yard/handlers/base.rb:388
 msgid "returns whatever is passed in, for chainability."
-msgstr ""
+msgstr "cainability??用に解析されるものを返す"
 
 # YARD::Handlers::Base#ensure_loaded!
 #: ../lib/yard/handlers/base.rb:450
@@ -13101,6 +13250,10 @@ msgid ""
 "since the namespace may not have been processed yet (it can be located\n"
 "in a file that has not been handled)."
 msgstr ""
+"特定の +object+ は解析されて、レジストリの中へロードされる事を保証する。\n"
+"例えば、namespaceは、まだ処理されないかもしれないので\n"
+"(処理されないファイルの中にそれはある可能性がある。)\n"
+"これはnamespaceにデータを追加する時に必要である。"
 
 # YARD::Handlers::Base#ensure_loaded!
 #: ../lib/yard/handlers/base.rb:455
@@ -13109,6 +13262,10 @@ msgid ""
 "processed. If the object gets resolved, the rest of the handler continues,\n"
 "otherwise an exception is raised."
 msgstr ""
+"このメソッドの呼び出しは\n"
+"他の全てのファイルが処理されるまでハンドラーを延期する。\n"
+"もしオブジェクトが解決された場合、ハンドラーの残りが続き、\n"
+"さもなければ、例外を上げる。"
 
 # @example Adding a mixin to the String class programmatically
 #: ../lib/yard/handlers/base.rb:469
@@ -13130,6 +13287,8 @@ msgid ""
 "+max_retries+ attempts, this exception is raised and the handler\n"
 "finishes processing."
 msgstr ""
+"オブジェクトが +max_retries+ を試みても解決されない場合、\n"
+"この例外を上げ、ハンドラーが処理を終了させる。"
 
 # @example
 #: ../lib/yard/handlers/base.rb:469
@@ -13141,12 +13300,12 @@ msgstr ""
 msgid ""
 "the number of times to defer the handler\n"
 "before raising a +NamespaceMissingError+."
-msgstr ""
+msgstr "+NamespaceMissingError+ を上げる前にハンドラーがリトライする回数"
 
 # @param [Proxy, CodeObjects::Base] object
 #: ../lib/yard/handlers/base.rb:469
 msgid "the object to resolve."
-msgstr ""
+msgstr "解決したいオブジェクト"
 
 # YARD::Handlers::Base#call_params
 # YARD::Handlers::Base#caller_method
@@ -13155,7 +13314,7 @@ msgstr ""
 #: ../lib/yard/handlers/base.rb:506 ../lib/yard/handlers/base.rb:515
 #: ../lib/yard/handlers/base.rb:526 ../lib/yard/handlers/base.rb:561
 msgid "Macro Support"
-msgstr ""
+msgstr "マクロのサポート"
 
 # @abstract
 #: ../lib/yard/handlers/base.rb:506
@@ -13164,21 +13323,23 @@ msgid ""
 "statement. It should return an empty list if the statement is not a\n"
 "method call."
 msgstr ""
+"メソッド呼び出し文の中のパラメータを返す為にこのメソッドを実装する。\n"
+"文がメソッド呼び出しでない場合は空のリストを返すべき。"
 
 # @return [Array<String>]
 #: ../lib/yard/handlers/base.rb:506
 msgid "a list of argument names"
-msgstr ""
+msgstr "引数の名前のリスト"
 
 # @return [nil]
 #: ../lib/yard/handlers/base.rb:515
 msgid "if the statement is not a method call"
-msgstr ""
+msgstr "文がメソッド呼び出しでない場合"
 
 # @return [String]
 #: ../lib/yard/handlers/base.rb:515
 msgid "the method name being called"
-msgstr ""
+msgstr "呼び出されるメソッド名"
 
 # @abstract
 #: ../lib/yard/handlers/base.rb:515
@@ -13187,6 +13348,9 @@ msgid ""
 "a method call. It should return nil if the statement is not a method\n"
 "call."
 msgstr ""
+"メソッド呼び出しの中で呼び出されるメソッドが返す為に\n"
+"このメソッドが実装する。\n"
+"文がメソッド呼び出しでない場合は、nilを返すべき。"
 
 # YARD::Handlers::Base#find_or_create_macro
 #: ../lib/yard/handlers/base.rb:520
@@ -13194,11 +13358,13 @@ msgid ""
 "Attempts to find or create a macro if a +@macro+ tag is found in the\n"
 "docstring (or the object's docstring)."
 msgstr ""
+"+@macro+ タグがdocstring(やオブジェクトのdocstring)の中で見つかった場合、\n"
+"マクロタグがあるか探し、マクロ作成を試みる。"
 
 # @return [nil]
 #: ../lib/yard/handlers/base.rb:526
 msgid "if the docstring does not create or reference a macro"
-msgstr ""
+msgstr "docstringが作られていない場合やマクロの参照がない場合"
 
 # @param [Docstring, CodeObjects::Base]
 #: ../lib/yard/handlers/base.rb:526
@@ -13210,27 +13376,27 @@ msgstr ""
 msgid ""
 "the docstring\n"
 "or it's object with which to check for a macro"
-msgstr ""
+msgstr "マクロのチェックの為のdocstringやオブジェクト"
 
 # @return [CodeObjects::MacroObject]
 #: ../lib/yard/handlers/base.rb:526
 msgid "the newly created macro"
-msgstr ""
+msgstr "新たに作成されたマクロ"
 
 # YARD::Handlers::Base#expand_macro
 #: ../lib/yard/handlers/base.rb:558
 msgid "Sets the docstring on +object+ to the expanded macro."
-msgstr ""
+msgstr "マクロを拡張する為に +object+ のdocstringを設定する"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/handlers/base.rb:561
 msgid "the object to expand the macro on"
-msgstr ""
+msgstr "拡張するオブジェクトのマクロ"
 
 # @param [CodeObjects::MacroObject] macro
 #: ../lib/yard/handlers/base.rb:561
 msgid "the macro object to expand"
-msgstr ""
+msgstr "マクロによって拡張する為のオブジェクト"
 
 # YARD::Handlers::Processor
 #: ../lib/yard/handlers/processor.rb:6
