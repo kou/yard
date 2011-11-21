@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-21 12:02+0900\n"
+"PO-Revision-Date: 2011-11-21 16:08+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1774,6 +1774,9 @@ msgid ""
 "(Note that $0 represents the method call, in this case `property`. The rest\n"
 "are arguments in the method call.)"
 msgstr ""
+"(以下の事に留意する。\n"
+"$0はメソッド呼び出しを表す、この場合は`property`となる。\n"
+"残りはメソッド呼び出しの引数となる。)"
 
 #: ../docs/GettingStarted.md:273
 msgid ""
@@ -1782,6 +1785,11 @@ msgid ""
 "can re-apply it to any other property in our class by simply calling on\n"
 "the macro. The following:"
 msgstr ""
+"上の例は、前項の中の最初の訳文と等しい。\n"
+"このマクロを使うことによっていくつかの特別な恩恵もある。\n"
+"それは、マクロを簡単に呼び出すことによって、\n"
+"例のクラスの中の他のpropertyに最適用できる。\n"
+"以下の例は、"
 
 #: ../docs/GettingStarted.md:278
 msgid ""
@@ -1791,7 +1799,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:281
 msgid "Would be equivalent to:"
-msgstr ""
+msgstr "下と同等になる。"
 
 #: ../docs/GettingStarted.md:283
 msgid ""
@@ -1810,6 +1818,12 @@ msgid ""
 "documented\n"
 "by using this snippet:"
 msgstr ""
+"最終的にマクロは、メソッド呼び出しの為に\"追加\"され、\n"
+"いつでも、クラスや継承クラスのソースコードの中で見られる\n"
+"メソッド呼び出しの起動の実装を可能にする。\n"
+"単に`[attach]`フラグを追加することで、\n"
+"そのマクロは将来の呼び出しで暗黙的に呼び出される。\n"
+"下記のすべてのpropertyは、このスニペットを使用してドキュメントになる。"
 
 #: ../docs/GettingStarted.md:295
 msgid ""
@@ -1826,10 +1840,12 @@ msgid ""
 "You can read more about macros in the {file:docs/Tags.md Tags Overview} "
 "document."
 msgstr ""
+"もっとマクロについて知りたい場合は{file:docs/Tags.md Tags Overview}の中で\n"
+"読むことができる。"
 
 #: ../docs/GettingStarted.md:304
 msgid "## Customized YARD Markup"
-msgstr ""
+msgstr "## YARDマークアップのカスタマイズ"
 
 #: ../docs/GettingStarted.md:306
 msgid ""
@@ -1839,15 +1855,20 @@ msgid ""
 "`Name`\n"
 "cannot)."
 msgstr ""
+"YARDは他のコードオブジェクト、URL、ファイル、\n"
+"ドキュメントの間で組み込むdocstringへのリンクの特別な構文をサポートする。\n"
+"この構文は、`{Name OptionalTitle}`の一般的な型を持っている\n"
+"(`OptionalTitle`内でスペースを入れることができるが、\n"
+" `Name`は入れることができない)"
 
 #: ../docs/GettingStarted.md:311
 msgid "### Linking Objects `{...}`"
-msgstr ""
+msgstr "### オブジェクトのリンク `{...}`"
 
 #: ../docs/GettingStarted.md:313
 msgid ""
 "To link another \"object\" (class, method, module, etc.), use the format:"
-msgstr ""
+msgstr "\"他のオブジェクト(class, method, module, etc.)へのリンクには、以下の書式を使う。\""
 
 #: ../docs/GettingStarted.md:315
 msgid ""
@@ -1863,22 +1884,32 @@ msgid ""
 "path to refer to an object inside the same namespace as your current "
 "docstring."
 msgstr ""
+"明確なタイトル無しでは、YARDはオブジェクトのリンク名に相対パスを使う。\n"
+"以下の事に留意する。\n"
+"現在のdocstringのように同じnamespace内にあるオブジェクトを参照する為に、\n"
+"そのオブジェクトパス内で相対パスを使える。"
 
 #: ../docs/GettingStarted.md:323
 msgid ""
 "Note that the `@see` tag automatically links its data. You should not use\n"
 "the link syntax in this tag:"
 msgstr ""
+"留意することは、`@see`タグは自動リンクとなる。\n"
+"このタグのなかでリンク構文を使うべきではない。"
 
 #: ../docs/GettingStarted.md:326
 msgid ""
 "    # @see #methodname   <- Correct.\n"
 "    # @see {#methodname} <- Incorrect."
 msgstr ""
+"    # @see #methodname   <- 正.\n"
+"    # @see {#methodname} <- 誤."
 
 #: ../docs/GettingStarted.md:329
 msgid "If you want to use a Hash, prefix the first { with \"!\":"
 msgstr ""
+"もしあなたがハッシュを使う為にプレフィックスに、\n"
+"最初の{がほしい場合\"!\"を一緒につける。"
 
 #: ../docs/GettingStarted.md:331
 msgid "   # !{ :some_key => 'value' }"
@@ -1886,11 +1917,11 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:333
 msgid "### Linking URLs `{http://...}`"
-msgstr ""
+msgstr "### URLのリンク '{http://...}'"
 
 #: ../docs/GettingStarted.md:335
 msgid "URLs are also linked using this `{...}` syntax:"
-msgstr ""
+msgstr "URLはこの'{...}'構文を用いリンクされる。"
 
 #: ../docs/GettingStarted.md:337
 msgid ""
@@ -1900,7 +1931,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:340
 msgid "### Linking Files `{file:...}`"
-msgstr ""
+msgstr "### ファイルのリンク `{file:...}`"
 
 #: ../docs/GettingStarted.md:342
 msgid ""
@@ -1908,6 +1939,10 @@ msgid ""
 "prefix to the object name. Files refer to extra readme files you added\n"
 "via the command-line. Consider the following examples:"
 msgstr ""
+"ファイルも同じ構文を使ってリンクされる、\n"
+"しかし、オブジェクト名のプレフィックスに`file:`が追加される。\n"
+"ファイルはあなたがコマンドライン経由で追加した特別なreadmeファイルを参照する。\n"
+"次の例を考えてみる。"
 
 #: ../docs/GettingStarted.md:346
 msgid ""
@@ -1919,10 +1954,12 @@ msgstr ""
 msgid ""
 "As shown, you can also add an optional `#anchor` if the page is an HTML link."
 msgstr ""
+"上のように、\n"
+"そのページがHTMLリンク可能な場合は省略可能な`#anchor`を追加できる。"
 
 #: ../docs/GettingStarted.md:351
 msgid "### Embedding Docstrings `{include:...}`"
-msgstr ""
+msgstr "### Docstringの組み込み `{include:...}`"
 
 #: ../docs/GettingStarted.md:353
 msgid ""
@@ -1934,6 +1971,11 @@ msgid ""
 "can\n"
 "embed a docstring (minus tags) at a specific point in the text."
 msgstr ""
+"私達は上で他と一緒にdocstring丸ごとリンクすることを考慮した\n"
+"`{see ...}`構文を見た、\n"
+"しかし、タグなしでdocstringのテキストコピーだけ欲しい場合がある。\n"
+"同じ`{...}`構文と`include:`プレフィックスを用いると、\n"
+"テキストの特定の場所で、タグなしのdocstringを組み込むことができる。\n"
 
 #: ../docs/GettingStarted.md:358
 msgid ""
@@ -1950,7 +1992,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:365
 msgid "The docstring for Bar becomes:"
-msgstr ""
+msgstr "docstringは次のようになる。"
 
 #: ../docs/GettingStarted.md:367
 msgid "    \"This is another class. This class is cool too!\""
@@ -1958,7 +2000,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:369
 msgid "### Embedding Files `{include:file:...}`"
-msgstr ""
+msgstr "### ファイルの埋め込み `{include:file:...}`"
 
 #: ../docs/GettingStarted.md:371
 msgid ""
@@ -1968,6 +2010,12 @@ msgid ""
 "type, it will be applied and embedded as marked up text. The following\n"
 "shows how the tag can be used inside of comments:"
 msgstr ""
+"上の`{include:OBJECT}`タグと同様に、\n"
+"あなたはその内容を埋め込むことができる。\n"
+"ファイルは`{include:file:path/to/file}`を用いる。\n"
+"もしファイルが特定のマークアップ型を使う場合は、\n"
+"マークアップテキストとして適用され組み込まれる。\n"
+"以下は、どのタグがコメントの内部で使うことができるか表す。"
 
 #: ../docs/GettingStarted.md:376
 msgid ""
@@ -1978,7 +2026,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:380
 msgid "### Rendering Objects `{render:...}`"
-msgstr ""
+msgstr "### オブジェクトのレンダリング `{render:...}`"
 
 #: ../docs/GettingStarted.md:382
 msgid ""
@@ -1989,6 +2037,11 @@ msgid ""
 "Consider\n"
 "the following documentation inside of a README file:"
 msgstr ""
+"全てのオブジェクトはドキュメントの適当な位置に表示される。\n"
+"これは、ガイドスタイルドキュメント用に使われる。\n"
+"それは、全てのソースツリーを記述していない。\n"
+"でも、その代わり重要なクラス又はメソッドを選択的に表示する。\n"
+"以下のREADMEファイルの内部のドキュメントを考えてみる。"
 
 #: ../docs/GettingStarted.md:387
 msgid "    = igLatinPay!"
@@ -1999,6 +2052,8 @@ msgid ""
 "    This library adds pig latin methods to the string class, allowing you\n"
 "    to transform sentences into pig latin."
 msgstr ""
+"このライブラリはstringクラスの為にpig latinメソッドを追加する、\n"
+"pig latinの中へ文の変換にはあなたが許可する。"
 
 #: ../docs/GettingStarted.md:392
 msgid "    {render:String#pig_latin}"
@@ -2006,7 +2061,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:394
 msgid "    You can also un-pig-latin-ify a word or sentence:"
-msgstr ""
+msgstr "??あなたは単語や文のun-pig-latin-ifyもできる。"
 
 #: ../docs/GettingStarted.md:396
 msgid "    {render:String#de_pig_latin}"
@@ -2017,6 +2072,8 @@ msgid ""
 "The above would render the methods in place inside the README document,\n"
 "allowing you to summarize a small library in a single file."
 msgstr ""
+"上はREADMEドキュメント内部の中のメソッドを表示する。\n"
+"単一ファイルの中に小さいライブラリで要約することが可能となる。"
 
 #: ../docs/GettingStarted.md:401
 msgid "<a name=\"using\"></a>"
@@ -2024,11 +2081,11 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:403
 msgid "## Using YARD to Generate Documentation"
-msgstr ""
+msgstr "## ドキュメントを生成するYARDの使い方"
 
 #: ../docs/GettingStarted.md:405
 msgid "### `yard` Executable"
-msgstr ""
+msgstr "### 実行可能な`yard`コマンド"
 
 #: ../docs/GettingStarted.md:407
 msgid ""
@@ -2037,6 +2094,9 @@ msgid ""
 "tool \n"
 "if you wanted to:"
 msgstr ""
+"YARDは単一で適切に実行可能な'yard'コマンドとして??出荷する。\n"
+"あなたのプロジェクトの為の標準ドキュメントを生成することに加え\n"
+"以下のツールを使える。"
 
 #: ../docs/GettingStarted.md:411
 msgid ""
@@ -2053,10 +2113,12 @@ msgid ""
 "The following commands are available in YARD 0.6.x (see `yard help` for a \n"
 "full list):"
 msgstr ""
+"以下のコマンドは、YARD 0.6.xで利用できる。\n"
+"(`yard help`コマンドで全てのリストが見れる)"
 
 #: ../docs/GettingStarted.md:421
 msgid "    Usage: yard <command> [options]"
-msgstr ""
+msgstr "    使用法: yard <コマンド> [オプション]"
 
 #: ../docs/GettingStarted.md:423
 msgid ""
@@ -2071,16 +2133,30 @@ msgid ""
 "    server   Runs a local documentation server\n"
 "    stats    Prints documentation statistics on a set of files"
 msgstr ""
+"    Commands:\n"
+"    config   設定を見るか、現在の全体的な構成を編集する\n"
+"    diff     2つのgemsまたは、'.yardoc'ファイルのオブジェクトの差分を返す\n"
+"    doc      ドキュメントを生成する\n"
+"    gems     gemsにYARDのインデックスを組み込む\n"
+"    graph    Graphvizを用いてクラス図を図示する\n"
+"    help     ヘルプコマンド\n"
+"    ri       `ri`のようにコンソールの中でドキュメントを作成する\n"
+"    server   ローカルなドキュメント作成サーバーを起動する\n"
+"    stats    設定したファイルのドキュメントのステータスを出力する"
 
 #: ../docs/GettingStarted.md:434
 msgid ""
 "Note that `yardoc` is an alias for `yard doc`, and `yri` is an alias for\n"
 "`yard ri`. These commands are maintained for backwards compatibility."
 msgstr ""
+"以下の事に留意する。\n"
+"`yardoc`は、`yard doc`コマンドのエイリアスで,\n"
+"`yri`は`yard ri`コマンドのエイリアスということ。\n"
+"これらのコマンドは、後方互換が維持されている。"
 
 #: ../docs/GettingStarted.md:437
 msgid "### `.yardopts` Options File"
-msgstr ""
+msgstr "### `.yardopts` 設定ファイル"
 
 #: ../docs/GettingStarted.md:439
 msgid ""
@@ -2096,6 +2172,14 @@ msgid ""
 "pass\n"
 "to the command-line tool. For instance, if you often type:"
 msgstr ""
+"もしあなたのドキュメントがとても小さくない場合は、\n"
+"結局`yardoc`コマンドと一緒にたくさんの設定を必要としているだろう。\n"
+"`yardoc`コマンドはこのファイルの中で見つけた設定を使う、\n"
+"あなたのリポジトリに入れてあなたのソースと一緒に配布することを推奨する。\n"
+"このファイルはあなたのプロジェクトのルートに位置する。\n"
+"(あなたが`yardoc`を起動するディレクトリの中からの)\n"
+"そして、全ての引数を含んでなければコマンドラインではパスしないだろう。\n"
+"例えば、以下をよくタイプするならば、"
 
 #: ../docs/GettingStarted.md:446
 msgid "    yardoc --no-private --protected app/**/*.rb - README LEGAL COPYING"
@@ -2103,7 +2187,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:448
 msgid "You can place the following into your `.yardopts`:"
-msgstr ""
+msgstr "下のオプションを`.yardopts`の中へ書くことで設定できる。"
 
 #: ../docs/GettingStarted.md:450
 msgid "    --no-private --protected app/**/*.rb - README LEGAL COPYING"
@@ -2111,7 +2195,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:452
 msgid "This way, you only need to type:"
-msgstr ""
+msgstr "この方法を用いると、以下をタイプするだけでよい。"
 
 #: ../docs/GettingStarted.md:454
 msgid "    yardoc"
@@ -2121,7 +2205,7 @@ msgstr ""
 msgid ""
 "Any extra switches passed to the command-line now will be appended to your\n"
 "`.yardopts` options."
-msgstr ""
+msgstr "あなたの`.yardopts`設定にコマンドラインに渡された引数は追加される。"
 
 #: ../docs/GettingStarted.md:459
 msgid ""
@@ -2130,10 +2214,13 @@ msgid ""
 "and a full overview of the `.yardopts` file can be found in {YARD::CLI::"
 "Yardoc}."
 msgstr ""
+"以下の事に留意する。\n"
+"`yardoc`の設定は、{file:README.md README}の中で説明されている。\n"
+"そして、`.yardopts`ファイルの全ての概要は{YARD::CLI::Yardoc}中で見つけられる。"
 
 #: ../docs/GettingStarted.md:462
 msgid "### Documenting Extra Files"
-msgstr ""
+msgstr "### 追加のファイルを記述する"
 
 #: ../docs/GettingStarted.md:464
 msgid ""
@@ -2148,6 +2235,15 @@ msgid ""
 "command\n"
 "line (or in the `.yardopts` file) by listing them after the '-' separator:"
 msgstr ""
+"\"Extra files\"はライブラリやフレームワークで使うのにも、\n"
+"ユーザーにとっての何らかの特別な情報にも、\n"
+"簡単な概要を提供することを助ける\n"
+"追加のガイドスタイルドキュメントとなる。\n"
+"最も一般的な\"extra file\"はREADMEで、\n"
+"それは、もしあなたのプロジェクトのルートの中で見つけた場合、YARDによって自動で検出する。\n"
+"(`README*`で始まる何らかのファイル)\n"
+"以下の用に、追加のファイルの前に'-'セパレータを記述することによって\n"
+"コマンドライン上で(又は,`.yardopts`ファイル内で)指定できる。"
 
 #: ../docs/GettingStarted.md:471
 msgid "    yardoc lib/**/*.rb ext/**/*.c - LICENSE.txt"
@@ -2160,6 +2256,11 @@ msgid ""
 "ignore\n"
 "the first set of arguments:"
 msgstr ""
+"以下の事に留意する。\n"
+"READMEは、自動で選択される。\n"
+"従って、それを指定する必要はない。\n"
+"もしデフォルトのファイルglobを変更しないなら\n"
+"最初に設定する引数は無視できる。"
 
 #: ../docs/GettingStarted.md:477
 msgid "    yardoc - LICENSE.txt"
@@ -2171,10 +2272,12 @@ msgid ""
 "both\n"
 "with markup and pretty titles."
 msgstr ""
+"以降は追加のファイルをカスタマイズする方法について読むことができる。\n"
+"これによってマークアップや巧妙なタイトル両方を使用できる。"
 
 #: ../docs/GettingStarted.md:482
 msgid "#### Adding Meta-Data to Extra Files"
-msgstr ""
+msgstr "#### 追加のファイルにメタデータを追加する"
 
 #: ../docs/GettingStarted.md:484
 msgid ""
@@ -2188,6 +2291,13 @@ msgid ""
 "data \n"
 "in a README:"
 msgstr ""
+"もし`#`ハッシュ記号を使ったコメントによってプレフィックスしたら\n"
+"あなたは何らかの特別なファイルの一番上に、\n"
+"YARDスタイルの`@tag`メタデータを追加できる。\n"
+"YARDは任意のメタデータを受け入れる。\n"
+"しかし、`@markup`,`@encoding`そして`@title`については特別な注意を払う\n"
+"留意することは、タグの前に空白があってはならない。\n"
+"これはREADMEの中のいくつかのタグデータの例:"
 
 #: ../docs/GettingStarted.md:490
 msgid ""
@@ -2198,7 +2308,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:494
 msgid "    This is the best library you will ever meet. Lipsum ..."
-msgstr ""
+msgstr "    これはあなたが出会う最高のライブラリとなる。以下略..."
 
 #: ../docs/GettingStarted.md:496
 msgid ""
@@ -2210,6 +2320,12 @@ msgid ""
 "the extension of the filename, if the file has no extension, or if you want\n"
 "to override the auto-detection."
 msgstr ""
+"`@markup`タグは、\"markdown\", \"textile\", \"rdoc\", \"ruby\", \n"
+"\"text\", \"html\", \"none\"(no markup)を含んでいるファイルを扱う為に、\n"
+"マークアップ書式の指定を可能にする。\n"
+"このマークアップはファイル名の拡張子を自動検出できなかった時や、\n"
+"ファイル名の拡張子がない時や、\n"
+"あなたが(拡張子の)自動検出を上書きしたい時に使われる。"
 
 #: ../docs/GettingStarted.md:502
 msgid ""
@@ -2222,6 +2338,16 @@ msgid ""
 "Also note that this only affects Ruby 1.9.x, as Ruby 1.8 is not properly\n"
 "encoding aware."
 msgstr ""
+"`@encoding`を使用することによって、\n"
+"あなたは非標準のエンコーディングを指定できる。\n"
+"以下の事に留意する。\n"
+"`yardoc --charset`は全体のエンコーディングを設定する(全てのコメント/ファイルで)、\n"
+"なので、もしあなたがで全てのファイルでユニコードを使っているなら、それを指定できる。\n"
+"例えば、ローカライズした`README.jp`ファイルとSJISデータをもっていたら\n"
+"`@encoding`タグを使うことによって、default global charsetを上書きする為に\n"
+"使うことができる。\n"
+"又、これはRuby1.9.xにだけ作用する、\n"
+"Ruby1.8については適切なエンコーディングになっていない。"
 
 #: ../docs/GettingStarted.md:510
 msgid ""
@@ -2231,6 +2357,11 @@ msgid ""
 "name\n"
 "might not be descriptive enough, so YARD allows you to specify a full title:"
 msgstr ""
+"`@title`タグはそのドキュメントでフルタイトル名による指定を許可する。\n"
+"デフォルトでは、YARDはドキュメントのタイトルにファイル名を使う。\n"
+"そして、ファイルリストの中のインデックスやファイルメニューを列挙する。\n"
+"一部の例では、ファイル名は十分に説明できないかもしれない、\n"
+"その為、YARDはあなたがフルタイトルを指定することを認めている。"
 
 #: ../docs/GettingStarted.md:515
 msgid ""
@@ -2243,6 +2374,8 @@ msgid ""
 "Currently all other meta-data is hidden from view, though accessible\n"
 "programmatically using the {YARD::CodeObjects::ExtraFileObject} class."
 msgstr ""
+"現在の全ての他のメタデータは、一覧から隠される、そうはいうものの、\n"
+"{YARD::CodeObjects::ExtraFileObject}クラスを使う事によってプログラムにアクセス可能。"
 
 #: ../docs/GettingStarted.md:521
 msgid "<a name=\"config\"></a>"
@@ -2250,7 +2383,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:523
 msgid "## Configuring YARD"
-msgstr ""
+msgstr "## YARDを構成する"
 
 #: ../docs/GettingStarted.md:525
 msgid ""
@@ -2264,6 +2397,12 @@ msgid ""
 "DEFAULT_CONFIG_OPTIONS}.\n"
 "A sample configuration file might look like:"
 msgstr ""
+"YARD (0.6.2)以降は`~/.yard/config`の中に格納した全体構成ファイルをサポートする。\n"
+"このファイルはYAMLファイルのように格納され、\n"
+"任意のキーと実行時にYARDによって利用できる値を含むことができる。\n"
+"YARDは様々な機能を制御する為に使われるので特定のキーを定義する。\n"
+"それは{YARD::Config::DEFAULT_CONFIG_OPTIONS}の中で列挙される。\n"
+"サンプルの設定ファイルは次のようになる。"
 
 #: ../docs/GettingStarted.md:531 ../docs/WhatsNew.md:426
 msgid ""
@@ -2284,6 +2423,9 @@ msgid ""
 "To view a key, use `yard config ITEM`, and to set it, use `yard config ITEM "
 "VALUE`."
 msgstr ""
+"`yard config`コマンドを使って調べたり、構成設定を編集することもできる。\n"
+"構成をリストするには、`yard config --list`を使う。\n"
+"キーを調べるには、`yard config ITEM`, や、その値を設定する為に`yard config ITEM VALUE`を使う。"
 
 #: ../docs/GettingStarted.md:543
 msgid "<a name=\"extending\"></a>"
@@ -2291,7 +2433,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:545
 msgid "## Extending YARD"
-msgstr ""
+msgstr "## YARDを拡張する"
 
 #: ../docs/GettingStarted.md:547
 msgid ""
@@ -2301,6 +2443,13 @@ msgid ""
 "and documentation from code. An overview of YARD's full architecture can be\n"
 "found in the {file:docs/Overview.md} document."
 msgstr ""
+"非標準のRuby構文(DSL)をサポートする為にYARDを拡張するには、\n"
+"沢山の方法がある。\n"
+"新しいメタデータタグの追加や\n"
+"プログラムで中間のメタデータにアクセスする方法、\n"
+"コードから記述する方法など。\n"
+"YARDの全体構造の概要は、\n"
+"{file:docs/Overview.md}ドキュメントの中で見つけられる。"
 
 #: ../docs/GettingStarted.md:552
 msgid ""
@@ -2308,16 +2457,20 @@ msgid ""
 "md}\n"
 "and {file:docs/Parser.md} architecture documents."
 msgstr ""
+"RubyDSLサポートを追加する方法については、\n"
+"\"{file:docs/Handlers.md}や{file:docs/Parser.md}構造のドキュメントを参照。"
 
 #: ../docs/GettingStarted.md:555
 msgid "For information on adding extra tags, see {file:docs/Tags.md}."
-msgstr ""
+msgstr "特別なタグを追加する方法は{file:docs/Tags.md}を参照。"
 
 #: ../docs/GettingStarted.md:557
 msgid ""
 "For information on accessing the data YARD stores about your documentation,\n"
 "look at the {file:docs/CodeObjects.md} architecture document."
 msgstr ""
+"あなたのドキュメントについて格納したYARDのデータがアクセスする方法は、\n"
+"{file:docs/CodeObjects.md}構造ドキュメント参照。"
 
 #: ../docs/GettingStarted.md:560
 msgid "<a name=\"templating\"></a>"
@@ -2325,7 +2478,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:562
 msgid "## Templating YARD"
-msgstr ""
+msgstr "## YARDのテンプレートを作る"
 
 #: ../docs/GettingStarted.md:564
 msgid ""
@@ -2334,6 +2487,10 @@ msgid ""
 "information after extending it. The {file:docs/Templates.md} architecture\n"
 "document covers the basics of how YARD's templating system works."
 msgstr ""
+"多くの場合、あなたがYARDテンプレートのスタイルを変える為や\n"
+"特別な情報を後で拡張し追加する為に必要だろう。\n"
+"{file:docs/Templates.md}構造ドキュメントは、\n"
+"YARDテンプレートシステム作業の基本をカバーする。"
 
 #: ../docs/GettingStarted.md:568
 msgid "<a name=\"plugins\"></a>"
@@ -2341,7 +2498,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:570
 msgid "## Plugin Support"
-msgstr ""
+msgstr "## プラグインサポート"
 
 #: ../docs/GettingStarted.md:572
 msgid ""
@@ -2354,6 +2511,14 @@ msgid ""
 "installing\n"
 "the gem or cloning the project and trying the example:"
 msgstr ""
+"0.4以降、YARDは`yard-`や `yard_`から始まる名前のgemを\n"
+"自動でロードするだろう。あなたはカスタムプラグインをロードする為に\n"
+"YARDの機能の[extend](#extending)を使える。\n"
+"これの良い例は[yard-rspec][yard-rspec] プラグインで、\n"
+"あなたのドキュメント(`yardoc` and `yri`)に[RSpec][rspec]の仕様を追加する。\n"
+"あなたはgemをインストールすることによって、\n"
+"またはプロジェクトをクローンすることで試すことができる。\n"
+"例を以下に示す。"
 
 #: ../docs/GettingStarted.md:579
 msgid ""
@@ -2371,6 +2536,14 @@ msgid ""
 "might\n"
 "not exist, so you may need to create it."
 msgstr ""
+"YARDはユーザーごとの基本のプラグインを\n"
+"一時的に無効にする方法も提供する。\n"
+"プラグインを無効にする為には、\n"
+"`~/.yard/ignored_plugins`ファイルを作り\n"
+"改行によって区切られた、プラグイン名をリストする。\n"
+"以下の事に留意する。\n"
+"`.yard`ディレクトリは存在しない場合、\n"
+"作成する必要があるかもしれない。"
 
 #: ../docs/GettingStarted.md:588
 msgid ""
