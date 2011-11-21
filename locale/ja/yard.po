@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-21 16:48+0900\n"
+"PO-Revision-Date: 2011-11-21 18:08+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1250,7 +1250,6 @@ msgid ""
 msgstr ""
 
 #: ../docs/GettingStarted.md:44
-#, fuzzy
 msgid ""
 "While this may seem easy enough to read and understand, it's hard for a "
 "machine\n"
@@ -3613,11 +3612,11 @@ msgstr ""
 # title
 #: ../docs/Tags.md:1
 msgid "Tags Overview"
-msgstr ""
+msgstr "タグの概要"
 
 #: ../docs/Tags.md:3
 msgid "# Tags Overview"
-msgstr ""
+msgstr "# タグの概要"
 
 #: ../docs/Tags.md:5
 msgid ""
@@ -3625,6 +3624,8 @@ msgid ""
 "`@tag`\n"
 "style syntax:"
 msgstr ""
+"タグとは以下の様に@tag形式の構文を介して、\n"
+"ドキュメントに追加できるメタデータを表す。"
 
 #: ../docs/Tags.md:8
 msgid ""
@@ -3637,7 +3638,7 @@ msgstr ""
 msgid ""
 "The above example adds metadata under the name `tagname` to the Foo class "
 "object."
-msgstr ""
+msgstr "上記の例では、Fooクラスのオブジェクトへ`tagname`という名でメタデータをつけている。"
 
 #: ../docs/Tags.md:14
 msgid ""
@@ -3649,10 +3650,17 @@ msgid ""
 "metadata and how to extend YARD to support custom tags or override existing "
 "tags."
 msgstr ""
+"コメント文字列全てを解析せずにアクセスできるよう\n"
+"オブジェクトをドキュメント化する際、\n"
+"タグは任意のメタデータを追加する最善の方法となる。\n"
+"このドキュメントの残りの部分は、\n"
+"タグのメタデータにアクセスする方法\n"
+"カスタムタグをサポートしたり、既存のタグを上書きしたりするために\n"
+"YARDを拡張する方法といった、タグの構文の説明になる。"
 
 #: ../docs/Tags.md:19
 msgid "## Tag Syntax"
-msgstr ""
+msgstr "## タグ構文"
 
 #: ../docs/Tags.md:21
 msgid ""
@@ -3662,6 +3670,9 @@ msgid ""
 "following\n"
 "syntax is valid:"
 msgstr ""
+"タグは、コメント行の冒頭にある\\\"@tagname\\\"から始まる。\n"
+"後続の行がスペースでインデントされている場合は複数行にまたがることができる。\n"
+"次の構文は有効となる。"
 
 #: ../docs/Tags.md:25
 msgid ""
@@ -3674,6 +3685,8 @@ msgstr ""
 msgid ""
 "In the above example, \"@tagname\" will have the text *\"This is tag data\"*."
 msgstr ""
+"上記の例で、\"@tagname\"内の情報は\"this is tag data\"となる。\n"
+"(but this is not は含まない)"
 
 #: ../docs/Tags.md:31
 msgid ""
@@ -3683,6 +3696,9 @@ msgid ""
 "below\n"
 "titled \"[Reference Tags](#reftags)\""
 msgstr ""
+"タグのデータが、`（see NAME）`で始まる場合、`それは、`reference tag`とみなされる。\n"
+"`reference tag`の構文と文法は、以下のセクションで説明されている。\n"
+"titled \"[Reference Tags](#reftags)\"\n"
 
 #: ../docs/Tags.md:35
 msgid ""
@@ -3692,16 +3708,22 @@ msgid ""
 "The \n"
 "following syntaxes are available:"
 msgstr ""
+"カスタムタグはどんな方法でも解析できる。しかし、\n"
+"ビルトインタグは、構文を簡単にする為に定められた\n"
+"いくつかの共通する構文構造に従う。\n"
+"次の構文が用意されている。"
 
 #: ../docs/Tags.md:39
 msgid "### Freeform Data"
-msgstr ""
+msgstr "### フリーフォームデータ"
 
 #: ../docs/Tags.md:41
 msgid ""
 "This syntax has no special syntax, it is simply a tagname followed by any\n"
 "data."
 msgstr ""
+"この構文は特別な構文ではなく,\n"
+"何らかのデータに続いたタグ名があるだけとなる。"
 
 #: ../docs/Tags.md:44
 msgid "    @tagname data here"
@@ -3709,7 +3731,7 @@ msgstr ""
 
 #: ../docs/Tags.md:46
 msgid "### Freeform Data With Title"
-msgstr ""
+msgstr "### タイトルを用いたフリーフォームデータ"
 
 #: ../docs/Tags.md:48
 msgid ""
@@ -3722,6 +3744,12 @@ msgid ""
 "first line is the method signature for the overload. Here is an example of "
 "both:"
 msgstr ""
+"フリーフォームタグは最初の行をタイトル(又は,他の関連する識別子)にする。\n"
+"そして、それに続くインデントされた行をタグデータとして処理する。\n"
+"２つの例は@exampleと@overloadタグのケースで、\n"
+"@exampleの場合は最初の行はタイトルとなる。\n"
+"@overloadの場合は最初の行はメソッドの用法となる。\n"
+"ここで両方の例を次に示す。"
 
 #: ../docs/Tags.md:54
 msgid ""
@@ -3740,7 +3768,7 @@ msgstr ""
 
 #: ../docs/Tags.md:63
 msgid "### Data With Optional Type Information"
-msgstr ""
+msgstr "### 任意の型情報がついたデータ"
 
 #: ../docs/Tags.md:65
 msgid ""
@@ -3748,6 +3776,10 @@ msgid ""
 "tag. Type information is specified as a freeform list of Ruby types, duck\n"
 "types or literal values. The following is a valid tag with type information:"
 msgstr ""
+"この構文は、省略できるタグに関連付けられる型情報が含まれる。\n"
+"型情報は、Rubyの型かダックタイプやリテラル値の\n"
+"フリーフォームのリストとして指定される。\n"
+"以下は、型情報を持つ有効なタグとなる。"
 
 #: ../docs/Tags.md:69
 msgid "    @return [String, #read] a string or object that responds to #read"
@@ -3755,7 +3787,7 @@ msgstr ""
 
 #: ../docs/Tags.md:71
 msgid "### Data With Name and Optional Type Information"
-msgstr ""
+msgstr "### 名前と任意の型情報のついたデータ"
 
 #: ../docs/Tags.md:73
 msgid ""
@@ -3765,6 +3797,11 @@ msgid ""
 "following\n"
 "shows how this can be used:"
 msgstr ""
+"省略可能な型情報を用いた上のデータの様な特殊なケースは、\n"
+"データがキーを用い更に関連付けられる場合、\n"
+"@paramのようなタグのケースとなる。\n"
+"`@param`キーのケースの場合は、メソッドの中の名前は引数となる。\n"
+"次のような用法で使われる。"
 
 #: ../docs/Tags.md:78
 msgid "    @param [String] url the URL to perform the request on"
@@ -3775,14 +3812,17 @@ msgid ""
 "Note that \"url\" in the above example is the key name. The syntax is of the "
 "form:"
 msgstr ""
+"以下の事に留意する。\n"
+"上の例の中の\"url\"は、キー名である。\n"
+"この構文は次の形式になる。"
 
 #: ../docs/Tags.md:82
 msgid "    @tagname [types] <name> <description>"
-msgstr ""
+msgstr "    @tagname [型...] <名前> <説明文>"
 
 #: ../docs/Tags.md:84
 msgid "As mentioned, types are optional, so the following is also valid:"
-msgstr ""
+msgstr "型は省略可能で, 以下は同様に有効である"
 
 #: ../docs/Tags.md:86
 msgid "    @param url the URL to perform the request on"
@@ -3794,17 +3834,17 @@ msgstr ""
 
 #: ../docs/Tags.md:91
 msgid "## List of Available Tags"
-msgstr ""
+msgstr "## 利用可能なタグのリスト"
 
 #: ../docs/Tags.md:93
 msgid "YARD supplies the following built-in tags:"
-msgstr ""
+msgstr "YARDは、以下のビルトインタグを用意している。"
 
 #: ../docs/Tags.md:95
 msgid ""
 "  * `@abstract`: Marks a class/module/method as abstract with optional\n"
 "    implementor information."
-msgstr ""
+msgstr "  * `@abstract`: 省略可能な実装者の情報と共にクラス,モジュール,メソッドをマークする。"
 
 #: ../docs/Tags.md:98
 msgid ""
@@ -3820,6 +3860,10 @@ msgid ""
 "is\n"
 "    allowable in this tag, and there are no predefined values(*)."
 msgstr ""
+"  * `@api`: オブジェクトが属するAPIを宣言する。表示はされない。\n"
+"     しかし、クエリーを実行するのに便利である。\n"
+"     (クエリを抽出する為のコマンドは `yardoc --query`がある。)\n"
+"     どんなテキストでもこのタグでは使用できる,また事前に定義された値は無い(*)."
 
 #: ../docs/Tags.md:104
 msgid "        @api freeform text"
@@ -3832,6 +3876,8 @@ msgid ""
 "not\n"
 "    to be used."
 msgstr ""
+"(*) 特別な名前の`@api privete`は、それがあるドキュメントの中に通知を表示する。\n"
+"    そのメソッドが使われていないことをユーザーに知らせる。"
 
 #: ../docs/Tags.md:110
 msgid ""
@@ -3839,6 +3885,8 @@ msgid ""
 "be\n"
 "    used on Struct classes only (classes that inherit Struct)."
 msgstr ""
+"  * `@attr`: クラスのdocstringから属性を宣言する。\n"
+"     Structクラスだけで使用できる。(Structクラスを継承するクラス)"
 
 #: ../docs/Tags.md:113
 msgid ""
@@ -3852,6 +3900,8 @@ msgid ""
 "    Meant to be used on Struct classes only (classes that inherit Struct). "
 "See `@attr`."
 msgstr ""
+"  * `@attr_reader`: クラスのdocstringから読み込み専用属性と宣言する。\n"
+"     Structクラスだけで使用できる。(Structクラスを継承するクラス)`@attr`参照。"
 
 #: ../docs/Tags.md:118
 msgid "        @attr_reader [Types] name description of a readonly attribute"
@@ -3864,6 +3914,8 @@ msgid ""
 "    Meant to be used on Struct classes only (classes that inherit Struct). "
 "See `@attr`."
 msgstr ""
+"  * `@attr_writer`: クラスのdocstringから書き込み専用属性と宣言する\n"
+"     Structクラスだけで使用できる。(Structクラスを継承するクラス)`@attr`参照。"
 
 #: ../docs/Tags.md:123
 msgid "        @attr_writer [Types] name description of writeonly attribute"
@@ -3877,6 +3929,9 @@ msgid ""
 "is \n"
 "    readonly, writeonly, or readwrite (default). Only used with DSL methods."
 msgstr ""
+"  * `@attribute`: DSLクラスメソッドを指定された名前を持つ属性として認識する。\n"
+"     又,r,w,rwフラグは読み込み専用,書込み専用,読書き両用(デフォルト)となる。\n"
+"     DSLのメソッドだけで使用される。\n"
 
 #: ../docs/Tags.md:129
 msgid "        @attribute [rw|r|w] NAME"
@@ -3884,27 +3939,31 @@ msgstr ""
 
 #: ../docs/Tags.md:131
 msgid "  * `@author`: List the author(s) of a class/method"
-msgstr ""
+msgstr "  * `@author`: クラス,メソッドの作者リスト"
 
 #: ../docs/Tags.md:133
 msgid "        @author Full Name"
-msgstr ""
+msgstr "        @author フルネーム"
 
 #: ../docs/Tags.md:135
 msgid ""
 "  * `@deprecated`: Marks a method/class as deprecated with an optional\n"
 "    reason."
 msgstr ""
+"  * `@deprecated`: 廃止予定のメソッド,クラスをマークする。\n"
+"                   任意で理由を書く\n"
 
 #: ../docs/Tags.md:138
 msgid "        @deprecated Describe the reason or provide alt. references here"
-msgstr ""
+msgstr "        @deprecated  廃止の理由や代替のメソッドの説明する。参照はこちら"
 
 #: ../docs/Tags.md:140
 msgid ""
 "  * `@example`: Show an example snippet of code for an object. The\n"
 "    first line is an optional title."
 msgstr ""
+"  * `@example`: コードの一部を例として表示する。\n"
+"     最初の行は省略可能なタイトルである。\n"
 
 #: ../docs/Tags.md:143
 msgid ""
@@ -3917,6 +3976,9 @@ msgid ""
 "  * `@macro`: Registers or expands a new macro. See the [Macros](#macros)\n"
 "    section for more details. Note that the name parameter is never optional."
 msgstr ""
+"  * `@macro`: 新しいマクロを登録または拡張する。\n"
+"     詳細は [Macros](#macros) 参照。\n"
+"     NAMEというパラメータは省略できないことに注意する。\n"
 
 #: ../docs/Tags.md:149
 msgid ""
@@ -3930,6 +3992,8 @@ msgid ""
 "name\n"
 "    and optional signature. Only used with DSL methods."
 msgstr ""
+"  * `@method`: DSLクラスメソッドを名前と省略可能な用法がついたメソッドとして認識する。\n"
+"               DSLメソッドと一緒の時だけ使われる。"
 
 #: ../docs/Tags.md:155
 msgid "        @method method_signature(opts = {}, &block)"
@@ -3940,6 +4004,8 @@ msgid ""
 "  * `@note`: Creates an emphasized note for the users to read about the\n"
 "    object."
 msgstr ""
+"  * `@note`: ユーザがオブジェクトのことを読んで知るために、\n"
+"     強調された注意書きを作る。\n"
 
 #: ../docs/Tags.md:160
 msgid "        @note This method should only be used in outer space."
@@ -3952,6 +4018,11 @@ msgid ""
 "    the option key name, an optional default value for the key and a \n"
 "    description of the option."
 msgstr ""
+"  * `@option`: メソッドの中のハッシュの設定を説明をする。\n"
+"    タグは最初にパラメーターの設定の名前を取得する。\n"
+"    (以下の例でいえば、@paramのopts)\n"
+"    それに続いて、省略可能な型(複数指定可),キー名の設定,\n"
+"    キー名のデフォルトの値(省略可能),設定の説明がある。"
 
 #: ../docs/Tags.md:167
 msgid ""
@@ -3972,6 +4043,12 @@ msgid ""
 "    indented tag data will be a new documentation string with its\n"
 "    own tags adding metadata for such an overload."
 msgstr ""
+"  * `@overload`: 様々な引数やリターンタイプとともに様々なコンテキストで\n"
+"    使うことができるメソッドを説明する。\n"
+"    最初の行で新しいメソッドの用法を宣言しなければならない、\n"
+"    そしてそれにつづくインデントされたタグデータは、\n"
+"    多重定義用にメタデータがタグに追加された\n"
+"    新しい文字列となる。"
 
 #: ../docs/Tags.md:181
 msgid ""
