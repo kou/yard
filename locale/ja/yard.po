@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-21 16:08+0900\n"
+"PO-Revision-Date: 2011-11-21 16:32+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -2585,11 +2585,11 @@ msgstr ""
 # title
 #: ../docs/Handlers.md:1
 msgid "Handlers Architecture"
-msgstr ""
+msgstr "ハンドラー構造"
 
 #: ../docs/Handlers.md:3
 msgid "# Handlers Architecture"
-msgstr ""
+msgstr "# ハンドラー構造"
 
 #: ../docs/Handlers.md:5
 msgid ""
@@ -2598,6 +2598,11 @@ msgid ""
 "analysis on source and to only deal with the logic regarding recognizing\n"
 "source statements as {file:docs/CodeObjects.md code objects}."
 msgstr ""
+"ハンドラーは、ソースコードを解析した処理を受け入れる。\n"
+"これの処理は、実行する単語の詳細の抽象化を解析の後で行う。\n"
+"そして、意味のあるソースの分析や、\n"
+"ロジックに関しては{file:docs/CodeObjects.md code objects}のような\n"
+"ソース文の受け入れだけで扱う。"
 
 #: ../docs/Handlers.md:10
 msgid ""
@@ -2606,7 +2611,7 @@ msgstr ""
 
 #: ../docs/Handlers.md:12
 msgid "## The Pipeline"
-msgstr ""
+msgstr "## パイプライン"
 
 #: ../docs/Handlers.md:14
 msgid ""
@@ -2621,10 +2626,17 @@ msgid ""
 "`process`\n"
 "method."
 msgstr ""
+"{file:docs/Parser.md parser component}がソースを解析すると、\n"
+"後処理する為に{YARD::Handlers::Processor} クラスに渡す。\n"
+"そしてパーサーによって与える文の設定を辿ったり、\n"
+"ハンドラーがマッチしている文を委譲する責任がある。\n"
+"{YARD::Handlers::Base.handles?}メソッドがtrueを返す時、\n"
+"ハンドラーがマッチしている文を与える。\n"
+"ハンドラーは`process`メソッドによって呼び出した後で任意の処理を実行できる。\n"
 
 #: ../docs/Handlers.md:22
 msgid "## The Processor Class"
-msgstr ""
+msgstr "## プロセッサークラス"
 
 #: ../docs/Handlers.md:24
 msgid ""
@@ -2645,10 +2657,23 @@ msgid ""
 "the \n"
 "owner would be the method object itself."
 msgstr ""
+"主なプロセッサーの目的は、上で述べたように、\n"
+"パーサーによって与える文のリストを通じて辿ることである。\n"
+"プロセッサーは処理されている状態について管理する。\n"
+"例えば、プロセッサーは現在の\n"
+"ネームスペース(モジュールやオブジェクトのクラスが定義される)、\n"
+"スコープ(クラスやインスタンス)、ファイルと所有者\n"
+"を追跡する。\n"
+"所有者は、オブジェクトを参照する。\n"
+"そのオブジェクトは処理されるソース命令文に最も直接的な責任を持つ。\n"
+"これは(参照するオブジェクトの対象は)、多くの場合ネームスペースと同じで、\n"
+"メソッドの本体を解析した時を除き、\n"
+"そのネームスペースでは、クラスやモジュール,メソッドが定義される。\n"
+"そして所有者はメソッドオブジェクト自体となる。"
 
 #: ../docs/Handlers.md:34
 msgid "## Implementing a Handler"
-msgstr ""
+msgstr "## ハンドラーを実装する"
 
 #: ../docs/Handlers.md:36
 msgid ""
@@ -2657,6 +2682,8 @@ msgid ""
 "details on implementing a legacy handler, see the \"API Differences\" "
 "section below."
 msgstr ""
+"このセクションは *新しいスタイル* Rubyハンドラー処理の基本をカバーする。\n"
+"レガシーなハンドラーの詳細は、\\\"API Differences\\\" セクション以下を参照。"
 
 #: ../docs/Handlers.md:39
 msgid ""
@@ -2667,6 +2694,11 @@ msgid ""
 "class method. A very simple handler that handles a module definition would "
 "be:"
 msgstr ""
+"Rubyハンドラーは処理の為に、\n"
+"{YARD::Handlers::Base.handles handles}クラスメソッドを用い、\n"
+"{YARD::Handlers::Ruby::Base}サブクラスや、\n"
+"ノードタイプやソースを宣言することによって実行される。\n"
+"モジュール定義の処理は次のような非常に簡単なハンドラーである。"
 
 #: ../docs/Handlers.md:43
 msgid ""
@@ -2687,6 +2719,8 @@ msgid ""
 "For details on what nodes are, and what node types are, see the \n"
 "{file:docs/Parser.md parser architecture document}."
 msgstr ""
+"ノードやノードの型の詳細については、\n"
+"{file:docs/Parser.md parser architecture document}参照。"
 
 #: ../docs/Handlers.md:54
 msgid ""
@@ -2702,10 +2736,17 @@ msgid ""
 "current\n"
 "node (or statement) that is being handled by the handler."
 msgstr ""
+"このケースの場合、処理されるノードタイプは`:module`タイプである。\n"
+"複数のノードタイプや`handles`宣言は一つのハンドラーを記述する。\n"
+"例えば、ハンドラーはhandlesクラス定義が`:class`や\n"
+"`:sclass`ノードタイプそれぞれを処理する。\n"
+"(後者の:sclassは`class << Something`のようにクラス定義を参照する。)\n"
+"{YARD::Handlers::Base#statement statement}属性は、\n"
+"ハンドラーによって処理される現在のノード(や文を)参照する。"
 
 #: ../docs/Handlers.md:61
 msgid "### Handling a Method Call"
-msgstr ""
+msgstr "### メソッド呼び出しの処理"
 
 #: ../docs/Handlers.md:63
 msgid ""
@@ -2715,6 +2756,10 @@ msgid ""
 "method\n"
 "call can be handled by declaring the following in a `handles` statement:"
 msgstr ""
+"場合によって開発者は、メソッド呼び出し操作を必要とするかもしれない。\n"
+"パーサーは多くのAST型(Abstract Syntax Tree)の中で、\n"
+"メソッド呼び出しを表現できる。そして、この処理を簡素化する為に、\n"
+"メソッド呼び出しは、次のような`handles`文の中で宣言される事によって処理される。"
 
 #: ../docs/Handlers.md:67
 msgid ""
@@ -2736,6 +2781,8 @@ msgid ""
 "with \n"
 "the following syntaxes:"
 msgstr ""
+"このケースでは、私達はメソッド名`describe`のメソッド呼び出しを\n"
+"次の構文のように処理できる。"
 
 #: ../docs/Handlers.md:78
 msgid ""
@@ -2749,7 +2796,7 @@ msgstr ""
 
 #: ../docs/Handlers.md:85
 msgid "### Creating a new Code Object"
-msgstr ""
+msgstr "### 新しいコードオブジェクトを作成する"
 
 #: ../docs/Handlers.md:87
 msgid ""
@@ -2766,6 +2813,15 @@ msgid ""
 "the\n"
 "object. This method will be seen in the next example."
 msgstr ""
+"通常(しかし、いつもではない)の処理は、\n"
+"レジストリを追加する新しいコードオブジェクトの作成が実行される。\n"
+"(コードオブジェクトについては{file:docs/CodeObjects.md this document}参照)\n"
+"コードオブジェクトは単純に作成されたり存在する`namespace`に追加される。\n"
+"これは、レジストリにそれらを追加するだけで十分である。\n"
+"何故なら便利な{YARD::Handlers::Base#register register}メソッドがあり、\n"
+"これは新たに作成されるオブジェクト、ファイル、行、\n"
+"ソースやオブジェクトのdocstringのような標準属性を素早く設定する。\n"
+"このメソッドは次の例の中で見られるだろう。"
 
 #: ../docs/Handlers.md:95
 msgid "### Handling an Inner Block"
@@ -2787,6 +2843,16 @@ msgid ""
 "parsing\n"
 "only the inner blocks that are relevant to documentation."
 msgstr ""
+"デフォルトでパーサーは全てのトップレベル文から、\n"
+"プロセッサークラスのリストを与える。\n"
+"そして、プロセッサーは、トップレベル文だけ解析する。\n"
+"モジュール、クラス、メソッド内でブロックが宣言される場合や、\n"
+"ブロックが処理されるメソッド呼び出しを解析した場合でさえ、\n"
+"{YARD::Handlers::Base#parse_block parse_block}メソッドは、\n"
+"解析の為に文のリストを呼び出さなければならない。\n"
+"これは命令文のリストの処理を継続するプロセッサーにリストを送信する。\n"
+"ソースツリーは、ドキュメント作成に関連したブロック内だけ解析することによって、\n"
+"この形式の中で選択され抜粋される。"
 
 #: ../docs/Handlers.md:105
 msgid ""
@@ -2794,6 +2860,8 @@ msgid ""
 "performing\n"
 "the following commands:"
 msgstr ""
+"例えばモジュールハンドラーは、\n"
+"以下のコマンドを実行することによってモジュールから内部の本体を解析する。"
 
 #: ../docs/Handlers.md:108
 msgid ""
@@ -2821,6 +2889,12 @@ msgid ""
 "options\n"
 "on the `parse_block` method."
 msgstr ""
+"この場合`statement[1]`は追加の文で、\n"
+"私達が解析するブロックのリストを参照する。\n"
+"ここにあるように、\n"
+"モジュールやクラスのようにオブジェクトを解析する時、\n"
+"私達は`parse_block`メソッドのオプションが設定されることによって\n"
+"解析しているブロックの範囲をネームスペースに設定する。"
 
 #: ../docs/Handlers.md:123
 msgid "### API Differences for Legacy Handler"
@@ -2839,11 +2913,18 @@ msgid ""
 "of semantically parsed nodes (this is described in the {file:docs/Parser.md "
 "parser document})."
 msgstr ""
+"レガシーハンドラーはレガシーパーサーを使い,\n"
+"それに伴い異る種類のASTがあるのでハンドラーAPIに微妙な違いがある。\n"
+"最も重要なことだが、`handles`メソッドは通常、\n"
+"単語のトークンやソースコード、文字列やRegExpオブジェクトと共に処理する。\n"
+"文のオブジェクトと同様、意味のある解析されるノードの代わりに、\n"
+"単語のトークンから構成される。\n"
+"(これは{file:docs/Parser.md parser document}の中で記述される)"
 
 #: ../docs/Handlers.md:131
 msgid ""
 "The module example above can be rewritten as a legacy handler as follows:"
-msgstr ""
+msgstr "上記のモジュール例は、次のようなレガシーハンドラーによって再書込みされる。"
 
 #: ../docs/Handlers.md:133
 msgid ""
@@ -2865,7 +2946,7 @@ msgstr ""
 
 #: ../docs/Handlers.md:143
 msgid "A few notes on the differences:"
-msgstr ""
+msgstr "標準のハンドラーとの違いに関するいくつかの注意。"
 
 #: ../docs/Handlers.md:145
 msgid ""
@@ -2881,6 +2962,15 @@ msgid ""
 "will \n"
 "    always parse the `statement.block` if it exists."
 msgstr ""
+"  * 標準のRubyBaseハンドラークラスの代わりに`Legacy::Base`から継承する。\n"
+"  * ノードタイプ`:module`を`TkMODULE`へ交換する、\n"
+"    それは、命令文の中の最初のトークンを表す。\n"
+"  * モジュール名を取得する為に直接文字列操作を実行する。\n"
+"  * `parse_block`は命令文のリストを取得しない。\n"
+"    古いパーサーの中のAPIで、\n"
+"    それぞれの命令文は`block`属性を持っていたら\n"
+"    命令文の中に命令文のリストを定義する、\n"
+"    従って、`parse_block`は、`statement.block`が存在すれば解析する。\n"
 
 # title
 #: ../docs/Overview.md:1
