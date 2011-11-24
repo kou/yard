@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-24 14:22+0900\n"
+"PO-Revision-Date: 2011-11-24 15:36+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -3846,7 +3846,7 @@ msgstr ""
 
 #: ../docs/Tags.md:82
 msgid "    @tagname [types] <name> <description>"
-msgstr "    @tagname [型...] <名前> <説明文>"
+msgstr ""
 
 #: ../docs/Tags.md:84
 msgid "As mentioned, types are optional, so the following is also valid:"
@@ -3878,7 +3878,7 @@ msgstr "  * `@abstract`: 省略可能な実装者の情報と共にクラス,モ
 msgid ""
 "        @abstract Subclass and override {#run} to implement a custom "
 "Threadable class."
-msgstr "        @abstract カスタムThreadableクラスに{#run}メソッドをサブクラス化や上書きする。"
+msgstr ""
 
 #: ../docs/Tags.md:100
 msgid ""
@@ -3895,7 +3895,7 @@ msgstr ""
 
 #: ../docs/Tags.md:104
 msgid "        @api freeform text"
-msgstr "        @api フリーフォームテキスト"
+msgstr ""
 
 #: ../docs/Tags.md:106
 msgid ""
@@ -3972,7 +3972,7 @@ msgstr "  * `@author`: クラス,メソッドの作者リスト"
 
 #: ../docs/Tags.md:133
 msgid "        @author Full Name"
-msgstr "        @author フルネーム"
+msgstr ""
 
 #: ../docs/Tags.md:135
 msgid ""
@@ -3984,7 +3984,7 @@ msgstr ""
 
 #: ../docs/Tags.md:138
 msgid "        @deprecated Describe the reason or provide alt. references here"
-msgstr "        @deprecated  廃止の理由や代替のメソッドの説明する。参照はこちら"
+msgstr ""
 
 #: ../docs/Tags.md:140
 msgid ""
@@ -4020,9 +4020,7 @@ msgid ""
 "  * `@method`: Recognizes a DSL class method as a method with the given "
 "name\n"
 "    and optional signature. Only used with DSL methods."
-msgstr ""
-"  * `@method`: DSLクラスメソッドを名前と省略可能な用法がついたメソッドとして認識する。\n"
-"               DSLメソッドと一緒の時だけ使われる。"
+msgstr "  * `@method`: DSLクラスメソッドを名前と省略可能な用法がついたメソッドとして認識する。DSLメソッドと一緒の時だけ使われる。"
 
 #: ../docs/Tags.md:155
 msgid "        @method method_signature(opts = {}, &block)"
@@ -4109,12 +4107,10 @@ msgid ""
 "    command-line switch to yardoc (see {file:README.md})."
 msgstr ""
 "  * `@private`: privateとしてオブジェクトを定義する。\n"
-"    これはRubyの可視性に従わないクラス、\n"
-"    モジュール、定数のために存在する。\n"
-"    たとえば、Rubyはそのような区分はしないだろうが,\n"
-"    内部クラスは\"private\"だと考える場合、\n"
-"    yardoc用のコマンド`--no-private`({file:README.md} 参照)を使うことによって\n"
-"    @privateタグを宣言すると、クラスをドキュメンテーションから隠すことができる。"
+"これはRubyの可視性に従わないクラス、モジュール、定数のために存在する。\n"
+"たとえば、Rubyはそのような区分はしないだろうが,内部クラスは\"private\"だと考える場合、\n"
+"yardoc用のコマンド`--no-private`({file:README.md} 参照)を使うことによって\n"
+"@privateタグを宣言すると、クラスをドキュメンテーションから隠すことができる。"
 
 #: ../docs/Tags.md:202
 msgid "        @private"
@@ -4134,7 +4130,7 @@ msgstr "  * `@return`: メソッドの戻り値を説明する。"
 
 #: ../docs/Tags.md:210
 msgid "        @return [optional, types, ...] description"
-msgstr ""
+msgstr "        @return [型(省略可能)...] 説明"
 
 #: ../docs/Tags.md:212
 msgid ""
@@ -4147,7 +4143,7 @@ msgstr ""
 
 #: ../docs/Tags.md:215
 msgid "        @scope class|instance"
-msgstr ""
+msgstr "        @scope クラス又はインスタンス"
 
 #: ../docs/Tags.md:217
 msgid ""
@@ -4331,7 +4327,7 @@ msgstr ""
 
 #: ../docs/Tags.md:300
 msgid "## Macros"
-msgstr ""
+msgstr "## マクロ"
 
 #: ../docs/Tags.md:302
 msgid ""
@@ -4407,8 +4403,8 @@ msgid ""
 "For instance, creating a new macro might look like (see the section on\n"
 "interpolation below for a description of the `$2` syntax):"
 msgstr ""
-"例えば、新しいマクロを作ることは◯◯のように見える。\n"
-"(`$2`構文で説明されている補間のセクションを見よ)\n"
+"例えば、新しいマクロを作ることは以下のようになる。\n"
+"(`$2`構文の説明は補間のセクション参照)"
 
 #: ../docs/Tags.md:335
 msgid ""
@@ -4599,8 +4595,8 @@ msgid ""
 msgstr ""
 "もし、元々のクラスのメソッドでマクロを宣言してなくても、\n"
 "他のメソッド呼び出しでマクロを付けることができる。\n"
-"我々のコードベースの中でしかPostクラスを持っていないとすれば、\n"
-"`property`呼び出しで初めて使う時にマクロをつけることができるだろう。"
+"自身のコードベースの中でしかPostクラスを持っていないとすれば、\n"
+"`property`呼び出しで初めて使う時にマクロをつけることができる。"
 
 #: ../docs/Tags.md:422
 msgid ""
@@ -4635,7 +4631,7 @@ msgstr ""
 "$0は、このケースのプロパティでは、\n"
 "メソッドコール自体を参照する特別な変数である。\n"
 "最後に、$&変数というのがある。\n"
-"これは全ての行あるいは'property :title, String'.を参照する。\n"
+"これは全ての行あるいは'property :title, String'.を参照する。"
 
 #: ../docs/Tags.md:438
 msgid "#### Ranges"
@@ -4694,11 +4690,11 @@ msgstr ""
 
 #: ../docs/Tags.md:461
 msgid "#### Escaping Interpolation"
-msgstr "#### 補完をエスケープする"
+msgstr "#### 補間をエスケープする"
 
 #: ../docs/Tags.md:463
 msgid "Interpolation can be escaped by prefixing the `$` with `\\`, like so:"
-msgstr "補完をエスケープするには、下の様に`$`の前に`\\`置く事でエスケープする。"
+msgstr "補間をエスケープするには、下の様に`$`の前に`\\`置く事でエスケープする。"
 
 #: ../docs/Tags.md:465
 msgid ""
@@ -4752,9 +4748,9 @@ msgid ""
 msgstr ""
 "同じ名前の複数のタグが格納されることもあるので、\n"
 "それらはタグのリストとなっている。\n"
-"#tag method はタグのリストにおける最初のアイテムのエイリアスである。\n"
-"また、the #tagについても述べておく。\n"
-"#tags と#has_tag?のメソッドは上で記述された{YARD::Docstring}\n"
+"`#tag`メソッドはタグのリストにおける最初のアイテムのエイリアスである。\n"
+"また、the `#tag`についても述べておく。\n"
+"`#tags` と`#has_tag?`のメソッドは上で記述された{YARD::Docstring}\n"
 "オブジェクトを委譲する便利なメソッドである。"
 
 #: ../docs/Tags.md:486
@@ -4949,10 +4945,8 @@ msgid ""
 "example,\n"
 "a tag can also be declared as follows:"
 msgstr ""
-"ファクトリーはタグが宣言される時に、\n"
-"接頭辞を追加する為にSUFFIXを参照する所で\n"
-"`parse_tag_SUFFIX`のように`parse_tag`メソッドが実装される。\n"
-"例えば、次のようにタグは定義できる。"
+"ファクトリーはタグが宣言される時に、`parse_tag_SUFFIX`メソッドのように\n"
+"`parse_tag`メソッドが実装される。例えば、次のようにタグは定義できる。"
 
 #: ../docs/Tags.md:558
 msgid "    YARD::Tags::Library.define_tag \"Parameter\", :param, :with_types"
@@ -4968,7 +4962,7 @@ msgid ""
 "implemented\n"
 "as:"
 msgstr ""
-"そのようなケースでは、ファクトリーは`parse_tag_with_types`とともに呼ばれる。\n"
+"上のようなケースでは、ファクトリーは`parse_tag_with_types`とともに呼び出される。\n"
 "メソッドは新しい{YARD::Tags::Tag}オブジェクトを必ず返さなければならない。\n"
 "一般に、`parse_tag`メソッドは2つか3つの引数を取得する。\n"
 "単純なタグは次のように実装することができる。"
@@ -5011,7 +5005,7 @@ msgstr ""
 
 #: ../docs/Tags.md:580
 msgid "### Changing the Factory"
-msgstr "### factoryを変更する"
+msgstr "### ファクトリーを変更する"
 
 #: ../docs/Tags.md:582
 msgid ""
@@ -5029,7 +5023,7 @@ msgstr ""
 msgid ""
 "This must be done before any parsing is done, or the factory will not be "
 "used."
-msgstr "解析が完了する前にしなければならない、さもなければfactoryは使えません。"
+msgstr "これは解析が完了する前にしなければならない、でなければfactoryは使えない。"
 
 # title
 #: ../docs/Templates.md:1
