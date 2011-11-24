@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-24 18:31+0900\n"
+"PO-Revision-Date: 2011-11-24 18:52+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -4029,7 +4029,7 @@ msgstr ""
 
 #: ../docs/Tags.md:82
 msgid "    @tagname [types] <name> <description>"
-msgstr ""
+msgstr "    @tagname [型] <名前> <説明>"
 
 #: ../docs/Tags.md:84
 msgid "As mentioned, types are optional, so the following is also valid:"
@@ -4055,13 +4055,13 @@ msgstr "YARDは、以下のビルトインタグを用意している。"
 msgid ""
 "  * `@abstract`: Marks a class/module/method as abstract with optional\n"
 "    implementor information."
-msgstr "  * `@abstract`: 省略可能な実装者の情報と共にクラス,モジュール,メソッドをマークする。"
+msgstr "  * `@abstract`: 省略可能な実装者の情報と共にクラス,モジュール,メソッドの概要をマークする。"
 
 #: ../docs/Tags.md:98
 msgid ""
 "        @abstract Subclass and override {#run} to implement a custom "
 "Threadable class."
-msgstr ""
+msgstr "        @abstract カスタムThreadableクラスを実装する為に{#run}メソッドをサブクラス化や上書きする"
 
 #: ../docs/Tags.md:100
 msgid ""
@@ -4078,7 +4078,7 @@ msgstr ""
 
 #: ../docs/Tags.md:104
 msgid "        @api freeform text"
-msgstr ""
+msgstr "        @api フリーフォームテキスト"
 
 #: ../docs/Tags.md:106
 msgid ""
@@ -4103,7 +4103,7 @@ msgstr ""
 #: ../docs/Tags.md:113
 msgid ""
 "        @attr [Types] attribute_name a full description of the attribute"
-msgstr ""
+msgstr "        @attr [型...] 属性名 属性の全ての説明"
 
 #: ../docs/Tags.md:115
 msgid ""
@@ -4117,7 +4117,7 @@ msgstr ""
 
 #: ../docs/Tags.md:118
 msgid "        @attr_reader [Types] name description of a readonly attribute"
-msgstr ""
+msgstr "        @attr_reader [型...] 名前 読取り専用属性の説明"
 
 #: ../docs/Tags.md:120
 msgid ""
@@ -4131,7 +4131,7 @@ msgstr ""
 
 #: ../docs/Tags.md:123
 msgid "        @attr_writer [Types] name description of writeonly attribute"
-msgstr ""
+msgstr "        @attr_writer [型...] 名前 書込み専用属性の説明"
 
 #: ../docs/Tags.md:125
 msgid ""
@@ -4147,7 +4147,7 @@ msgstr ""
 
 #: ../docs/Tags.md:129
 msgid "        @attribute [rw|r|w] NAME"
-msgstr ""
+msgstr "        @attribute [rw|r|w] 名前"
 
 #: ../docs/Tags.md:131
 msgid "  * `@author`: List the author(s) of a class/method"
@@ -4155,19 +4155,17 @@ msgstr "  * `@author`: クラス,メソッドの作者リスト"
 
 #: ../docs/Tags.md:133
 msgid "        @author Full Name"
-msgstr ""
+msgstr "        @author フルネーム"
 
 #: ../docs/Tags.md:135
 msgid ""
 "  * `@deprecated`: Marks a method/class as deprecated with an optional\n"
 "    reason."
-msgstr ""
-"  * `@deprecated`: 廃止予定のメソッド,クラスをマークする。\n"
-"                   任意で理由を書く\n"
+msgstr "  * `@deprecated`: 廃止予定のメソッド,クラスをマークする。任意で理由を書く"
 
 #: ../docs/Tags.md:138
 msgid "        @deprecated Describe the reason or provide alt. references here"
-msgstr ""
+msgstr "        @deprecated 廃止される理由や代替の提供についての参照をここに書く。"
 
 #: ../docs/Tags.md:140
 msgid ""
@@ -4197,6 +4195,8 @@ msgid ""
 "        @macro [new|attached] macro_name\n"
 "          The macro contents to expand"
 msgstr ""
+"        @macro [new,又は,attached] マクロ名\n"
+"          展開する内容をここ以降に書く"
 
 #: ../docs/Tags.md:152
 msgid ""
@@ -4219,7 +4219,7 @@ msgstr ""
 
 #: ../docs/Tags.md:160
 msgid "        @note This method should only be used in outer space."
-msgstr ""
+msgstr "        @note このメソッドは外部からのみ利用される。"
 
 #: ../docs/Tags.md:162
 msgid ""
@@ -4305,7 +4305,7 @@ msgstr "  * `@raise`: メソッドが投げる例外を記述する。"
 
 #: ../docs/Tags.md:206
 msgid "        @raise [ExceptionClass] description"
-msgstr ""
+msgstr "        @raise [ExceptionClass] 説明"
 
 #: ../docs/Tags.md:208
 msgid "  * `@return`: Describes return value of method"
