@@ -3,6 +3,6 @@
   <% consts = run_verifier superclass.constants(:included => false, :inherited => false) %>
   <% consts.reject! {|m| object.child(:scope => :class, :name => m.name) != nil } %>
   <% next if consts.size == 0 %>
-  <h3 class="inherited"><%= format(superclass.type == :class ? _("Constants inherited from %{superclass}") : _("Constants included from %{superclass}"), :superclass => (linkify superclass)) %></h3>
+  <h3 class="inherited"><%= (superclass.type == :class ? _("Constants inherited from %{superclass}") : _("Constants included from %{superclass}")) % {:superclass => (linkify superclass)} %></h3>
   <p class="inherited"><%= consts.sort_by {|o| o.name.to_s }.map {|m| linkify(m, m.name) }.join(", ") %></p>
 <% end %>
