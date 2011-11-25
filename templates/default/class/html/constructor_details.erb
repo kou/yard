@@ -1,7 +1,7 @@
 <div id="constructor_details" class="method_details_list">
   <h2><%= _("Constructor Details") %></h2>
   <% if @ctor.namespace != object %>
-    <p class="notice"><%= format(_("This class inherits a constructor from %{superclass}"), :superclass => (linkify @ctor, @ctor.namespace.path)) %></p>
+    <p class="notice"><%= _("This class inherits a constructor from %{superclass}") % {:superclass => (linkify @ctor, @ctor.namespace.path)} %></p>
   <% else %>
     <%= yieldall :object => @ctor, :index => 0 %>
   <% end %>

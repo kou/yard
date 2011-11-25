@@ -110,7 +110,7 @@ def groups(list, type = "Method")
     group_data.each {|group, items| yield(items, group) unless items.empty? }
   end
   
-  scopes(others) {|items, scope| yield(items, format(_("%{scope} %{type} Summary"), :scope => _(scope.to_s.capitalize), :type => _(type))) }
+  scopes(others) {|items, scope| yield(items, _("%{scope} %{type} Summary") % {:scope => _(scope.to_s.capitalize), :type => _(type)}) }
 end
 
 N_("Class")
