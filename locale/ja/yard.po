@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-24 18:52+0900\n"
+"PO-Revision-Date: 2011-11-25 09:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -2254,6 +2254,8 @@ msgid ""
 "    This library adds pig latin methods to the string class, allowing you\n"
 "    to transform sentences into pig latin."
 msgstr ""
+"    このライブラリはstring classの為にpig latinメソッドを追加する。\n"
+"    pig latinへ文を変換する事を可能にする。"
 
 #: ../docs/GettingStarted.md:392
 msgid "    {render:String#pig_latin}"
@@ -2261,7 +2263,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:394
 msgid "    You can also un-pig-latin-ify a word or sentence:"
-msgstr ""
+msgstr "    あなたは単語や文を以下の様にpig-latinにしないこともできる。"
 
 #: ../docs/GettingStarted.md:396
 msgid "    {render:String#de_pig_latin}"
@@ -2324,7 +2326,7 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:421
 msgid "    Usage: yard <command> [options]"
-msgstr ""
+msgstr "    Usage: yard <コマンド> [オプション...]"
 
 #: ../docs/GettingStarted.md:423
 msgid ""
