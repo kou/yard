@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-25 19:14+0900\n"
+"PO-Revision-Date: 2011-11-28 11:57+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16018,22 +16018,13 @@ msgid ""
 msgstr ""
 "オブジェクトが認識される時に例外を上げる。\n"
 "しかし、記述される事はない。\n"
-"Raised\n"
-"when an object is recognized but cannot be documented.\n"
-"これは通常 使った時に起る。\n"
-"Ruby構文が\n"
-"\n"
-"\n"
-"オブジェクトが自然の中で動的すぎる\n"
-"\n"
-"宣言する為に\n"
-"This generally occurs when the Ruby syntax used\n"
-"to declare an object is too dynamic in nature."
+"これは通常オブジェクトを宣言する為に\n"
+"使われたRuby構文が動的すぎる時に起る。"
 
 # YARD::Parser::ParserSyntaxError
 #: ../lib/yard/parser/source_parser.rb:14
 msgid "Raised when the parser sees a Ruby syntax error"
-msgstr ""
+msgstr "パーサーがRubyの構文のエラーを発見した時、例外を上げる。"
 
 # YARD::Parser::LoadOrderError
 #: ../lib/yard/parser/source_parser.rb:17
@@ -16042,6 +16033,13 @@ msgid ""
 "{CodeObjects::NamespaceObject} (usually by adding a child to it)\n"
 "that has not yet been resolved."
 msgstr ""
+"LoadOrderErrorは、ハンドラーがまだ解決されていない、\n"
+"{CodeObjects::NamespaceObject}(通常,その為に子を追加する事によって)\n"
+"の変更の為に必要な時に起る。\n"
+"\n"
+"A LoadOrderError occurs when a handler needs to modify a\n"
+"{CodeObjects::NamespaceObject} (usually by adding a child to it)\n"
+"that has not yet been resolved."
 
 # @see
 #: ../lib/yard/parser/source_parser.rb:21
@@ -16054,6 +16052,11 @@ msgid ""
 "the context representing the\n"
 "point at which the load order error occurred."
 msgstr ""
+"コンテキストはload order errorが起こされる所の\n"
+"ポイントを指摘する。\n"
+"\n"
+"the context representing the\n"
+"point at which the load order error occurred."
 
 # @param [Continuation] context
 #: ../lib/yard/parser/source_parser.rb:27
@@ -16069,6 +16072,8 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:27
 msgid "a new instance of LoadOrderError"
 msgstr ""
+"LoadOrderErrorの新しいインスタンス\n"
+"a new instance of LoadOrderError"
 
 # YARD::Parser::SourceParser
 #: ../lib/yard/parser/source_parser.rb:33
@@ -16077,6 +16082,14 @@ msgid ""
 "also invokes handlers to process the parsed statements and generate\n"
 "any code objects that may be recognized."
 msgstr ""
+"namespaceの中のソースファイルを解析する為の責任がある。\n"
+"そして解析する事は、解析される文や\n"
+"認識されるかもしれないコードオブジェクトを生成する\n"
+"処理の為にハンドラーも起動する。\n"
+"\n"
+"Responsible for parsing a source file into the namespace.\n"
+"Parsing also invokes handlers to process the parsed statements and generate\n"
+"any code objects that may be recognized."
 
 # YARD::Parser::SourceParser
 #: ../lib/yard/parser/source_parser.rb:37
@@ -16086,6 +16099,21 @@ msgid ""
 "a certain filetype is recognized. To register a parser and hook it\n"
 "up to a set of file extensions, call {register_parser_type}"
 msgstr ""
+"== カスタムパーサー\n"
+"ソースパーサーは\n"
+"明確にファイルタイプが認識される時に\n"
+"記録される為や呼び出される為に\n"
+"カスタムパーサーを可能にする。\n"
+"\n"
+"== Custom Parsers\n"
+"SourceParser allows custom parsers to be registered and called\n"
+"when a certain filetype is recognized.\n"
+"\n"
+"パーサーやファイル拡張子の設定を記録する為には、?(hook it up toの訳)\n"
+"{register_parser_type}を呼び出す。\n"
+"\n"
+"To register a parser and hook it up to a set of file extensions,\n"
+"call {register_parser_type}"
 
 # @see
 #: ../lib/yard/parser/source_parser.rb:44
@@ -16096,23 +16124,29 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:49
 msgid "Byte order marks for various encodings"
 msgstr ""
+"様々なエンコーディング用のバイトオーダーマーク\n"
+"Byte order marks for various encodings"
 
 # @return [Symbol]
 #: ../lib/yard/parser/source_parser.rb:61
 msgid "the default parser type (defaults to :ruby)"
 msgstr ""
+"デフォルトパーサータイプ(デフォルト :ruby)\n"
+"the default parser type (defaults to :ruby)"
 
 # YARD::Parser::SourceParser.parse
 #: ../lib/yard/parser/source_parser.rb:68
 msgid "Parses a path or set of paths"
 msgstr ""
+"パスやパスの設定を解析する。\n"
+"Parses a path or set of paths"
 
 # @param [String, Array<String>] paths
 #: ../lib/yard/parser/source_parser.rb:75
 msgid ""
 "a path, glob, or list of paths to\n"
 "parse"
-msgstr ""
+msgstr "パス,glob,解析の為のパスのリスト"
 
 # @param [Array<String, Regexp>]
 #: ../lib/yard/parser/source_parser.rb:75
@@ -16134,6 +16168,8 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:75
 msgid "a list of excluded path matchers"
 msgstr ""
+"パスの照合を除外されるリスト\n"
+"a list of excluded path matchers"
 
 # @param [Fixnum] level
 #: ../lib/yard/parser/source_parser.rb:75
@@ -16141,21 +16177,31 @@ msgid ""
 "the logger level to use during parsing. See\n"
 "{YARD::Logger}"
 msgstr ""
+"解析される間、使用する為のloggerレベル。\n"
+"{YARD::Logger}参照。\n"
+"the logger level to use during parsing. See\n"
+"{YARD::Logger}"
 
 # YARD::Parser::SourceParser.parse_string
 #: ../lib/yard/parser/source_parser.rb:94
 msgid "Parses a string +content+"
 msgstr ""
+"+content+ の文字列を解析する。\n"
+"Parses a string +content+"
 
 # @param [String] content
 #: ../lib/yard/parser/source_parser.rb:98
 msgid "the block of code to parse"
 msgstr ""
+"解析する為のコードの入ったブロック\n"
+"the block of code to parse"
 
 # @return
 #: ../lib/yard/parser/source_parser.rb:98
 msgid "the parser object that was used to parse +content+"
 msgstr ""
+"+content+ を解析する為に利用されるパーサーオブジェクト\n"
+"the parser object that was used to parse +content+"
 
 # @param [Symbol]
 #: ../lib/yard/parser/source_parser.rb:98
@@ -16168,28 +16214,38 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:107
 msgid "the parser type to use. See {parser_type}."
 msgstr ""
+"利用するパーサーの型。{parser_type}参照。\n"
+"the parser type to use. See {parser_type}."
 
 # YARD::Parser::SourceParser.tokenize
 #: ../lib/yard/parser/source_parser.rb:103
 msgid "Tokenizes but does not parse the block of code"
 msgstr ""
+"トークナイズする。しかしコードの入ったブロックは解析しない。\n"
+"Tokenizes but does not parse the block of code"
 
 # @param [String] content
 #: ../lib/yard/parser/source_parser.rb:107
 #: ../lib/yard/parser/source_parser.rb:458
 msgid "the block of code to tokenize"
 msgstr ""
+"トークナイズする為のコードの入ったブロック\n"
+"the block of code to tokenize"
 
 # @return [Array]
 #: ../lib/yard/parser/source_parser.rb:107
 #: ../lib/yard/parser/source_parser.rb:458
 msgid "a list of tokens"
 msgstr ""
+"トークンの入ったリスト。\n"
+"a list of tokens"
 
 # YARD::Parser::SourceParser.register_parser_type
 #: ../lib/yard/parser/source_parser.rb:112
 msgid "Registers a new parser type."
 msgstr ""
+"新しいパーサーの型を記録する。\n"
+"Registers a new parser type."
 
 # @param [Array<String>, String, Regexp] extensions
 #: ../lib/yard/parser/source_parser.rb:121
@@ -16197,6 +16253,9 @@ msgid ""
 "a list of extensions or a\n"
 "regex to match against the file extension"
 msgstr ""
+"拡張やファイル拡張子にマッチする正規表現のリスト。(??against備えての意味)\n"
+"a list of extensions or\n"
+"a regex to match against the file extension"
 
 # @example Registering a parser for "java" files
 #: ../lib/yard/parser/source_parser.rb:121
@@ -16217,6 +16276,8 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:121
 msgid "a symbolic name for the parser type"
 msgstr ""
+"パーサー型用のシンボリック名\n"
+"a symbolic name for the parser type"
 
 # @param [Base]
 #: ../lib/yard/parser/source_parser.rb:121
