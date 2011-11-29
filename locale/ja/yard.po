@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-29 10:46+0900\n"
+"PO-Revision-Date: 2011-11-29 11:43+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16072,11 +16072,7 @@ msgid ""
 msgstr ""
 "LoadOrderErrorは、ハンドラーがまだ解決されていない、\n"
 "{CodeObjects::NamespaceObject}(通常,その為に子を追加する事によって)\n"
-"の変更の為に必要な時に起る。\n"
-"\n"
-"A LoadOrderError occurs when a handler needs to modify a\n"
-"{CodeObjects::NamespaceObject} (usually by adding a child to it)\n"
-"that has not yet been resolved."
+"の変更の為に必要な時に起る。"
 
 # @see
 #: ../lib/yard/parser/source_parser.rb:21
@@ -16090,10 +16086,7 @@ msgid ""
 "point at which the load order error occurred."
 msgstr ""
 "コンテキストはload order errorが起こされる所の\n"
-"ポイントを指摘する。\n"
-"\n"
-"the context representing the\n"
-"point at which the load order error occurred."
+"ポイントを指摘する。"
 
 # @param [Continuation] context
 #: ../lib/yard/parser/source_parser.rb:27
@@ -16108,9 +16101,7 @@ msgstr ""
 # @return [LoadOrderError]
 #: ../lib/yard/parser/source_parser.rb:27
 msgid "a new instance of LoadOrderError"
-msgstr ""
-"LoadOrderErrorの新しいインスタンス\n"
-"a new instance of LoadOrderError"
+msgstr "LoadOrderErrorの新しいインスタンス。"
 
 # YARD::Parser::SourceParser
 #: ../lib/yard/parser/source_parser.rb:33
@@ -16122,11 +16113,7 @@ msgstr ""
 "namespaceの中のソースファイルを解析する為の責任がある。\n"
 "そして解析する事は、解析される文や\n"
 "認識されるかもしれないコードオブジェクトを生成する\n"
-"処理の為にハンドラーも起動する。\n"
-"\n"
-"Responsible for parsing a source file into the namespace.\n"
-"Parsing also invokes handlers to process the parsed statements and generate\n"
-"any code objects that may be recognized."
+"処理の為にハンドラーも起動する。"
 
 # YARD::Parser::SourceParser
 #: ../lib/yard/parser/source_parser.rb:37
@@ -16141,16 +16128,8 @@ msgstr ""
 "明確にファイルタイプが認識される時に\n"
 "記録される為や呼び出される為に\n"
 "カスタムパーサーを可能にする。\n"
-"\n"
-"== Custom Parsers\n"
-"SourceParser allows custom parsers to be registered and called\n"
-"when a certain filetype is recognized.\n"
-"\n"
 "パーサーやファイル拡張子の設定を記録する為には、?(hook it up toの訳)\n"
-"{register_parser_type}を呼び出す。\n"
-"\n"
-"To register a parser and hook it up to a set of file extensions,\n"
-"call {register_parser_type}"
+"{register_parser_type}を呼び出す。"
 
 # @see
 #: ../lib/yard/parser/source_parser.rb:44
@@ -16160,23 +16139,17 @@ msgstr ""
 # YARD::Parser::SourceParser::ENCODING_BYTE_ORDER_MARKS
 #: ../lib/yard/parser/source_parser.rb:49
 msgid "Byte order marks for various encodings"
-msgstr ""
-"様々なエンコーディング用のバイトオーダーマーク\n"
-"Byte order marks for various encodings"
+msgstr "様々なエンコーディング用のバイトオーダーマーク"
 
 # @return [Symbol]
 #: ../lib/yard/parser/source_parser.rb:61
 msgid "the default parser type (defaults to :ruby)"
-msgstr ""
-"デフォルトパーサータイプ(デフォルト :ruby)\n"
-"the default parser type (defaults to :ruby)"
+msgstr "デフォルトパーサータイプ(デフォルト :ruby)"
 
 # YARD::Parser::SourceParser.parse
 #: ../lib/yard/parser/source_parser.rb:68
 msgid "Parses a path or set of paths"
-msgstr ""
-"パスやパスの設定を解析する。\n"
-"Parses a path or set of paths"
+msgstr "パスやパスの設定を解析する。"
 
 # @param [String, Array<String>] paths
 #: ../lib/yard/parser/source_parser.rb:75
@@ -16204,9 +16177,7 @@ msgstr ""
 # @param [Array<String, Regexp>] excluded
 #: ../lib/yard/parser/source_parser.rb:75
 msgid "a list of excluded path matchers"
-msgstr ""
-"パスの照合を除外されるリスト\n"
-"a list of excluded path matchers"
+msgstr "パスの照合を除外されるリスト。"
 
 # @param [Fixnum] level
 #: ../lib/yard/parser/source_parser.rb:75
@@ -16215,9 +16186,7 @@ msgid ""
 "{YARD::Logger}"
 msgstr ""
 "解析される間、使用する為のloggerレベル。\n"
-"{YARD::Logger}参照。\n"
-"the logger level to use during parsing. See\n"
-"{YARD::Logger}"
+"{YARD::Logger}参照。"
 
 # YARD::Parser::SourceParser.parse_string
 #: ../lib/yard/parser/source_parser.rb:94
@@ -16229,16 +16198,12 @@ msgstr ""
 # @param [String] content
 #: ../lib/yard/parser/source_parser.rb:98
 msgid "the block of code to parse"
-msgstr ""
-"解析する為のコードの入ったブロック\n"
-"the block of code to parse"
+msgstr "解析する為のコードの入ったブロック。"
 
 # @return
 #: ../lib/yard/parser/source_parser.rb:98
 msgid "the parser object that was used to parse +content+"
-msgstr ""
-"+content+ を解析する為に利用されるパーサーオブジェクト\n"
-"the parser object that was used to parse +content+"
+msgstr "+content+ を解析する為に利用されるパーサーオブジェクト。"
 
 # @param [Symbol]
 #: ../lib/yard/parser/source_parser.rb:98
@@ -16250,49 +16215,36 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:98
 #: ../lib/yard/parser/source_parser.rb:107
 msgid "the parser type to use. See {parser_type}."
-msgstr ""
-"利用するパーサーの型。{parser_type}参照。\n"
-"the parser type to use. See {parser_type}."
+msgstr "利用するパーサーの型。{parser_type}参照。"
 
 # YARD::Parser::SourceParser.tokenize
 #: ../lib/yard/parser/source_parser.rb:103
 msgid "Tokenizes but does not parse the block of code"
-msgstr ""
-"トークナイズする。しかしコードの入ったブロックは解析しない。\n"
-"Tokenizes but does not parse the block of code"
+msgstr "トークナイズする。しかしコードの入ったブロックは解析しない。"
 
 # @param [String] content
 #: ../lib/yard/parser/source_parser.rb:107
 #: ../lib/yard/parser/source_parser.rb:458
 msgid "the block of code to tokenize"
-msgstr ""
-"トークナイズする為のコードの入ったブロック\n"
-"the block of code to tokenize"
+msgstr "トークナイズする為のコードの入ったブロック。"
 
 # @return [Array]
 #: ../lib/yard/parser/source_parser.rb:107
 #: ../lib/yard/parser/source_parser.rb:458
 msgid "a list of tokens"
-msgstr ""
-"トークンの入ったリスト。\n"
-"a list of tokens"
+msgstr "トークンの入ったリスト。"
 
 # YARD::Parser::SourceParser.register_parser_type
 #: ../lib/yard/parser/source_parser.rb:112
 msgid "Registers a new parser type."
-msgstr ""
-"新しいパーサーの型を記録する。\n"
-"Registers a new parser type."
+msgstr "新しいパーサーの型を記録する。"
 
 # @param [Array<String>, String, Regexp] extensions
 #: ../lib/yard/parser/source_parser.rb:121
 msgid ""
 "a list of extensions or a\n"
 "regex to match against the file extension"
-msgstr ""
-"拡張子のリストやファイル拡張子に対しマッチする正規表現。\n"
-"a list of extensions or\n"
-"a regex to match against the file extension"
+msgstr "拡張子のリストやファイル拡張子に対しマッチする正規表現。"
 
 # @example Registering a parser for "java" files
 #: ../lib/yard/parser/source_parser.rb:121
@@ -16312,9 +16264,7 @@ msgstr ""
 # @param [Symbol] type
 #: ../lib/yard/parser/source_parser.rb:121
 msgid "a symbolic name for the parser type"
-msgstr ""
-"パーサー型用のシンボリック名\n"
-"a symbolic name for the parser type"
+msgstr "パーサー型用のシンボリック名。"
 
 # @param [Base]
 #: ../lib/yard/parser/source_parser.rb:121
@@ -16324,9 +16274,7 @@ msgstr ""
 # @param [Base] parser_klass
 #: ../lib/yard/parser/source_parser.rb:121
 msgid "a class that implements parsing and tokenization"
-msgstr ""
-"解析やトークナイズを実装するクラス。\n"
-"a class that implements parsing and tokenization"
+msgstr "解析やトークナイズを実装するクラス。"
 
 # @param [Array<String>, String, Regexp]
 #: ../lib/yard/parser/source_parser.rb:121
@@ -16337,9 +16285,7 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:132
 #: ../lib/yard/parser/source_parser.rb:134
 msgid "a list of registered parser types"
-msgstr ""
-"パーサーの型が記録されるリスト\n"
-"a list of registered parser types"
+msgstr "パーサーの型が記録されるリスト。"
 
 # YARD::Parser::SourceParser.parser_type_for_extension
 #: ../lib/yard/parser/source_parser.rb:146
@@ -16348,16 +16294,12 @@ msgid ""
 "type is found, the default Ruby type is returned."
 msgstr ""
 "拡張用の記録されるパーサーの型を見つける。\n"
-"型が見つからない無い場合、デフォルトのRuby型が返される。\n"
-"Finds a parser type that is registered for the extension.\n"
-"If no type is found, the default Ruby type is returned."
+"型が見つからない無い場合、デフォルトのRuby型が返される。"
 
 # @return [Symbol]
 #: ../lib/yard/parser/source_parser.rb:150
 msgid "the parser type to be used for the extension"
-msgstr ""
-"拡張用に利用されるパーサーの型。\n"
-"the parser type to be used for the extension"
+msgstr "拡張用に利用されるパーサーの型。"
 
 # YARD::Parser::SourceParser.validated_parser_type
 #: ../lib/yard/parser/source_parser.rb:158
@@ -16367,24 +16309,17 @@ msgid ""
 msgstr ""
 "有効なパーサー型を返す。\n"
 "基本的に、Ripperライブラリが利用不可の場合、\n"
-":ruby型が設定されないよう実行される。\n"
-"\n"
-"Returns the validated parser type. Basically, enforces that :ruby\n"
-"type is never set if the Ripper library is not available"
+":ruby型が設定されないよう実行される。"
 
 # @param [Symbol] type
 #: ../lib/yard/parser/source_parser.rb:163
 msgid "the parser type to set"
-msgstr ""
-"設定するパーサーの型\n"
-"the parser type to set"
+msgstr "設定するパーサーの型。"
 
 # @return [Symbol]
 #: ../lib/yard/parser/source_parser.rb:163
 msgid "the validated parser type"
-msgstr ""
-"有効なパーサーの型\n"
-"the validated parser type"
+msgstr "有効なパーサーの型。"
 
 # YARD::Parser::SourceParser.before_parse_list
 #: ../lib/yard/parser/source_parser.rb:170
@@ -16396,11 +16331,7 @@ msgstr ""
 "ファイルのリストが{parse}経由で解析される前に呼び出されるコールバックを記録する。\n"
 "ブロックは\n"
 "このメソッドがその後parse呼び出し上で呼び出される\n"
-"為に渡される。\n"
-"\n"
-"Registers a callback to be called before a list of files is parsed via {parse}.\n"
-"The block passed\n"
-"to this method will be called on subsequent parse calls."
+"為に渡される。"
 
 # @example
 #: ../lib/yard/parser/source_parser.rb:213
@@ -16481,10 +16412,7 @@ msgstr ""
 msgid ""
 "the yielded block is called once before \n"
 "parsing all files"
-msgstr ""
-"yieldされるブロックは全てのファイルを解析する前に一度呼び出される\n"
-"\n"
-"the yielded block is called once before parsing all files"
+msgstr "yieldされるブロックは全てのファイルを解析する前に一度呼び出される。"
 
 # @yieldparam [Array<String>]
 #: ../lib/yard/parser/source_parser.rb:213
@@ -16496,9 +16424,7 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:213
 #: ../lib/yard/parser/source_parser.rb:237
 msgid "the list of files that will be parsed."
-msgstr ""
-"解析されるファイルのリスト\n"
-"the list of files that will be parsed."
+msgstr "解析されるファイルのリスト。"
 
 # @yieldparam [OpenStruct]
 #: ../lib/yard/parser/source_parser.rb:213
@@ -16514,8 +16440,6 @@ msgid ""
 "state for post processing (see {Handlers::Processor#globals})"
 msgstr ""
 "globalは、後処理用の任意の状態を格納する為に構築する。\n"
-"(see {Handlers::Processor#globals})\n"
-"a global structure to store arbitrary state for post processing\n"
 "(see {Handlers::Processor#globals})"
 
 # @yieldreturn [Boolean]
@@ -16523,10 +16447,7 @@ msgstr ""
 msgid ""
 "if the block returns +false+, parsing is\n"
 "cancelled."
-msgstr ""
-"ブロックが +false+ を返す場合、解析処理はキャンセルされる。\n"
-"if the block returns +false+,\n"
-"parsing is cancelled."
+msgstr "ブロックが +false+ を返す場合、解析処理はキャンセルされる。"
 
 # @return [Proc]
 #: ../lib/yard/parser/source_parser.rb:213
@@ -16534,9 +16455,7 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:274
 #: ../lib/yard/parser/source_parser.rb:303
 msgid "the yielded block"
-msgstr ""
-"yieldされるブロック。\n"
-"the yielded block"
+msgstr "yieldされるブロック。"
 
 # @see
 #: ../lib/yard/parser/source_parser.rb:213
@@ -16558,14 +16477,8 @@ msgid ""
 "via {parse}. The block passed to this method will be called on \n"
 "subsequent parse calls."
 msgstr ""
-"ファイルのリストが{parse}経由で解析される後で呼び出される為に\n"
-"コールバックを記録する。\n"
-"ブロックは\n"
-"このメソッドがその後のparse呼び出し上で呼び出される為に\n"
-"解析される。\n"
-"\n"
-"Registers a callback to be called after a list of files is parsed via {parse}.\n"
-"The block passed to this method will be called on subsequent parse calls."
+"ファイルのリストが{parse}経由で解析された後で呼び出される為にコールバックを記録する。\n"
+"ブロックはこのメソッドがその後のparse呼び出し上で呼び出される為に解析される。"
 
 # @example
 #: ../lib/yard/parser/source_parser.rb:237
@@ -16605,12 +16518,8 @@ msgid ""
 msgstr ""
 "個々のファイルが解析される前に呼び出される為に、\n"
 "コールバックを記録する。\n"
-"ブロックは\n"
-"このメソッドがその後parse呼び出しを呼び出される\n"
-"為に渡される。\n"
-"Registers a callback to be called before an individual file is parsed. \n"
-"The block passed to this method will be called on subsequent parse \n"
-"calls."
+"ブロックはこのメソッドがその後parse呼び出しを呼び出される\n"
+"為に渡される。"
 
 # YARD::Parser::SourceParser.before_parse_file
 #: ../lib/yard/parser/source_parser.rb:246
@@ -16618,12 +16527,8 @@ msgid ""
 "To register a callback that is called before the entire list of files\n"
 "is processed, see {before_parse_list}."
 msgstr ""
-"?(自信がないです)\n"
 "全ての処理されるファイルのリストの前に呼び出される\n"
-"コールバックを\n"
-"記録する為には、{before_parse_list}参照。\n"
-"To register a callback that is called before the entire list of files is processed,\n"
-"see {before_parse_list}."
+"コールバックを記録する為には、{before_parse_list}参照。"
 
 # @example Installing a simple callback
 #: ../lib/yard/parser/source_parser.rb:274
@@ -16658,19 +16563,8 @@ msgid ""
 "file that is parsed. This might happen many times for a single\n"
 "codebase."
 msgstr ""
-"yieldされるブロックは、\n"
-"それぞれの解析されるファイルの前に\n"
-"一度呼び出される。\n"
-"\n"
-"?(for => 用 と訳すとしっくりこないので..)\n"
-"これは、\n"
-"単一のコードベースの為に\n"
-"何回も\n"
-"起きる可能性がある。\n"
-"\n"
-"\n"
-"the yielded block is called once before each file that is parsed.\n"
-"This might happen many times for a single codebase."
+"yieldされるブロックは、それぞれの解析されるファイルの前に一度呼び出される。\n"
+"これは、単一のコードベースの為に何回も起きる可能性がある。"
 
 # @yieldparam [SourceParser]
 #: ../lib/yard/parser/source_parser.rb:274
@@ -16683,9 +16577,7 @@ msgstr ""
 msgid ""
 "the parser object that will {#parse}\n"
 "the file."
-msgstr ""
-"ファイルを{#parse}メソッドで解析するパーサーオブジェクト\n"
-"the parser object that will {#parse} the file."
+msgstr "ファイルを{#parse}メソッドで解析するパーサーオブジェクト。"
 
 # @yieldreturn [Boolean]
 #: ../lib/yard/parser/source_parser.rb:274
@@ -16694,9 +16586,7 @@ msgid ""
 "the file is cancelled."
 msgstr ""
 "ブロックが +false+ を返す場合、\n"
-"ファイルがキャンセルされる為に解析する。\n"
-"if the block returns +false+,\n"
-"parsing for the file is cancelled."
+"ファイルがキャンセルされる為に解析する。"
 
 # @see
 #: ../lib/yard/parser/source_parser.rb:274
@@ -16710,18 +16600,9 @@ msgid ""
 "The block passed to this method will be called on subsequent parse \n"
 "calls."
 msgstr ""
-"個々のファイルが解析された後で\n"
-"呼び出される為に\n"
-"コールバックを\n"
-"記録する。\n"
-"\n"
-"ブロックは\n"
-"このメソッドがその後parse呼び出しで呼び出される為に\n"
-"解析される。\n"
-"\n"
-"Registers a callback to be called after an individual file is parsed. \n"
-"The block passed to this method will be called on subsequent parse \n"
-"calls."
+"個々のファイルが解析された後で呼び出される為に\n"
+"コールバックを記録する。\n"
+"ブロックはこのメソッドがその後parse呼び出しで呼び出される為に解析される。"
 
 # YARD::Parser::SourceParser.after_parse_file
 #: ../lib/yard/parser/source_parser.rb:283
@@ -16729,12 +16610,8 @@ msgid ""
 "To register a callback that is called after the entire list of files\n"
 "is processed, see {after_parse_list}."
 msgstr ""
-"処理されるファイルの全てのリストの後で呼び出される\n"
-"コールバックを記録するには、\n"
-"{after_parse_list}参照。\n"
-"\n"
-"To register a callback that is called after the entire list of files is processed,\n"
-"see {after_parse_list}."
+"処理されるファイルの全てのリストの後で呼び出される。\n"
+"コールバックを記録するには、{after_parse_list}参照。"
 
 # @example
 #: ../lib/yard/parser/source_parser.rb:303
@@ -16758,9 +16635,7 @@ msgstr ""
 msgid ""
 "the parser object that parsed\n"
 "the file."
-msgstr ""
-"ファイルを解析した、パーサーオブジェクト\n"
-"the parser object that parsed the file."
+msgstr "ファイルを解析した、パーサーオブジェクト。"
 
 # @yield [parser]
 #: ../lib/yard/parser/source_parser.rb:303
@@ -16769,14 +16644,7 @@ msgid ""
 "that is parsed. This might happen many times for a single codebase."
 msgstr ""
 "yieldされるブロックは、それぞれの解析されるファイルが後で一度呼び出される。\n"
-"\n"
-"これは\n"
-"単一のコードベースの為に\n"
-"何回も\n"
-"起る可能性がある。\n"
-"\n"
-"the yielded block is called once after each file that is parsed.\n"
-"This might happen many times for a single codebase."
+"これは単一のコードベースの為に何回も起る可能性がある。"
 
 # @return [Array<Proc>]
 #: ../lib/yard/parser/source_parser.rb:310
@@ -16785,10 +16653,7 @@ msgid ""
 "parsing a list of files. Should only be used for testing."
 msgstr ""
 "ファイルのリストを解析する前に呼び出されるコールバックのリスト。\n"
-"(?調査)検査用にだけ利用されるべきである。\n"
-"\n"
-"the list of callbacks to be called before parsing a list of files.\n"
-"Should only be used for testing."
+"検査用にだけ利用されるべきである。"
 
 # @return [Array<Proc>]
 #: ../lib/yard/parser/source_parser.rb:317
@@ -16797,10 +16662,7 @@ msgid ""
 "parsing a list of files. Should only be used for testing."
 msgstr ""
 "ファイルのリストを解析する前に呼び出される為のコールバックのリスト。\n"
-"検査用にだけ利用されるべきである。\n"
-"\n"
-"the list of callbacks to be called after parsing a list of files.\n"
-"Should only be used for testing."
+"検査用にだけ利用されるべきである。"
 
 # @return [Array<Proc>]
 #: ../lib/yard/parser/source_parser.rb:324
@@ -16809,10 +16671,7 @@ msgid ""
 "parsing a file. Should only be used for testing."
 msgstr ""
 "ファイルが解析する前に呼び出される為のコールバックのリスト。\n"
-"検査用にだけ利用されるべきである。\n"
-"\n"
-"the list of callbacks to be called before parsing a file.\n"
-"Should only be used for testing."
+"検査用にだけ利用されるべきである。"
 
 # @return [Array<Proc>]
 #: ../lib/yard/parser/source_parser.rb:331
@@ -16821,10 +16680,7 @@ msgid ""
 "parsing a file. Should only be used for testing."
 msgstr ""
 "ファイルが解析する前に呼び出される為のコールバックのリスト。\n"
-"検査用にだけ利用されるべきである。\n"
-"\n"
-"the list of callbacks to be called after parsing a file.\n"
-"Should only be used for testing."
+"検査用にだけ利用されるべきである。"
 
 # YARD::Parser::SourceParser.parse_in_order
 #: ../lib/yard/parser/source_parser.rb:340
@@ -16850,16 +16706,12 @@ msgstr ""
 # @param [Array<String>] files
 #: ../lib/yard/parser/source_parser.rb:345
 msgid "a list of files to queue for parsing"
-msgstr ""
-"解析用のキューの為のファイルのリスト\n"
-"a list of files to queue for parsing"
+msgstr "解析用のキューの為のファイルのリスト。"
 
 # @return [String]
 #: ../lib/yard/parser/source_parser.rb:382
 msgid "the filename being parsed by the parser."
-msgstr ""
-"パーサーによって解析されているファイル名。\n"
-"the filename being parsed by the parser."
+msgstr "パーサーによって解析されているファイル名。"
 
 # @return [Symbol]
 #: ../lib/yard/parser/source_parser.rb:386
@@ -16868,9 +16720,7 @@ msgid ""
 "This should be set by the {#initialize constructor}."
 msgstr ""
 "パーサーのインスタンスと共に関連付られるパーサーの型。\n"
-"これは、{#initialize constructor}メソッドによって設定されるべきである。\n"
-"the parser type associated with the parser instance.\n"
-"This should be set by the {#initialize constructor}."
+"これは、{#initialize constructor}メソッドによって設定されるべきである。"
 
 # @return [OpenStruct]
 #: ../lib/yard/parser/source_parser.rb:391
@@ -16879,9 +16729,7 @@ msgid ""
 "shared between files and handlers."
 msgstr ""
 "ファイルとハンドラーとの間で共有される\n"
-"任意のグローバルな状態を含んでいるOpenStruct\n"
-"(??開放的な構造,型がOpenStructの為、そのままの方がいい??)\n"
-"an open struct containing arbitrary global state shared between files and handlers."
+"任意のグローバルな状態を含んでいるOpenStruct"
 
 # @return [String]
 #: ../lib/yard/parser/source_parser.rb:395
@@ -16895,32 +16743,23 @@ msgstr ""
 msgid ""
 "Creates a new parser object for code parsing with a specific parser type."
 msgstr ""
-"明確なパーサー型と共に\n"
-"コード解析用の\n"
-"新しいパーサーオブジェクトを\n"
-"作成する。\n"
-"Creates a new parser object for code parsing with a specific parser type."
+"明確なパーサー型と共にコード解析用の\n"
+"新しいパーサーオブジェクトを作成する。"
 
 # @return [SourceParser]
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "a new instance of SourceParser"
-msgstr ""
-"ソースパーサーの新しいインスタンス\n"
-"a new instance of SourceParser"
+msgstr "ソースパーサーの新しいインスタンス。"
 
 # @param [OpenStruct] globals
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "global state to be re-used across separate source files"
-msgstr ""
-"globalはソースファイルをまたいで再利用される為の状態となる。\n"
-"global state to be re-used across separate source files"
+msgstr "globalはソースファイルをまたいで再利用される為の状態となる。"
 
 # @param [Boolean] load_order_errors
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "whether or not to raise the {LoadOrderError}"
-msgstr ""
-"{LoadOrderError}の例外を上げるかどうか\n"
-"whether or not to raise the {LoadOrderError}"
+msgstr "{LoadOrderError}の例外を上げるかどうか"
 
 # @param [Boolean]
 #: ../lib/yard/parser/source_parser.rb:402
@@ -16930,9 +16769,7 @@ msgstr ""
 # @param [Symbol] parser_type
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "the parser type to use"
-msgstr ""
-"使用するパーサータイプ\n"
-"the parser type to use"
+msgstr "使用するパーサータイプ。"
 
 # YARD::Parser::SourceParser#parse
 #: ../lib/yard/parser/source_parser.rb:410
@@ -16940,26 +16777,18 @@ msgid ""
 "The main parser method. This should not be called directly. Instead,\n"
 "use the class methods {parse} and {parse_string}."
 msgstr ""
-"主なパーサーメソッド。\n"
-"これは直接呼ばれるべきではない。\n"
-"代わりに、{parse}や{parse_string}クラスメソッドを利用する。\n"
-"\n"
-"The main parser method. This should not be called directly.\n"
-"Instead, use the class methods {parse} and {parse_string}."
+"主なパーサーメソッド。これは直接呼ばれるべきではない。\n"
+"代わりに、{parse}や{parse_string}クラスメソッドを利用する。"
 
 # @return [Object, nil]
 #: ../lib/yard/parser/source_parser.rb:414
 msgid "the parser object used to parse the source"
-msgstr ""
-"ソースを解析する為に利用されるパーサーオブジェクト。\n"
-"the parser object used to parse the source"
+msgstr "ソースを解析する為に利用されるパーサーオブジェクト。"
 
 # @param [String, #read, Object] content
 #: ../lib/yard/parser/source_parser.rb:414
 msgid "the source file to parse"
-msgstr ""
-"解析の為のソースファイル\n"
-"the source file to parse"
+msgstr "解析の為のソースファイル。"
 
 # YARD::Parser::SourceParser#tokenize
 #: ../lib/yard/parser/source_parser.rb:455
@@ -16968,49 +16797,33 @@ msgid ""
 "{#parser_type}"
 msgstr ""
 "トークナイズする。しかし、\n"
-"現在の{#parser_type}メソッドを使用して、コードのブロックを\n"
-"解析しない。\n"
-"\n"
-"Tokenizes but does not parse the block of code using the current {#parser_type}"
+"現在の{#parser_type}メソッドを使用して、コードの入ったブロックは解析しない。"
 
 # YARD::Parser::SourceParser#convert_encoding
 #: ../lib/yard/parser/source_parser.rb:466
 msgid "Searches for encoding line and forces encoding"
-msgstr ""
-"行のエンコーディングやエンコーディングの強制\n"
-"の為に検索する。\n"
-"Searches for encoding line and forces encoding"
+msgstr "行のエンコーディングやエンコーディングの強制の為に検索する。"
 
 # YARD::Parser::SourceParser#post_process
 #: ../lib/yard/parser/source_parser.rb:487
 msgid ""
 "Runs a {Handlers::Processor} object to post process the parsed statements."
-msgstr ""
-"解析した文の後処理の為に、\n"
-"{Handlers::Processor}オブジェクトを\n"
-"起動する。\n"
-"Runs a {Handlers::Processor} object to post process the parsed statements."
+msgstr "解析した文の後処理の為に、{Handlers::Processor}オブジェクトを起動する。"
 
 # YARD::Parser::SourceParser#parser_type_for_filename
 #: ../lib/yard/parser/source_parser.rb:500
 msgid "Guesses the parser type to use depending on the file extension."
-msgstr ""
-"ファイル拡張子に応じて使用するパーサーの型を推測する。\n"
-"Guesses the parser type to use depending on the file extension."
+msgstr "ファイル拡張子に応じて使用するパーサーの型を推測する。"
 
 # @param [String] filename
 #: ../lib/yard/parser/source_parser.rb:503
 msgid "the filename to use to guess the parser type"
-msgstr ""
-"パーサー型を推測する為に利用するファイル名\n"
-"the filename to use to guess the parser type"
+msgstr "パーサー型を推測する為に利用するファイル名。"
 
 # @return [Symbol]
 #: ../lib/yard/parser/source_parser.rb:503
 msgid "a parser type that matches the filename"
-msgstr ""
-"ファイル名の拡張子に応じたパーサータイプ\n"
-"a parser type that matches the filename"
+msgstr "ファイル名の拡張子に応じたパーサータイプ。"
 
 # YARD::Rake::YardocTask
 #: ../lib/yard/rake/yardoc_task.rb:8
