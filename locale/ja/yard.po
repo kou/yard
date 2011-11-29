@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-29 10:08+0900\n"
+"PO-Revision-Date: 2011-11-29 10:46+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -2248,6 +2248,8 @@ msgstr ""
 #: ../docs/GettingStarted.md:387
 msgid "    = igLatinPay!"
 msgstr ""
+"        !!!plain\n"
+"    = igLatinPay!"
 
 #: ../docs/GettingStarted.md:389
 msgid ""
@@ -2326,7 +2328,9 @@ msgstr ""
 
 #: ../docs/GettingStarted.md:421
 msgid "    Usage: yard <command> [options]"
-msgstr "    Usage: yard <コマンド> [オプション...]"
+msgstr ""
+"    !!!plain\n"
+"    Usage: yard <コマンド> [オプション...]"
 
 #: ../docs/GettingStarted.md:423
 msgid ""
