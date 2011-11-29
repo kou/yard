@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-28 17:43+0900\n"
+"PO-Revision-Date: 2011-11-29 10:08+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -4059,7 +4059,9 @@ msgstr ""
 
 #: ../docs/Tags.md:82
 msgid "    @tagname [types] <name> <description>"
-msgstr "    @tagname [型] <名前> <説明>"
+msgstr ""
+"        !!!plain\n"
+"    @tagname [型] <名前> <説明>"
 
 #: ../docs/Tags.md:84
 msgid "As mentioned, types are optional, so the following is also valid:"
@@ -4091,7 +4093,9 @@ msgstr "  * `@abstract`: 省略可能な実装者の情報と共にクラス,モ
 msgid ""
 "        @abstract Subclass and override {#run} to implement a custom "
 "Threadable class."
-msgstr "        @abstract カスタムThreadableクラスを実装する為に{#run}メソッドをサブクラス化や上書きする"
+msgstr ""
+"        !!!plain\n"
+"        @abstract カスタムThreadableクラスを実装する為に{#run}メソッドをサブクラス化や上書きする"
 
 #: ../docs/Tags.md:100
 msgid ""
@@ -4108,7 +4112,9 @@ msgstr ""
 
 #: ../docs/Tags.md:104
 msgid "        @api freeform text"
-msgstr "        @api フリーフォームテキスト"
+msgstr ""
+"        !!!plain\n"
+"        @api フリーフォームテキスト"
 
 #: ../docs/Tags.md:106
 msgid ""
@@ -4118,8 +4124,8 @@ msgid ""
 "    to be used."
 msgstr ""
 "    (*) 次の事に留意する。特別な名前の`@api privete`は、\n"
-"    それがあるドキュメントの中に通知を表示する。\n"
-"    そして、そのメソッドが使われていないことをユーザーに知らせる。"
+"それがあるドキュメントの中に通知を表示する。\n"
+"そして、そのメソッドが使われていないことをユーザーに知らせる。"
 
 #: ../docs/Tags.md:110
 msgid ""
@@ -4133,7 +4139,9 @@ msgstr ""
 #: ../docs/Tags.md:113
 msgid ""
 "        @attr [Types] attribute_name a full description of the attribute"
-msgstr "        @attr [型...] 属性名 属性の全ての説明"
+msgstr ""
+"        !!!plain\n"
+"        @attr [型...] 属性名 属性の全ての説明"
 
 #: ../docs/Tags.md:115
 msgid ""
@@ -4147,7 +4155,9 @@ msgstr ""
 
 #: ../docs/Tags.md:118
 msgid "        @attr_reader [Types] name description of a readonly attribute"
-msgstr "        @attr_reader [型...] 名前 読取り専用属性の説明"
+msgstr ""
+"        !!!plain\n"
+"        @attr_reader [型...] 名前 読取り専用属性の説明"
 
 #: ../docs/Tags.md:120
 msgid ""
@@ -4161,7 +4171,9 @@ msgstr ""
 
 #: ../docs/Tags.md:123
 msgid "        @attr_writer [Types] name description of writeonly attribute"
-msgstr "        @attr_writer [型...] 名前 書込み専用属性の説明"
+msgstr ""
+"        !!!plain\n"
+"        @attr_writer [型...] 名前 書込み専用属性の説明"
 
 #: ../docs/Tags.md:125
 msgid ""
@@ -4177,7 +4189,9 @@ msgstr ""
 
 #: ../docs/Tags.md:129
 msgid "        @attribute [rw|r|w] NAME"
-msgstr "        @attribute [rw|r|w] 名前"
+msgstr ""
+"        !!!plain\n"
+"        @attribute [rw|r|w] 名前"
 
 #: ../docs/Tags.md:131
 msgid "  * `@author`: List the author(s) of a class/method"
@@ -4185,7 +4199,9 @@ msgstr "  * `@author`: クラス,メソッドの作者リスト"
 
 #: ../docs/Tags.md:133
 msgid "        @author Full Name"
-msgstr "        @author フルネーム"
+msgstr ""
+"        !!!plain\n"
+"        @author フルネーム"
 
 #: ../docs/Tags.md:135
 msgid ""
@@ -4195,7 +4211,9 @@ msgstr "  * `@deprecated`: 廃止予定のメソッド,クラスをマークす�
 
 #: ../docs/Tags.md:138
 msgid "        @deprecated Describe the reason or provide alt. references here"
-msgstr "        @deprecated 廃止される理由や代替の提供についての参照をここに書く。"
+msgstr ""
+"        !!!plain\n"
+"        @deprecated 廃止される理由や代替の提供についての参照をここに書く。"
 
 #: ../docs/Tags.md:140
 msgid ""
@@ -4218,13 +4236,14 @@ msgid ""
 msgstr ""
 "  * `@macro`: 新しいマクロを登録または拡張する。\n"
 "     詳細は [Macros](#macros) 参照。\n"
-"     NAMEというパラメータは省略できないことに注意する。\n"
+"     NAMEというパラメータは省略できないことに注意する。"
 
 #: ../docs/Tags.md:149
 msgid ""
 "        @macro [new|attached] macro_name\n"
 "          The macro contents to expand"
 msgstr ""
+"        !!!plain\n"
 "        @macro [new,又は,attached] マクロ名\n"
 "          展開する内容をここ以降に書く"
 
@@ -4249,7 +4268,9 @@ msgstr ""
 
 #: ../docs/Tags.md:160
 msgid "        @note This method should only be used in outer space."
-msgstr "        @note このメソッドは外部からのみ利用される。"
+msgstr ""
+"        !!!plain\n"
+"        @note このメソッドは外部からのみ利用される。"
 
 #: ../docs/Tags.md:162
 msgid ""
@@ -4308,7 +4329,9 @@ msgstr "  * `@param`: メソッドのパラメータを定義する。"
 
 #: ../docs/Tags.md:193
 msgid "        @param [optional, types, ...] argname description"
-msgstr "        @param [型(省略可能)...] 引数名 説明"
+msgstr ""
+"        !!!plain\n"
+"        @param [型(省略可能)...] 引数名 説明"
 
 #: ../docs/Tags.md:195
 msgid ""
@@ -4335,7 +4358,9 @@ msgstr "  * `@raise`: メソッドが投げる例外を記述する。"
 
 #: ../docs/Tags.md:206
 msgid "        @raise [ExceptionClass] description"
-msgstr "        @raise [ExceptionClass] 説明"
+msgstr ""
+"        !!!plain\n"
+"        @raise [ExceptionClass] 説明"
 
 #: ../docs/Tags.md:208
 msgid "  * `@return`: Describes return value of method"
@@ -4343,7 +4368,9 @@ msgstr "  * `@return`: メソッドの戻り値を説明する。"
 
 #: ../docs/Tags.md:210
 msgid "        @return [optional, types, ...] description"
-msgstr "        @return [型(省略可能)...] 説明"
+msgstr ""
+"        !!!plain\n"
+"        @return [型(省略可能)...] 説明"
 
 #: ../docs/Tags.md:212
 msgid ""
@@ -4356,7 +4383,9 @@ msgstr ""
 
 #: ../docs/Tags.md:215
 msgid "        @scope class|instance"
-msgstr "        @scope クラス又はインスタンス"
+msgstr ""
+"        !!!plain\n"
+"        @scope クラス又はインスタンス"
 
 #: ../docs/Tags.md:217
 msgid ""
@@ -4393,6 +4422,7 @@ msgid ""
 "          at http://somesite.com that can be integrated easily\n"
 "          into the project."
 msgstr ""
+"        !!!plain\n"
 "        @todo 何らかのサービスに対するサポートを提供する。\n"
 "          そこには、プロジェクトに容易に統合できる。\n"
 "          http://somesite.comで利用可能な\n"
@@ -4430,6 +4460,9 @@ msgid ""
 "        # for block {|a, b, c| ... }\n"
 "        @yield [a, b, c] Description of block"
 msgstr ""
+"        !!!plain\n"
+"        # for block {|a, b, c| ... }\n"
+"        @yield [a, b, c] ブロックの説明"
 
 #: ../docs/Tags.md:249
 msgid "  * `@yieldparam`: Defines parameters yielded by a block"
@@ -4437,7 +4470,9 @@ msgstr "  * `@yieldparam`: ブロックでyieldされたパラメータを定義
 
 #: ../docs/Tags.md:251
 msgid "        @yieldparam [optional, types, ...] argname description"
-msgstr "        @yieldparam [型(省略可能)...] 引数名 説明"
+msgstr ""
+"        !!!plain\n"
+"        @yieldparam [型(省略可能)...] 引数名 説明"
 
 #: ../docs/Tags.md:253
 msgid "  * `@yieldreturn`: Defines return type of a block"
@@ -4445,7 +4480,9 @@ msgstr "  * `@yieldreturn`: ブロックのリターンタイプを定義する�
 
 #: ../docs/Tags.md:255
 msgid "        @yieldreturn [optional, types, ...] description"
-msgstr "        @yieldreturn [型(省略可能)...] 説明"
+msgstr ""
+"        !!!plain\n"
+"        @yieldreturn [型(省略可能)...] 説明"
 
 #: ../docs/Tags.md:258
 msgid "<a name=\"reftags\"></a>"
@@ -5037,7 +5074,7 @@ msgstr "登録の分離やタグ作成は次の表の通り。"
 
 #: ../docs/Tags.md:510
 msgid "![Tags Architecture Class Diagram](images/tags-class-diagram.png)"
-msgstr ""
+msgstr "![Tags Architecture Class Diagram](http://rubydoc.info/docs/yard/file/docs/images/tags-class-diagram.png)"
 
 #: ../docs/Tags.md:512
 msgid "### DefaultFactory"
@@ -5095,10 +5132,8 @@ msgid ""
 "`, \n"
 "    for example:"
 msgstr ""
-"  * Text with types: テキストの最初の部分で型のリストを解析する。\n"
-"                     型は任意で指定できる。\n"
-"                     標準的な構文は[type1, type2, ...]という型をしている。\n"
-"                     例えば:"
+"  * Text with types: テキストの最初の部分で型のリストを解析する。型は任意で指定できる。\n"
+"標準的な構文は[type1, type2, ...]という型をしている。例えば:"
 
 #: ../docs/Tags.md:534
 msgid ""
@@ -5112,10 +5147,8 @@ msgid ""
 "text\n"
 "    followed by a name and extra descriptive text. For example:"
 msgstr ""
-"  * Text with types and a name: 名前や説明文が\n"
-"                                続くテキストの最初の部分で\n"
-"                                型のリストを解析する。\n"
-"                                例えば:"
+"  * Text with types and a name: 名前や説明文が続くテキストの最初の部分で\n"
+"型のリストを解析する。例えば:"
 
 #: ../docs/Tags.md:540
 msgid ""
@@ -5137,7 +5170,7 @@ msgstr ""
 
 #: ../docs/Tags.md:547
 msgid "    # @tagname name <Types, here> description"
-msgstr ""
+msgstr "    # @tagname 名前 <型..., here> 説明"
 
 #: ../docs/Tags.md:549
 msgid ""
