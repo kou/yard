@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-29 15:11+0900\n"
+"PO-Revision-Date: 2011-11-29 15:40+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16244,11 +16244,10 @@ msgid ""
 "up to a set of file extensions, call {register_parser_type}"
 msgstr ""
 "== カスタムパーサー\n"
-"ソースパーサーは\n"
+"ソースパーサーによってカスタムパーサーは\n"
 "明確にファイルタイプが認識される時に\n"
-"記録される為や呼び出される為に\n"
-"カスタムパーサーを可能にする。\n"
-"パーサーやファイル拡張子の設定を記録する為には、?(hook it up toの訳)\n"
+"記録され呼び出される。\n"
+"パーサーを記録しファイル拡張子の設定をつなぐには、\n"
 "{register_parser_type}を呼び出す。"
 
 # @see
@@ -16449,9 +16448,7 @@ msgid ""
 "subsequent parse calls."
 msgstr ""
 "ファイルのリストが{parse}経由で解析される前に呼び出されるコールバックを記録する。\n"
-"ブロックは\n"
-"このメソッドがその後parse呼び出し上で呼び出される\n"
-"為に渡される。"
+"このメソッドの為に渡されるブロックはその後parse呼び出し上で呼び出される。"
 
 # @example
 #: ../lib/yard/parser/source_parser.rb:213
@@ -16559,7 +16556,7 @@ msgid ""
 "a global structure to store arbitrary\n"
 "state for post processing (see {Handlers::Processor#globals})"
 msgstr ""
-"globalは、後処理用の任意の状態を格納する為に構築する。\n"
+"後処理用の任意の状態を格納する、global structure??(コード確認する)\n"
 "(see {Handlers::Processor#globals})"
 
 # @yieldreturn [Boolean]
@@ -16598,7 +16595,7 @@ msgid ""
 "subsequent parse calls."
 msgstr ""
 "ファイルのリストが{parse}経由で解析された後で呼び出される為にコールバックを記録する。\n"
-"ブロックはこのメソッドがその後のparse呼び出し上で呼び出される為に解析される。"
+"このメソッドの為に渡されるブロックはその後のparse呼び出し上で呼び出される。\n"
 
 # @example
 #: ../lib/yard/parser/source_parser.rb:237
@@ -16638,8 +16635,7 @@ msgid ""
 msgstr ""
 "個々のファイルが解析される前に呼び出される為に、\n"
 "コールバックを記録する。\n"
-"ブロックはこのメソッドがその後parse呼び出しを呼び出される\n"
-"為に渡される。"
+"このメソッドの為に渡されるブロックはその後parse呼び出しを呼び出される。"
 
 # YARD::Parser::SourceParser.before_parse_file
 #: ../lib/yard/parser/source_parser.rb:246
@@ -16647,7 +16643,7 @@ msgid ""
 "To register a callback that is called before the entire list of files\n"
 "is processed, see {before_parse_list}."
 msgstr ""
-"全ての処理されるファイルのリストの前に呼び出される\n"
+"全てのファイルのリストが処理される前に呼び出される\n"
 "コールバックを記録する為には、{before_parse_list}参照。"
 
 # @example Installing a simple callback
@@ -16683,8 +16679,8 @@ msgid ""
 "file that is parsed. This might happen many times for a single\n"
 "codebase."
 msgstr ""
-"yieldされるブロックは、それぞれの解析されるファイルの前に一度呼び出される。\n"
-"これは、単一のコードベースの為に何回も起きる可能性がある。"
+"yieldされるブロックは、それぞれのファイルが解析される前に一度呼び出される。\n"
+"これは、単一のコードベースでは何回も起きる可能性がある。"
 
 # @yieldparam [SourceParser]
 #: ../lib/yard/parser/source_parser.rb:274
@@ -16722,7 +16718,7 @@ msgid ""
 msgstr ""
 "個々のファイルが解析された後で呼び出される為に\n"
 "コールバックを記録する。\n"
-"ブロックはこのメソッドがその後parse呼び出しで呼び出される為に解析される。"
+"このメソッドの為に渡されるブロックはその後parse呼び出しを呼び出される。"
 
 # YARD::Parser::SourceParser.after_parse_file
 #: ../lib/yard/parser/source_parser.rb:283
@@ -16730,7 +16726,7 @@ msgid ""
 "To register a callback that is called after the entire list of files\n"
 "is processed, see {after_parse_list}."
 msgstr ""
-"処理されるファイルの全てのリストの後で呼び出される。\n"
+"ファイルリストが全て処理された後で呼び出される。\n"
 "コールバックを記録するには、{after_parse_list}参照。"
 
 # @example
@@ -16763,7 +16759,7 @@ msgid ""
 "the yielded block is called once after each file \n"
 "that is parsed. This might happen many times for a single codebase."
 msgstr ""
-"yieldされるブロックは、それぞれの解析されるファイルが後で一度呼び出される。\n"
+"yieldされるブロックは、それぞれのファイルが解析された後で一度呼び出される。\n"
 "これは単一のコードベースの為に何回も起る可能性がある。"
 
 # @return [Array<Proc>]
@@ -16874,7 +16870,7 @@ msgstr "ソースパーサーの新しいインスタンス。"
 # @param [OpenStruct] globals
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "global state to be re-used across separate source files"
-msgstr "globalはソースファイルをまたいで再利用される為の状態となる。"
+msgstr "ソースファイルをまたいで再利用される,global state.??"
 
 # @param [Boolean] load_order_errors
 #: ../lib/yard/parser/source_parser.rb:402
@@ -16922,7 +16918,7 @@ msgstr ""
 # YARD::Parser::SourceParser#convert_encoding
 #: ../lib/yard/parser/source_parser.rb:466
 msgid "Searches for encoding line and forces encoding"
-msgstr "行のエンコーディングやエンコーディングの強制の為に検索する。"
+msgstr "エンコーディング行を検索し、エンコーディングを強制する。"
 
 # YARD::Parser::SourceParser#post_process
 #: ../lib/yard/parser/source_parser.rb:487
