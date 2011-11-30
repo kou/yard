@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-29 18:49+0900\n"
+"PO-Revision-Date: 2011-11-30 12:50+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15047,6 +15047,8 @@ msgid ""
 "a list of semantic tokens representing the source code\n"
 "to be post-processed"
 msgstr ""
+"a list of semantic tokens representing the source code\n"
+"to be post-processed"
 
 # @return [CParser]
 #: ../lib/yard/parser/c_parser.rb:8
@@ -15059,11 +15061,13 @@ msgid ""
 "Builds and s-expression by creating {AstNode} objects with\n"
 "the type provided by the first argument."
 msgstr ""
+"最初の引数によって提供された型と共に{AstNode}オブジェクトを\n"
+"作成する事によってビルドされS式にされる。??(build,S式の順番を確認)"
 
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:24
 msgid "tag|example|A method call"
-msgstr ""
+msgstr "tag|example|メソッド呼び出し"
 
 # @see
 #: ../lib/yard/parser/ruby/ast_node.rb:24
@@ -15081,6 +15085,8 @@ msgstr ""
 #: ../lib/yard/parser/ruby/ast_node.rb:24
 msgid "tag|example|An implicit list of keywords"
 msgstr ""
+"キーワードのリストを実装する。\n"
+"@example An implicit list of keywords"
 
 # @example A method call
 #: ../lib/yard/parser/ruby/ast_node.rb:24
@@ -15100,6 +15106,11 @@ msgid ""
 "  # AST for \"if true; 5 end\":\n"
 "  s(s(:if, s(:var_ref, s(:kw, \"true\")), s(s(:int, \"5\")), nil))"
 msgstr ""
+"ASTノードは型や子のリストによって特徴付けられる。\n"
+"それは最も簡単にs-expression(S式) {#s}メソッドによって表される。\n"
+"以下の通り。\n"
+"  # AST for \"if true; 5 end\":\n"
+"  s(s(:if, s(:var_ref, s(:kw, \"true\")), s(s(:int, \"5\")), nil))"
 
 # YARD::Parser::Ruby::AstNode
 #: ../lib/yard/parser/ruby/ast_node.rb:36
@@ -15110,72 +15121,79 @@ msgid ""
 "list, like Strings or Symbols representing names. To return only\n"
 "the AstNode children of the node, use {#children}."
 msgstr ""
+"ノードの型は、リストの一部とは考えられていない。\n"
+"その為,そのリストは子だけとなる。\n"
+"そして +ast[0]+ は型を参照しない、\n"
+"しかし、最初の子(やオブジェクト)が選ばれる。\n"
+"+AstNode+ オブジェクトではない事項は、リストの一部にでき、\n"
+"文字列やシンボルのように、名前を表現している。\n"
+"ノードからAstNodeの子だけ返すには、{#children}メソッドを使用する。"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:41
 msgid "the value to set the attribute docstring_hash_flag to."
-msgstr ""
+msgstr "docstring_hash_flag属性を設定する,値。"
 
 # YARD::Parser::Ruby::AstNode#docstring_hash_flag
 # YARD::Parser::Ruby::AstNode#comments_hash_flag
 #: ../lib/yard/parser/ruby/ast_node.rb:42
 #: ../lib/yard/parser/ruby/ast_node.rb:47
 msgid "Returns the value of attribute docstring_hash_flag"
-msgstr ""
+msgstr "docstring_hash_flag属性の値を返す。"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:42
 msgid "the value to set the attribute source to."
-msgstr ""
+msgstr "ソースの属性を設定する,値"
 
 # YARD::Parser::Ruby::AstNode#docstring_hash_flag=
 #: ../lib/yard/parser/ruby/ast_node.rb:42
 msgid "Sets the attribute docstring_hash_flag"
-msgstr ""
+msgstr "docstring_hash_flag属性を設定する。"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/statement.rb:5
 #: ../lib/yard/parser/ruby/ast_node.rb:42
 msgid "the value to set the attribute group to."
-msgstr ""
+msgstr "グループ属性を設定する,値。"
 
 # @return [String]
 #: ../lib/yard/parser/ruby/ast_node.rb:83
 #: ../lib/yard/parser/ruby/ast_node.rb:42
 msgid "the parse of {#full_source} that the node represents"
-msgstr ""
+msgstr "ノードを表す{#full_source}の入った,parse"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:42
 msgid "the value to set the attribute docstring_range to."
-msgstr ""
+msgstr "docstring_range属性を設定する,値。"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:42
 msgid "the value to set the attribute docstring to."
-msgstr ""
+msgstr "docstring属性を設定する,値。"
 
 # YARD::Parser::Ruby::AstNode#docstring_range=
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "Sets the attribute docstring_range"
-msgstr ""
+msgstr "docstring_range属性を設定する。"
 
 # YARD::Parser::Ruby::AstNode#docstring_range
 # YARD::Parser::Ruby::AstNode#comments_range
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 #: ../lib/yard/parser/ruby/ast_node.rb:46
 msgid "Returns the value of attribute docstring_range"
-msgstr ""
+msgstr "docstring_range属性の入った値を返す。"
 
 # YARD::Parser::Ruby::AstNode#docstring=
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "Sets the attribute docstring"
-msgstr ""
+msgstr "docstring属性を設定する。"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "the value to set the attribute full_source to."
-msgstr ""
+msgstr "full_source属性を設定する,値。"
 
 # YARD::Parser::Ruby::AstNode#docstring
 # YARD::Parser::Ruby::AstNode#comments
@@ -15183,105 +15201,107 @@ msgstr ""
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 #: ../lib/yard/parser/ruby/ast_node.rb:45 ../lib/yard/tags/overload_tag.rb:5
 msgid "Returns the value of attribute docstring"
-msgstr ""
+msgstr "docstring属性の入った値を返す。"
 
 # YARD::Parser::Ruby::AstNode#source=
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "Sets the attribute source"
-msgstr ""
+msgstr "ソース属性を設定する。"
 
 # YARD::Parser::Ruby::Legacy::Statement#group
 # YARD::Parser::Ruby::AstNode#group
 #: ../lib/yard/parser/ruby/legacy/statement.rb:6
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "Returns the value of attribute group"
-msgstr ""
+msgstr "グループ属性の入った値を返す。"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "the value to set the attribute source_range to."
-msgstr ""
+msgstr "source_range属性を設定する値。"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "the value to set the attribute line_range to."
-msgstr ""
+msgstr "line_range属性を設定する,値。"
 
 # @param value
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "the value to set the attribute file to."
-msgstr ""
+msgstr "ファイル属性を設定する,値。"
 
 # YARD::Parser::Ruby::Legacy::Statement#group=
 # YARD::Parser::Ruby::AstNode#group=
 #: ../lib/yard/parser/ruby/legacy/statement.rb:6
 #: ../lib/yard/parser/ruby/ast_node.rb:43
 msgid "Sets the attribute group"
-msgstr ""
+msgstr "グループ属性を設定する。"
 
 # YARD::Parser::Ruby::AstNode#file=
 #: ../lib/yard/parser/ruby/ast_node.rb:44
 msgid "Sets the attribute file"
-msgstr ""
+msgstr "ファイル属性を設定する。"
 
 # YARD::Parser::Ruby::AstNode#full_source=
 #: ../lib/yard/parser/ruby/ast_node.rb:44
 msgid "Sets the attribute full_source"
-msgstr ""
+msgstr "full_source属性を設定する。"
 
 # YARD::Parser::Ruby::AstNode#source_range=
 #: ../lib/yard/parser/ruby/ast_node.rb:44
 msgid "Sets the attribute source_range"
-msgstr ""
+msgstr "source_range属性を設定する。"
 
 # YARD::Parser::Ruby::AstNode#line_range=
 #: ../lib/yard/parser/ruby/ast_node.rb:44
 msgid "Sets the attribute line_range"
-msgstr ""
+msgstr "line_range属性を設定する。"
 
 # YARD::Parser::Ruby::AstNode#to_s
 #: ../lib/yard/parser/ruby/ast_node.rb:48
 msgid "Returns the value of attribute source"
-msgstr ""
+msgstr "source属性の入った値を返す。"
 
 # @return [Symbol]
 #: ../lib/yard/parser/ruby/ast_node.rb:50
 msgid "the node's unique symbolic type"
-msgstr ""
+msgstr "独自のsymbolic型のノード群。"
 
 # @return [AstNode, nil]
 #: ../lib/yard/parser/ruby/ast_node.rb:53
 msgid "the node's parent or nil if it is a root node."
-msgstr ""
+msgstr "親ノード群(ルートノードの場合,nilとなる。)"
 
 # @return [Range]
 #: ../lib/yard/parser/ruby/ast_node.rb:57
 msgid ""
 "the character range in {#full_source} represented\n"
 "by the node"
-msgstr ""
+msgstr "ノードによって表される{#full_source}メソッドの中の固有の範囲。"
 
 # @return [Range]
 #: ../lib/yard/parser/ruby/ast_node.rb:64
 msgid ""
 "the line range in {#full_source} represented\n"
 "by the node"
-msgstr ""
+msgstr "ノードによって表される{#full_source}メソッドの中の行の範囲。"
 
 # @return [String]
 #: ../lib/yard/parser/ruby/ast_node.rb:70
 msgid "the filename the node was parsed from"
 msgstr ""
+"ノードから解析された,ファイル名。\n"
+"?(fromの先..toと同じ?)the filename the node was parsed from"
 
 # @return [String]
 #: ../lib/yard/parser/ruby/ast_node.rb:76
 msgid "the full source that the node was parsed from"
-msgstr ""
+msgstr "ノードから解析されたソースの全て。"
 
 # YARD::Parser::Ruby::AstNode::KEYWORDS
 #: ../lib/yard/parser/ruby/ast_node.rb:89
 msgid "List of all known keywords"
-msgstr ""
+msgstr "有名なキーワードのリスト。"
 
 # YARD::Parser::Ruby::AstNode.node_class_for
 #: ../lib/yard/parser/ruby/ast_node.rb:101
@@ -15289,6 +15309,8 @@ msgid ""
 "Finds the node subclass that should be instantiated for a specific\n"
 "node type"
 msgstr ""
+"特定のノード型用の\n"
+"インスタンス化されるべきサブクラスのノードを見つける。"
 
 # YARD::Parser::Ruby::AstNode.node_class_for
 # YARD::Parser::Ruby::AstNode#initialize
@@ -15297,22 +15319,22 @@ msgstr ""
 #: ../lib/yard/parser/ruby/ast_node.rb:139
 #: ../lib/yard/parser/ruby/ast_node.rb:152
 msgid "Creating an AstNode"
-msgstr ""
+msgstr "AstNodeを作成する。"
 
 # @param [Symbol] type
 #: ../lib/yard/parser/ruby/ast_node.rb:105
 msgid "the node type to find a subclass for"
-msgstr ""
+msgstr "ノードの型用のサブクラスを見つける,型"
 
 # @return [Class]
 #: ../lib/yard/parser/ruby/ast_node.rb:105
 msgid "a subclass of AstNode to instantiate the node with."
-msgstr ""
+msgstr "nodeをインスタンス化するAstNodeのサブクラス。"
 
 # YARD::Parser::Ruby::AstNode#initialize
 #: ../lib/yard/parser/ruby/ast_node.rb:127
 msgid "Creates a new AST node"
-msgstr ""
+msgstr "新しいASTノードを作成する。"
 
 # @param [Array<AstNode>]
 #: ../lib/yard/parser/ruby/ast_node.rb:139
@@ -15322,29 +15344,29 @@ msgstr ""
 # @param [Array<AstNode>] arr
 #: ../lib/yard/parser/ruby/ast_node.rb:139
 msgid "the child nodes"
-msgstr ""
+msgstr "子のノード"
 
 # @param [Hash] opts
 #: ../lib/yard/parser/ruby/ast_node.rb:139
 msgid "any extra line options"
-msgstr ""
+msgstr "省略可能な行の為の追加の設定。"
 
 # @return [AstNode]
 #: ../lib/yard/parser/ruby/ast_node.rb:139
 msgid "a new instance of AstNode"
-msgstr ""
+msgstr "AstNodeの新しいインスタンス。"
 
 # @param [Symbol] type
 #: ../lib/yard/parser/ruby/ast_node.rb:139
 msgid "the type of node being created"
-msgstr ""
+msgstr "作成されるノードのタイプ。"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:152
 msgid ""
 "whether the node is equal to another by checking\n"
 "the list and type"
-msgstr ""
+msgstr "ノードがリストか型かチェックすることによって他と等しくなるかどうか"
 
 # YARD::Parser::Ruby::AstNode#jump
 #: ../lib/yard/parser/ruby/ast_node.rb:159
@@ -15353,6 +15375,15 @@ msgid ""
 "first node with a type matching any of +node_types+, otherwise\n"
 "returns the original node (self)."
 msgstr ""
+"??andの繋がり方\n"
+"ノードや,全ての子孫通じて検索する。\n"
+"+node_types+ の入った型マッチと共に\n"
+"最初のノードを返す。\n"
+"さもなければ、(自身の)オリジナルノードを返す。\n"
+"\n"
+"Searches through the node and all descendants\n"
+"and returns the first node with a type matching any of +node_types+,\n"
+"otherwise returns the original node (self)."
 
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:178
@@ -15366,7 +15397,7 @@ msgstr ""
 #: ../lib/yard/parser/ruby/ast_node.rb:184
 #: ../lib/yard/parser/ruby/ast_node.rb:193
 msgid "Traversing a Node"
-msgstr ""
+msgstr "ノードを辿る。"
 
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:178
@@ -15401,12 +15432,12 @@ msgstr ""
 # @param [Array<Symbol>] node_types
 #: ../lib/yard/parser/ruby/ast_node.rb:178
 msgid "a set of node types to match"
-msgstr ""
+msgstr "マッチするノードの型の設定。"
 
 # @return [AstNode]
 #: ../lib/yard/parser/ruby/ast_node.rb:178
 msgid "the matching node, if one was found"
-msgstr ""
+msgstr "マッチするノード(一つ見つかった場合)"
 
 # @example Returns the first method definition in a block of code
 #: ../lib/yard/parser/ruby/ast_node.rb:178
@@ -15420,18 +15451,21 @@ msgstr ""
 # @return [self]
 #: ../lib/yard/parser/ruby/ast_node.rb:178
 msgid "if no node was found"
-msgstr ""
+msgstr "ノードが見つからなかった場合"
 
 # @return [Array<AstNode>]
 #: ../lib/yard/parser/ruby/ast_node.rb:184
 msgid "the {AstNode} children inside the node"
-msgstr ""
+msgstr "ノード内部の{AstNode}の子。"
 
 # YARD::Parser::Ruby::AstNode#traverse
 #: ../lib/yard/parser/ruby/ast_node.rb:189
 msgid ""
 "Traverses the object and yields each node (including descendants) in order."
 msgstr ""
+"オブジェクトを辿り、\n"
+"順番にそれぞれのノード(子孫を含んでいる)を\n"
+"yieldする。??(処理の流れ)"
 
 # @yieldparam [AstNode]
 #: ../lib/yard/parser/ruby/ast_node.rb:193
@@ -15441,17 +15475,17 @@ msgstr ""
 # @yield
 #: ../lib/yard/parser/ruby/ast_node.rb:193
 msgid "each descendant node in order"
-msgstr ""
+msgstr "整理されたそれぞれの子孫のノード。"
 
 # @yieldparam [AstNode] self,
 #: ../lib/yard/parser/ruby/ast_node.rb:193
 msgid "or a child/descendant node"
-msgstr ""
+msgstr "自身や子や子孫のノード。"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:204
 msgid "whether the node is a token"
-msgstr ""
+msgstr "ノードがトークンかどうか"
 
 # YARD::Parser::Ruby::AstNode#token?
 # YARD::Parser::Ruby::AstNode#ref?
@@ -15473,27 +15507,27 @@ msgstr ""
 msgid ""
 "whether the node is a reference (variable,\n"
 "constant name)"
-msgstr ""
+msgstr "ノードが参照するかどうか(変数,定数名)"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:215
 msgid "whether the node is a literal value"
-msgstr ""
+msgstr "ノードがリテラル値かどうか"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:220
 msgid "whether the node is a keyword"
-msgstr ""
+msgstr "ノードがキーワードかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:225
 msgid "whether the node is a method call"
-msgstr ""
+msgstr "ノードがメソッド呼び出しかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:230
 msgid "whether the node is a if/elsif/else condition"
-msgstr ""
+msgstr "ノードがifやelsifやelseの条件かどうか"
 
 # YARD::Parser::Ruby::AstNode#has_line?
 # YARD::Parser::Ruby::AstNode#line
@@ -15502,22 +15536,22 @@ msgstr ""
 #: ../lib/yard/parser/ruby/ast_node.rb:242
 #: ../lib/yard/parser/ruby/ast_node.rb:247
 msgid "Getting Line Information"
-msgstr ""
+msgstr "行の情報を取得する。"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/ast_node.rb:237
 msgid "whether the node has a {#line_range} set"
-msgstr ""
+msgstr "ノードが{#line_range}設定を持っているかどうか"
 
 # @return [Fixnum]
 #: ../lib/yard/parser/ruby/ast_node.rb:242
 msgid "the starting line number of the node"
-msgstr ""
+msgstr "ノードの文字列の行数"
 
 # @return [String]
 #: ../lib/yard/parser/ruby/ast_node.rb:247
 msgid "the first line of source represented by the node."
-msgstr ""
+msgstr "ノードによって表されるソースの最初の行"
 
 # YARD::Parser::Ruby::AstNode#show
 # YARD::Parser::Ruby::AstNode#pretty_print
@@ -15526,27 +15560,27 @@ msgstr ""
 #: ../lib/yard/parser/ruby/ast_node.rb:259
 #: ../lib/yard/parser/ruby/ast_node.rb:294
 msgid "Printing a Node"
-msgstr ""
+msgstr "ノードをプリントする。"
 
 # @return [String]
 #: ../lib/yard/parser/ruby/ast_node.rb:254
 msgid "the first line of source the node represents"
-msgstr ""
+msgstr "ノードを表すソースの最初の行"
 
 # @return [nil]
 #: ../lib/yard/parser/ruby/ast_node.rb:259
 msgid "pretty prints the node"
-msgstr ""
+msgstr "ノードの出力"
 
 # @return [String]
 #: ../lib/yard/parser/ruby/ast_node.rb:294
 msgid "inspects the object"
-msgstr ""
+msgstr "解析するオブジェクト"
 
 # YARD::Parser::Ruby::AstNode#reset_line_info
 #: ../lib/yard/parser/ruby/ast_node.rb:304
 msgid "Resets line information"
-msgstr ""
+msgstr "行情報をリセットする。"
 
 # YARD::Parser::Ruby::Legacy::RubyToken
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:7
