@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-30 14:58+0900\n"
+"PO-Revision-Date: 2011-11-30 18:23+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14962,6 +14962,8 @@ msgid ""
 "a specific way. A parser should implement {#parse}, {#tokenize} and\n"
 "{#enumerator}."
 msgstr ""
+"独自の方法でソースコードを解析する抽象的なベースパーサークラスを表す。\n"
+"パーサーは{#parse}や,{#tokenize}や{#enumerator}メソッドを実装しなくてはならない。"
 
 # YARD::Parser::Base
 #: ../lib/yard/parser/base.rb:8
@@ -14969,6 +14971,8 @@ msgid ""
 "== Registering a Custom Parser\n"
 "To register a parser, see {SourceParser.register_parser_type}"
 msgstr ""
+"== カスタムパーサーを記録する\n"
+"パーサーを記録する為には、{SourceParser.register_parser_type}を参照。"
 
 # @see
 #: ../lib/yard/parser/base.rb:15
@@ -14988,7 +14992,7 @@ msgstr ""
 # YARD::Parser::Base.parse
 #: ../lib/yard/parser/base.rb:17
 msgid "Convenience method to create a new parser and {#parse}"
-msgstr ""
+msgstr "新しいパーサーや(#parse)メソッドを作成する為の便利なメソッド"
 
 # YARD::Parser::Base#initialize
 #: ../lib/yard/parser/base.rb:22
@@ -14996,37 +15000,45 @@ msgid ""
 "This default constructor does nothing. The subclass is responsible for\n"
 "storing the source contents and filename if they are required."
 msgstr ""
+"このデフォルトのコンストラクターは生成しない??。\n"
+"サブクラスはソースの内容やファイル名が必要とされる場合、それらを記憶する責任がある。"
 
 # @param [String] source
 #: ../lib/yard/parser/base.rb:25
 msgid "the source contents"
-msgstr ""
+msgstr "ソースの内容"
 
 # @param [String] filename
 #: ../lib/yard/parser/base.rb:25
 msgid "the name of the file if from disk"
 msgstr ""
+"もしディスクからの場合(??なんのこっちゃ..)\n"
+"ファイルの名前"
 
 # YARD::Parser::Base#parse
 #: ../lib/yard/parser/base.rb:30
 msgid ""
 "This method should be implemented to parse the source and return itself."
 msgstr ""
+"このメソッドはソースの解析やそれ自身を返す為に\n"
+"実装されなくてはならない。"
 
 # @return [Base]
 #: ../lib/yard/parser/base.rb:32
 msgid "this method should return itself"
-msgstr ""
+msgstr "このメソッドはそれ自身を返さなくてはならない。"
 
 # YARD::Parser::Base#tokenize
 #: ../lib/yard/parser/base.rb:37
 msgid "This method should be implemented to tokenize given source"
 msgstr ""
+"このメソッドは与えられたソースを\n"
+"トークナイズする為に実装されなければならない。"
 
 # @return [Array]
 #: ../lib/yard/parser/base.rb:39
 msgid "a list/tree of lexical tokens"
-msgstr ""
+msgstr "単語のトークンの入ったリストやツリー"
 
 # YARD::Parser::Base#enumerator
 #: ../lib/yard/parser/base.rb:44
@@ -15035,20 +15047,21 @@ msgid ""
 "representing the source code to be post-processed. Otherwise the method\n"
 "should return nil."
 msgstr ""
+"後処理される為にソースコードを表している意味のあるトークンのリストを返す為に\n"
+"このメソッドは実装されなければならない。\n"
+"そうでなければこのメソッドは、nilを返さなければならない。"
 
 # @return [nil]
 #: ../lib/yard/parser/base.rb:51
 msgid "if no post-processing should be done"
-msgstr ""
+msgstr "後処理がない場合、nilを返さなければならない。"
 
 # @return [Array]
 #: ../lib/yard/parser/base.rb:51
 msgid ""
 "a list of semantic tokens representing the source code\n"
 "to be post-processed"
-msgstr ""
-"a list of semantic tokens representing the source code\n"
-"to be post-processed"
+msgstr "後処理される為のソースコードを表す意味のあるトークンのリスト"
 
 # @return [CParser]
 #: ../lib/yard/parser/c_parser.rb:8
