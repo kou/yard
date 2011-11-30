@@ -1,4 +1,4 @@
 <p class="note private">
-  <strong><%= format("This %{type} is part of a private API.", :type => object.type) %></strong> 
-  <%= format("You should avoid using this %{type} if possible, as it may be removed or be changed in the future.", :type => object.type) %>
+  <strong><%= _("This %{type} is part of a private API.") % {:type => object.type} %></strong> 
+  <%= _("You should avoid using this %{type} if possible, as it may be removed or be changed in the future.") % {:type => object.type} %>
 </p>
