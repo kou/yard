@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-01 11:27+0900\n"
+"PO-Revision-Date: 2011-12-01 15:33+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15592,50 +15592,52 @@ msgstr "行情報をリセットする。"
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:7
 msgid "Legacy lexical tokenizer module."
 msgstr ""
+"レガシーレキシカルトークナイザーモジュール\n"
+"(レガシーな単語をトークナイザーするモジュール)"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::Token
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:17
 msgid "Represents a token in the Ruby lexer"
-msgstr ""
+msgstr "Ruby lexerの中のトークンを表す"
 
 # @return [Integer]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:20
 msgid ""
 "the line number in the file/stream the token is\n"
 "located."
-msgstr ""
+msgstr "トークンが位置する,ファイルやストリームの中の行の数"
 
 # @return [Integer]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:24
 msgid ""
 "the character number in the file/stream the token\n"
 "is located."
-msgstr ""
+msgstr "トークンが位置する,ファイルやストリームの中のcharacterの数"
 
 # @return [String]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:27
 msgid "the token text value"
-msgstr ""
+msgstr "トークンのテキストの値"
 
 # @return [Symbol]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:30
 msgid "the lexical state at the token"
-msgstr ""
+msgstr "トークンにおける単語の状態"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::Token#initialize
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:36
 msgid "Creates a new Token object"
-msgstr ""
+msgstr "新しいトークンオブジェクトを作成する"
 
 # @param [Integer] char_no
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:38
 msgid "the char number to initialize the token to"
-msgstr ""
+msgstr "トークンをイニシャライズする,char number(??文字の何番目か)"
 
 # @param [Integer] line_no
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:38
 msgid "the line number to initialize the token to"
-msgstr ""
+msgstr "トークンをイニシャライズする,行数"
 
 # @param [Integer]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:38
@@ -15650,17 +15652,17 @@ msgstr ""
 # @return [Token]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:38
 msgid "a new instance of Token"
-msgstr ""
+msgstr "トークンの新しいインスタンス"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::Token#set_text
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:45
 msgid "Chainable way to sets the text attribute"
-msgstr ""
+msgstr "テキスト属性を設定する為の方法を紐付ける。"
 
 # @param [String] text
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:48
 msgid "the new text"
-msgstr ""
+msgstr "新しいテキスト"
 
 # @param [String]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:48
@@ -15686,67 +15688,67 @@ msgstr ""
 # @return [Token]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:48
 msgid "this token object"
-msgstr ""
+msgstr "このトークンオブジェクト"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkBlockContents
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:55
 msgid "Represents a block"
-msgstr ""
+msgstr "ブロックを表す"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkStatementEnd
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:60
 msgid "Represents an end statement"
-msgstr ""
+msgstr "文の終りを表す。"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkNode#node
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:66
 msgid "Returns the value of attribute node"
-msgstr ""
+msgstr "node属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkWhitespace
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:69
 msgid "Represents whitespace"
-msgstr ""
+msgstr "空白を表す"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkId
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:73
 msgid "Represents a Ruby identifier"
-msgstr ""
+msgstr "RubyのIDを表す。??(処理の中の固有のID)"
 
 # @return [TkId]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:74
 msgid "a new instance of TkId"
-msgstr ""
+msgstr "TkIdの新しいインスタンス"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkKW
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:82
 msgid "Represents a Ruby keyword"
-msgstr ""
+msgstr "Rubyキーワードを表す。"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkVal
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:86
 msgid "Represents a Ruby value"
-msgstr ""
+msgstr "Rubyの値を表す。"
 
 # @return [TkVal]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:87
 msgid "a new instance of TkVal"
-msgstr ""
+msgstr "TkValの新しいインスタンス"
 
 # @return [TkOPASGN]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:100
 msgid "a new instance of TkOPASGN"
-msgstr ""
+msgstr "TkOPASGNの新しいインスタンス"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkOPASGN#op
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:106
 msgid "Returns the value of attribute op"
-msgstr ""
+msgstr "op属性の値を返す。"
 
 # @return [TkUnknownChar]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:109
 msgid "a new instance of TkUnknownChar"
-msgstr ""
+msgstr "TkUnknownCharの新しいインスタンス"
 
 # YARD::Parser::Ruby::Legacy::RubyToken::TkReading2Token
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:284
@@ -15758,7 +15760,7 @@ msgstr ""
 # YARD::Parser::Ruby::Legacy::RubyLex
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:330
 msgid "Lexical analyzer for Ruby source"
-msgstr ""
+msgstr "Rubyソース用の単語解析"
 
 # YARD::Parser::Ruby::Legacy::RubyLex::BufferedReader
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:333
@@ -15766,6 +15768,8 @@ msgid ""
 "Read an input stream character by character. We allow for unlimited\n"
 "ungetting of characters just read."
 msgstr ""
+"character毎にストリームの入力を読み込む。\n"
+"そこで読まれたcharacterの書き戻しを無制限に許可する。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex::BufferedReader
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:336
@@ -15774,6 +15778,9 @@ msgid ""
 "into a buffer initially, and then simply traversing it using\n"
 "pointers."
 msgstr ""
+"最初にバッファの中へ全ての入力を読み込む事によって\n"
+"実装する事を非常に簡潔にする。\n"
+"そして、それはポインターを利用する事によって簡単に辿ることができる。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex::BufferedReader
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:340
@@ -15785,6 +15792,14 @@ msgid ""
 "the other to read the rest of the input line where the here\n"
 "document was initially encountered. For example, we might have"
 msgstr ""
+"私達は <i>複数のヒアドキュメント</i> も考慮しなければならない。\n"
+"この複数のヒアドキュメントは、字句解析器がヒアドキュメントに出会う時に起こる。\n"
+"この時点で私達は、事実上2つの部分に入力ストリームを分割する必要がある。\n"
+"一つはヒアドキュメントの本体を読み込む部分、\n"
+"もう一つは、それ以外の\n"
+"ヒアドキュメントが最初に出会った所から、\n"
+"入力行の残りを読み込む為の部分。\n"
+"例えば、"
 
 # YARD::Parser::Ruby::Legacy::RubyLex::BufferedReader
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:347
@@ -15806,86 +15821,90 @@ msgid ""
 "here document.  Once complete, it needs to read the rest of the\n"
 "original line, but then skip the here document body."
 msgstr ""
+"この字句解析器が<<Aと出会った時、行の終りまで読み込まれその内容を保持する。\n"
+"そして、その後ヒアドキュメントの本体を読み込む。\n"
+"一度Aの部分で解析が完了させ、字句解析器は元の行の残りを読み込む必要がある。\n"
+"しかし、その時ヒアドキュメントの本体はスキップする。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex::BufferedReader#line_num
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:363
 msgid "Returns the value of attribute line_num"
-msgstr ""
+msgstr "line_num属性の値を返す。"
 
 # @return [BufferedReader]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:364
 msgid "a new instance of BufferedReader"
-msgstr ""
+msgstr "BufferedReaderの新しいインスタンス"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#continue
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:457
 msgid "Returns the value of attribute continue"
-msgstr ""
+msgstr "continue属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#lex_state
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:458
 msgid "Returns the value of attribute lex_state"
-msgstr ""
+msgstr "lex_state属性の値を返す。"
 
 # @return [RubyLex]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:463
 msgid "a new instance of RubyLex"
-msgstr ""
+msgstr "RubyLexの新しいインスタンス"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:485
 msgid "the value to set the attribute skip_space to."
-msgstr ""
+msgstr "skip_space属性を設定する,値"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:486
 msgid "the value to set the attribute read_auto_clean_up to."
-msgstr ""
+msgstr "read_auto_clean_up属性を設定する,値"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#skip_space=
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:486
 msgid "Sets the attribute skip_space"
-msgstr ""
+msgstr "skip_space属性を設定する。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#skip_space
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:486
 msgid "Returns the value of attribute skip_space"
-msgstr ""
+msgstr "skip_space属性を返す。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#read_auto_clean_up=
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:487
 msgid "Sets the attribute read_auto_clean_up"
-msgstr ""
+msgstr "read_auto_clean_up属性を設定する。"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:487
 msgid "the value to set the attribute exception_on_syntax_error to."
-msgstr ""
+msgstr "exception_on_syntax_error属性を設定する,値"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#read_auto_clean_up
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:487
 msgid "Returns the value of attribute read_auto_clean_up"
-msgstr ""
+msgstr "read_auto_clean_up属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#exception_on_syntax_error
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:488
 msgid "Returns the value of attribute exception_on_syntax_error"
-msgstr ""
+msgstr "exception_on_syntax_error属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#exception_on_syntax_error=
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:488
 msgid "Sets the attribute exception_on_syntax_error"
-msgstr ""
+msgstr "exception_on_syntax_error属性を設定する。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#indent
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:490
 msgid "Returns the value of attribute indent"
-msgstr ""
+msgstr "indent属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::RubyLex#line_no
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:492
 msgid "io functions"
-msgstr ""
+msgstr "入出力の機能"
 
 # YARD::Parser::Ruby::Legacy::RubyLex::DEINDENT_CLAUSE
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:579
