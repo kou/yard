@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-01 16:46+0900\n"
+"PO-Revision-Date: 2011-12-01 17:04+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16100,12 +16100,12 @@ msgstr "ブロックの中のトークンを処理する。"
 # YARD::Parser::Ruby::Legacy::StatementList#process_initial_comment
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:215
 msgid "Processes a comment token that comes before a statement"
-msgstr "文の前に来るトークンのコメントを処理する。(??statement処理の前に行われる)"
+msgstr "statement処理の前にトークンのコメントを処理する。"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:218
 msgid "whether or not +tk+ was processed as an initial comment"
-msgstr "+tk+ が始めのコメントのように処理されるかどうか。(initial comment??)"
+msgstr "+tk+ がこの#process_initial_commentメソッドが正常に処理されたかどうか。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#process_simple_block_opener
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:262
@@ -16156,7 +16156,7 @@ msgstr ""
 # YARD::Parser::Ruby::Legacy::StatementList#peek_no_space
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:382
 msgid "Returns the next token in the stream that's not a space"
-msgstr "スペースの無いストリームの中の次のトークンを返す。??(ストリーム->配列??)"
+msgstr "スペースの無いストリームの中の次のトークンを返す。"
 
 # @return [RubyToken::Token]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:384
