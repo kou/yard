@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-01 11:20+0900\n"
+"PO-Revision-Date: 2011-12-01 11:23+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16139,14 +16139,14 @@ msgstr "スペースの無い次のトークン"
 # @return [TokenList]
 #: ../lib/yard/parser/ruby/legacy/token_list.rb:6
 msgid "a new instance of TokenList"
-msgstr ""
+msgstr "TokenListの新しいインスタンス"
 
 # @param [TokenList, Token, String] tokens
 #: ../lib/yard/parser/ruby/legacy/token_list.rb:25
 msgid ""
 "A list of tokens. If the token is a string, it\n"
 "is parsed with {RubyLex}."
-msgstr ""
+msgstr "トークンのリスト。トークンが文字列の場合、{RubyLex}と共に解析される。"
 
 # @param [TokenList, Token, String]
 #: ../lib/yard/parser/ruby/legacy/token_list.rb:25
