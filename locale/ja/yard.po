@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-01 09:47+0900\n"
+"PO-Revision-Date: 2011-12-01 11:20+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15970,36 +15970,36 @@ msgstr "Rubyのソースの入った,最初から最後までの行"
 # @param value
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:6
 msgid "the value to set the attribute shebang_line to."
-msgstr ""
+msgstr "shebang_line属性を設定する,値"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:6
 msgid "the value to set the attribute encoding_line to."
-msgstr ""
+msgstr "encoding_line属性を設定する,値"
 
 # YARD::Parser::Ruby::Legacy::StatementList#encoding_line=
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:7
 msgid "Sets the attribute encoding_line"
-msgstr ""
+msgstr "encoding_line属性を設定する。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#encoding_line
 # YARD::Parser::Ruby::RipperParser#encoding_line
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:7
 #: ../lib/yard/parser/ruby/ruby_parser.rb:27
 msgid "Returns the value of attribute encoding_line"
-msgstr ""
+msgstr "encoding_line属性を返す。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#shebang_line=
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:7
 msgid "Sets the attribute shebang_line"
-msgstr ""
+msgstr "shebang_line属性を設定する。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#shebang_line
 # YARD::Parser::Ruby::RipperParser#shebang_line
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:7
 #: ../lib/yard/parser/ruby/ruby_parser.rb:27
 msgid "Returns the value of attribute shebang_line"
-msgstr ""
+msgstr "shebang_line属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::StatementList::OPEN_BLOCK_TOKENS
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:9
@@ -16007,36 +16007,39 @@ msgid ""
 "The following list of tokens will require a block to be opened\n"
 "if used at the beginning of a statement."
 msgstr ""
+"続くトークンのリストは、\n"
+"文の始めで使う場合、\n"
+"??(ソースを調べるopenblock)開かれるブロックを必要とする。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#initialize
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:14
 msgid "Creates a new statement list"
-msgstr ""
+msgstr "新しい文のリストを作成する。"
 
 # @return [StatementList]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:16
 msgid "a new instance of StatementList"
-msgstr ""
+msgstr "StatementListの新しいインスタンス"
 
 # @param [TokenList, String] content
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:16
 msgid "the tokens to create the list from"
-msgstr ""
+msgstr "トークンのリストを作成する,トークン"
 
 # YARD::Parser::Ruby::Legacy::StatementList#next_statement
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:38
 msgid "Returns the next statement in the token stream"
-msgstr ""
+msgstr "処理するトークンの中の次の文を返す。"
 
 # @return [Statement]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:40
 msgid "the next statement"
-msgstr ""
+msgstr "次の文"
 
 # YARD::Parser::Ruby::Legacy::StatementList#process_token
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:132
 msgid "Processes a single token"
-msgstr ""
+msgstr "単一のトークンを処理する。"
 
 # @param [RubyToken::Token] tk
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:134
@@ -16048,7 +16051,7 @@ msgstr ""
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:358
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:376
 msgid "the token to process"
-msgstr ""
+msgstr "処理の為のトークン"
 
 # @param [RubyToken::Token]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:134
@@ -16065,17 +16068,17 @@ msgstr ""
 # YARD::Parser::Ruby::Legacy::StatementList#process_block_token
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:197
 msgid "Processes a token in a block"
-msgstr ""
+msgstr "ブロックの中のトークンを処理する。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#process_initial_comment
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:215
 msgid "Processes a comment token that comes before a statement"
-msgstr ""
+msgstr "文の前に来るトークンのコメントを処理する。(??statement処理の前に行われる)"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:218
 msgid "whether or not +tk+ was processed as an initial comment"
-msgstr ""
+msgstr "+tk+ が始めのコメントのように処理されるかどうか。(initial comment??)"
 
 # YARD::Parser::Ruby::Legacy::StatementList#process_simple_block_opener
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:262
@@ -16084,6 +16087,8 @@ msgid ""
 "that is, a block opener such as +begin+ or +do+\n"
 "that isn't followed by an expression"
 msgstr ""
+"後に式がない +begin+ や +do+ 等のような単純なトークンの\n"
+"blockを開く処理をする。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#process_complex_block_opener
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:287
@@ -16092,23 +16097,25 @@ msgid ""
 "that is, a block opener such as +while+ or +for+\n"
 "that is followed by an expression"
 msgstr ""
+"後に式が来る +while+ や +for+ 等のようなトークンの\n"
+"複雑なblockを開く処理をする。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#process_statement_end
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:301
 msgid "Processes a token that closes a statement"
-msgstr ""
+msgstr "クラスの文トークンを処理する。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#balances?
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:354
 msgid "Handles the balancing of parentheses and blocks"
-msgstr ""
+msgstr "丸括弧とブロックの両立の為の処理する。"
 
 # @return [Boolean]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:358
 msgid ""
 "whether or not the current statement's parentheses and blocks\n"
 "are balanced after +tk+"
-msgstr ""
+msgstr "現在の文の丸括弧とブロックが +tk+ の後で両立するかどうか。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#push_token
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:373
@@ -16116,16 +16123,18 @@ msgid ""
 "Adds a token to the current statement,\n"
 "unless it's a newline, semicolon, or comment"
 msgstr ""
+"現在の文の為にトークンを追加する。\n"
+"ただし、改行や,セミコロンや,コメントの場合を除く。"
 
 # YARD::Parser::Ruby::Legacy::StatementList#peek_no_space
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:382
 msgid "Returns the next token in the stream that's not a space"
-msgstr ""
+msgstr "スペースの無いストリームの中の次のトークンを返す。??(ストリーム->配列??)"
 
 # @return [RubyToken::Token]
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:384
 msgid "the next non-space token"
-msgstr ""
+msgstr "スペースの無い次のトークン"
 
 # @return [TokenList]
 #: ../lib/yard/parser/ruby/legacy/token_list.rb:6
