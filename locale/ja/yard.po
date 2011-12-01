@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-01 15:33+0900\n"
+"PO-Revision-Date: 2011-12-01 16:09+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8027,7 +8027,7 @@ msgstr ""
 #: ../lib/yard/parser/ruby/ruby_parser.rb:112
 #: ../lib/yard/parser/ruby/legacy/ruby_parser.rb:112
 msgid "Ruby parsing components."
-msgstr ""
+msgstr "Rubyのパーサーの構成"
 
 # YARD::Parser::Ruby::Legacy
 #: ../lib/yard/autoload.rb:113 ../lib/yard/parser/ruby/legacy/ruby_lex.rb:113
@@ -8036,12 +8036,12 @@ msgstr ""
 #: ../lib/yard/parser/ruby/legacy/ruby_parser.rb:113
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:113
 msgid "Handles Ruby parsing in Ruby 1.8."
-msgstr ""
+msgstr "Ruby1.8の利用されるパーサー処理"
 
 # YARD::Rake
 #: ../lib/yard/autoload.rb:133 ../lib/yard/rake/yardoc_task.rb:133
 msgid "Holds Rake tasks used by YARD"
-msgstr ""
+msgstr "YARDによって利用されるRake taskを持つ"
 
 # YARD::Serializers
 #: ../lib/yard/autoload.rb:137 ../lib/yard/serializers/base.rb:137
@@ -8050,7 +8050,7 @@ msgstr ""
 #: ../lib/yard/serializers/process_serializer.rb:137
 #: ../lib/yard/serializers/file_system_serializer.rb:137
 msgid "Namespace for components that serialize to various endpoints"
-msgstr ""
+msgstr "様々な終点?の為に放送(連載??serialize)する構成の為のNamespace"
 
 # YARD::Server
 #: ../lib/yard/autoload.rb:145 ../lib/yard/server.rb:145
@@ -8072,7 +8072,7 @@ msgstr ""
 #: ../lib/yard/server/commands/display_object_command.rb:145
 msgid ""
 "Namespace for classes and modules that handle serving documentation over HTTP"
-msgstr ""
+msgstr "HTTP経由でドキュメント作成の提供するクラスやモジュールの為のNamespace"
 
 # YARD::Server
 #: ../lib/yard/autoload.rb:147 ../lib/yard/server.rb:147
@@ -8096,6 +8096,8 @@ msgid ""
 "== Implementing a Custom Server\n"
 "To customize the YARD server, see the {Adapter} and {Router} classes."
 msgstr ""
+"== カスタムサーバーの実装\n"
+"YARDサーバーをカスタマイズするには、{Adapter}や{Router}クラス参照。"
 
 # YARD::Server
 #: ../lib/yard/autoload.rb:150 ../lib/yard/server.rb:150
@@ -8121,6 +8123,9 @@ msgid ""
 "documentation\n"
 "in {RackMiddleware}."
 msgstr ""
+"== Rack Middleware\n"
+"あなたがRack MiddlewareのようにYARDサーバーを使いたい場合、\n"
+"{RackMiddleware}ドキュメントを参照。"
 
 # YARD::Server::Commands
 #: ../lib/yard/autoload.rb:158 ../lib/yard/server/commands/base.rb:158
@@ -8137,6 +8142,9 @@ msgid ""
 "to by the {Router} class. To implement a custom command, subclass {Commands::"
 "Base}."
 msgstr ""
+"コマンドは特定のサーバーの応答のような実装。\n"
+"そして、{Router}クラスによって導かれる。\n"
+"カスタムコマンドを実装する為には、{Commands::Base}サブクラス参照"
 
 # YARD::Tags
 #: ../lib/yard/autoload.rb:189 ../lib/yard/tags/tag.rb:189
@@ -8146,7 +8154,7 @@ msgstr ""
 #: ../lib/yard/tags/default_factory.rb:189
 #: ../lib/yard/tags/tag_format_error.rb:189
 msgid "Namespace for Tag components"
-msgstr ""
+msgstr "タグの構成の為のNamespace"
 
 # YARD::Templates
 #: ../lib/yard/autoload.rb:201 ../lib/yard/templates/engine.rb:201
@@ -8157,7 +8165,7 @@ msgstr ""
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:201
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:201
 msgid "Namespace for templating system"
-msgstr ""
+msgstr "テンプレートシステム用のNamespace"
 
 # YARD::Templates::Helpers
 #: ../lib/yard/autoload.rb:203 ../lib/yard/templates/helpers/uml_helper.rb:203
@@ -8171,13 +8179,13 @@ msgstr ""
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:203
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:203
 msgid "Namespace for template helpers"
-msgstr ""
+msgstr "テンプレートへルパー用のNamespace"
 
 # YARD::Templates::Helpers::Markup
 #: ../lib/yard/autoload.rb:204
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:204
 msgid "Namespace for markup providers"
-msgstr ""
+msgstr "マークアップを提供する為のNamespace"
 
 # YARD::CLI::Command
 #: ../lib/yard/cli/command.rb:6
