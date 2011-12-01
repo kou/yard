@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-01 09:40+0900\n"
+"PO-Revision-Date: 2011-12-01 09:47+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15908,64 +15908,64 @@ msgstr "Rubyパーサーの新しいインスタンス"
 #: ../lib/yard/parser/ruby/legacy/statement.rb:5
 #: ../lib/yard/parser/ruby/ruby_parser.rb:26
 msgid "Returns the value of attribute comments"
-msgstr ""
+msgstr "コメント属性の値を返す。"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/statement.rb:5
 msgid "the value to set the attribute comments_range to."
-msgstr ""
+msgstr "comments_range属性を設定する,値"
 
 # YARD::Parser::Ruby::Legacy::Statement#block
 #: ../lib/yard/parser/ruby/legacy/statement.rb:5
 msgid "Returns the value of attribute block"
-msgstr ""
+msgstr "ブロック属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::Statement#tokens
 # YARD::Parser::Ruby::RipperParser#tokens
 #: ../lib/yard/parser/ruby/legacy/statement.rb:5
 #: ../lib/yard/parser/ruby/ruby_parser.rb:26
 msgid "Returns the value of attribute tokens"
-msgstr ""
+msgstr "tokens属性の値を返す。"
 
 # YARD::Parser::Ruby::Legacy::Statement#comments_range=
 #: ../lib/yard/parser/ruby/legacy/statement.rb:6
 msgid "Sets the attribute comments_range"
-msgstr ""
+msgstr "comments_range属性を設定する。"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/statement.rb:6
 msgid "the value to set the attribute comments_hash_flag to."
-msgstr ""
+msgstr "comments_hash_flag属性を設定する。"
 
 # YARD::Parser::Ruby::Legacy::Statement#comments_range
 #: ../lib/yard/parser/ruby/legacy/statement.rb:6
 msgid "Returns the value of attribute comments_range"
-msgstr ""
+msgstr "comments_range属性を返す。"
 
 # YARD::Parser::Ruby::Legacy::Statement#comments_hash_flag
 #: ../lib/yard/parser/ruby/legacy/statement.rb:7
 msgid "Returns the value of attribute comments_hash_flag"
-msgstr ""
+msgstr "comments_hash_flag属性を返す。"
 
 # YARD::Parser::Ruby::Legacy::Statement#comments_hash_flag=
 #: ../lib/yard/parser/ruby/legacy/statement.rb:7
 msgid "Sets the attribute comments_hash_flag"
-msgstr ""
+msgstr "comments_hash_flag属性を設定する。"
 
 # @return [Statement]
 #: ../lib/yard/parser/ruby/legacy/statement.rb:8
 msgid "a new instance of Statement"
-msgstr ""
+msgstr "文の新しいインスタンス"
 
 # @return [Fixnum]
 #: ../lib/yard/parser/ruby/legacy/statement.rb:38
 msgid "the first line of Ruby source"
-msgstr ""
+msgstr "Rubyのソースの入った最初の行"
 
 # @return [Range<Fixnum>]
 #: ../lib/yard/parser/ruby/legacy/statement.rb:44
 msgid "the first to last lines of Ruby source"
-msgstr ""
+msgstr "Rubyのソースの入った,最初から最後までの行"
 
 # @param value
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:6
