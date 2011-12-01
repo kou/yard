@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-11-30 18:23+0900\n"
+"PO-Revision-Date: 2011-12-01 09:36+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8019,6 +8019,8 @@ msgid ""
 "The parser namespace holds all parsing engines used by YARD.\n"
 "Currently only Ruby and C (Ruby) parsers are implemented."
 msgstr ""
+"パーサーnamespaceはYARDによって使用した全てのパーサーエンジンを持つ。\n"
+"今の所、RubyとC(Ruby)パーサーだけは実装されている。"
 
 # YARD::Parser::Ruby
 #: ../lib/yard/autoload.rb:112 ../lib/yard/parser/ruby/ast_node.rb:112
@@ -15066,7 +15068,7 @@ msgstr "後処理される為のソースコードを表す意味のあるトー
 # @return [CParser]
 #: ../lib/yard/parser/c_parser.rb:8
 msgid "a new instance of CParser"
-msgstr ""
+msgstr "Cパーサーの新しいインスタンス"
 
 # YARD::Parser::Ruby#s
 #: ../lib/yard/parser/ruby/ast_node.rb:5
