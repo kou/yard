@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-02 18:09+0900\n"
+"PO-Revision-Date: 2011-12-02 19:29+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -3312,11 +3312,11 @@ msgstr ""
 # title
 #: ../docs/Overview.md:1
 msgid "Architecture Overview"
-msgstr ""
+msgstr "基本設計概念の概要"
 
 #: ../docs/Overview.md:3
 msgid "# Architecture Overview"
-msgstr ""
+msgstr "# 基本設計概念の概要"
 
 #: ../docs/Overview.md:5
 msgid ""
@@ -3328,6 +3328,10 @@ msgid ""
 "something\n"
 "that tools like RDoc do not do. These components are:"
 msgstr ""
+"YARDは主な構成として三つに分けられる。\n"
+"いずれも、目的毎に拡張される為にYARDに受け入れられる。\n"
+"これは、HTMLドキュメント生成から集めるデータを明確に分ける為に\n"
+"YARD設計上の選択を重視する。"
 
 #: ../docs/Overview.md:10
 msgid ""
@@ -3350,13 +3354,28 @@ msgid ""
 "a \n"
 "conventional HTML documentation generation tool (like RDoc)."
 msgstr ""
+"この区分は、プロジェクトの主要な目的である\n"
+"そして、YARDがHTMLの出力を生成するただの道具では無い事を意味している。\n"
+"\n"
+"??期待されるYARDの主な構成の一部が独自に利用され、拡張され,変更される。\n"
+"\n"
+"The expectation is that any subset of YARD's major components may be used,\n"
+"extended or modified independently.\n"
+"\n"
+"YARDはデータ収集ツール(解析やコードの監査の為に)や\n"
+"ソースのデータ(ウェブサーバーはコードについて生の未フォーマットのデータを含んでいる)や\n"
+"慣習としてのHTMLドキュメント生成ツール(RDocのように)\n"
+"のように利用されるかもしれない。<\n"
+"\n"
+"!!!タイぽ?? just as as\n"
+"just as as a data source"
 
 #: ../docs/Overview.md:21
 msgid ""
 "The important classes and dependencies of these components are shown in "
 "the \n"
 "following class diagram:"
-msgstr ""
+msgstr "重要なクラスやこれらの構成の依存関係は、次のクラス図の中で表示される。"
 
 #: ../docs/Overview.md:24
 msgid "![Overview Class Diagram](images/overview-class-diagram.png)"
@@ -3368,7 +3387,7 @@ msgstr ""
 
 #: ../docs/Overview.md:28
 msgid "## Code Parsing & Processing Component"
-msgstr ""
+msgstr "## コードの解析と処理の構成"
 
 #: ../docs/Overview.md:30
 msgid ""
@@ -3378,6 +3397,16 @@ msgid ""
 "not*\n"
 "*shown in the class diagram*). These sub-components are:"
 msgstr ""
+"この構成は、4つの下位構成を作り上げる、\n"
+"いずれも、\n"
+"データ収集処理の間の別々のタスク\n"
+"分割を持つ\n"
+"\n"
+"\n"
+"This component is made up of four sub-components,\n"
+"each of which have separate tasks during the data gathering process\n"
+"(*note: the tag architecture is not* *shown in the class diagram*).\n"
+"These sub-components are:"
 
 #: ../docs/Overview.md:34
 msgid ""
