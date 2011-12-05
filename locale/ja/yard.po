@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-05 09:46+0900\n"
+"PO-Revision-Date: 2011-12-05 10:07+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -5227,7 +5227,7 @@ msgstr "登録の分離やタグ作成は次の表の通り。"
 
 #: ../docs/Tags.md:510
 msgid "![Tags Architecture Class Diagram](images/tags-class-diagram.png)"
-msgstr "![Tags Architecture Class Diagram](http://rubydoc.info/docs/yard/file/docs/images/tags-class-diagram.png)"
+msgstr ""
 
 #: ../docs/Tags.md:512
 msgid "### DefaultFactory"
