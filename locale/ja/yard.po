@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-05 10:07+0900\n"
+"PO-Revision-Date: 2011-12-05 11:29+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -3400,12 +3400,7 @@ msgstr ""
 "いずれも、\n"
 "データ収集処理の間,別々のタスクを持つ。\n"
 "(*注意: タグ構造はクラス図)\n"
-"\n"
-"\n"
-"This component is made up of four sub-components,\n"
-"each of which have separate tasks during the data gathering process\n"
-"(*note: the tag architecture is not* *shown in the class diagram*).\n"
-"These sub-components are:"
+"下位構成は以下のようになる。"
 
 #: ../docs/Overview.md:34
 msgid ""
@@ -3425,6 +3420,12 @@ msgid ""
 "{YARD::Registry},\n"
 "the data store component."
 msgstr ""
+"パーサーの構成は、ソースファイルを読み込み、\n"
+"そして、ハンドラーがその処理をする所で文章の中へその内容を変換する。\n"
+"作成されるコードオブジェクトは、言い換えれば、\n"
+"オブジェクトにタグ(メタデータ)が追加されることである。\n"
+"これらオブジェクトは{YARD::Registry}に全て追加され、\n"
+"そのデータは内容を記録する。"
 
 #: ../docs/Overview.md:44
 msgid "<a name=\"storage\"></a>"
@@ -3432,7 +3433,7 @@ msgstr ""
 
 #: ../docs/Overview.md:46
 msgid "## Data Storage Component"
-msgstr ""
+msgstr "## データの記録内容"
 
 #: ../docs/Overview.md:48
 msgid ""
@@ -3446,6 +3447,13 @@ msgid ""
 "and allow\n"
 "for more robust storage."
 msgstr ""
+"この内容とは、現在の所、\n"
+"単純にRubyオブジェクトの整理されたフラットなnamespaceのように実装されている。\n"
+"実装がシングルクラスの{YARD::Registry}の中で見つけられ,\n"
+"そして、解析や,記憶,アクセスされる全てのデータ用の集中型リポジトリとなる。\n"
+"バックエンドに依存せず、\n"
+"そして、最も堅牢なストレージの為に受け入れ、\n"
+"このストレージメカニズムを改善するのが、今後の進め方である。"
 
 #: ../docs/Overview.md:54
 msgid "<a name=\"templates\"></a>"
@@ -3453,7 +3461,7 @@ msgstr ""
 
 #: ../docs/Overview.md:56
 msgid "## Post Processing & Templating System"
-msgstr ""
+msgstr "## 後処理とテンプレートシステム"
 
 #: ../docs/Overview.md:58
 msgid ""
@@ -3466,6 +3474,13 @@ msgid ""
 "the data. See {file:docs/Templates.md Templates Architecture} for a complete "
 "overview."
 msgstr ""
+"この構成は\n"
+"レジストリーから多様な書式を出力可能なテンプレートエンジンまで\n"
+"オブジェクトの処理を操作する。\n"
+"実際の話をすると、これは、設計や出力やデータの構造を変更する為に\n"
+"テンプレートが実装される場所となる。\n"
+"テンプレートの詳細な説明は\n"
+"{file:docs/Templates.md Templates Architecture}参照。"
 
 # title
 #: ../docs/Parser.md:1
