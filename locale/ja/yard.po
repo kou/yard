@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-06 11:21+0900\n"
+"PO-Revision-Date: 2011-12-06 16:01+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -6001,13 +6001,17 @@ msgstr ""
 
 #: ../docs/Templates.md:217
 msgid "## Inserting and Traversing Sections"
-msgstr ""
+msgstr "## 挿入とトラバース(辿る)セクション"
 
 #: ../docs/Templates.md:219
 msgid ""
 "The ability to insert sections was mentioned above. The class template, for\n"
 "instance, will modify the #init method to insert class specific sections:"
 msgstr ""
+"挿入セクションの機能は上で述べた。\n"
+"テンプレートクラス、例えば、\n"
+"以下のクラスの特定のセクションを挿入する為に\n"
+"#initメソッドを変更する。"
 
 #: ../docs/Templates.md:222
 msgid ""
@@ -6034,6 +6038,15 @@ msgid ""
 "by \n"
 "another module)."
 msgstr ""
+"観察方法のセクション??は\n"
+"superメソッドが呼び出された後に変更されている。\n"
+"(superメソッドは`default/module/setup.rb`の中で定義されている。)\n"
+"`sections`オブジェクトは、{YARD::Templates::Section}クラスとなる。\n"
+"そして{Array#place}メソッドを使えば、他のセクションを前後に挿入できる。\n"
+"(索引を作るというよりも名前を与えることによって)\n"
+"これは、セクションが示す場所に依存しないで\n"
+"テンプレートの上書きを可能にする。\n"
+"(その為、他のモジュールによって上書きされるかもしれない。)"
 
 #: ../docs/Templates.md:237
 msgid ""
@@ -6041,6 +6054,9 @@ msgid ""
 "name`.\n"
 "For instance, with the following sections declaration:"
 msgstr ""
+"あなたは、`:name`と名付けられた最初の子のセクション名を探す為に\n"
+"`sections[:name]`を利用できる。\n"
+"例えば、次のようなセクション宣言を用いる。"
 
 #: ../docs/Templates.md:240
 msgid "    sections :a, [:b, :c, [:d]]"
@@ -6048,7 +6064,7 @@ msgstr ""
 
 #: ../docs/Templates.md:242
 msgid "You can get to the :d section with:"
-msgstr ""
+msgstr "次のようにすると、:dセクションを取得できる。"
 
 #: ../docs/Templates.md:244
 msgid "    sections[:a][:c][:d]"
@@ -6060,6 +6076,11 @@ msgid ""
 "indexed\n"
 "access. The following command would result in `[:a, [:b, :c, [:d, :e]]]`:"
 msgstr ""
+"アクセスを索引しないで、\n"
+"ネストした集合の内部の\n"
+"セクションを挿入する為に\n"
+"これを利用できる。<\n"
+"次のコマンドは`[:a, [:b, :c, [:d, :e]]]`の様な結果になる。"
 
 #: ../docs/Templates.md:249
 msgid "    sections[:a][:c].place(:e).after(:d)"
@@ -6073,6 +6094,9 @@ msgid ""
 "section name\n"
 "recursively. The above example could simply be rewritten as:"
 msgstr ""
+"二つのメソッド、{Insertion#before_any}と{Insertion#after_any}がある。\n"
+"これは、再帰的に最初にマッチするセクション名の前後のセクションへの挿入を可能にする。\n"
+"上の例は、単純に次のように書き換えできた。"
 
 #: ../docs/Templates.md:255
 msgid "    sections.place(:e).after_any(:d)"
@@ -6080,7 +6104,7 @@ msgstr ""
 
 #: ../docs/Templates.md:257
 msgid "## Overriding Templates by Registering a Template Path"
-msgstr ""
+msgstr "## テンプレートパスを記録し、テンプレートを上書きする。"
 
 #: ../docs/Templates.md:259
 msgid ""
@@ -6091,6 +6115,11 @@ msgid ""
 "without\n"
 "creating a template from scratch."
 msgstr ""
+"明示的に継承するテンプレートは、\n"
+"再利用したいコードのテンプレートを\n"
+"カスタマイズし、作成する時、便利である。\n"
+"しかしながら、一般的なYARDテンプレートをカスタマイズしたいユーザーは、\n"
+"下書きからテンプレートの作成無しで既存の挙動を上書きしたいだろう。"
 
 #: ../docs/Templates.md:264
 msgid ""
@@ -6101,6 +6130,12 @@ msgid ""
 "template\n"
 "path is registered as:"
 msgstr ""
+"YARDは記録される他のテンプレートパスを\n"
+"受け入れる事によってこの問題を解決する。\n"
+"何故なら、テンプレートモジュールは、\n"
+"'default/class'のような、相対パスによって表される。\n"
+"それは、テンプレートパスの記録される全ての中で見られる\n"
+"新しいテンプレートは、次のように記録される。"
 
 #: ../docs/Templates.md:269
 msgid ""
@@ -6116,6 +6151,12 @@ msgid ""
 "it will be used as the template module, with the modules from the other\n"
 "template paths implicitly mixed in."
 msgstr ""
+"この場所で、いつでも??、'default/class'テンプレートは、ロードされる。\n"
+"テンプレートは\n"
+"新しく記録したテンプレートパス内部に最初に固定される。\n"
+"もし見つかった場合、\n"
+"暗黙の内にmix-inされる他のテンプレートパスからモジュールと共に、\n"
+"テンプレートモジュールのように利用される。"
 
 #: ../docs/Templates.md:276
 msgid ""
@@ -6129,6 +6170,12 @@ msgid ""
 "template\n"
 "path:"
 msgstr ""
+"従って、同じディレクトリ構成を使うと、YARDの組み込みのテンプレートを構成する。\n"
+"ユーザーは、古いものが継承された場合、\n"
+"個々のテンプレートをカスタマイズや上書きできる。\n"
+"実際の例は、\n"
+"次の'/path/to/mytemplates'カスタムテンプレートパスの中のように\n"
+"作成する事によって、上で見た'default/class'テンプレートを更に変更する。\n"
 
 #: ../docs/Templates.md:282
 msgid ""
@@ -6141,7 +6188,7 @@ msgstr ""
 
 #: ../docs/Templates.md:288
 msgid "The `setup.rb` file would look like:"
-msgstr ""
+msgstr "`setup.rb`ファイルは次の様になる。"
 
 #: ../docs/Templates.md:290
 msgid ""
@@ -6157,10 +6204,13 @@ msgid ""
 "be \n"
 "appended to the rendered data."
 msgstr ""
+"??今のクラスオブジェクトは、HTMLの様に書式化される。\n"
+"Now, when a class object is formatted as HTML,\n"
+"例のcustomesection.erbは、表示されるデータに追加される。\n"
 
 #: ../docs/Templates.md:299
 msgid "### Overriding Stylesheets and Javascripts"
-msgstr ""
+msgstr "### スタイルシートとJavascriptsを上書きする。"
 
 #: ../docs/Templates.md:301
 msgid ""
@@ -6170,10 +6220,16 @@ msgid ""
 "The\n"
 "documentation output will utilize the new replacement file."
 msgstr ""
+"テンプレートの著者は\n"
+"`fulldoc`テンプレートの中で既存のファイルのような同じ名前を用い、\n"
+"ファイルを作成する事によって\n"
+"既存のスタイルシートとjavascriptを\n"
+"上書きできる。\n"
+"ドキュメント出力は新しく置換するファイルを利用する。"
 
 #: ../docs/Templates.md:305
 msgid "YARD's `fulldoc` template defines three stylesheets:"
-msgstr ""
+msgstr "YARDの`fulldoc`テンプレートはツリーのスタイルシートを定義する。"
 
 #: ../docs/Templates.md:307
 msgid ""
@@ -6188,13 +6244,16 @@ msgstr ""
 
 #: ../docs/Templates.md:315
 msgid "The `style.css` is the primary stylesheet for the HTML output."
-msgstr ""
+msgstr "`style.css`は、HTML出力用の主要なスタイルシートとなる。"
 
 #: ../docs/Templates.md:317
 msgid ""
 "The `full_list.css` is an additional stylesheet loaded specifically for the\n"
 "search field menus (i.e. class list, method list, and file list)."
 msgstr ""
+"??きれてる所..loaded動詞..主語はどれ..\n"
+"追加のスタイルシートの`full_list.css`は、厳密にいえば検索フィールドメニューの為にロードされる。\n"
+"(すなわち、クラスリスト、メソッドリスト、ファイルリスト)"
 
 #: ../docs/Templates.md:320
 msgid ""
@@ -6206,10 +6265,18 @@ msgid ""
 "they\n"
 "will be overridden."
 msgstr ""
+"`common.css`は、\n"
+"テンプレートの著者がプラグイン用の\n"
+"カスタムスタイルを提供する為に\n"
+"簡単に上書きする空のcssファイルとなる。\n"
+"しかしながら、ユーザーが、\n"
+"スタイルを実行するのに同じファイルを利用する\n"
+"複数のプラグインをインストールした場合、\n"
+"上書きされる事が問題になる。"
 
 #: ../docs/Templates.md:325
 msgid "YARD's `fulldoc` template defines three javascript files:"
-msgstr ""
+msgstr "YARDの`fulldoc`テンプレートは次の様に、ツリー上のjavascriptファイルを定義する。"
 
 #: ../docs/Templates.md:327
 msgid ""
@@ -6224,7 +6291,7 @@ msgstr ""
 
 #: ../docs/Templates.md:335
 msgid "The `app.js` is the primary javascript file for the HTML output."
-msgstr ""
+msgstr "`app.js`は、HTML出力用の主要なjavascriptファイルとなる。"
 
 #: ../docs/Templates.md:337
 msgid ""
@@ -6232,14 +6299,17 @@ msgid ""
 "the\n"
 "search field menus (i.e. class list, method list, and file list)."
 msgstr ""
+"追加のjavascriptを定義する`full_list.js`は、\n"
+"厳密にいえば、検索フィールドメニュー用にロードされる。\n"
+"(すなわち、クラスリスト、メソッドリスト、ファイルリスト)"
 
 #: ../docs/Templates.md:340
 msgid "The `jquery.js` is copy of the jquery javascript library."
-msgstr ""
+msgstr "`jquery.js`はjquery javascriptライブラリをコピーする。"
 
 #: ../docs/Templates.md:342
 msgid "### Adding a Custom Stylesheet or Javascript"
-msgstr ""
+msgstr "### カスタムすタイルシートとJavascritpを追加する"
 
 #: ../docs/Templates.md:344
 msgid ""
@@ -6247,6 +6317,10 @@ msgid ""
 "search\n"
 "field menus) generated from the base `layout` template:"
 msgstr ""
+"基本の`layout`テンプレートから生成した\n"
+"全てのページと共に、\n"
+"追加のスタイルシートとjavascriptをロードするには、\n"
+"(但し、検索フィールドメニューを除く)"
 
 #: ../docs/Templates.md:347
 msgid ""
@@ -6254,6 +6328,8 @@ msgid ""
 "     (default/ is the default template name inside of the /template root "
 "directory):"
 msgstr ""
+"  1. 自分のカスタムスタイルシートやjavascriptファイルを定義する。\n"
+"     (default/ は  /templateルートディレクトリ内にあるデフォルトテンプレート名となる)"
 
 #: ../docs/Templates.md:350
 msgid ""
@@ -6272,6 +6348,9 @@ msgid ""
 "methods \n"
 "     `stylesheets` and `javascripts`. The path to the template would be:"
 msgstr ""
+"  2. `layout`テンプレートディレクトリの中の`setup.rb`を作成し、\n"
+"  メソッド`stylesheets`と`javascripts`を上書きする。(??複数系か確認)\n"
+"  テンプレートのパスは次の様になる。"
 
 #: ../docs/Templates.md:361
 msgid ""
@@ -6283,7 +6362,7 @@ msgstr ""
 
 #: ../docs/Templates.md:366
 msgid "      And the code would look like:"
-msgstr ""
+msgstr "      そしてコードは次のようになる。"
 
 #: ../docs/Templates.md:368
 msgid ""
@@ -6307,10 +6386,12 @@ msgid ""
 "from \n"
 "the `fulldoc` template:"
 msgstr ""
+"検索メニューが`fulldoc`テンプレートからロードされる為に\n"
+"追加のスタイルシートとjavascriptをロードするには、次のようになる。"
 
 #: ../docs/Templates.md:382
 msgid "  1. Define your own custom stylesheet and/or javascript file."
-msgstr ""
+msgstr "  1. 自分のカスタムすタイルシートとjavascriptファイルを定義する。"
 
 #: ../docs/Templates.md:384
 msgid ""
@@ -6329,6 +6410,8 @@ msgid ""
 "`javascripts_full_list`\n"
 "     in the `setup.rb` file inside fulldoc/html."
 msgstr ""
+"  3. fulldoc/html内の`setup.rb`ファイルの中の\n"
+"  `stylesheets_full_list`と`javascripts_full_list`メソッドを上書きする。"
 
 #: ../docs/Templates.md:396
 msgid ""
@@ -6348,11 +6431,11 @@ msgstr ""
 
 #: ../docs/Templates.md:406
 msgid "### Overriding Search Menus"
-msgstr ""
+msgstr "### 検索メニューを上書きする。"
 
 #: ../docs/Templates.md:408 ../docs/Templates.md:443
 msgid "By default YARD's `fulldoc` template generates three search fields:"
-msgstr ""
+msgstr "デフォルトでYARDの`fulldoc`テンプレートは次のような検索フィールドのツリーを生成する。"
 
 #: ../docs/Templates.md:410 ../docs/Templates.md:445
 msgid ""
@@ -6363,7 +6446,7 @@ msgstr ""
 
 #: ../docs/Templates.md:414
 msgid "Their contents are rendered in methods within the `fulldoc` template:"
-msgstr ""
+msgstr "その内容は、`fulldoc`テンプレートの中でメソッドの中を表示する。"
 
 #: ../docs/Templates.md:416
 msgid ""
@@ -6382,6 +6465,8 @@ msgid ""
 "the\n"
 "     particular method."
 msgstr ""
+"  1. `fulldoc`テンプレートディレクトリの中の`setup.rb`を作成し、\n"
+"  メソッドの詳細を上書きする。"
 
 #: ../docs/Templates.md:425 ../docs/Templates.md:477
 msgid ""
@@ -6412,7 +6497,7 @@ msgstr ""
 
 #: ../docs/Templates.md:441
 msgid "### Adding Additional Search Menus"
-msgstr ""
+msgstr "### 追加の検索メニューを追加する。"
 
 #: ../docs/Templates.md:449
 msgid ""
@@ -6420,10 +6505,12 @@ msgid ""
 "into\n"
 "the `fulldoc` template through a similarly named method."
 msgstr ""
+"これらは`layout`テンプレートメソッドの中の`menu_lists`を定義される、\n"
+"そして、同様に名付けられたメソッドを通じて`fulldoc`テンプレートに置かれる。"
 
 #: ../docs/Templates.md:452
 msgid "To load an additional menu item:"
-msgstr ""
+msgstr "追加のメニュー項目をロードするには、次のようになる。"
 
 #: ../docs/Templates.md:455
 msgid ""
@@ -6435,6 +6522,12 @@ msgid ""
 "    The `search_title` is the name that appears in the search field tab on "
 "the page."
 msgstr ""
+"  1. `layout`テンプレートディレクトリの中の`setup.rb`を作成する。そして、\n"
+"  `menu_lists`メソッドを上書きする。\n"
+"  `type`は、ファイルの名前の検索フィールドを報告する。??(type詳細)\n"
+"  `title`は、フレームの中を見る時、\n"
+"  上のセクションが見える名前となる。\n"
+"  `search_title`は、ページ上の検索フィールドタブの中の名前となる。"
 
 #: ../docs/Templates.md:461
 msgid ""
@@ -6465,6 +6558,16 @@ msgid ""
 "     method you can configure and load the specific objects you wish to "
 "display."
 msgstr ""
+"  2. `fulldoc`の中のテンプレートディレクトリ`setup.rb`を作成する。\n"
+"  そして、特定の`type`の用にメニューを生成する為に、メソッドを作成する。\n"
+"\n"
+"  ??訳\n"
+"  `generate_assets`メソッドは機能を探す。\n"
+"  with:プリフィックスされる用法と共に\n"
+"  with:`generete`はtypeの値は指定され、末尾が`list`になる。\n"
+"\n"
+"  このメソッドの中であなたは、\n"
+"  表示したいと思う特定のオブジェクトの設定とロードができる。"
 
 #: ../docs/Templates.md:482
 msgid "         def generate_feature_list"
@@ -6497,7 +6600,7 @@ msgstr ""
 msgid ""
 "  3. Define custom javascript to load the search fields and the keyboard "
 "shortcuts."
-msgstr ""
+msgstr "  3. 検索フィールドとキーボードショートカットをロードするカスタムjavascriptを定義する。"
 
 #: ../docs/Templates.md:501
 msgid ""
