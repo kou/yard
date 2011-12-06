@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-06 11:14+0900\n"
+"PO-Revision-Date: 2011-12-06 11:18+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15230,9 +15230,7 @@ msgstr "ソースの内容"
 # @param [String] filename
 #: ../lib/yard/parser/base.rb:25
 msgid "the name of the file if from disk"
-msgstr ""
-"もしディスクからの場合(??なんのこっちゃ..)\n"
-"ファイルの名前"
+msgstr "ディスクからの場合、ファイルの名前"
 
 # YARD::Parser::Base#parse
 #: ../lib/yard/parser/base.rb:30
