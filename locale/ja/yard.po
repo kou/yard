@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-07 11:43+0900\n"
+"PO-Revision-Date: 2011-12-07 13:30+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12040,6 +12040,19 @@ msgid ""
 "a plugin use {load_plugin}. All other public methods are used by YARD\n"
 "during load time."
 msgstr ""
+"\n"
+"このクラスは\n"
+"YARDとプラグインのロードを操作するシステム全体の設定を維持する。\n"
+"\n"
+"設定を呼び出す{options}にアクセスする為や、\n"
+"プラグインを使う{load_plugin}をロードするには、\n"
+"全ての他のpublicなメソッドは、\n"
+"ロード時間の間にYARDによって利用される。\n"
+"??文章の流れ..\n"
+"\n"
+"To access options call {options},\n"
+"and to load a plugin use {load_plugin}.\n"
+"All other public methods are used by YARD during load time."
 
 # YARD::Config
 #: ../lib/yard/config.rb:8
@@ -12053,6 +12066,10 @@ msgid ""
 "+~/.yard/config+, which is read when YARD first loads. The file should\n"
 "be formatted as YAML, and should contain a map of keys and values."
 msgstr ""
+"persistent(長く使った)ユーザーの設定ファイルは、+~/.yard/config+ ファイルの中に記録される。\n"
+"そして、YARDが最初にロードする時に、読み出される。\n"
+"このファイルはYAMLのように書式化される、\n"
+"そして、キーや値のマップを含んでいるはずである。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:14
@@ -12060,11 +12077,13 @@ msgid ""
 "Although you can specify any key-value mapping in the configuration file,\n"
 "YARD defines special keys specified in {DEFAULT_CONFIG_OPTIONS}."
 msgstr ""
+"あなたは、設定ファイルの中に任意のキーや値のマッピングを指定できるけれども、\n"
+"YARDは{DEFAULT_CONFIG_OPTIONS}の中の規定の特別なキーを定義する。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:17
 msgid "An example of a configuration file is listed below:"
-msgstr ""
+msgstr "設定ファイルの例は次のよう記述される。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:19
@@ -12081,7 +12100,7 @@ msgstr ""
 # YARD::Config
 #: ../lib/yard/config.rb:27
 msgid "== Automatic Loading of Plugins"
-msgstr ""
+msgstr "== プラグインの自動ローディング"
 
 # YARD::Config
 #: ../lib/yard/config.rb:29
@@ -12092,11 +12111,19 @@ msgid ""
 "load through the 'autoload_plugins' list setting. This setting is\n"
 "independent of the 'load_plugins' value and will always be processed."
 msgstr ""
+"YARD 0.6.2は、デフォルトで全てのプラグインを自動ロードしない。\n"
+"この設定は、設定ファイルの中の'load_plugins'をtrueに設定する事によってリセットできる。\n"
+"さらに、あなたは、\n"
+"\n"
+"'autoload_plugins'リストを設定する事によって、??load on load\n"
+"続けてロード?する\n"
+"特定のプラグインのグループを指定できる。\n"
+"この設定は、'load_plugins'の独自の値となり、そして常に処理されるだろう。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:35
 msgid "== Ignored Plugins File"
-msgstr ""
+msgstr "== プラグインファイルを無視する"
 
 # YARD::Config
 #: ../lib/yard/config.rb:37
@@ -12106,6 +12133,14 @@ msgid ""
 "should now be specified in the main configuration file, though YARD\n"
 "will support the +ignored_plugins+ file until 0.7.x."
 msgstr ""
+"YARD 0.5やそれ以下では、\n"
+"ロード時間で無視されるプラグインを指定する為に\n"
+"+~/.yard/ignored_plugins+ ファイルを利用した。\n"
+"\n"
+"YARD 0.5 and below used a +~/.yard/ignored_plugins+ file to specify\n"
+"plugins to be ignored at load time. Ignored plugins in 0.6.2 and above\n"
+"should now be specified in the main configuration file, though YARD\n"
+"will support the +ignored_plugins+ file until 0.7.x."
 
 # YARD::Config
 #: ../lib/yard/config.rb:42
