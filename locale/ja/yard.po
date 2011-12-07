@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-07 11:25+0900\n"
+"PO-Revision-Date: 2011-12-07 11:43+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8270,7 +8270,7 @@ msgstr ""
 #: ../lib/yard/cli/server.rb:6 ../lib/yard/cli/command.rb:6
 #: ../lib/yard/cli/command_parser.rb:6
 msgid "Namespace for command-line interface components"
-msgstr ""
+msgstr "コマンドラインインタフェースコンポーネント用のNamespace"
 
 # YARD::CodeObjects
 #: ../lib/yard/autoload.rb:21 ../lib/yard/code_objects/base.rb:21
@@ -8291,6 +8291,10 @@ msgid ""
 "major objects, but DSL languages can create their own by inheriting\n"
 "from {CodeObjects::Base}."
 msgstr ""
+"\"code object\"は、Ruby言語の中の任意の物が定義される。\n"
+"クラスや、モジュール、メソッド、クラス変数、定数は重要なオブジェクトとなる、\n"
+"しかしDSL言語は、{CodeObjects::Base}からの継承によって\n"
+"それ自身を作成できる。"
 
 # YARD::Handlers
 #: ../lib/yard/autoload.rb:57 ../lib/yard/handlers/base.rb:57
@@ -8304,6 +8308,9 @@ msgid ""
 "parsing phase. This allows YARD as well as any custom extension to\n"
 "analyze source and generate {CodeObjects} to be stored for later use."
 msgstr ""
+"ハンドラーは、YARDの解析段階でデータの処理の間に呼び出される。\n"
+"これは、ソースの解析や後で使う為に記録される{CodeObjects}を生成する為に\n"
+"YARDも任意のカスタム拡張も受け入れる。"
 
 # YARD::Handlers::Ruby
 #: ../lib/yard/autoload.rb:61 ../lib/yard/handlers/ruby/base.rb:61
@@ -8311,13 +8318,13 @@ msgstr ""
 #: ../lib/yard/handlers/ruby/legacy/macro_handler.rb:61
 #: ../lib/yard/handlers/ruby/macro_handler_methods.rb:61
 msgid "All Ruby handlers"
-msgstr ""
+msgstr "全てのRubyハンドラー"
 
 # YARD::Handlers::Ruby::Legacy
 #: ../lib/yard/autoload.rb:62 ../lib/yard/handlers/ruby/legacy/base.rb:62
 #: ../lib/yard/handlers/ruby/legacy/macro_handler.rb:62
 msgid "Handlers for old Ruby 1.8 parser"
-msgstr ""
+msgstr "古いRuby1.8パーサー用のハンドラー"
 
 # YARD::Parser
 #: ../lib/yard/autoload.rb:109 ../lib/yard/parser/base.rb:109
