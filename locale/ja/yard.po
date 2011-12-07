@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-07 15:15+0900\n"
+"PO-Revision-Date: 2011-12-07 17:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12057,7 +12057,7 @@ msgstr ""
 # YARD::Config
 #: ../lib/yard/config.rb:8
 msgid "== User Configuration Files"
-msgstr ""
+msgstr "== ユーザー設定ファイル"
 
 # YARD::Config
 #: ../lib/yard/config.rb:10
@@ -12100,7 +12100,7 @@ msgstr ""
 # YARD::Config
 #: ../lib/yard/config.rb:27
 msgid "== Automatic Loading of Plugins"
-msgstr "== プラグインの自動ローディング"
+msgstr "== プラグインの自動ロード"
 
 # YARD::Config
 #: ../lib/yard/config.rb:29
@@ -12111,7 +12111,7 @@ msgid ""
 "load through the 'autoload_plugins' list setting. This setting is\n"
 "independent of the 'load_plugins' value and will always be processed."
 msgstr ""
-"YARD 0.6.2は、デフォルトで全てのプラグインを自動ロードしない。\n"
+"YARD 0.6.2からは、デフォルトで全てのプラグインを自動ロードしない。\n"
 "この設定は、設定ファイルの中の'load_plugins'をtrueに設定する事によってリセットできる。\n"
 "さらに、あなたは、\n"
 "\n"
@@ -12136,16 +12136,14 @@ msgstr ""
 "YARD 0.5やそれ以下では、\n"
 "ロード時間で無視されるプラグインを指定する為に\n"
 "+~/.yard/ignored_plugins+ ファイルを利用した。\n"
-"\n"
-"YARD 0.5 and below used a +~/.yard/ignored_plugins+ file to specify\n"
-"plugins to be ignored at load time. Ignored plugins in 0.6.2 and above\n"
-"should now be specified in the main configuration file, though YARD\n"
-"will support the +ignored_plugins+ file until 0.7.x."
+"0.6.2以上で無視されるプラグインは、\n"
+"現在、主に設定ファイルの中で規定されるはずである。\n"
+"とはいえ,YARDは +ignored_pluginis+ ファイルを0.7.xまで、サポートする。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:42
 msgid "== Safe Mode"
-msgstr ""
+msgstr "== セーフモード"
 
 # YARD::Config
 #: ../lib/yard/config.rb:44
@@ -12156,11 +12154,20 @@ msgid ""
 "a 'yard-' prefix, must be installed as a gem, and therefore cannot be\n"
 "touched by the user. To specify safe mode, use the +safe_mode+ key."
 msgstr ""
+"YARDはセーフモードでの起動をサポートする。\n"
+"これを行うことにより、requireファイルやクエリーのような\n"
+"任意のユーザーコードの実行を無効にする。\n"
+"しかし、プラグインはセーフモードの実行と共にロードされる。\n"
+"何故なら、プラグインは、'yard-'プレフィックスと共に、\n"
+"適切にnamespaceが設定され,\n"
+"gemのようにインストールされるはずである,\n"
+"そして、これ自身の設定はユーザーによって変更できない。\n"
+"セーフモードを指定するには、 +safe_mode+ キーを利用する。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:50
 msgid "== Plugin Specific Configuration"
-msgstr ""
+msgstr "== プラグインの詳細な設定"
 
 # YARD::Config
 #: ../lib/yard/config.rb:52
@@ -12170,6 +12177,13 @@ msgid ""
 "the YARD configuration is strongly encouraged to utilize namespacing of\n"
 "their configuration content."
 msgstr ""
+"追加の設定は\n"
+"プラグイン用の設定を提供する為に、\n"
+"明確に設定ファイルの中で\n"
+"定義される。\n"
+"YARDの設定を利用するプラグインは、\n"
+"その設定内容のnamespaceを利用する為に\n"
+"強力に後押しされる。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:57
@@ -12192,6 +12206,8 @@ msgid ""
 "As the configuration is available system wide, it can be\n"
 "accessed within the plugin code."
 msgstr ""
+"この設定はシステム全体に及び、\n"
+"プラグインのコードの中で、アクセスできる。"
 
 # YARD::Config
 #: ../lib/yard/config.rb:72
@@ -12214,6 +12230,12 @@ msgid ""
 "to\n"
 "retrieve values."
 msgstr ""
+"アクセスするのが設定の時、\n"
+"このファイルはユーザーが扱う事に\n"
+"気付くことになる。\n"
+"なので、キーや値の設定は見つからないかもしれない。\n"
+"??仮定しないので、代わりに、\n"
+"あなたが値を取り出す手続きをする前にキーの存在のチェックする。"
 
 # @see
 #: ../lib/yard/config.rb:85
@@ -12224,7 +12246,7 @@ msgstr ""
 # YARD::Config.options=
 #: ../lib/yard/config.rb:88
 msgid "The system-wide configuration options for YARD"
-msgstr ""
+msgstr "YARD用のシステム全体の設定オプション"
 
 # @see
 #: ../lib/yard/config.rb:90
@@ -12234,32 +12256,32 @@ msgstr ""
 # @return [SymbolHash]
 #: ../lib/yard/config.rb:90
 msgid "a map a key-value pair settings."
-msgstr ""
+msgstr "キー,値のペア設定のマップ"
 
 # YARD::Config::CONFIG_DIR
 #: ../lib/yard/config.rb:94
 msgid "The location where YARD stores user-specific settings"
-msgstr ""
+msgstr "YARDがユーザー固有の設定を記録する場所"
 
 # YARD::Config::CONFIG_FILE
 #: ../lib/yard/config.rb:97
 msgid "The main configuration YAML file."
-msgstr ""
+msgstr "YAMLファイルの主な設定"
 
 # YARD::Config::IGNORED_PLUGINS
 #: ../lib/yard/config.rb:100
 msgid "File listing all ignored plugins"
-msgstr ""
+msgstr "ファイルに記述する、無視されるプラグイン"
 
 # @deprecated
 #: ../lib/yard/config.rb:101
 msgid "Set `ignored_plugins` in the {CONFIG_FILE} instead."
-msgstr ""
+msgstr "{CONFIG_FILE}の代わりに、`ignored_plugins`を設定する。"
 
 # YARD::Config::DEFAULT_CONFIG_OPTIONS
 #: ../lib/yard/config.rb:104
 msgid "Default configuration options"
-msgstr ""
+msgstr "デフォルトの設定オプション"
 
 # YARD::Config::YARD_PLUGIN_PREFIX
 #: ../lib/yard/config.rb:112
@@ -12267,6 +12289,9 @@ msgid ""
 "The prefix used for YARD plugins. Name your gem with this prefix\n"
 "to allow it to be used as a plugin."
 msgstr ""
+"プレフィックスは、YARDプラグイン用に利用される。\n"
+"あなたのgemがプラグインの様に利用される為に、\n"
+"このプレフィックスと共に名付ける。"
 
 # YARD::Config.load
 #: ../lib/yard/config.rb:116
@@ -12274,16 +12299,19 @@ msgid ""
 "Loads settings from {CONFIG_FILE}. This method is called by YARD at\n"
 "load time and should not be called by the user."
 msgstr ""
+"{CONFIG_FILE}からの設定をロードする。\n"
+"これメソッドは、ロード時間でYARDによって呼び出される。\n"
+"そして、ユーザーによって呼び出されないはずである。"
 
 # YARD::Config.save
 #: ../lib/yard/config.rb:131
 msgid "Saves settings to {CONFIG_FILE}."
-msgstr ""
+msgstr "{CONFIG_FILE}の為の設定を保存する。"
 
 # @return [Boolean]
 #: ../lib/yard/config.rb:142
 msgid "true if all plugins loaded successfully, false otherwise."
-msgstr ""
+msgstr "全てのプラグインが正しくロードした場合、true、そうでなければ、false"
 
 # YARD::Config.load_plugin
 #: ../lib/yard/config.rb:149
@@ -12291,56 +12319,58 @@ msgid ""
 "Loads an individual plugin by name. It is not necessary to include the\n"
 "+yard-+ plugin prefix here."
 msgstr ""
+"名前によって、個々のプラグインをロードする。\n"
+"ここで +yard-+ プラグインのプレフィックスを含む必要は無い。"
 
 # @return [Boolean]
 #: ../lib/yard/config.rb:153
 msgid "whether the plugin was successfully loaded"
-msgstr ""
+msgstr "プラグインがロードに成功したかどうか"
 
 # @param [String] name
 #: ../lib/yard/config.rb:153
 msgid "the name of the plugin (with or without +yard-+ prefix)"
-msgstr ""
+msgstr "プラグインの名前( +yard-+ プレフィックスの有無にかかわらず)"
 
 # YARD::Config.load_gem_plugins
 #: ../lib/yard/config.rb:167
 msgid "Load gem plugins if :load_plugins is true"
-msgstr ""
+msgstr ":load_pluginsがtrueの場合、gemプラグインをロードする"
 
 # YARD::Config.load_autoload_plugins
 #: ../lib/yard/config.rb:187
 msgid "Load plugins set in :autoload_plugins"
-msgstr ""
+msgstr ":autoload_pluginsの中のグループのプラグインをロードする。"
 
 # YARD::Config.load_commandline_plugins
 #: ../lib/yard/config.rb:192
 msgid "Load plugins from {#arguments}"
-msgstr ""
+msgstr "(#arguments)メソッドからプラグインをロードする。"
 
 # YARD::Config.load_plugin_failed
 #: ../lib/yard/config.rb:202
 msgid "Print a warning if the plugin failed to load"
-msgstr ""
+msgstr "ロードに失敗したプラグインの場合、警告をプリントする。"
 
 # YARD::Config.add_ignored_plugins_file
 #: ../lib/yard/config.rb:210
 msgid "Legacy support for {IGNORED_PLUGINS}"
-msgstr ""
+msgstr "{IGNORED_PLUGINS}用のレガシーサポート"
 
 # YARD::Config.translate_plugin_names
 #: ../lib/yard/config.rb:217
 msgid "Translates plugin names to add yard- prefix."
-msgstr ""
+msgstr "yard-プレフィックスを追加する為にプラグイン名を翻訳する。"
 
 # YARD::Config.read_config_file
 #: ../lib/yard/config.rb:223
 msgid "Loads the YAML configuration file into memory"
-msgstr ""
+msgstr "メモリの中にYAML設定ファイルをロードする。"
 
 # @return [Hash]
 #: ../lib/yard/config.rb:225
 msgid "the contents of the YAML file from disk"
-msgstr ""
+msgstr "ディスクからのYAMLファイルの内容"
 
 # @see
 #: ../lib/yard/config.rb:225
@@ -12350,27 +12380,27 @@ msgstr ""
 # YARD::Config.translate_plugin_name
 #: ../lib/yard/config.rb:235
 msgid "Sanitizes and normalizes a plugin name to include the 'yard-' prefix."
-msgstr ""
+msgstr "'yard-'プレフィックスを含んでいるプラグイン名を正規化する。"
 
 # @param [String] name
 #: ../lib/yard/config.rb:237
 msgid "the plugin name"
-msgstr ""
+msgstr "プラグイン名"
 
 # @return [String]
 #: ../lib/yard/config.rb:237
 msgid "the sanitized and normalized plugin name."
-msgstr ""
+msgstr "正規化されるプラグイン名"
 
 # YARD::Config.with_yardopts
 #: ../lib/yard/config.rb:244
 msgid "Temporarily loads .yardopts file into @yardopts"
-msgstr ""
+msgstr "@yardoptsの中に、.yardoptsファイルを一時的にロードする。"
 
 # @return [Array<String>]
 #: ../lib/yard/config.rb:253
 msgid "arguments from commandline and yardopts file"
-msgstr ""
+msgstr "コマンドラインやyardoptsファイルからの引数"
 
 # Array#place
 #: ../lib/yard/core_ext/array.rb:3
