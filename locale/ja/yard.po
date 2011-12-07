@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-07 11:09+0900\n"
+"PO-Revision-Date: 2011-12-07 11:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8201,12 +8201,12 @@ msgstr ""
 # YARD::ROOT
 #: ../lib/yard.rb:5
 msgid "The root path for YARD source libraries"
-msgstr ""
+msgstr "YARDソースライブラリ用のルートパス"
 
 # YARD::TEMPLATE_ROOT
 #: ../lib/yard.rb:8
 msgid "The root path for YARD builtin templates"
-msgstr ""
+msgstr "YARDビルトインテンプレート用のルートパス"
 
 # @deprecated
 #: ../lib/yard.rb:11
@@ -8217,7 +8217,7 @@ msgstr ""
 # YARD.parse_string
 #: ../lib/yard.rb:14 ../lib/yard.rb:21
 msgid "An alias to {Parser::SourceParser}'s parsing method"
-msgstr ""
+msgstr "解析用の{Parser::SourceParser}メソッドへのエイリアス"
 
 # @see
 #: ../lib/yard.rb:18
@@ -8257,6 +8257,9 @@ msgid ""
 "those listed in +~/.yard/ignored_plugins+. This is called immediately\n"
 "after YARD is loaded to allow plugin support."
 msgstr ""
+"'yard-*'(推奨される)や'yard_*'の名前にマッチするgemをロードする。\n"
+"これを除外するには、 +~/.yard/ignored_plugins+ の中に対象の名前を記述する。\n"
+"これは、YARDがプラグインサポートをロードした後すぐに呼び出される。"
 
 # YARD::CLI
 #: ../lib/yard/autoload.rb:6 ../lib/yard/cli/yri.rb:6
