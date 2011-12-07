@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-07 17:25+0900\n"
+"PO-Revision-Date: 2011-12-07 18:52+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14476,6 +14476,8 @@ msgid ""
 "To implement a custom handler matcher, subclass this class and implement\n"
 "{#matches?} to return whether a node matches the handler."
 msgstr ""
+"カスタムハンドラーマッチャーを実装する為には、このクラスをサブクラス化する。\n"
+"そして、ノードがハンドラーにマッチするかどうかを返す為に{#matches?}メソッドを実装する。"
 
 # @example A Custom Handler Matcher Extension
 #: ../lib/yard/handlers/ruby/base.rb:18
@@ -14491,6 +14493,16 @@ msgid ""
 "  handles MyExtension.new('foo')\n"
 "end"
 msgstr ""
+"# 特定の文字列をチェックするハンドラーを実装する\n"
+"# ノードのソースの中で\n"
+"class MyExtension < HandlesExtension\n"
+"  def matches?(node) node.source.include?(name) end\n"
+"end\n"
+"\n"
+"# このハンドラーは'foo'を含んでいるソースで任意のノードを操作する。??(Rubyのinclude??)\n"
+"class MyHandler < Handlers::Ruby::Base\n"
+"  handles MyExtension.new('foo')\n"
+"end"
 
 # @example
 #: ../lib/yard/handlers/ruby/base.rb:18
@@ -14500,27 +14512,27 @@ msgstr ""
 # YARD::Handlers::Ruby::HandlesExtension#initialize
 #: ../lib/yard/handlers/ruby/base.rb:20
 msgid "Creates a new extension with a specific matcher value +name+"
-msgstr ""
+msgstr "特定のマッチャーの値の +name+ と共に、新たな拡張を作成する"
 
 # @return [HandlesExtension]
 #: ../lib/yard/handlers/ruby/base.rb:21
 msgid "a new instance of HandlesExtension"
-msgstr ""
+msgstr "HandlesExtensionの新しいインスタンス"
 
 # @param [Object] name
 #: ../lib/yard/handlers/ruby/base.rb:21
 msgid "the matcher value to check against {#matches?}"
-msgstr ""
+msgstr "{#matches?}メソッドに備えて確認する,マッチャーの値"
 
 # YARD::Handlers::Ruby::HandlesExtension#matches?
 #: ../lib/yard/handlers/ruby/base.rb:24
 msgid "Tests if the node matches the handler"
-msgstr ""
+msgstr "ノードがハンドラーにマッチする場合、テストする。"
 
 # @param [Parser::Ruby::AstNode] node
 #: ../lib/yard/handlers/ruby/base.rb:26
 msgid "a Ruby node"
-msgstr ""
+msgstr "Rubyのノード"
 
 # @param [Parser::Ruby::AstNode]
 #: ../lib/yard/handlers/ruby/base.rb:26
@@ -14530,12 +14542,12 @@ msgstr ""
 # @return [Boolean]
 #: ../lib/yard/handlers/ruby/base.rb:26
 msgid "whether the +node+ matches the handler"
-msgstr ""
+msgstr "+node+ がハンドラーにマッチするかどうか"
 
 # @return [String]
 #: ../lib/yard/handlers/ruby/base.rb:31
 msgid "the extension matcher value"
-msgstr ""
+msgstr "拡張のマッチャーの値"
 
 # YARD::Handlers::Ruby::Base
 #: ../lib/yard/handlers/ruby/base.rb:55
@@ -14545,11 +14557,15 @@ msgid ""
 "new-style parser is used. For implementing legacy handlers, see\n"
 "{Legacy::Base}."
 msgstr ""
+"これは、新しい(1.9用)Rubyパーサー用の基本ハンドラークラスとなる。\n"
+"この基本クラスからサブクラス化する全てのハンドラーは、\n"
+"新しいスタイルのパーサーを使う時に利用される。\n"
+"レガシーハンドラーの実装には、{Legacy::Base}を参照。"
 
 # @abstract
 #: ../lib/yard/handlers/ruby/base.rb:62
 msgid "See {Handlers::Base} for subclassing information."
-msgstr ""
+msgstr "サブクラス化用の情報には、{Handlers::Base}を参照"
 
 # @see
 #: ../lib/yard/handlers/ruby/base.rb:62
@@ -14564,12 +14580,19 @@ msgid ""
 "with which it is called, so YARD allows you to use this matcher\n"
 "to simplify matching a method call."
 msgstr ""
+"任意のメソッド呼び出しの型を操作する為のマッチャー\n"
+"メソッド呼び出しは、\n"
+"構文から多くの{AstNode}型となって表され\n"
+"呼び出す事ができる。\n"
+"なので、YARDは\n"
+"あなたがメソッド呼び出しのマッチを簡単にする為に\n"
+"このマッチャーを使う事を許可する。"
 
 # YARD::Handlers::Ruby::Base.method_call
 # YARD::Handlers::Ruby::Base.meta_type
 #: ../lib/yard/handlers/ruby/base.rb:83 ../lib/yard/handlers/ruby/base.rb:102
 msgid "Statement Matcher Extensions"
-msgstr ""
+msgstr "??ステートメントマッチャー拡張"
 
 # @example Match the "describe" method call
 #: ../lib/yard/handlers/ruby/base.rb:83
@@ -14590,7 +14613,7 @@ msgstr ""
 # @param [#to_s] name
 #: ../lib/yard/handlers/ruby/base.rb:83
 msgid "matches the method call of this name"
-msgstr ""
+msgstr "この名前のメソッド呼び出しのマッチャー"
 
 # YARD::Handlers::Ruby::Base.meta_type
 #: ../lib/yard/handlers/ruby/base.rb:88
@@ -14600,6 +14623,11 @@ msgid ""
 "with a set of types. For instance, +:if+ and +:unless+ are both\n"
 "of the meta-type +:condition+."
 msgstr ""
+"特定のメタタイプと共にノードを処理する為のマッチャー。\n"
+"{AstNode}はAstNodeの型を定義する為に\n"
+"{AstNode#type}メソッドを持っている。\n"
+"しかし、型のグループと共に関連付ける事もできる。\n"
+"例えば、 +:if+ と +:unless+ は、両方とも +:condition+ のメタタイプとなる。"
 
 # YARD::Handlers::Ruby::Base.meta_type
 #: ../lib/yard/handlers/ruby/base.rb:93
@@ -14609,11 +14637,15 @@ msgid ""
 "Some examples are: \"condition\", \"call\", \"literal\", \"kw\", \"token\",\n"
 "\"ref\"."
 msgstr ""
+"メタタイプは、\"?\"で終わる{AstNode}クラス上の任意のメソッドとなる。\n"
+"とはいえ、??(言い回し)\n"
+"あなたは、自身の宣言の中で\"?\"サフィックスを含んでいないはずである。\n"
+"いくつかの例を上げると、\"condition\", \"call\", \"literal\", \"kw\", \"token\",\"ref\" となる。"
 
 # @example Handling any conditional statement (if, unless)
 #: ../lib/yard/handlers/ruby/base.rb:102
 msgid "handles meta_type(:condition)"
-msgstr ""
+msgstr "メタタイプ(:condition)を操作する"
 
 # @param [Symbol] type
 #: ../lib/yard/handlers/ruby/base.rb:102
@@ -14621,6 +14653,8 @@ msgid ""
 "the meta-type to match. A meta-type can be\n"
 "any method name + \"?\" that {AstNode} responds to."
 msgstr ""
+"マッチするメタタイプ。\n"
+"メタタイプは、{AstNode}に対応する任意のメソッド名 + \"?\" でできる。"
 
 # @example
 #: ../lib/yard/handlers/ruby/base.rb:102
@@ -14630,25 +14664,25 @@ msgstr ""
 # YARD::Handlers::Ruby::Base.handles?
 #: ../lib/yard/handlers/ruby/base.rb:110
 msgid "Testing for a Handler"
-msgstr ""
+msgstr "ハンドラー用にテストする。"
 
 # @return [Boolean]
 #: ../lib/yard/handlers/ruby/base.rb:110
 msgid ""
 "whether or not an {AstNode} object should be\n"
 "handled by this handler"
-msgstr ""
+msgstr "{AstNode}オブジェクトはこのハンドラーによって処理されるかどうか"
 
 # YARD::Handlers::Ruby::Base#parse_block
 #: ../lib/yard/handlers/ruby/base.rb:132
 msgid "Parsing an Inner Block"
-msgstr ""
+msgstr "内部のブロックを解析する"
 
 # YARD::Handlers::Ruby::Base#call_params
 # YARD::Handlers::Ruby::Base#caller_method
 #: ../lib/yard/handlers/ruby/base.rb:141 ../lib/yard/handlers/ruby/base.rb:148
 msgid "Macro Handling"
-msgstr ""
+msgstr "マクロを処理する"
 
 # YARD::Handlers::Ruby::Legacy::ClassConditionHandler
 # YARD::Handlers::Ruby::ClassConditionHandler
