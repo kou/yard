@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-07 18:52+0900\n"
+"PO-Revision-Date: 2011-12-08 10:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16054,12 +16054,12 @@ msgstr "新しいトークンオブジェクトを作成する"
 # @param [Integer] char_no
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:38
 msgid "the char number to initialize the token to"
-msgstr "トークンをイニシャライズする,文字数(??文字の何番目か)"
+msgstr "char numberをトークンにイニシャライズする, char number"
 
 # @param [Integer] line_no
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:38
 msgid "the line number to initialize the token to"
-msgstr "トークンをイニシャライズする,行数"
+msgstr "行数をトークンにイニシャライズする。行数"
 
 # @param [Integer]
 #: ../lib/yard/parser/ruby/legacy/ruby_lex.rb:38
