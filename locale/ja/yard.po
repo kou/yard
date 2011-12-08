@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-08 10:48+0900\n"
+"PO-Revision-Date: 2011-12-08 16:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -1249,7 +1249,7 @@ msgid ""
 msgstr ""
 "コードオブジェクトクラスは{YARD::Registry}クラスと一体となった\n"
 "全てのインスタンス化されるコードオブジェクトの手順を保持する。\n"
-"これは、(データが??)集中する場所から(??centralized location)\n"
+"これは、(データが???)集中する場所から(centralized location)\n"
 "フェッチや,キャッチや,インポートや,エクスポートされる\n"
 "オブジェクトを受け入れる為に選択を明確に設計する。\n"
 "上記のように、\n"
@@ -1315,8 +1315,8 @@ msgstr ""
 "さらに、現在のオブジェクトにアクセスを提供する為には、{YARD::CodeObjects::Proxy}クラスがある。\n"
 "それは、作成されるかどうかはわからないがパスでオブジェクトを表す事が出来る。\n"
 "\n"
-"これはソースコードの同じ本体の中で定義されない、又は、(さもなければ??)\n"
-"もしかしたら後で定義される??(ネバーがココマデかかる?)\n"
+"これはソースコードの同じ本体の中で定義されない、又は、(さもなければ???)\n"
+"もしかしたら後で定義される???(ネバーがココマデかかる?)\n"
 "コードの中のオブジェクトの為に参照を表す為に必須となる\n"
 "\n"
 "This is necessary to represent a reference to an object in code\n"
@@ -1333,7 +1333,7 @@ msgstr ""
 "\n"
 "任意のコードオブジェクトが利用される時でも、\n"
 "属性を確かめる為に順番に処理されるか注意するには、\n"
-"解決不可能なプロキシーにアクセスされない??(しない)\n"
+"解決不可能なプロキシーにアクセスされない???(しない)\n"
 "\n"
 "Whenever arbitrary code objects are used,\n"
 "care should be taken in order to make sure attributes are not accessed on unresolvable proxies.\n"
@@ -1431,7 +1431,7 @@ msgstr ""
 "\n"
 "これを行う為に推奨される方法は、\n"
 "カスタムオブジェクトはパスに説明するプレフィックス(接頭語)を\n"
-"追加すると共に??(with)\n"
+"追加すると共に???(with)\n"
 "\n"
 "例えば、次は仮の`FooObject`用のパスの実装となる。"
 
@@ -3349,7 +3349,8 @@ msgid ""
 msgstr ""
 "この区分は、プロジェクトの主要な目的である\n"
 "そして、YARDがHTMLの出力を生成するただの道具では無い事を意味している。\n"
-"??期待されるYARDの主な構成の一部が独自に利用され、拡張され,変更される。\n"
+"??e The expectation is that any subset of YARD's major components may be used, extended or modified independently.主語の部分,,期待は、\n"
+"望んでいるものは、YARDの主な構成の一部が独自に利用され、拡張され,変更されることである。\n"
 "YARDはデータ収集ツール(解析やコードの監査の為に)や\n"
 "ソースのデータ(ウェブサーバーはコードについて生の未フォーマットのデータを含んでいる)や\n"
 "慣習としてのHTMLドキュメント生成ツール(RDocのように)\n"
@@ -5572,7 +5573,7 @@ msgstr ""
 "これは、生成しファイルに任意のシリアル化出力する。\n"
 "後者の、`#generate`メソッドは\n"
 "HTMLドキュメントを生成する為に,特別に利用される。\n"
-"必要とされる利点(資産??)を上書きする。\n"
+"必要とされる利点(資産???)を上書きする。\n"
 "例えば、オブジェクトは以下の様に表示される。"
 
 #: ../docs/Templates.md:50
@@ -5663,7 +5664,7 @@ msgid ""
 "endpoint,\n"
 "which enables inter-document linking."
 msgstr ""
-"?? endpoint\n"
+"??? endpoint\n"
 "このクラスは\n"
 "処理の終りを予期し、\n"
 "データをシリアライズする方法の決定し\n"
@@ -5921,7 +5922,7 @@ msgstr ""
 "次の事に留意する。\n"
 "`yieldall`は全ての下位セクションをyieldし、\n"
 "であるのに対して、\n"
-"`yield`は、要素が無くなるまで、(??コード確認)\n"
+"`yield`は、要素が無くなるまで、(???コード確認)\n"
 "それぞれ個々に(順番に)yieldする。\n"
 "非常に多くの場合、\n"
 "あなたは、`yieldall`を使いたいと思っただろう。\n"
@@ -5946,7 +5947,7 @@ msgstr ""
 "現在のテンプレートによって自動的に継承される。\n"
 "(又は、正確には、mix-inされる)\n"
 "つまり、'default/class/html'テンプレートは、\n"
-"'デフォルトやクラス'から自動的に継承する。??(コード確認)\n"
+"'デフォルトやクラス'から自動的に継承する。???(コード確認)\n"
 "そして'default/class/setup.rb'の中に定義されるもの全ては、\n"
 "'default/class/html/setup.rb'によって上書きされることも意味する。"
 
@@ -5970,8 +5971,8 @@ msgid ""
 "goals described above."
 msgstr ""
 "Templateモジュールはモジュールであり,クラスではないから、\n"
-"それは(templateモジュール)他のテンプレートから(include/extend経由で??)明示的にmix-in出来る。\n"
-"そして、erbファイルやhelper logic??を\n"
+"それは(templateモジュール)他のテンプレートから(include/extend経由で???)明示的にmix-in出来る。\n"
+"そして、erbファイルやhelper logic???を\n"
 "共有する為に、テンプレートを受け入れる。\n"
 "'default/class'テンプレートは、同じセクションの多くを利用するから、\n"
 "'default/module'テンプレートを明示的にmix-inする\n"
@@ -5997,7 +5998,7 @@ msgid ""
 msgstr ""
 "この'default/module/html'のincludeは、\n"
 "拡張によって'default/module'を含める意味となる。\n"
-"これは任意のモジュールerbファイル??から利用する為にクラスを受け入れる。"
+"この拡張は任意でerbモジュールのファイルから利用するクラスを受け入れる。"
 
 #: ../docs/Templates.md:217
 msgid "## Inserting and Traversing Sections"
@@ -6038,7 +6039,7 @@ msgid ""
 "by \n"
 "another module)."
 msgstr ""
-"観察方法のセクション??は\n"
+"観察方法のセクション???は\n"
 "superメソッドが呼び出された後に変更されている。\n"
 "(superメソッドは`default/module/setup.rb`の中で定義されている。)\n"
 "`sections`オブジェクトは、{YARD::Templates::Section}クラスとなる。\n"
@@ -6151,7 +6152,7 @@ msgid ""
 "it will be used as the template module, with the modules from the other\n"
 "template paths implicitly mixed in."
 msgstr ""
-"この場所で、いつでも??、'default/class'テンプレートは、ロードされる。\n"
+"この場所で、毎回、'default/class'テンプレートは、ロードされる。\n"
 "テンプレートは\n"
 "新しく記録したテンプレートパス内部に最初に固定される。\n"
 "もし見つかった場合、\n"
@@ -6204,9 +6205,8 @@ msgid ""
 "be \n"
 "appended to the rendered data."
 msgstr ""
-"??今のクラスオブジェクトは、HTMLの様に書式化される。\n"
-"Now, when a class object is formatted as HTML,\n"
-"例のcustomesection.erbは、表示されるデータに追加される。\n"
+"現在のクラスオブジェクトは、HTMLの様に書式化される。\n"
+"例のcustomesection.erbは、表示されるデータに追加される。"
 
 #: ../docs/Templates.md:299
 msgid "### Overriding Stylesheets and Javascripts"
@@ -6251,7 +6251,7 @@ msgid ""
 "The `full_list.css` is an additional stylesheet loaded specifically for the\n"
 "search field menus (i.e. class list, method list, and file list)."
 msgstr ""
-"??きれてる所..loaded動詞..主語はどれ..\n"
+"??e loaded動詞..主語はどれ..The `full_list.css` is an additional stylesheet loaded specifically for the search field menus\n"
 "追加のスタイルシートの`full_list.css`は、厳密にいえば検索フィールドメニューの為にロードされる。\n"
 "(すなわち、クラスリスト、メソッドリスト、ファイルリスト)"
 
@@ -6349,8 +6349,9 @@ msgid ""
 "     `stylesheets` and `javascripts`. The path to the template would be:"
 msgstr ""
 "  2. `layout`テンプレートディレクトリの中の`setup.rb`を作成し、\n"
-"  メソッド`stylesheets`と`javascripts`を上書きする。(??複数系か確認)\n"
-"  テンプレートのパスは次の様になる。"
+"  メソッド`stylesheets`と`javascripts`を上書きする。\n"
+"  テンプレートのパスは次の様になる。<\n"
+"  ???複数系か確認 Create a `setup.rb` in the `layout` template directory and override the methods`stylesheets` and `javascripts`."
 
 #: ../docs/Templates.md:361
 msgid ""
@@ -6524,7 +6525,7 @@ msgid ""
 msgstr ""
 "  1. `layout`テンプレートディレクトリの中の`setup.rb`を作成する。そして、\n"
 "  `menu_lists`メソッドを上書きする。\n"
-"  `type`は、ファイルの名前の検索フィールドを報告する。??(type詳細)\n"
+"  `type`は、ファイルの名前の検索フィールドを報告する。???(type詳細)\n"
 "  `title`は、フレームの中を見る時、\n"
 "  上のセクションが見える名前となる。\n"
 "  `search_title`は、ページ上の検索フィールドタブの中の名前となる。"
@@ -6561,10 +6562,9 @@ msgstr ""
 "  2. `fulldoc`の中のテンプレートディレクトリ`setup.rb`を作成する。\n"
 "  そして、特定の`type`の用にメニューを生成する為に、メソッドを作成する。\n"
 "\n"
-"  ??訳\n"
-"  `generate_assets`メソッドは機能を探す。\n"
-"  with:プリフィックスされる用法と共に\n"
-"  with:`generete`はtypeの値は指定され、末尾が`list`になる。\n"
+"  ???  `generate_assets`メソッドは機能を探す。\n"
+"    with:プリフィックスされる用法と共に\n"
+"    with:`generete`はtypeの値は指定され、末尾が`list`になる。\n"
 "\n"
 "  このメソッドの中であなたは、\n"
 "  表示したいと思う特定のオブジェクトの設定とロードができる。"
@@ -8367,7 +8367,7 @@ msgstr "YARDによって利用されるRake taskを持つ"
 #: ../lib/yard/serializers/process_serializer.rb:137
 #: ../lib/yard/serializers/file_system_serializer.rb:137
 msgid "Namespace for components that serialize to various endpoints"
-msgstr "様々な終点?の為に放送(連載??serialize)する構成の為のNamespace"
+msgstr "様々な終点?の為に放送(連載???serialize)する構成の為のNamespace"
 
 # YARD::Server
 #: ../lib/yard/autoload.rb:145 ../lib/yard/server.rb:145
@@ -12048,11 +12048,8 @@ msgstr ""
 "プラグインを使う{load_plugin}をロードするには、\n"
 "全ての他のpublicなメソッドは、\n"
 "ロード時間の間にYARDによって利用される。\n"
-"??文章の流れ..\n"
-"\n"
-"To access options call {options},\n"
-"and to load a plugin use {load_plugin}.\n"
-"All other public methods are used by YARD during load time."
+"??e To access options call {options},and to load a plugin use {load_plugin}.\n"
+"    All other public methods are used by YARD during load time."
 
 # YARD::Config
 #: ../lib/yard/config.rb:8
@@ -12115,7 +12112,7 @@ msgstr ""
 "この設定は、設定ファイルの中の'load_plugins'をtrueに設定する事によってリセットできる。\n"
 "さらに、あなたは、\n"
 "\n"
-"'autoload_plugins'リストを設定する事によって、??load on load\n"
+"'autoload_plugins'リストを設定する事によって、??c load on load\n"
 "続けてロード?する\n"
 "特定のプラグインのグループを指定できる。\n"
 "この設定は、'load_plugins'の独自の値となり、そして常に処理されるだろう。"
@@ -12234,7 +12231,8 @@ msgstr ""
 "このファイルはユーザーが扱う事に\n"
 "気付くことになる。\n"
 "なので、キーや値の設定は見つからないかもしれない。\n"
-"??仮定しないので、代わりに、\n"
+"??e make no assumptions 意味\n"
+"仮定しないので、代わりに、\n"
 "あなたが値を取り出す手続きをする前にキーの存在のチェックする。"
 
 # @see
@@ -14194,6 +14192,8 @@ msgid ""
 "Iterates over all statements in a file and delegates them to the\n"
 "{Handlers::Base} objects that are registered to handle the statement."
 msgstr ""
+"ファイルの中の全てのステートメントにまたがり繰り返し、\n"
+"ステートメントを操作する為に記録される{Handlers::Base}オブジェクトに委譲する。"
 
 # YARD::Handlers::Processor
 #: ../lib/yard/handlers/processor.rb:9
@@ -14209,6 +14209,20 @@ msgid ""
 "processing of a file from {#extra_state}. If you need to access state\n"
 "across different files, look at {#globals}."
 msgstr ""
+"このクラスはそれぞれのハンドラーが渡される。\n"
+"そして、総合的な処理の状態を維持する。\n"
+"例えば、{#visibility}はハンドラーの中で設定される。\n"
+"全ての次のステートメントは、この状態にアクセス可能である。\n"
+"これは、クラスやモジュールの中で操作される\n"
+"\"public\",\"protected\",\"private\"ステートメントを受け入れる。\n"
+"さらに、{#namespace}メソッドは、\n"
+"オブジェクトが作成される場所で、制御の為に解析している間に設定される。\n"
+"あなたは、追加の処理状態を把握する属性にアクセスも出来る。\n"
+"任意のハンドラーが\n"
+"{#extra_state}メソッドからファイルの後処理をしている間に\n"
+"設定できる。\n"
+"あなたが複数のファイルに渡って状態にアクセスする必要がある場合、\n"
+"{#globals}メソッドで調べられる。"
 
 # @see
 #: ../lib/yard/handlers/ruby/base.rb:62 ../lib/yard/handlers/processor.rb:19
@@ -14219,34 +14233,34 @@ msgstr ""
 # YARD::Handlers::Processor.register_handler_namespace
 #: ../lib/yard/handlers/processor.rb:23
 msgid "Registers a new namespace for handlers of the given type."
-msgstr ""
+msgstr "与える型の入ったハンドラー用の記録する。"
 
 # @return [Hash]
 #: ../lib/yard/handlers/processor.rb:31 ../lib/yard/handlers/processor.rb:33
 #: ../lib/yard/parser/source_parser.rb:140
 #: ../lib/yard/parser/source_parser.rb:142
 msgid "a list of registered parser type extensions"
-msgstr ""
+msgstr "parser type extensionsが,記録されるリスト"
 
 # @return [String]
 #: ../lib/yard/handlers/processor.rb:40
 msgid "the filename"
-msgstr ""
+msgstr "ファイル名"
 
 # @return [CodeObjects::NamespaceObject]
 #: ../lib/yard/handlers/processor.rb:43
 msgid "the current namespace"
-msgstr ""
+msgstr "現在のnamespace"
 
 # @return [Symbol]
 #: ../lib/yard/handlers/processor.rb:46
 msgid "the current visibility (public, private, protected)"
-msgstr ""
+msgstr "現在の可視性(public,private,protected)"
 
 # @return [Symbol]
 #: ../lib/yard/handlers/processor.rb:49
 msgid "the current scope (class, instance)"
-msgstr ""
+msgstr "現在のスコープ(クラス,インスタンス)"
 
 # @return [CodeObjects::Base, nil]
 #: ../lib/yard/handlers/processor.rb:55
@@ -14256,16 +14270,20 @@ msgid ""
 "For instance, when parsing a method body, the {CodeObjects::MethodObject}\n"
 "is set as the owner, in case any extra method information is processed."
 msgstr ""
+"namespaceとは異なり、ownerは、\n"
+"ステートメントの間に記録されるnamespaceオブジェクトを持たない。\n"
+"例えば、メソッド本体を解析する時、{CodeObjects::MethodObject}は、\n"
+"このownerのように設定される。この場合、何らかの追加のメソッド情報が処理される。"
 
 # @return [Boolean]
 #: ../lib/yard/handlers/processor.rb:58
 msgid "whether or not {Parser::LoadOrderError} is raised"
-msgstr ""
+msgstr "{Parser::LoadOrderError}の例外を上げるかどうか"
 
 # @return [Symbol]
 #: ../lib/yard/handlers/processor.rb:61
 msgid "the parser type (:ruby, :ruby18, :c)"
-msgstr ""
+msgstr "パーサー型(:ruby, :ruby18, :c)"
 
 # @return [OpenStruct]
 #: ../lib/yard/handlers/processor.rb:79
@@ -14304,12 +14322,12 @@ msgstr ""
 # @return [OpenStruct]
 #: ../lib/yard/handlers/processor.rb:90
 msgid "an open structure that can store arbitrary data"
-msgstr ""
+msgstr "任意のデータを記録できる簡単な構造体"
 
 # YARD::Handlers::Processor#initialize
 #: ../lib/yard/handlers/processor.rb:93
 msgid "Creates a new Processor for a +file+."
-msgstr ""
+msgstr "+file+用の新しいProcessorを作成する"
 
 # @param [String] file
 #: ../lib/yard/handlers/processor.rb:105
@@ -14317,6 +14335,8 @@ msgid ""
 "the name of the file that is being processed.\n"
 "uses '(stdin)' if file is nil."
 msgstr ""
+"処理されるファイルの名前、\n"
+"ファイルがnilの場合、'(stdin)'を使う。"
 
 # @param [Symbol]
 #: ../lib/yard/handlers/processor.rb:105
@@ -14332,6 +14352,11 @@ msgid ""
 "If these errors are raised, the processor will attempt to load all\n"
 "other files before continuing to parse the file."
 msgstr ""
+"ファイルが最初に解析される必要がある参照を未解決の時、\n"
+"{Parser::LoadOrderError}の例外を上げるかどうか\n"
+"もしこれらのエラーが上げられる場合、\n"
+"プロセッサーは、ファイルの解析を継続する前に\n"
+"全ての他のファイルをロードをする。"
 
 # @param [Boolean]
 #: ../lib/yard/handlers/processor.rb:105
@@ -14354,7 +14379,7 @@ msgstr ""
 # @return [Processor]
 #: ../lib/yard/handlers/processor.rb:105
 msgid "a new instance of Processor"
-msgstr ""
+msgstr "プロセッサーの新しいインスタンス"
 
 # @param [Symbol] parser_type
 #: ../lib/yard/handlers/processor.rb:105
@@ -14363,6 +14388,9 @@ msgid ""
 "the parser. Used to select the handler (since handlers are specific\n"
 "to a parser type)."
 msgstr ""
+"パーサーが提供する,パーサータイプ(:ruby, :ruby18, :c)\n"
+"利用するハンドラーを選択するには、(ハンドラーがパーサータイプを指定する。)\n"
+"the parser. Used to select the handler (since handlers are specific to a parser type)."
 
 # YARD::Handlers::Processor#process
 #: ../lib/yard/handlers/processor.rb:120
@@ -14370,11 +14398,13 @@ msgid ""
 "Processes a list of statements by finding handlers to process each\n"
 "one."
 msgstr ""
+"処理の各自の処理ハンドラーが見つけることによって\n"
+"処理ステートメントのリスト\n"
 
 # @param [Array] statements
 #: ../lib/yard/handlers/processor.rb:124
 msgid "a list of statements"
-msgstr ""
+msgstr "ステートメントのリスト"
 
 # @param [Array]
 #: ../lib/yard/handlers/processor.rb:124
@@ -14385,22 +14415,22 @@ msgstr ""
 #: ../lib/yard/handlers/processor.rb:149
 msgid ""
 "Searches for all handlers in {Base.subclasses} that match the +statement+"
-msgstr ""
+msgstr "+statement+ にマッチする{Base.sublasses}の中の全てのハンドラー用に検索する。"
 
 # @return [Array<Base>]
 #: ../lib/yard/handlers/processor.rb:152
 msgid "a list of handlers to process the statement with."
-msgstr ""
+msgstr "ステートメントと共に処理する為のハンドラーのリスト"
 
 # @param statement
 #: ../lib/yard/handlers/processor.rb:152
 msgid "the statement object to match."
-msgstr ""
+msgstr "オブジェクトにマッチするステートメント"
 
 # YARD::Handlers::Processor#handler_base_class
 #: ../lib/yard/handlers/processor.rb:163
 msgid "Returns the handler base class"
-msgstr ""
+msgstr "ハンドラーのbaseクラスを返す"
 
 # @return [Base]
 #: ../lib/yard/handlers/processor.rb:164
@@ -14410,14 +14440,14 @@ msgstr ""
 # YARD::Handlers::Processor#handler_base_namespace
 #: ../lib/yard/handlers/processor.rb:169
 msgid "The module holding the handlers to be loaded"
-msgstr ""
+msgstr "ロードされるハンドラーを保持する,モジュール"
 
 # @return [Module]
 #: ../lib/yard/handlers/processor.rb:172
 msgid ""
 "the module containing the handlers depending on\n"
 "{#parser_type}."
-msgstr ""
+msgstr "{#parser_type}メソッドに依存しているハンドラーを含んでいる,モジュール"
 
 # YARD::Handlers::Processor#load_handlers
 #: ../lib/yard/handlers/processor.rb:177
@@ -14426,6 +14456,9 @@ msgid ""
 "Ruby1.9 handlers are never loaded into 1.8; also lowers the amount\n"
 "of modules that are loaded"
 msgstr ""
+"{#handler_base_namespace}から、ハンドラーをロードする。\n"
+"これはロードされるモジュールの量を減少させると共に\n"
+"Ruby1.9ハンドラーが1.8でロードされない事を保証する。"
 
 # YARD::Handlers::Ruby::Legacy::AliasHandler
 # YARD::Handlers::Ruby::AliasHandler
@@ -14499,7 +14532,7 @@ msgstr ""
 "  def matches?(node) node.source.include?(name) end\n"
 "end\n"
 "\n"
-"# このハンドラーは'foo'を含んでいるソースで任意のノードを操作する。??(Rubyのinclude??)\n"
+"# このハンドラーは'foo'を含んでいるソースで任意のノードを操作する。??c(Rubyのinclude)\n"
 "class MyHandler < Handlers::Ruby::Base\n"
 "  handles MyExtension.new('foo')\n"
 "end"
@@ -14592,7 +14625,9 @@ msgstr ""
 # YARD::Handlers::Ruby::Base.meta_type
 #: ../lib/yard/handlers/ruby/base.rb:83 ../lib/yard/handlers/ruby/base.rb:102
 msgid "Statement Matcher Extensions"
-msgstr "??ステートメントマッチャー拡張"
+msgstr ""
+"??c マッチャーはそのままでいいか\n"
+"ステートメントマッチャー拡張"
 
 # @example Match the "describe" method call
 #: ../lib/yard/handlers/ruby/base.rb:83
@@ -14638,7 +14673,7 @@ msgid ""
 "\"ref\"."
 msgstr ""
 "メタタイプは、\"?\"で終わる{AstNode}クラス上の任意のメソッドとなる。\n"
-"とはいえ、??(言い回し)\n"
+"とはいえ、??e 英訳\n"
 "あなたは、自身の宣言の中で\"?\"サフィックスを含んでいないはずである。\n"
 "いくつかの例を上げると、\"condition\", \"call\", \"literal\", \"kw\", \"token\",\"ref\" となる。"
 
@@ -17291,19 +17326,14 @@ msgid ""
 "the file is moved to the back of the queue with a Continuation object\n"
 "that can continue processing the file."
 msgstr ""
-"??(須藤さんに相談..説明がオカシイ\n"
 "err節の説明が入ってない\n"
 "Errorの時は Continuation オブジェクトではなく、\n"
 "e.contextと共にファイルの後ろにpushされる。)\n"
 "\n"
 "キューの中のファイルのリストを解析する。\n"
 "{LoadOrderError}が見つかった場合、\n"
-"ファイルは、処理しているファイルを継続できる\n"
-"Continuationオブジェクトと共に、キューの後ろに移動する。\n"
-"\n"
-"Parses a list of files in a queue. If a {LoadOrderError} is caught,\n"
-"the file is moved to the back of the queue with a Continuation object\n"
-"that can continue processing the file."
+"ファイルはキューの後ろに移動され、Continuationオブジェクトを用い、\n"
+"処理しているファイルを継続できる"
 
 # @param [Array<String>] files
 #: ../lib/yard/parser/source_parser.rb:345
@@ -17356,7 +17386,7 @@ msgstr "ソースパーサーの新しいインスタンス。"
 # @param [OpenStruct] globals
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "global state to be re-used across separate source files"
-msgstr "ソースファイルをまたいで再利用される,global state.??"
+msgstr "ソースファイルをまたいで再利用される、globalの状態"
 
 # @param [Boolean] load_order_errors
 #: ../lib/yard/parser/source_parser.rb:402
