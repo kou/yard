@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-09 16:54+0900\n"
+"PO-Revision-Date: 2011-12-09 17:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17459,29 +17459,29 @@ msgstr "ファイル名の拡張子に応じたパーサータイプ。"
 # YARD::Rake::YardocTask
 #: ../lib/yard/rake/yardoc_task.rb:8
 msgid "The rake task to run {CLI::Yardoc} and generate documentation."
-msgstr ""
+msgstr "{CLI::Yardoc}を起動する為のrake taskとなり、ドキュメントを生成する。"
 
 # YARD::Rake::YardocTask#name
 # YARD::Rake::YardocTask#name=
 #: ../lib/yard/rake/yardoc_task.rb:10
 msgid "The name of the task"
-msgstr ""
+msgstr "taskの名前"
 
 # @return [String]
 #: ../lib/yard/rake/yardoc_task.rb:11
 msgid "the task name"
-msgstr ""
+msgstr "task名"
 
 # YARD::Rake::YardocTask#options
 # YARD::Rake::YardocTask#options=
 #: ../lib/yard/rake/yardoc_task.rb:14
 msgid "Options to pass to {CLI::Yardoc}"
-msgstr ""
+msgstr "{CLI::Yardoc}の為のパスの設定"
 
 # @return [Hash]
 #: ../lib/yard/rake/yardoc_task.rb:15
 msgid "the options passed to the commandline utility"
-msgstr ""
+msgstr "コマンドライン用途の為に渡される設定"
 
 # YARD::Rake::YardocTask#files
 # YARD::Rake::YardocTask#files=
@@ -17489,29 +17489,29 @@ msgstr ""
 msgid ""
 "The Ruby source files (and any extra documentation files separated by '-')\n"
 "to process"
-msgstr ""
+msgstr "処理の為のRubyソースファイル(や、'-'によって分割される、任意の特別なドキュメントファイル)"
 
 # YARD::Rake::YardocTask#before
 # YARD::Rake::YardocTask#before=
 #: ../lib/yard/rake/yardoc_task.rb:23
 msgid "Runs a +Proc+ before the task"
-msgstr ""
+msgstr "taskの前に +Proc+ を起動する。"
 
 # @return [Proc]
 #: ../lib/yard/rake/yardoc_task.rb:24
 msgid "a proc to call before running the task"
-msgstr ""
+msgstr "task を起動する前に、呼び出される,proc"
 
 # YARD::Rake::YardocTask#after
 # YARD::Rake::YardocTask#after=
 #: ../lib/yard/rake/yardoc_task.rb:27
 msgid "Runs a +Proc+ after the task"
-msgstr ""
+msgstr "taskの後で起動する +Proc+"
 
 # @return [Proc]
 #: ../lib/yard/rake/yardoc_task.rb:28
 msgid "a proc to call after running the task"
-msgstr ""
+msgstr "taskを起動した後で呼び出される,proc"
 
 # @return [Verifier, Proc]
 #: ../lib/yard/rake/yardoc_task.rb:34
@@ -17520,33 +17520,37 @@ msgid ""
 "being generated. Any object that the verifier returns false for will be\n"
 "excluded from documentation. This attribute can also be a lambda."
 msgstr ""
+"生成される全てのオブジェクトに対して起動する為の、\n"
+"任意の {Verifier} となる。\n"
+"verifierがドキュメントから除外される為にfalseを返す任意のオブジェクト。\n"
+"この属性は、lambdaにもできる。"
 
 # YARD::Rake::YardocTask#initialize
 #: ../lib/yard/rake/yardoc_task.rb:37
 msgid "Creates a new task with name +name+."
-msgstr ""
+msgstr "+name+ 名と共に新しいtaskを作成する。"
 
 # @param [String, Symbol] name
 #: ../lib/yard/rake/yardoc_task.rb:42
 msgid "the name of the rake task"
-msgstr ""
+msgstr "rake taskの名前"
 
 # @return [YardocTask]
 #: ../lib/yard/rake/yardoc_task.rb:42
 msgid "a new instance of YardocTask"
-msgstr ""
+msgstr "YardocTaskの新しいインスタンス"
 
 # @yield
 #: ../lib/yard/rake/yardoc_task.rb:42
 msgid "a block to allow any options to be modified on the task"
-msgstr ""
+msgstr "task上で変更される為に任意のオプションを受け入れる,block"
 
 # @yieldparam [YardocTask] _self
 #: ../lib/yard/rake/yardoc_task.rb:42
 msgid ""
 "the task object to allow any parameters\n"
 "to be changed."
-msgstr ""
+msgstr "変更される任意のパラメータを受け入れるtask オブジェクト"
 
 # @yieldparam [YardocTask]
 #: ../lib/yard/rake/yardoc_task.rb:42
@@ -17556,7 +17560,7 @@ msgstr ""
 # YARD::Rake::YardocTask#define
 #: ../lib/yard/rake/yardoc_task.rb:57
 msgid "Defines the rake task"
-msgstr ""
+msgstr "rake taskを定義する。"
 
 # YARD::Registry
 #: ../lib/yard/registry.rb:6
