@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-09 15:22+0900\n"
+"PO-Revision-Date: 2011-12-09 16:54+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8352,7 +8352,7 @@ msgstr "Rubyのパーサーの構成"
 #: ../lib/yard/parser/ruby/legacy/ruby_parser.rb:113
 #: ../lib/yard/parser/ruby/legacy/statement_list.rb:113
 msgid "Handles Ruby parsing in Ruby 1.8."
-msgstr "Ruby1.8の利用されるパーサー処理"
+msgstr "Ruby1.8で利用されるパーサー処理"
 
 # YARD::Rake
 #: ../lib/yard/autoload.rb:133 ../lib/yard/rake/yardoc_task.rb:133
@@ -8366,7 +8366,7 @@ msgstr "YARDによって利用されるRake taskを持つ"
 #: ../lib/yard/serializers/process_serializer.rb:137
 #: ../lib/yard/serializers/file_system_serializer.rb:137
 msgid "Namespace for components that serialize to various endpoints"
-msgstr "様々な終点?の為に放送(連載???serialize)する構成の為のNamespace"
+msgstr "様々な出力先の為にシリアライズする構成の為のNamespace"
 
 # YARD::Server
 #: ../lib/yard/autoload.rb:145 ../lib/yard/server.rb:145
