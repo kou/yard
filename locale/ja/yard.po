@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-08 20:26+0900\n"
+"PO-Revision-Date: 2011-12-09 15:22+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8226,7 +8226,7 @@ msgstr ""
 # @example
 #: ../lib/yard.rb:18
 msgid "tag|example|Parse a glob of files"
-msgstr ""
+msgstr "tag|example|ファイルのglobを解析する。"
 
 # @example Parse a glob of files
 #: ../lib/yard.rb:18
@@ -8241,7 +8241,7 @@ msgstr ""
 # @example
 #: ../lib/yard.rb:25
 msgid "tag|example|Parse a string of input"
-msgstr ""
+msgstr "tag|example|入力からの文字列を解析する"
 
 # @example Parse a string of input
 #: ../lib/yard.rb:25
