@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-13 17:36+0900\n"
+"PO-Revision-Date: 2011-12-13 17:40+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20607,22 +20607,22 @@ msgstr "ライブラリの新しいインスタンス"
 # @param value
 #: ../lib/yard/tags/option_tag.rb:4
 msgid "the value to set the attribute pair to."
-msgstr ""
+msgstr "pair属性に設定する値"
 
 # YARD::Tags::OptionTag#pair
 #: ../lib/yard/tags/option_tag.rb:5
 msgid "Returns the value of attribute pair"
-msgstr ""
+msgstr "pair属性の値を返す"
 
 # YARD::Tags::OptionTag#pair=
 #: ../lib/yard/tags/option_tag.rb:5
 msgid "Sets the attribute pair"
-msgstr ""
+msgstr "pair属性を設定する"
 
 # @return [OptionTag]
 #: ../lib/yard/tags/option_tag.rb:6
 msgid "a new instance of OptionTag"
-msgstr ""
+msgstr "オプションタグの新しいインスタンス"
 
 # YARD::Tags::OverloadTag#signature
 #: ../lib/yard/tags/overload_tag.rb:5
