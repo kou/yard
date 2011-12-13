@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-13 17:51+0900\n"
+"PO-Revision-Date: 2011-12-13 17:53+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20642,39 +20642,39 @@ msgstr "OverloadTagの新しいインスタンス"
 # @param value
 #: ../lib/yard/tags/ref_tag.rb:4 ../lib/yard/tags/ref_tag_list.rb:4
 msgid "the value to set the attribute owner to."
-msgstr ""
+msgstr "owner属性を設定する為の値"
 
 # YARD::Tags::RefTag#owner
 # YARD::Tags::RefTagList#owner
 #: ../lib/yard/tags/ref_tag.rb:5 ../lib/yard/tags/ref_tag_list.rb:5
 msgid "Returns the value of attribute owner"
-msgstr ""
+msgstr "owner属性の値を返す"
 
 # YARD::Tags::RefTag#owner=
 # YARD::Tags::RefTagList#owner=
 #: ../lib/yard/tags/ref_tag.rb:5 ../lib/yard/tags/ref_tag_list.rb:5
 msgid "Sets the attribute owner"
-msgstr ""
+msgstr "owner属性を設定する"
 
 # @param value
 #: ../lib/yard/tags/ref_tag_list.rb:4
 msgid "the value to set the attribute tag_name to."
-msgstr ""
+msgstr "tag_name属性を設定する値"
 
 # YARD::Tags::RefTagList#tag_name
 #: ../lib/yard/tags/ref_tag_list.rb:5
 msgid "Returns the value of attribute tag_name"
-msgstr ""
+msgstr "tag_name属性の値を返す"
 
 # YARD::Tags::RefTagList#tag_name=
 #: ../lib/yard/tags/ref_tag_list.rb:5
 msgid "Sets the attribute tag_name"
-msgstr ""
+msgstr "tag_name属性を設定する"
 
 # @return [RefTagList]
 #: ../lib/yard/tags/ref_tag_list.rb:6
 msgid "a new instance of RefTagList"
-msgstr ""
+msgstr "RefTagListの新しいインスタンス"
 
 # YARD::Tags::Tag
 #: ../lib/yard/tags/tag.rb:4
