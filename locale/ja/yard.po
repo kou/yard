@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-13 14:41+0900\n"
+"PO-Revision-Date: 2011-12-13 17:36+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20311,6 +20311,8 @@ msgid ""
 "Holds all the registered meta tags. If you want to extend YARD and add\n"
 "a new meta tag, you can do it in one of two ways."
 msgstr ""
+"全ての記録されるメタタグを把握する。あなたがYARDを拡張したい場合や\n"
+"新しいメタタグを追加したい場合は、2つの方法のうちどちらかを選択することができる。"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:7
@@ -20326,6 +20328,16 @@ msgid ""
 "  define_tag \"Parameter\", :param, :with_types_and_name\n"
 "  define_tag \"Author\", :author"
 msgstr ""
+"== 方法 #1\n"
+"{Library.define_tag}を使い,タグ名を解析する事によって新しいタグを定義し、\n"
+"タグを作成する時に使うfactoryメソッド。\n"
+"これらの定義は 方法 #2の中の見られる事と同様に\n"
+"Rubyコードの中で自動拡張される。\n"
+"あなたがfactoryメソッドを利用しない場合、\n"
+"デフォルトは{DefaultFactory#parse_tag}になるだろう。\n"
+"Example:\n"
+"  define_tag \"Parameter\", :param, :with_types_and_name\n"
+"  define_tag \"Author\", :author"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:16
@@ -20333,6 +20345,8 @@ msgid ""
 "The first line will expand to the code:\n"
 "  def param_tag(text) tag_factory.parse_tag_with_types_and_name(text) end"
 msgstr ""
+"例の最初の行は、次の様になる:\n"
+"  def param_tag(text) tag_factory.parse_tag_with_types_and_name(text) end"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:19
@@ -20340,6 +20354,8 @@ msgid ""
 "The second line will expand to:\n"
 "  def author_tag(text) tag_factory.parse_tag(text) end"
 msgstr ""
+"例の2番目の行は次の様になる:\n"
+"  def author_tag(text) tag_factory.parse_tag(text) end"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:22
@@ -20349,6 +20365,10 @@ msgid ""
 "defaults to the {DefaultFactory} class and can be set by changing {Library."
 "default_factory}."
 msgstr ""
+"次の事に留意する。\n"
+"+tag_facotory+ は、タグを解析する為に利用されるfactoryオブジェクトとなる。\n"
+"この値は{DefaultFactory}クラスがデフォルトとなり、\n"
+"{Library.default_factory}を変更する事によって設定できる。"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:25
@@ -20360,6 +20380,12 @@ msgid ""
 "    # parse your tag contents here\n"
 "  end"
 msgstr ""
+"== 方法 #2\n"
+"自分で引数の様な生のテキストを取得する +tagname_tag+ メソッドを書く。\n"
+"Example:\n"
+"  def mytag_tag(text)\n"
+"    # parse your tag contents here\n"
+"  end"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:32
@@ -20369,6 +20395,11 @@ msgid ""
 "standard\n"
 "tag syntax."
 msgstr ""
+"この例は、\n"
+"あなたが、docstringを通じてクラス化するメタデータを追加する為に\n"
+"@mytag TEXTを使う事を受け入れる。\n"
+"あなたは、標準のタグ構文を解析し補助する為に\n"
+"{Library#factory}オブジェクトを利用できる。"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:36
@@ -20381,6 +20412,12 @@ msgid ""
 "useful\n"
 "if you want to change the syntax of existing tags (@see, @since, etc.)"
 msgstr ""
+"== 追加や変更のタグ構文\n"
+"あなたが、専用のタグ解析が必要な場合、\n"
+"YARDが起動する前に自分で解析するメソッドを用意し、\n"
+"{Library.default_factory= Library.default_factory}を設定すると、\n"
+"{#factory}オブジェクトの代用ができる。\n"
+"これは、既に存在するタグ(@see,@since等)構文を変更したい場合、便利である。"
 
 # @see
 #: ../lib/yard/tags/library.rb:43
@@ -20395,7 +20432,7 @@ msgstr ""
 # YARD::Tags::Library.labels
 #: ../lib/yard/tags/library.rb:48
 msgid "Returns the value of attribute labels"
-msgstr ""
+msgstr "属性のラベルの入った値を返す"
 
 # YARD::Tags::Library.default_factory=
 #: ../lib/yard/tags/library.rb:58
@@ -20404,6 +20441,9 @@ msgid ""
 "this to an object (or class) that responds to +parse_TAGNAME+ methods\n"
 "where +TAGNAME+ is the name of the tag."
 msgstr ""
+"+TAGNAME+ がタグの名前となる処理の所で、\n"
+"+parse_TAGNAME+ メソッドに関連するオブジェクト(又は,クラス)の為に、\n"
+"これを設定する事によってタグを解析するベースであるfactoryオブジェクトを変更する。"
 
 # YARD::Tags::Library.default_factory=
 #: ../lib/yard/tags/library.rb:62
@@ -20411,6 +20451,8 @@ msgid ""
 "You should set this value before performing any source parsing with\n"
 "YARD, otherwise your factory class will not be used."
 msgstr ""
+"あなたはYARDによって何らかのソースの解析を実行する前に、この値を設定しなければならない。\n"
+"設定しない場合、あなたのfactoryクラスは利用できない。"
 
 # @param [Class, Object]
 #: ../lib/yard/tags/library.rb:70
@@ -20425,34 +20467,34 @@ msgstr ""
 # @param [Class, Object] factory
 #: ../lib/yard/tags/library.rb:70
 msgid "the factory that parses all tags"
-msgstr ""
+msgstr "全てのタグを解析するファクトリー"
 
 # YARD::Tags::Library.factory_method_for
 #: ../lib/yard/tags/library.rb:75
 msgid ""
 "Returns the factory method used to parse the tag text for a specific tag"
-msgstr ""
+msgstr "特定のタグ用のタグテキストを解析するのに、利用されるファクトリーメソッドを返す。"
 
 # @param [Symbol]
 # @param [#to_s]
 #: ../lib/yard/tags/library.rb:81 ../lib/yard/tags/library.rb:121
 msgid "tag|param|tag"
-msgstr ""
+msgstr "タグ"
 
 # @return [nil]
 #: ../lib/yard/tags/library.rb:81
 msgid "if the tag is freeform text"
-msgstr ""
+msgstr "タグがフリーフォームテキストの場合"
 
 # @return [Class<Tag>]
 #: ../lib/yard/tags/library.rb:81
 msgid "the Tag class to use to parse the tag"
-msgstr ""
+msgstr "タグを解析する為に利用するタグクラス"
 
 # @return [Symbol]
 #: ../lib/yard/tags/library.rb:81
 msgid "the factory method name for the tag"
-msgstr ""
+msgstr "タグの為のfactoryメソッド名"
 
 # YARD::Tags::Library.visible_tags
 # YARD::Tags::Library.visible_tags=
@@ -20462,6 +20504,10 @@ msgid ""
 "tags in the list is also significant, as it represents the order that\n"
 "tags are displayed in templates."
 msgstr ""
+"テンプレートをレンダリングする時、\n"
+"表示する為にタグのリストをセットする。\n"
+"リストの中のタグの順番は重要である。\n"
+"これは、タグがテンプレートの中で表示される順番を表す。"
 
 # YARD::Tags::Library.visible_tags
 # YARD::Tags::Library.visible_tags=
@@ -20470,6 +20516,8 @@ msgid ""
 "You can use the {Array#place} to insert new tags to be displayed in\n"
 "the templates at specific positions:"
 msgstr ""
+"特定の場所でテンプレートの中で、\n"
+"表示される新しいタグを挿入する為に{Array#place}メソッドを利用できる。"
 
 # YARD::Tags::Library.visible_tags
 # YARD::Tags::Library.visible_tags=
@@ -20480,7 +20528,7 @@ msgstr ""
 # @return [Array<Symbol>]
 #: ../lib/yard/tags/library.rb:96
 msgid "a list of ordered tags"
-msgstr ""
+msgstr "命令されるタグのリスト"
 
 # YARD::Tags::Library.transitive_tags
 # YARD::Tags::Library.transitive_tags=
@@ -20491,11 +20539,14 @@ msgid ""
 "apply to all methods inside a module it is defined in. Transitive\n"
 "tags can be overridden by directly defining a tag on the child object."
 msgstr ""
+"定義されるnamespaceの内部で任意の子??c(シンボルの事だと思うが何故,子と言う表現かわからない)を適用しタグのリストをグループ化すべきである。\n"
+"例えば、\"@since\"タグは、モジュールの内部で定義される全てのメソッドが適用される。\n"
+"過渡的なタグは、子のオブジェクト上のタグを直接定義する事によって上書きできる。"
 
 # @return [Array<Symbol>]
 #: ../lib/yard/tags/library.rb:105
 msgid "a list of transitive tags"
-msgstr ""
+msgstr "過渡的なタグのリスト"
 
 # YARD::Tags::Library.sorted_labels
 #: ../lib/yard/tags/library.rb:108
@@ -20503,11 +20554,13 @@ msgid ""
 "Sorts the labels lexically by their label name, often used when displaying\n"
 "the tags."
 msgstr ""
+"ラベルをそのラベル名によってソートする。\n"
+"タグを表示する時に、よく利用される。"
 
 # @return [Array<Symbol>, String]
 #: ../lib/yard/tags/library.rb:111
 msgid "the sorted labels as an array of the tag name and label"
-msgstr ""
+msgstr "ソートされるタグ名やラベルの配列"
 
 # YARD::Tags::Library.define_tag
 #: ../lib/yard/tags/library.rb:116
@@ -20516,18 +20569,20 @@ msgid ""
 "or the\n"
 "regular {DefaultFactory#parse_tag} factory method if none is supplied."
 msgstr ""
+"{Tag}factoryメソッドの一つによって新しいタグを定義する便利なメソッド、\n"
+"又、提供されない場合、正規の{DefaultFactory#parse_tag}メソッド"
 
 # @param [#to_s, Class<Tag>] meth
 #: ../lib/yard/tags/library.rb:121
 msgid ""
 "the {Tag} factory method to call when\n"
 "creating the tag or the name of the class to directly create a tag for"
-msgstr ""
+msgstr "タグや直接タグを作成するクラスの名前を作成する時、呼び出すfactoryメソッドの{Tag}"
 
 # @param [#to_s] tag
 #: ../lib/yard/tags/library.rb:121
 msgid "the tag name to create"
-msgstr ""
+msgstr "作成するタグ名"
 
 # @param [#to_s, Class<Tag>]
 # @param [CodeObjects::MethodObject]
@@ -20542,12 +20597,12 @@ msgstr ""
 #: ../lib/yard/tags/library.rb:160
 msgid ""
 "A factory class to handle parsing of tags, defaults to {default_factory}"
-msgstr ""
+msgstr "タグの解析を操作するfactoryクラス、デフォルトは{default_factory}となる。"
 
 # @return [Library]
 #: ../lib/yard/tags/library.rb:162
 msgid "a new instance of Library"
-msgstr ""
+msgstr "ライブラリの新しいインスタンス"
 
 # @param value
 #: ../lib/yard/tags/option_tag.rb:4
