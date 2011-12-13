@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-09 17:48+0900\n"
+"PO-Revision-Date: 2011-12-13 14:37+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20194,7 +20194,7 @@ msgstr ""
 # YARD::Tags::DefaultFactory#parse_tag
 #: ../lib/yard/tags/default_factory.rb:8
 msgid "Parses tag text and creates a new tag with descriptive text"
-msgstr ""
+msgstr "タグテキストを解析し、説明文と共に新しいタグを作成する。"
 
 # @param [String] text
 #: ../lib/yard/tags/default_factory.rb:12
@@ -20203,12 +20203,12 @@ msgstr ""
 #: ../lib/yard/tags/default_factory.rb:44
 #: ../lib/yard/tags/default_factory.rb:80
 msgid "the raw tag text"
-msgstr ""
+msgstr "元のタグテキスト"
 
 # @return [Tag]
 #: ../lib/yard/tags/default_factory.rb:12
 msgid "a tag object with the tag_name and text values filled"
-msgstr ""
+msgstr "タグ名やテキストの入ったタグオブジェクト"
 
 # @param tag_name
 #: ../lib/yard/tags/default_factory.rb:12
@@ -20216,30 +20216,30 @@ msgstr ""
 #: ../lib/yard/tags/default_factory.rb:32
 #: ../lib/yard/tags/default_factory.rb:44
 msgid "the name of the tag to parse"
-msgstr ""
+msgstr "解析の為のタグの名前"
 
 # YARD::Tags::DefaultFactory#parse_tag_with_name
 #: ../lib/yard/tags/default_factory.rb:17
 msgid ""
 "Parses tag text and creates a new tag with a key name and descriptive text"
-msgstr ""
+msgstr "タグテキストを解析し、キー名と説明文と共に新しいタグを作成する。"
 
 # @return [Tag]
 #: ../lib/yard/tags/default_factory.rb:21
 msgid "a tag object with the tag_name, name and text values filled"
-msgstr ""
+msgstr "タグ名,キー名,テキストの入ったタグオブジェクト"
 
 # YARD::Tags::DefaultFactory#parse_tag_with_types
 #: ../lib/yard/tags/default_factory.rb:27
 msgid ""
 "Parses tag text and creates a new tag with formally declared types and\n"
 "descriptive text"
-msgstr ""
+msgstr "タグテキストを解析し、形式的に宣言される型と説明文と共に新しいタグを作成する。"
 
 # @return [Tag]
 #: ../lib/yard/tags/default_factory.rb:32
 msgid "a tag object with the tag_name, types and text values filled"
-msgstr ""
+msgstr "タグ名,型,テキストを含んだタグオブジェクト"
 
 # YARD::Tags::DefaultFactory#parse_tag_with_types_and_name
 #: ../lib/yard/tags/default_factory.rb:39
@@ -20247,31 +20247,33 @@ msgid ""
 "Parses tag text and creates a new tag with formally declared types, a key\n"
 "name and descriptive text"
 msgstr ""
+"タグタキストを解析し,形式的に宣言された型と共に新しいタグを作成する,\n"
+"キー名と説明文。"
 
 # @return [Tag]
 #: ../lib/yard/tags/default_factory.rb:44
 msgid "a tag object with the tag_name, name, types and text values filled"
-msgstr ""
+msgstr "タグ名,キー名,型,テキストの入ったタグオブジェクト"
 
 # YARD::Tags::DefaultFactory#extract_name_from_text
 #: ../lib/yard/tags/default_factory.rb:76
 msgid ""
 "Extracts the name from raw tag text returning the name and remaining value"
-msgstr ""
+msgstr "元のタグテキストの返す名前から名前を抽出する。又、残りの値は残す。"
 
 # @return [Array]
 #: ../lib/yard/tags/default_factory.rb:80
 msgid ""
 "an array holding the name as the first element and the\n"
 "value as the second element"
-msgstr ""
+msgstr "最初の要素は名前を含み、次の要素は残りの値を含んだ配列"
 
 # YARD::Tags::DefaultFactory#extract_types_and_name_from_text
 #: ../lib/yard/tags/default_factory.rb:98
 msgid ""
 "Parses a [], <>, {} or () block at the beginning of a line of text\n"
 "into a list of comma delimited values."
-msgstr ""
+msgstr "テキスト行の先頭で[],<>,{},()ブロックのカンマで区切られた値の配列の中を解析する\n"
 
 # @return [Array(String, Array<String>, String)]
 #: ../lib/yard/tags/default_factory.rb:107
@@ -20280,6 +20282,10 @@ msgid ""
 "list (or nil), followed by the type list parsed into an array of\n"
 "strings, followed by the text following the type list."
 msgstr ""
+"型の配列の前のテキスト(又はnil)、\n"
+"続いて、文字列の配列の中を解析されることによって処理される,型のリスト,\n"
+"続いて、型のリストをフォローする事によって処理される,テキストを含んだ配列\n"
+"??c @exampleのメソッド名と実際のメソッドの名前が違う"
 
 # @example 
 #: ../lib/yard/tags/default_factory.rb:107
