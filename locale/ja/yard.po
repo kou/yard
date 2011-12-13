@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-13 17:53+0900\n"
+"PO-Revision-Date: 2011-12-13 18:31+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20682,6 +20682,9 @@ msgid ""
 "Represents a metadata tag value (+@tag+). Tags can have any combination of\n"
 "{#types}, {#name} and {#text}, or none of the above."
 msgstr ""
+"タグはメタデータタグの値(+@tag+)を表し\n"
+"任意の{#tapes},{#name},{#text},又は,\n"
+"前述のどれでもないメソッドの組み合わせを持つ事が出来る。"
 
 # @example Programmatic tag creation
 #: ../lib/yard/tags/tag.rb:12
@@ -20692,46 +20695,51 @@ msgid ""
 "# is equivalent to:\n"
 "Tag.new(:param, 'an argument', ['String', 'nil'], 'arg')"
 msgstr ""
+"# 次のdocstring構文は:\n"
+"#   @param [String, nil] arg an argument\n"
+"#\n"
+"# 以下と同様になる。\n"
+"Tag.new(:param, 'an argument', ['String', 'nil'], 'arg')"
 
 # @example
 #: ../lib/yard/tags/tag.rb:12
 msgid "tag|example|Programmatic tag creation"
-msgstr ""
+msgstr "タグを作成するプログラム例"
 
 # @return [String]
 #: ../lib/yard/tags/tag.rb:14
 msgid "the name of the tag"
-msgstr ""
+msgstr "タグの名前"
 
 # @return [String]
 #: ../lib/yard/tags/tag.rb:18
 msgid "the tag text associated with the tag"
-msgstr ""
+msgstr "タグと一緒に関連付けられるタグテキスト"
 
 # @return [nil]
 #: ../lib/yard/tags/tag.rb:18
 msgid "if no tag text is supplied"
-msgstr ""
+msgstr "タグテキストが指定されない場合"
 
 # @return [Array<String>]
 #: ../lib/yard/tags/tag.rb:22
 msgid "a list of types associated with the tag"
-msgstr ""
+msgstr "タグと一緒に関連付けられる型のリスト"
 
 # @return [nil]
 #: ../lib/yard/tags/tag.rb:22
 msgid "if no types are associated with the tag"
-msgstr ""
+msgstr "型がタグと一緒に関連付けられない場合"
 
 # @return [String]
 #: ../lib/yard/tags/tag.rb:25
 msgid "a name associated with the tag"
-msgstr ""
+msgstr "タグと共に関連づけられる,名前"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/tags/tag.rb:28
 msgid "the associated object"
-msgstr ""
+msgstr "関連するオブジェクト"
 
 # YARD::Tags::Tag#initialize
 #: ../lib/yard/tags/tag.rb:31
@@ -20740,13 +20748,15 @@ msgid ""
 "declared types\n"
 "and a key name can be specified."
 msgstr ""
+"タグ名とテキストと共に新しいタグオブジェクトを作成する。\n"
+"任意で、形式的に宣言される型やキー名を指定する事が出来る。"
 
 # YARD::Tags::Tag#initialize
 #: ../lib/yard/tags/tag.rb:34
 msgid ""
 "Types are mainly for meta tags that rely on type information, such as +param"
 "+, +return+, etc."
-msgstr ""
+msgstr "型は主に、+param+, +return+等の様な型情報を頼るメタタグ用である。"
 
 # YARD::Tags::Tag#initialize
 #: ../lib/yard/tags/tag.rb:36
@@ -20754,34 +20764,34 @@ msgid ""
 "Key names are for tags that declare meta data for a specific key or name, "
 "such as +param+,\n"
 "+raise+, etc."
-msgstr ""
+msgstr "キー名は+param+,+raise+等のような特定のキーや名前用にメタデータを宣言するタグ為にある。"
 
 # @return [Tag]
 #: ../lib/yard/tags/tag.rb:43
 msgid "a new instance of Tag"
-msgstr ""
+msgstr "タグの新しいインスタンス"
 
 # @param [String] name
 #: ../lib/yard/tags/tag.rb:43
 msgid "optional key name which the tag refers to"
-msgstr ""
+msgstr "タグが参照する,任意のキー名"
 
 # @param [#to_s] tag_name
 #: ../lib/yard/tags/tag.rb:43
 msgid "the tag name to create the tag for"
-msgstr ""
+msgstr "タグを作成する為のタグ名"
 
 # @param [String] text
 #: ../lib/yard/tags/tag.rb:43
 msgid "the descriptive text for this tag"
-msgstr ""
+msgstr "このタグの為の説明文"
 
 # @param [Array<String>] types
 #: ../lib/yard/tags/tag.rb:43
 msgid ""
 "optional type list of formally declared types\n"
 "for the tag"
-msgstr ""
+msgstr "タグ用に形式的に宣言された型の入った,任意の型配列"
 
 # YARD::Tags::Tag#type
 #: ../lib/yard/tags/tag.rb:48
@@ -20789,6 +20799,8 @@ msgid ""
 "Convenience method to access the first type specified. This should mainly\n"
 "be used for tags that only specify one type."
 msgstr ""
+"最初の指定される型にアクセスする為の便利なメソッド,\n"
+"これは、主にタグ一つの型だけ指定する時に利用されるべきである。"
 
 # @see
 #: ../lib/yard/tags/tag.rb:52
@@ -20798,7 +20810,7 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/tags/tag.rb:52
 msgid "the first of the list of specified types"
-msgstr ""
+msgstr "指定される型のリストの最初の部分"
 
 # YARD::Templates::Engine
 #: ../lib/yard/templates/engine.rb:6
