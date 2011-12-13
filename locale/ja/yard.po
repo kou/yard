@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-13 14:37+0900\n"
+"PO-Revision-Date: 2011-12-13 14:41+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20298,12 +20298,12 @@ msgstr ""
 # YARD::Tags::DefaultTag#defaults
 #: ../lib/yard/tags/default_tag.rb:5
 msgid "Returns the value of attribute defaults"
-msgstr ""
+msgstr "デフォルトの属性の値を返す"
 
 # @return [DefaultTag]
 #: ../lib/yard/tags/default_tag.rb:6
 msgid "a new instance of DefaultTag"
-msgstr ""
+msgstr "DefaultTagクラスの新しいインスタンス"
 
 # YARD::Tags::Library
 #: ../lib/yard/tags/library.rb:4
