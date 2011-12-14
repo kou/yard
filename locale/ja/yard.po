@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-14 11:28+0900\n"
+"PO-Revision-Date: 2011-12-14 18:19+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12867,6 +12867,12 @@ msgid ""
 "long as they are indented. The following +@example+ tag shows how tags\n"
 "can be indented:"
 msgstr ""
+"documentation stringを略して\"docstring\"は、\n"
+"コメントやメタデータ,オブジェクトのタグをカプセル化する。\n"
+"メタデータは +@tag VALUE+ から\n"
+"VALUEがインデントされる間の複数行に渡って表される。\n"
+"次の +@example+ タグは\n"
+"タグがどのようにインデントされるか表す。"
 
 # YARD::Docstring
 #: ../lib/yard/docstring.rb:9
@@ -12883,43 +12889,45 @@ msgid ""
 "Tags can be nested in a documentation string, though the {Tags::Tag}\n"
 "itself is responsible for parsing the inner tags."
 msgstr ""
+"タグはドキュメント文字列の中でネストされ、{Tags::Tag}自身は、\n"
+"中のタグを解析する責任がある。"
 
 # @return [Array<Tags::RefTag>]
 #: ../lib/yard/docstring.rb:19
 msgid "the list of reference tags"
-msgstr ""
+msgstr "参照タグのリスト"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/docstring.rb:22
 msgid "the object that owns the docstring."
-msgstr ""
+msgstr "docstring自身のオブジェクト"
 
 # @return [Range]
 #: ../lib/yard/docstring.rb:25
 msgid "line range in the {#object}'s file where the docstring was parsed from"
-msgstr ""
+msgstr "解析されるdocstringの{#object}ファイルの中のline range"
 
 # @return [String]
 #: ../lib/yard/docstring.rb:28
 msgid "the raw documentation (including raw tag text)"
-msgstr ""
+msgstr "未加工のドキュメント(未加工のタグテキストを含んでいる)"
 
 # @return [Boolean]
 #: ../lib/yard/docstring.rb:31
 msgid "whether the docstring was started with \"##\""
-msgstr ""
+msgstr "docstringが\"##\"と共に記録される"
 
 # YARD::Docstring::META_MATCH
 #: ../lib/yard/docstring.rb:35
 msgid "Matches a tag at the start of a comment line"
-msgstr ""
+msgstr "コメント行の初めでのタグにマッチする。"
 
 # YARD::Docstring#initialize
 #: ../lib/yard/docstring.rb:40
 msgid ""
 "Creates a new docstring with the raw contents attached to an optional\n"
 "object."
-msgstr ""
+msgstr "未加工の内容は任意のオブジェクトが追加されると共に、新しいdocstringを作成する"
 
 # @param [TokenList, String]
 # @param [String]
@@ -12931,7 +12939,7 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:458 ../lib/yard/docstring.rb:49
 #: ../lib/yard/docstring.rb:73
 msgid "tag|param|content"
-msgstr ""
+msgstr "内容"
 
 # YARD::Docstring#initialize
 # YARD::Docstring#+
@@ -12940,26 +12948,26 @@ msgstr ""
 #: ../lib/yard/docstring.rb:49 ../lib/yard/docstring.rb:62
 #: ../lib/yard/docstring.rb:73 ../lib/yard/docstring.rb:88
 msgid "Creating a Docstring Object"
-msgstr ""
+msgstr "Docstringオブジェクトを作成する"
 
 # @param [String] content
 #: ../lib/yard/docstring.rb:49
 msgid ""
 "the raw comments to be parsed into a docstring\n"
 "and associated meta-data."
-msgstr ""
+msgstr "docstring,関連するメタデータの中で解析される未加工の内容,"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/docstring.rb:49
 msgid ""
 "an object to associate the docstring\n"
 "with."
-msgstr ""
+msgstr "docstringと関連するオブジェクト"
 
 # @return [Docstring]
 #: ../lib/yard/docstring.rb:49
 msgid "a new instance of Docstring"
-msgstr ""
+msgstr "Docstringの新しいインスタンス"
 
 # @example 
 #: ../lib/yard/docstring.rb:49
@@ -12969,35 +12977,35 @@ msgstr ""
 # YARD::Docstring#+
 #: ../lib/yard/docstring.rb:58
 msgid "Adds another {Docstring}, copying over tags."
-msgstr ""
+msgstr "別の{Docstring}を追加し、タグをコピーする。"
 
 # @param [Docstring, String] other
 #: ../lib/yard/docstring.rb:62
 msgid ""
 "the other docstring (or string) to\n"
 "add."
-msgstr ""
+msgstr "他の追加するdocstring(やstring)"
 
 # @return [Docstring]
 #: ../lib/yard/docstring.rb:62
 msgid "a new docstring with both docstrings combines"
-msgstr ""
+msgstr "docstring化し,一体化(別のdocstringと)した、新しいdocstring"
 
 # YARD::Docstring#replace
 # YARD::Docstring#all=
 #: ../lib/yard/docstring.rb:72 ../lib/yard/docstring.rb:80
 msgid "Replaces the docstring with new raw content. Called by {#all=}."
-msgstr ""
+msgstr "{#all=}メソッドが呼ばれる事によって、新しい整形前の内容にdocstringを置換する。"
 
 # @param [String] content
 #: ../lib/yard/docstring.rb:73
 msgid "the raw comments to be parsed"
-msgstr ""
+msgstr "解析される未加工のコメント"
 
 # YARD::Docstring#dup
 #: ../lib/yard/docstring.rb:82
 msgid "Deep-copies a docstring"
-msgstr ""
+msgstr "docstringを深い階層までコピーする。"
 
 # @note
 #: ../lib/yard/docstring.rb:88
@@ -13006,21 +13014,24 @@ msgid ""
 "not create new individual tags. Modifying the tag objects will still\n"
 "affect the original tags."
 msgstr ""
+"このメソッドは新しいタグリストと共に新しいdocstringを作成する。\n"
+"しかし、新しい個々のタグは作成できない。\n"
+"タグオブジェクトを変更すると、元のタグに影響するだろう。"
 
 # @return [Docstring]
 #: ../lib/yard/docstring.rb:88
 msgid "a new copied docstring"
-msgstr ""
+msgstr "新しくコピーされたdocstring"
 
 # @return [Fixnum]
 #: ../lib/yard/docstring.rb:101
 msgid "the first line of the {#line_range}"
-msgstr ""
+msgstr "{#line_range}メソッドの最初の行"
 
 # @return [nil]
 #: ../lib/yard/docstring.rb:101
 msgid "if there is no associated {#line_range}"
-msgstr ""
+msgstr "{#line_range}メソッドに関係ない場合"
 
 # YARD::Docstring#summary
 #: ../lib/yard/docstring.rb:106
@@ -13028,12 +13039,14 @@ msgid ""
 "Gets the first line of a localized docstring to the period or the first "
 "paragraph."
 msgstr ""
+"ピリオドや最初の段落の為に、\n"
+"局所化されるdocstringの最初の行を取得する。"
 
 # @return [String]
 #: ../lib/yard/docstring.rb:107
 msgid ""
 "The first line or paragraph of the docstring; always ends with a period."
-msgstr ""
+msgstr "docstringの最初の行や段落、そして常にperiodと共に終わる。"
 
 # YARD::Docstring#document
 #: ../lib/yard/docstring.rb:138
@@ -13041,11 +13054,14 @@ msgid ""
 "Gets a localized docstring. Use String#to_s to get non\n"
 "localized docstring."
 msgstr ""
+"局所化されるdocstringを取得する。\n"
+"局所化されないdocstringを取得するには、\n"
+"String#to_sメソッドを使う。"
 
 # @return [String]
 #: ../lib/yard/docstring.rb:140
 msgid "the localized docstring."
-msgstr ""
+msgstr "docstringを局所化する"
 
 # YARD::Docstring#to_raw
 #: ../lib/yard/docstring.rb:160
@@ -13053,26 +13069,30 @@ msgid ""
 "Reformats and returns a raw representation of the tag data using the\n"
 "current tag and docstring data, not the original text."
 msgstr ""
+"再書式化し返す、\n"
+"現在のタグやdocstringデータによって\n"
+"未加工のタグデータで表される。\n"
+"しかし元のテキストではない。"
 
 # @todo
 #: ../lib/yard/docstring.rb:165
 msgid "Add Tags::Tag#to_raw and refactor"
-msgstr ""
+msgstr "Tags::Tag#to_rawメソッドや再編集を追加する"
 
 # @return [String]
 #: ../lib/yard/docstring.rb:165
 msgid "the updated raw formatted docstring data"
-msgstr ""
+msgstr "更新され書式化される未加工のdocstringのデータ"
 
 # YARD::Docstring#create_tag
 #: ../lib/yard/docstring.rb:188
 msgid "Creates a tag from the {Tags::DefaultFactory tag factory}."
-msgstr ""
+msgstr "{Tags::DefaultFactory tag factory}から、タグを作成する。"
 
 # YARD::Docstring#create_tag
 #: ../lib/yard/docstring.rb:190
 msgid "To add an already created tag object, use {#add_tag}"
-msgstr ""
+msgstr "既に作成されたタグオブジェクトを追加するには、{#add_tag}メソッドを使う。"
 
 # @param [Symbol] tag
 # @param [String] tag_name
@@ -13080,22 +13100,22 @@ msgstr ""
 #: ../lib/yard/tags/library.rb:81 ../lib/yard/docstring.rb:194
 #: ../lib/yard/docstring.rb:265
 msgid "the tag name"
-msgstr ""
+msgstr "タグ名"
 
 # @return [Tags::Tag, Tags::RefTag]
 #: ../lib/yard/docstring.rb:194
 msgid "a tag"
-msgstr ""
+msgstr "タグ"
 
 # @param [String] tag_buf
 #: ../lib/yard/docstring.rb:194
 msgid "the text attached to the tag with newlines removed."
-msgstr ""
+msgstr "空白文字が削除されたタグを追加したテキスト"
 
 # @param [String]
 #: ../lib/yard/docstring.rb:194
 msgid "tag|param|tag_buf"
-msgstr ""
+msgstr "tag_buf"
 
 # YARD::Docstring#create_tag
 # YARD::Docstring#add_tag
@@ -13110,7 +13130,7 @@ msgstr ""
 #: ../lib/yard/docstring.rb:257 ../lib/yard/docstring.rb:265
 #: ../lib/yard/docstring.rb:274 ../lib/yard/docstring.rb:284
 msgid "Creating and Accessing Meta-data"
-msgstr ""
+msgstr "メタデータを作成しアクセスする。"
 
 # @param [#to_s]
 # @param
@@ -13120,7 +13140,7 @@ msgstr ""
 #: ../lib/yard/tags/default_factory.rb:32
 #: ../lib/yard/tags/default_factory.rb:44 ../lib/yard/docstring.rb:194
 msgid "tag|param|tag_name"
-msgstr ""
+msgstr "tag_name"
 
 # YARD::Docstring#add_tag
 #: ../lib/yard/docstring.rb:211
@@ -13129,16 +13149,19 @@ msgid ""
 "tag data based on the {Tags::DefaultFactory} tag factory, use {#create_tag}\n"
 "instead."
 msgstr ""
+"タグのリストにタグや参照タグオブジェクトを追加する。\n"
+"あなたが、{Tags::DefaultFactory}タグfactoryを元にしたタグデータを解析したい場合、\n"
+"代わりに{#create_tag}メソッドを使う。"
 
 # @param [Tags::Tag, Tags::RefTag] tags
 #: ../lib/yard/docstring.rb:216
 msgid "list of tag objects to add"
-msgstr ""
+msgstr "追加のタグオブジェクトのリスト"
 
 # @param [Tags::Tag, Tags::RefTag]
 #: ../lib/yard/docstring.rb:216
 msgid "tag|param|tags"
-msgstr ""
+msgstr "tags"
 
 # YARD::Docstring#tag
 #: ../lib/yard/docstring.rb:231
@@ -13146,16 +13169,18 @@ msgid ""
 "Convenience method to return the first tag\n"
 "object in the list of tag objects of that name"
 msgstr ""
+"タグオブジェクトのリストのような名前の中の、\n"
+"最初のタグオブジェクトを返す為の便利なメソッド。"
 
 # @return [Tags::Tag]
 #: ../lib/yard/docstring.rb:239
 msgid "the first tag in the list of {#tags}"
-msgstr ""
+msgstr "{#tags}メソッドのリストの中の、最初のタグ"
 
 # @param [#to_s] name
 #: ../lib/yard/docstring.rb:239
 msgid "the tag name to return data for"
-msgstr ""
+msgstr "データを返す為のタグ名"
 
 # @example 
 #: ../lib/yard/docstring.rb:239
@@ -13170,72 +13195,80 @@ msgid ""
 "Returns a list of tags specified by +name+ or all tags if +name+ is not "
 "specified."
 msgstr ""
+"+name+ が指定されない場合、\n"
+"+name+ やallタグによって指定されたタグのリストを返す"
 
 # @return [Array<Tags::Tag>]
 #: ../lib/yard/docstring.rb:247
 msgid "the list of tags by the specified tag name"
-msgstr ""
+msgstr "指定されたタグ名によってタグのリストとなる。"
 
 # @param [#to_s] name
 #: ../lib/yard/docstring.rb:247
 msgid "the tag name to return data for, or nil for all tags"
 msgstr ""
+"the tag name to return data for, or nil for all tags<\n"
+"データやnilやをタグ名となる\n"
+"\n"
 
 # YARD::Docstring#has_tag?
 #: ../lib/yard/docstring.rb:254
 msgid "Returns true if at least one tag by the name +name+ was declared"
 msgstr ""
+"名前の +name+ が宣言される事によって最新のタブ\n"
+"name + nameのによってタグが一つだけの場合、\n"
+"trueを返す"
 
 # @param [String] name
 #: ../lib/yard/docstring.rb:257
 msgid "the tag name to search for"
-msgstr ""
+msgstr "検索用の為のタグ名"
 
 # @return [Boolean]
 #: ../lib/yard/docstring.rb:257
 msgid "whether or not the tag +name+ was declared"
-msgstr ""
+msgstr "タグ +name+が宣言されるかどうか\n"
 
 # YARD::Docstring#delete_tags
 #: ../lib/yard/docstring.rb:262
 msgid "Delete all tags with +name+"
-msgstr ""
+msgstr "全てのタグ +name+ を用いた削除する。"
 
 # YARD::Docstring#delete_tag_if
 #: ../lib/yard/docstring.rb:270
 msgid "Deletes all tags where the block returns true"
-msgstr ""
+msgstr "ブロックがtrueを返す所で全てのタグを削除する。"
 
 # @yieldparam [Tags::Tag] tag
 #: ../lib/yard/docstring.rb:274
 msgid "the tag that is being tested"
-msgstr ""
+msgstr "試されるタグ"
 
 # @yieldparam [Tags::Tag]
 #: ../lib/yard/docstring.rb:274
 msgid "tag|yieldparam|tag"
-msgstr ""
+msgstr "tag"
 
 # @yieldreturn [Boolean]
 #: ../lib/yard/docstring.rb:274
 msgid "true if the tag should be deleted"
-msgstr ""
+msgstr "タグが削除される場合、true"
 
 # YARD::Docstring#blank?
 #: ../lib/yard/docstring.rb:280
 msgid ""
 "Returns true if the docstring has no content that is visible to a template."
-msgstr ""
+msgstr "docstringがテンプレートの為、明確な内容を持たない場合、trueを返す。"
 
 # @return [Boolean]
 #: ../lib/yard/docstring.rb:284
 msgid "whether or not the docstring has content"
-msgstr ""
+msgstr "docstringが内容を持っているかどうか"
 
 # @param [Boolean]
 #: ../lib/yard/docstring.rb:284
 msgid "tag|param|only_visible_tags"
-msgstr ""
+msgstr "only_visible_tags"
 
 # @param [Boolean] only_visible_tags
 #: ../lib/yard/docstring.rb:284
@@ -13243,33 +13276,35 @@ msgid ""
 "whether only {Tags::Library.visible_tags}\n"
 "should be checked, or if all tags should be considered."
 msgstr ""
+"{Tags::Library.visible_tags}が、チェックされるかどうか、\n"
+"又は、全てのタグが考慮される場合"
 
 # YARD::Docstring#convert_ref_tags
 #: ../lib/yard/docstring.rb:297
 msgid "Maps valid reference tags"
-msgstr ""
+msgstr "有効な参照タグをマップする"
 
 # @return [Array<Tags::RefTag>]
 #: ../lib/yard/docstring.rb:299
 msgid "the list of valid reference tags"
-msgstr ""
+msgstr "有効な参照タグのリストを返す"
 
 # YARD::Docstring#create_ref_tag
 #: ../lib/yard/docstring.rb:305
 msgid "Creates a {Tags::RefTag}"
-msgstr ""
+msgstr "{Tags::RefTag}を作成する"
 
 # YARD::Docstring#parse_comments
 #: ../lib/yard/docstring.rb:310
 msgid "Parses out comments split by newlines into a new code object"
-msgstr ""
+msgstr "新しいコードオブジェクトの中の改行によって分割されるコメントを解析する"
 
 # @return [String]
 #: ../lib/yard/docstring.rb:317
 msgid ""
 "the non-metadata portion of the comments to\n"
 "be used as a docstring"
-msgstr ""
+msgstr "docstringのように利用される為のコメントのメタデータではない部分"
 
 # @param [String] comments
 #: ../lib/yard/docstring.rb:317
@@ -13277,6 +13312,8 @@ msgid ""
 "the newline delimited array of comments. If the comments\n"
 "are passed as a String, they will be split by newlines."
 msgstr ""
+"コメントの配列を改行で区切る。\n"
+"コメントが文字列の様に解析される場合、改行によって分割される。"
 
 # #P
 #: ../lib/yard/globals.rb:4
