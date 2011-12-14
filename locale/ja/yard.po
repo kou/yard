@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-14 18:27+0900\n"
+"PO-Revision-Date: 2011-12-14 18:30+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20836,7 +20836,7 @@ msgid ""
 "be used for tags that only specify one type."
 msgstr ""
 "最初の指定される型にアクセスする為の便利なメソッド,\n"
-"これは、主にタグ一つの型だけ指定する時に利用されるべきである。"
+"これは、主に型が一つだけのタグを指定する時に利用されるべきである。"
 
 # @see
 #: ../lib/yard/tags/tag.rb:52
