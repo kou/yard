@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-13 18:59+0900\n"
+"PO-Revision-Date: 2011-12-14 11:07+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20284,8 +20284,7 @@ msgid ""
 msgstr ""
 "型の配列の前のテキスト(又はnil)、\n"
 "続いて、文字列の配列の中を解析されることによって処理される,型のリスト,\n"
-"続いて、型のリストをフォローする事によって処理される,テキストを含んだ配列\n"
-"??c @exampleのメソッド名と実際のメソッドの名前が違う"
+"続いて、型のリストをフォローする事によって処理される,テキストを含んだ配列"
 
 # @example 
 #: ../lib/yard/tags/default_factory.rb:107
