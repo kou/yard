@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-14 18:40+0900\n"
+"PO-Revision-Date: 2011-12-14 18:54+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15575,7 +15575,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:24
 msgid "tag|example|A method call"
-msgstr "tag|example|メソッド呼び出し"
+msgstr "メソッド呼び出し"
 
 # @see
 #: ../lib/yard/parser/ruby/ast_node.rb:24
@@ -15592,7 +15592,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:24
 msgid "tag|example|An implicit list of keywords"
-msgstr "tag|example|キーワードの暗黙のリスト"
+msgstr "キーワードの暗黙のリスト"
 
 # @example A method call
 #: ../lib/yard/parser/ruby/ast_node.rb:24
@@ -15887,7 +15887,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:178
 msgid "tag|example|If the node types are not present in the AST"
-msgstr "tag|example|ノードの型がASTの中に渡さない場合"
+msgstr "ノードの型がASTの中に渡さない場合"
 
 # YARD::Parser::Ruby::AstNode#jump
 # YARD::Parser::Ruby::AstNode#children
@@ -15901,7 +15901,7 @@ msgstr "ノードを辿る。"
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:178
 msgid "tag|example|Returns first 'def' or 'class' statement"
-msgstr "tag|example|最初の'def'や'class'文を返す。"
+msgstr "最初の'def'や'class'文を返す。"
 
 # @example Returns first 'def' or 'class' statement
 #: ../lib/yard/parser/ruby/ast_node.rb:178
@@ -15914,7 +15914,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/ruby/ast_node.rb:178
 msgid "tag|example|Returns the first method definition in a block of code"
-msgstr "tag|example|コードのブロックの中の最初のメソッド定義を返す。"
+msgstr "コードのブロックの中の最初のメソッド定義を返す。"
 
 # @example If the node types are not present in the AST
 #: ../lib/yard/parser/ruby/ast_node.rb:178
