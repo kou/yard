@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-14 19:01+0900\n"
+"PO-Revision-Date: 2011-12-14 19:16+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -13206,23 +13206,17 @@ msgstr "指定されたタグ名によってタグのリストとなる。"
 # @param [#to_s] name
 #: ../lib/yard/docstring.rb:247
 msgid "the tag name to return data for, or nil for all tags"
-msgstr ""
-"the tag name to return data for, or nil for all tags<\n"
-"データやnilやをタグ名となる\n"
-"\n"
+msgstr "データからタグ名を返す、又は、nilの場合、全てのタグ。"
 
 # YARD::Docstring#has_tag?
 #: ../lib/yard/docstring.rb:254
 msgid "Returns true if at least one tag by the name +name+ was declared"
-msgstr ""
-"名前の +name+ が宣言される事によって最新のタブ\n"
-"name + nameのによってタグが一つだけの場合、\n"
-"trueを返す"
+msgstr "宣言されるnameのタグ名が1つでもあれば、trueを返す。"
 
 # @param [String] name
 #: ../lib/yard/docstring.rb:257
 msgid "the tag name to search for"
-msgstr "検索用の為のタグ名"
+msgstr "検索の為のタグ名"
 
 # @return [Boolean]
 #: ../lib/yard/docstring.rb:257
