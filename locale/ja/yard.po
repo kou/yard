@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-14 18:57+0900\n"
+"PO-Revision-Date: 2011-12-14 19:01+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12920,7 +12920,7 @@ msgstr "docstringが\"##\"と共に記録される"
 # YARD::Docstring::META_MATCH
 #: ../lib/yard/docstring.rb:35
 msgid "Matches a tag at the start of a comment line"
-msgstr "コメント行の初めでのタグにマッチする。"
+msgstr "コメント行の始まりでタグにマッチする。"
 
 # YARD::Docstring#initialize
 #: ../lib/yard/docstring.rb:40
