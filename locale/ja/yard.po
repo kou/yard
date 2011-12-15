@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-15 16:18+0900\n"
+"PO-Revision-Date: 2011-12-15 17:09+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -18328,7 +18328,7 @@ msgstr ""
 # YARD::RegistryStore
 #: ../lib/yard/registry_store.rb:5
 msgid "The data store for the {Registry}."
-msgstr ""
+msgstr "{Registry}用のデータストア"
 
 # @see
 #: ../lib/yard/registry_store.rb:8
@@ -18338,23 +18338,23 @@ msgstr ""
 # YARD::RegistryStore#proxy_types
 #: ../lib/yard/registry_store.rb:10
 msgid "Returns the value of attribute proxy_types"
-msgstr ""
+msgstr "proxy_types属性の値を返す"
 
 # YARD::RegistryStore#checksums
 #: ../lib/yard/registry_store.rb:10
 msgid "Returns the value of attribute checksums"
-msgstr ""
+msgstr "checksums属性の値を返す"
 
 # @return [RegistryStore]
 #: ../lib/yard/registry_store.rb:11
 msgid "a new instance of RegistryStore"
-msgstr ""
+msgstr "RegistryStoreの新しいインスタンス"
 
 # YARD::RegistryStore#get
 # YARD::RegistryStore#[]
 #: ../lib/yard/registry_store.rb:24 ../lib/yard/registry_store.rb:59
 msgid "Gets a {CodeObjects::Base} from the store"
-msgstr ""
+msgstr "記録から{CodeObjects::Base}を取得する"
 
 # @param [String, Symbol] key
 #: ../lib/yard/registry_store.rb:28
@@ -18362,32 +18362,34 @@ msgid ""
 "the path name of the object to look for.\n"
 "If it is empty or :root, returns the {#root} object."
 msgstr ""
+"検索の為のオブジェクトのパス名。\n"
+"空か:rootの場合、{#root}オブジェクトを返す。"
 
 # @return [CodeObjects::Base, nil]
 #: ../lib/yard/registry_store.rb:28
 msgid "a code object or nil if none is found"
-msgstr ""
+msgstr "コードオブジェクトか見つからない場合はnilを返す"
 
 # YARD::RegistryStore#put
 # YARD::RegistryStore#[]=
 #: ../lib/yard/registry_store.rb:46 ../lib/yard/registry_store.rb:60
 msgid "Associates an object with a path"
-msgstr ""
+msgstr "パスと一緒にオブジェクトを関連付ける。"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/registry_store.rb:49
 msgid "returns +value+"
-msgstr ""
+msgstr "+value+ を返す"
 
 # @param [String, Symbol] key
 #: ../lib/yard/registry_store.rb:49
 msgid "the path name (:root or '' for root object)"
-msgstr ""
+msgstr "パス名(:rootやrootオブジェクト用の'')"
 
 # @param [CodeObjects::Base] value
 #: ../lib/yard/registry_store.rb:49
 msgid "the object to store"
-msgstr ""
+msgstr "記録するオブジェクト"
 
 # YARD::RegistryStore#keys
 #: ../lib/yard/registry_store.rb:64
@@ -18395,18 +18397,20 @@ msgid ""
 "Gets all path names from the store. Loads the entire database\n"
 "if +reload+ is +true+"
 msgstr ""
+"記録から全てのパス名を取得する。\n"
+"+reload+ が +true+ の場合、全体のデータベースをロードする。"
 
 # @return [Array<Symbol>]
 #: ../lib/yard/registry_store.rb:69
 msgid "the path names of all the code objects"
-msgstr ""
+msgstr "全てのコードオブジェクトのパス名"
 
 # @param [Boolean] reload
 #: ../lib/yard/registry_store.rb:69 ../lib/yard/registry_store.rb:77
 msgid ""
 "if false, does not load the entire database\n"
 "before a lookup."
-msgstr ""
+msgstr "falseの場合、検索の前に全体のデータベースをロードしない"
 
 # YARD::RegistryStore#values
 #: ../lib/yard/registry_store.rb:72
@@ -18414,26 +18418,28 @@ msgid ""
 "Gets all code objects from the store. Loads the entire database\n"
 "if +reload+ is +true+"
 msgstr ""
+"記録から全てのパス名を取得する。\n"
+"+reload+ が +true+ の場合、全体のデータベースをロードする。"
 
 # @return [Array<CodeObjects::Base>]
 #: ../lib/yard/registry_store.rb:77
 msgid "all the code objects"
-msgstr ""
+msgstr "全てのコードオブジェクト"
 
 # @return [CodeObjects::RootObject]
 #: ../lib/yard/registry_store.rb:80
 msgid "the root object"
-msgstr ""
+msgstr "rootオブジェクト"
 
 # @return [Boolean]
 #: ../lib/yard/registry_store.rb:84 ../lib/yard/registry_store.rb:100
 msgid "whether the database was loaded"
-msgstr ""
+msgstr "データベースがロードされたかどうか"
 
 # @param [String, nil] file
 #: ../lib/yard/registry_store.rb:84 ../lib/yard/registry_store.rb:100
 msgid "the name of the yardoc db to load"
-msgstr ""
+msgstr "ロードするyardoc dbの名前"
 
 # YARD::RegistryStore#load!
 #: ../lib/yard/registry_store.rb:94
@@ -18441,21 +18447,23 @@ msgid ""
 "Loads the .yardoc file and loads all cached objects into memory\n"
 "automatically."
 msgstr ""
+".yardocファイルをロードしたり、\n"
+"全てのキャッシュされたオブジェクトを自動的にメモリの中へロードする。"
 
 # YARD::RegistryStore#load_all
 #: ../lib/yard/registry_store.rb:110
 msgid "Loads all cached objects into memory"
-msgstr ""
+msgstr "メモリの中へ全てのキャッシュされたオブジェクトをロードする"
 
 # YARD::RegistryStore#save
 #: ../lib/yard/registry_store.rb:130
 msgid "Saves the database to disk"
-msgstr ""
+msgstr "ディスクにデータベースをセーブする"
 
 # @param [String, nil] file
 #: ../lib/yard/registry_store.rb:134
 msgid "if supplied, the name of the file to save to"
-msgstr ""
+msgstr "指定された場合、セーブするファイルの名前となる"
 
 # @param [Boolean] merge
 #: ../lib/yard/registry_store.rb:134
@@ -18463,6 +18471,8 @@ msgid ""
 "if true, merges the data in memory with the\n"
 "data on disk, otherwise the data on disk is deleted."
 msgstr ""
+"trueの場合、ディスク上のデータと共にメモリの中のデータをマージする。\n"
+"そうでなければ、ディスク上のデータは削除される。"
 
 # @param [Boolean]
 #: ../lib/yard/registry_store.rb:134
@@ -18472,12 +18482,12 @@ msgstr ""
 # @return [Boolean]
 #: ../lib/yard/registry_store.rb:134
 msgid "whether the database was saved"
-msgstr ""
+msgstr "データベースがセーブされるかどうか"
 
 # YARD::RegistryStore#destroy
 #: ../lib/yard/registry_store.rb:155
 msgid "Deletes the .yardoc database on disk"
-msgstr ""
+msgstr "ディスク上のデータベースの.yardocの削除"
 
 # @param [Boolean]
 #: ../lib/yard/registry_store.rb:161
@@ -18491,6 +18501,9 @@ msgid ""
 "will only be removed if it ends with .yardoc. This helps with\n"
 "cases where the directory might have been named incorrectly."
 msgstr ""
+"forceにtrueが設定されず、そのファイルの末尾に.yardocが付く場合、\n"
+"ファイル/ディレクトリは削除される。\n"
+"これは、ディレクトリが間違って名付けられた場合、役立つだろう。"
 
 # @return [Boolean]
 #: ../lib/yard/registry_store.rb:161
@@ -18498,6 +18511,8 @@ msgid ""
 "true if the .yardoc database was deleted, false\n"
 "otherwise."
 msgstr ""
+".yardocデータベースが削除された場合、true。\n"
+"それ以外はfalse。"
 
 # YARD::Serializers::Base
 #: ../lib/yard/serializers/base.rb:4
