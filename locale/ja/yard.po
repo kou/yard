@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-14 19:16+0900\n"
+"PO-Revision-Date: 2011-12-15 15:57+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17604,6 +17604,16 @@ msgid ""
 "objects are done on the singleton Registry instance using the {Registry.at}\n"
 "or {Registry.resolve} methods."
 msgstr ""
+"+Registry+ は解析している間に、\n"
+"全ての{CodeObjects}が作成される為の\n"
+"集中データストアとなる。\n"
+"ストレージは、\n"
+"キーのようなオブジェクトパス(see {CodeObjects::Base#path})と\n"
+"値のようなオブジェクトを用い、key valueストアとなる。\n"
+"オブジェクトパスは、Registryの中で記録される為に固有でなければならない。\n"
+"オブジェクト用の全ての検索は、\n"
+"{Registry.at} や {Registry.resolve}メソッドによって\n"
+"シングルトンレジストリインスタンスの上で行われる。\n"
 
 # YARD::Registry
 #: ../lib/yard/registry.rb:13
@@ -17614,6 +17624,11 @@ msgid ""
 "be loaded back to perform any lookups. See {Registry.load!} and\n"
 "{Registry.save} for information on saving and loading of a yardoc file."
 msgstr ""
+"== レジストリをセーブ/ロードする\n"
+"レジストリは\"yardoc file\"(実際はディレクトリ)にセーブされ、\n"
+"任意の検索を実行する為に、ロードできる。\n"
+"yardocファイルのセーブやロードの情報は、\n"
+"{Registry.load!} , {Registry.save}を参照。"
 
 # YARD::Registry
 #: ../lib/yard/registry.rb:18
@@ -17625,11 +17640,16 @@ msgid ""
 "specific\n"
 "object set must occur in the originating thread."
 msgstr ""
+"== スレッドの注意\n"
+"レジストリクラスは、YARD全体で直接アクセスされるシングルトンクラスとなる。\n"
+"スレッドの問題を緩和するには、YARD(0.6.5+)でthread localなレジストリを作る。\n"
+"これはスレッドの中で固有のオブジェクトのグループが生成される、\n"
+"レジストリにアクセスする全てのものを意味する。"
 
 # @example
 #: ../lib/yard/registry.rb:30
 msgid "tag|example|Loading a Registry"
-msgstr ""
+msgstr "レジストリをロードする"
 
 # @example Performing a Search on a Registry
 #: ../lib/yard/registry.rb:30
@@ -17641,7 +17661,7 @@ msgstr ""
 # @example
 #: ../lib/yard/registry.rb:30
 msgid "tag|example|Performing a Search on a Registry"
-msgstr ""
+msgstr "レジストリー上で検索を実行する"
 
 # @example Loading a Registry
 #: ../lib/yard/registry.rb:30
@@ -17654,14 +17674,14 @@ msgstr ""
 # YARD::Registry.yardoc_file_for_gem
 #: ../lib/yard/registry.rb:40
 msgid "Returns the .yardoc file associated with a gem."
-msgstr ""
+msgstr "gemと共に関連した.yardocファイルを返す。"
 
 # @param [Boolean] for_writing
 #: ../lib/yard/registry.rb:50
 msgid ""
 "whether or not the method should search\n"
 "for writable locations"
-msgstr ""
+msgstr "メソッドが書き込み可能な場所を検索するかどうか"
 
 # @return [String]
 #: ../lib/yard/registry.rb:50
@@ -17670,11 +17690,15 @@ msgid ""
 "location suitable to write the .yardoc file. Otherwise, the first\n"
 "existing location associated with the gem's .yardoc file."
 msgstr ""
+"+for_writing+ にtrueをセットした場合、\n"
+".yardocファイルを書き込む為に最適な場所を返す。\n"
+"若しくは、.yardocファイルに関連づけられた\n"
+"既存の場所になる。"
 
 # @param [String] ver_require
 #: ../lib/yard/registry.rb:50
 msgid "an optional Gem version requirement"
-msgstr ""
+msgstr "任意のGemのバージョン要求"
 
 # @param [String]
 #: ../lib/yard/registry.rb:50
@@ -17684,7 +17708,7 @@ msgstr ""
 # @param [String] gem
 #: ../lib/yard/registry.rb:50
 msgid "the name of the gem to search for"
-msgstr ""
+msgstr "検索するgemの名前"
 
 # @param [String]
 #: ../lib/yard/registry.rb:50
@@ -17697,6 +17721,8 @@ msgid ""
 "if +for_writing+ is set to false and no yardoc file\n"
 "is found, returns nil."
 msgstr ""
+"+for_writing+ がfalseを設定する場合と、\n"
+"yardocファイルが見つからない場合は、nilを返す。"
 
 # @param [Boolean]
 #: ../lib/yard/registry.rb:50
@@ -17709,13 +17735,13 @@ msgstr ""
 #: ../lib/yard/registry.rb:50 ../lib/yard/registry.rb:72
 #: ../lib/yard/registry.rb:74 ../lib/yard/registry.rb:73
 msgid "Getting .yardoc File Locations"
-msgstr ""
+msgstr ".yardocファイルの場所を取得する。"
 
 # YARD::Registry.yardoc_file
 # YARD::Registry.yardoc_file=
 #: ../lib/yard/registry.rb:70
 msgid "Gets/sets the yardoc filename"
-msgstr ""
+msgstr "yardocのファイル名を取得/設定する。"
 
 # @see
 #: ../lib/yard/registry.rb:72 ../lib/yard/registry.rb:74
@@ -17727,12 +17753,12 @@ msgstr ""
 #: ../lib/yard/registry.rb:72 ../lib/yard/registry.rb:74
 #: ../lib/yard/registry.rb:73
 msgid "the yardoc filename"
-msgstr ""
+msgstr "yardocのファイル名"
 
 # YARD::Registry.load
 #: ../lib/yard/registry.rb:81
 msgid "Loads the registry and/or parses a list of files"
-msgstr ""
+msgstr "レジストリのロードやファイルのリストを解析する"
 
 # @example
 #: ../lib/yard/registry.rb:95
@@ -17748,18 +17774,18 @@ msgstr ""
 #: ../lib/yard/registry.rb:95 ../lib/yard/registry.rb:116
 #: ../lib/yard/registry.rb:130 ../lib/yard/registry.rb:145
 msgid "Loading Data from Disk"
-msgstr ""
+msgstr "ディスクから、データをロードする"
 
 # @raise [ArgumentError]
 #: ../lib/yard/registry.rb:95
 msgid "if files is not a String or Array"
-msgstr ""
+msgstr "ファイルがStringやArrayでない場合"
 
 # @return [Registry]
 #: ../lib/yard/registry.rb:95 ../lib/yard/registry.rb:116
 #: ../lib/yard/registry.rb:130 ../lib/yard/registry.rb:145
 msgid "the registry object (for chaining)"
-msgstr ""
+msgstr "レジストリオブジェクト(チェーン用)"
 
 # @example Loads the yardoc file or parses files 'a', 'b' and 'c' (but not both)
 #: ../lib/yard/registry.rb:95
@@ -17771,7 +17797,7 @@ msgstr ""
 msgid ""
 "tag|example|Reparses files 'a' and 'b' regardless of whether yardoc file "
 "exists"
-msgstr ""
+msgstr "yardocファイルが存在するかどうかにかかわらず、ファイル'a'と'b'を再解析する。"
 
 # @example Reparses files 'a' and 'b' regardless of whether yardoc file exists
 #: ../lib/yard/registry.rb:95
@@ -17784,6 +17810,8 @@ msgid ""
 "if reparse is false and a yardoc file already\n"
 "exists, any files passed in will be ignored."
 msgstr ""
+"reparseがfalseの場合や、yardocファイルが既に存在する場合、\n"
+"オプションの解析されるファイルは、無視される。"
 
 # @param [Boolean]
 #: ../lib/yard/registry.rb:95
@@ -17799,16 +17827,21 @@ msgid ""
 "If files is a String, it should represent the yardoc file to load\n"
 "into the registry."
 msgstr ""
+"+files+が配列の場合、YARDがレジストリの中を解析するべきファイルのリストを表す。\n"
+"reloadがfalseを設定された場合や、yardocファイルが既に存在する場合、\n"
+"これらのファイルは、スキップされる。\n"
+"ファイルがStringの場合、\n"
+"レジストリの中へロードするyardocファイルを表す。"
 
 # YARD::Registry.load_yardoc
 #: ../lib/yard/registry.rb:113
 msgid "Loads a yardoc file directly"
-msgstr ""
+msgstr "直接yardocファイルをロードする"
 
 # @param [String] file
 #: ../lib/yard/registry.rb:116
 msgid "the yardoc file to load."
-msgstr ""
+msgstr "ロードするyardocファイル"
 
 # YARD::Registry.load!
 #: ../lib/yard/registry.rb:123
@@ -17816,6 +17849,9 @@ msgid ""
 "Loads a yardoc file and forces all objects cached on disk into\n"
 "memory. Equivalent to calling {load_yardoc} followed by {load_all}"
 msgstr ""
+"yardocファイルをロードし、\n"
+"メモリの中へディスク上の全てのキャッシュされるオブジェクトを強制する。\n"
+"{load_all}に続いて呼び出す{load_yardoc}と同等である。"
 
 # @see
 #: ../lib/yard/registry.rb:130 ../lib/yard/registry_store.rb:100
@@ -17830,12 +17866,12 @@ msgstr ""
 # @param [String] file
 #: ../lib/yard/registry.rb:130
 msgid "the yardoc file to load"
-msgstr ""
+msgstr "ロードするyardocファイル"
 
 # YARD::Registry.load_all
 #: ../lib/yard/registry.rb:137
 msgid "Forces all objects cached on disk into memory"
-msgstr ""
+msgstr "メモリの中へディスク上のキャッシュされる全てのオブジェクトを強制する"
 
 # @example Loads all objects from disk
 #: ../lib/yard/registry.rb:145
@@ -17849,33 +17885,33 @@ msgstr ""
 # @example
 #: ../lib/yard/registry.rb:145
 msgid "tag|example|Loads all objects from disk"
-msgstr ""
+msgstr "ディスクから全てのオブジェクトをロードする"
 
 # YARD::Registry.save
 #: ../lib/yard/registry.rb:153
 msgid "Saves the registry to +file+"
-msgstr ""
+msgstr "+file+をレジストリにセーブする"
 
 # YARD::Registry.save
 # YARD::Registry.delete_from_disk
 #: ../lib/yard/registry.rb:156 ../lib/yard/registry.rb:162
 msgid "Saving and Deleting Data from Disk"
-msgstr ""
+msgstr "ディスクからデータをセーブ/削除する。"
 
 # @param [String] file
 #: ../lib/yard/registry.rb:156
 msgid "the yardoc file to save to"
-msgstr ""
+msgstr "セーブされるyardocファイル"
 
 # @return [Boolean]
 #: ../lib/yard/registry.rb:156
 msgid "true if the file was saved"
-msgstr ""
+msgstr "ファイルがセーブされた場合、trueを返す"
 
 # YARD::Registry.delete_from_disk
 #: ../lib/yard/registry.rb:161
 msgid "Deletes the yardoc file from disk"
-msgstr ""
+msgstr "ディスクからyardocファイルを削除する"
 
 # YARD::Registry.register
 #: ../lib/yard/registry.rb:169
@@ -17888,32 +17924,32 @@ msgstr ""
 #: ../lib/yard/registry.rb:172 ../lib/yard/registry.rb:180
 #: ../lib/yard/registry.rb:186
 msgid "Adding and Deleting Objects from the Registry"
-msgstr ""
+msgstr "レジストリから、オブジェクトを追加,削除する。"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/registry.rb:172
 msgid "the object to register"
-msgstr ""
+msgstr "記録するオブジェクト"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/registry.rb:172
 msgid "the registered object"
-msgstr ""
+msgstr "記録されたオブジェクト"
 
 # YARD::Registry.delete
 #: ../lib/yard/registry.rb:178
 msgid "Deletes an object from the registry"
-msgstr ""
+msgstr "レジストリから、オブジェクトを削除する"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/registry.rb:180
 msgid "the object to remove"
-msgstr ""
+msgstr "削除するオブジェクト"
 
 # YARD::Registry.clear
 #: ../lib/yard/registry.rb:185
 msgid "Clears the registry"
-msgstr ""
+msgstr "レジストリ空にする"
 
 # YARD::Registry.each
 # YARD::Registry.all
@@ -17928,12 +17964,12 @@ msgstr ""
 #: ../lib/yard/registry.rb:235 ../lib/yard/registry.rb:239
 #: ../lib/yard/registry.rb:267 ../lib/yard/registry.rb:350
 msgid "Accessing Objects in the Registry"
-msgstr ""
+msgstr "レジストリの中でオブジェクトにアクセスする"
 
 # YARD::Registry.each
 #: ../lib/yard/registry.rb:193
 msgid "Iterates over {all} with no arguments"
-msgstr ""
+msgstr "引数無しで{all}を繰り返す。"
 
 # YARD::Registry.all
 #: ../lib/yard/registry.rb:198
@@ -17941,6 +17977,8 @@ msgid ""
 "Returns all objects in the registry that match one of the types provided\n"
 "in the +types+ list (if +types+ is provided)."
 msgstr ""
+"+types+ リスト(タイプが供給される場合 )\n"
+"供給される型の一つにマッチするレジストリの中でオブジェクトの全てを返す\n"
 
 # @param [Array<String>]
 # @param [Array<Symbol>]
@@ -17970,11 +18008,13 @@ msgid ""
 "objects down by. Equivalent to performing a select:\n"
 "  +Registry.all.select {|o| types.include(o.type) }+"
 msgstr ""
+"任意の型のリストを絞り込む。次の選択と同様である。\n"
+"  +Registry.all.select {|o| types.include(o.type) }+"
 
 # @return [Array<CodeObjects::Base>]
 #: ../lib/yard/registry.rb:209
 msgid "the list of objects found"
-msgstr ""
+msgstr "オブジェクトのリストをみつける"
 
 # @see
 #: ../lib/yard/registry.rb:209
@@ -17984,22 +18024,22 @@ msgstr ""
 # @example
 #: ../lib/yard/registry.rb:209
 msgid "tag|example|Returns all objects"
-msgstr ""
+msgstr "全てのオブジェクトを返す"
 
 # YARD::Registry.paths
 #: ../lib/yard/registry.rb:223
 msgid "Returns the paths of all of the objects in the registry."
-msgstr ""
+msgstr "レジストリの中の全てのオブジェクトのパスを返す"
 
 # @return [Array<String>]
 #: ../lib/yard/registry.rb:225
 msgid "all of the paths in the registry."
-msgstr ""
+msgstr "レジストリの中のパスの全て"
 
 # @param [Boolean] reload
 #: ../lib/yard/registry.rb:225
 msgid "whether to load entire database"
-msgstr ""
+msgstr "データベース全体をロードするかどうか"
 
 # @param [Boolean]
 #: ../lib/yard/registry.rb:225 ../lib/yard/registry_store.rb:69
@@ -18011,12 +18051,12 @@ msgstr ""
 # YARD::Registry.[]
 #: ../lib/yard/registry.rb:230 ../lib/yard/registry.rb:236
 msgid "Returns the object at a specific path."
-msgstr ""
+msgstr "固有のパスでオブジェクトを返す"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/registry.rb:234
 msgid "the object at path"
-msgstr ""
+msgstr "パスのオブジェクト"
 
 # @param [String, :root] path
 #: ../lib/yard/registry.rb:234
@@ -18024,16 +18064,18 @@ msgid ""
 "the pathname to look for. If +path+ is +root+,\n"
 "returns the {root} object."
 msgstr ""
+"検索の為のパス名、 +path+ が +root+ の場合\n"
+"{root}を返す。"
 
 # YARD::Registry.root
 #: ../lib/yard/registry.rb:238
 msgid "The root namespace object."
-msgstr ""
+msgstr "rootは名前空間オブジェクトとなる"
 
 # @return [CodeObjects::RootObject]
 #: ../lib/yard/registry.rb:239
 msgid "the root object in the namespace"
-msgstr ""
+msgstr "namespaceの中のrootオブジェクト"
 
 # YARD::Registry.resolve
 #: ../lib/yard/registry.rb:242
@@ -18041,6 +18083,8 @@ msgid ""
 "Attempts to find an object by name starting at +namespace+, performing\n"
 "a lookup similar to Ruby's method of resolving a constant in a namespace."
 msgstr ""
+"+namespace+ でnameで始まるオブジェクトが見つかるか試みる\n"
+"namespaceの中で定数を解決するのに、Rubyメソッドと同様に検索を実行する。"
 
 # @param [CodeObjects::NamespaceObject, nil] namespace
 #: ../lib/yard/registry.rb:267
@@ -18048,11 +18092,13 @@ msgid ""
 "the starting namespace\n"
 "(module or class). If +nil+ or +:root+, starts from the {root} object."
 msgstr ""
+"始まりのnamespace(モジュールやクラス)。\n"
+"+nil+ や +:root+ の場合、{root}オブジェクトから始まる。"
 
 # @example
 #: ../lib/yard/registry.rb:267
 msgid "tag|example|Looks for a constant in the root namespace"
-msgstr ""
+msgstr "root namespaseの中の定数をを探す"
 
 # @example Looks for a constant in the root namespace
 #: ../lib/yard/registry.rb:267
@@ -18062,12 +18108,12 @@ msgstr ""
 # @example
 #: ../lib/yard/registry.rb:267
 msgid "tag|example|Looks for a class method respecting the inheritance tree"
-msgstr ""
+msgstr "関連する継承ツリーのクラスメソッドを探す"
 
 # @example
 #: ../lib/yard/registry.rb:267
 msgid "tag|example|Looks for a constant but returns a proxy if not found"
-msgstr ""
+msgstr "定数を探すが、見つからない場合は、proxyを返す。"
 
 # @example Looks for a constant but returns a proxy if not found
 #: ../lib/yard/registry.rb:267
@@ -18079,12 +18125,12 @@ msgstr ""
 # @example
 #: ../lib/yard/registry.rb:267
 msgid "tag|example|Looks for instance method #reverse starting from A::B::C"
-msgstr ""
+msgstr "A::B::Cで始まる、インスタンスメソッド#reverseを探す"
 
 # @example Looks for a complex path from a namespace
 #: ../lib/yard/registry.rb:267
 msgid "Registry.resolve(P('A::B'), 'B::D') # => #<yardoc class A::B::D>"
-msgstr ""
+msgstr "Registry.resolve(P('A::B'), 'B::D') # => #<yardoc class A::B::D>"
 
 # @example Looks for instance method #reverse starting from A::B::C
 #: ../lib/yard/registry.rb:267
@@ -18096,19 +18142,19 @@ msgstr ""
 msgid ""
 "the name (or complex path) to look for from\n"
 "+namespace+."
-msgstr ""
+msgstr "+namespace+から検索する名前(や複雑なパス)"
 
 # @param [Boolean]
 #: ../lib/yard/registry.rb:267
 msgid "tag|param|inheritance"
-msgstr ""
+msgstr "継承"
 
 # @param [Boolean] inheritance
 #: ../lib/yard/registry.rb:267
 msgid ""
 "Follows inheritance chain (mixins, superclass)\n"
 "when performing name resolution if set to +true+."
-msgstr ""
+msgstr "+true+が設定された時、名前解決を実行する、継承のチェーン(mixin,superクラス)"
 
 # @param [Boolean]
 #: ../lib/yard/registry.rb:267
@@ -18121,23 +18167,25 @@ msgid ""
 "If +true+, returns a proxy representing\n"
 "the unresolved path (namespace + name) if no object is found."
 msgstr ""
+"+true+の場合やオブジェクトが見つからなかった場合、\n"
+"未解決のパス(namespace + name)を表すproxyを返す。"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/registry.rb:267
 msgid "the object if it is found"
-msgstr ""
+msgstr "見つかったオブジェクト"
 
 # @return [CodeObjects::Proxy]
 #: ../lib/yard/registry.rb:267
 msgid ""
 "a Proxy representing the object if\n"
 "+proxy_fallback+ is +true+."
-msgstr ""
+msgstr "+proxy_fallback+ が +true+の場合、オブジェクトを表すproxyとなる。"
 
 # @return [nil]
 #: ../lib/yard/registry.rb:267
 msgid "if +proxy_fallback+ is +false+ and no object was found."
-msgstr ""
+msgstr "+proxy_fallback+ が +false+ 又は、オブジェクトが見つからなかった場合"
 
 # @see
 #: ../lib/yard/registry.rb:267
@@ -18147,7 +18195,7 @@ msgstr ""
 # @example
 #: ../lib/yard/registry.rb:267
 msgid "tag|example|Looks for a complex path from a namespace"
-msgstr ""
+msgstr "namespaceから複雑なパスを検索する"
 
 # @example Looks for a class method respecting the inheritance tree
 #: ../lib/yard/registry.rb:267
@@ -18158,22 +18206,22 @@ msgstr ""
 # YARD::Registry.checksum_for
 #: ../lib/yard/registry.rb:303 ../lib/yard/registry.rb:309
 msgid "Managing Source File Checksums"
-msgstr ""
+msgstr "ソースファイルチェックサムを管理する"
 
 # @return [Hash{String => String}]
 #: ../lib/yard/registry.rb:303
 msgid "a set of checksums for files"
-msgstr ""
+msgstr "ファイル用のチェックサムのグループ"
 
 # @param [String] data
 #: ../lib/yard/registry.rb:309
 msgid "data to checksum"
-msgstr ""
+msgstr "チェックサムのデータ"
 
 # @return [String]
 #: ../lib/yard/registry.rb:309
 msgid "the SHA1 checksum for data"
-msgstr ""
+msgstr "データのSHA1チェックサム"
 
 # YARD::Registry.single_object_db
 # YARD::Registry.single_object_db=
@@ -18183,6 +18231,9 @@ msgid ""
 "single object database (for disk efficiency), or spread them out\n"
 "(for load time efficiency)."
 msgstr ""
+"レジストリストレージは単一のオブジェクトのデータベースの中へ\n"
+"毎回ロードするか、(ディスク効率の為)\n"
+"又は、データベースを展開する。(ロード時間効率の為)"
 
 # YARD::Registry.single_object_db
 # YARD::Registry.single_object_db=
@@ -18190,7 +18241,7 @@ msgstr ""
 #: ../lib/yard/registry.rb:323 ../lib/yard/registry.rb:325
 #: ../lib/yard/registry.rb:324 ../lib/yard/registry.rb:330
 msgid "Managing Internal State (Advanced / Testing Only)"
-msgstr ""
+msgstr "内部の状態を管理する(Advanced / Testing Only)"
 
 # @return [Boolean, nil]
 #: ../lib/yard/registry.rb:323 ../lib/yard/registry.rb:325
@@ -18199,6 +18250,8 @@ msgid ""
 "if this value is set to nil, the storage\n"
 "adapter will decide how to store the data."
 msgstr ""
+"この値にnilを設定した場合、\n"
+"ストレージアダプターがデータを記録する方法を決める。"
 
 # @note
 #: ../lib/yard/registry.rb:323 ../lib/yard/registry.rb:325
@@ -18206,34 +18259,34 @@ msgstr ""
 msgid ""
 "Setting this attribute to nil will offload the decision to\n"
 "the {RegistryStore storage adapter}."
-msgstr ""
+msgstr "この属性にnilを設定すると、{RegistryStore storage adapter}の決定をunloadする。"
 
 # YARD::Registry.proxy_types
 #: ../lib/yard/registry.rb:328
 msgid ""
 "The assumed types of a list of paths. This method is used by CodeObjects::"
 "Base"
-msgstr ""
+msgstr "パスのリストの想定される型。このメソッドはCodeObjects::Baseによって利用される。"
 
 # @return [{String => Symbol}]
 #: ../lib/yard/registry.rb:330
 msgid "a set of unresolved paths and their assumed type"
-msgstr ""
+msgstr "未解決のパスのグループやその想定される型"
 
 # YARD::Registry.instance
 #: ../lib/yard/registry.rb:337
 msgid "The registry singleton instance."
-msgstr ""
+msgstr "レジストリシングルトンインスタンス"
 
 # @return [Registry]
 #: ../lib/yard/registry.rb:340
 msgid "returns the registry instance"
-msgstr ""
+msgstr "レジストリインスタンスを返す"
 
 # @deprecated
 #: ../lib/yard/registry.rb:340
 msgid "use Registry.methodname directly."
-msgstr ""
+msgstr "直接Registry.methodnameを使う"
 
 # YARD::Registry.instance
 #: ../lib/yard/registry.rb:340
@@ -18243,29 +18296,29 @@ msgstr ""
 # YARD::Registry.partial_resolve
 #: ../lib/yard/registry.rb:347
 msgid "Attempts to resolve a name in a namespace"
-msgstr ""
+msgstr "namespaceの中で名前の解決を試みる"
 
 # @param [CodeObjects::NamespaceObject] namespace
 #: ../lib/yard/registry.rb:350
 msgid "the starting namespace"
-msgstr ""
+msgstr "始まりのnamespace"
 
 # @param [String] name
 #: ../lib/yard/registry.rb:350
 msgid "the name to look for"
-msgstr ""
+msgstr "検索するname"
 
 # YARD::Registry.global_yardoc_file
 # YARD::Registry.local_yardoc_file
 #: ../lib/yard/registry.rb:366 ../lib/yard/registry.rb:376
 msgid "Retrieving yardoc File Locations"
-msgstr ""
+msgstr "yardocファイルの場所を取り出す"
 
 # YARD::Registry.thread_local_store
 # YARD::Registry.thread_local_store=
 #: ../lib/yard/registry.rb:390 ../lib/yard/registry.rb:395
 msgid "Threading support"
-msgstr ""
+msgstr "スレッドをサポート"
 
 # @since
 #: ../lib/yard/registry.rb:390 ../lib/yard/registry.rb:395
