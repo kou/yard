@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-15 15:57+0900\n"
+"PO-Revision-Date: 2011-12-15 16:18+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17765,7 +17765,7 @@ msgstr "レジストリのロードやファイルのリストを解析する"
 msgid ""
 "tag|example|Loads the yardoc file or parses files 'a', 'b' and 'c' (but not "
 "both)"
-msgstr ""
+msgstr "yardocファイルをロードする。又は、'a','b','c'のファイルを解析する。(どちらかだけ行う)"
 
 # YARD::Registry.load
 # YARD::Registry.load_yardoc
@@ -17949,7 +17949,7 @@ msgstr "削除するオブジェクト"
 # YARD::Registry.clear
 #: ../lib/yard/registry.rb:185
 msgid "Clears the registry"
-msgstr "レジストリ空にする"
+msgstr "レジストリを空にする"
 
 # YARD::Registry.each
 # YARD::Registry.all
@@ -18216,7 +18216,7 @@ msgstr "ファイル用のチェックサムのグループ"
 # @param [String] data
 #: ../lib/yard/registry.rb:309
 msgid "data to checksum"
-msgstr "チェックサムのデータ"
+msgstr "チェックサムするデータ"
 
 # @return [String]
 #: ../lib/yard/registry.rb:309
@@ -18276,7 +18276,7 @@ msgstr "未解決のパスのグループやその想定される型"
 # YARD::Registry.instance
 #: ../lib/yard/registry.rb:337
 msgid "The registry singleton instance."
-msgstr "レジストリシングルトンインスタンス"
+msgstr "レジストリのシングルトンインスタンス"
 
 # @return [Registry]
 #: ../lib/yard/registry.rb:340
