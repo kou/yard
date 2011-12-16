@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-16 11:35+0900\n"
+"PO-Revision-Date: 2011-12-16 12:01+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -18712,37 +18712,37 @@ msgstr "シリアライズされたデータ"
 # YARD::Serializers::FileSystemSerializer
 #: ../lib/yard/serializers/file_system_serializer.rb:4
 msgid "Implements a serializer that reads from and writes to the filesystem."
-msgstr ""
+msgstr "ファイルシステムに読み書き込みするシリアライザを実装する。"
 
 # YARD::Serializers::FileSystemSerializer#basepath
 #: ../lib/yard/serializers/file_system_serializer.rb:6
 msgid "The base path to write data to."
-msgstr ""
+msgstr "データに書き込む為のベースパス"
 
 # @return [String]
 #: ../lib/yard/serializers/file_system_serializer.rb:7
 msgid "a base path"
-msgstr ""
+msgstr "ベースパス"
 
 # YARD::Serializers::FileSystemSerializer#extension
 #: ../lib/yard/serializers/file_system_serializer.rb:14
 msgid "The extension of the filename (defaults to +html+)"
-msgstr ""
+msgstr "ファイル名の拡張子(デフォルトは +html+ )"
 
 # @return [String]
 #: ../lib/yard/serializers/file_system_serializer.rb:16
 msgid "the extension of the file. Empty string for no extension."
-msgstr ""
+msgstr "ファイルの拡張子。拡張子無しは空文字"
 
 # YARD::Serializers::FileSystemSerializer#initialize
 #: ../lib/yard/serializers/file_system_serializer.rb:23
 msgid "Creates a new FileSystemSerializer with options"
-msgstr ""
+msgstr "オプションと共に、新しいFileSystemSerializerを作成する。"
 
 # @return [FileSystemSerializer]
 #: ../lib/yard/serializers/file_system_serializer.rb:27
 msgid "a new instance of FileSystemSerializer"
-msgstr ""
+msgstr "FileSystemSerializerの新しいインスタンス"
 
 # YARD::Serializers::FileSystemSerializer#serialize
 #: ../lib/yard/serializers/file_system_serializer.rb:34
@@ -18750,16 +18750,18 @@ msgid ""
 "Serializes object with data to its serialized path (prefixed by the "
 "+#basepath+)."
 msgstr ""
+"パス(+#basepath+ がプレフィックスされる)をシリアライズする為、\n"
+"データと共に、オブジェクトをシリアライズする。"
 
 # @return [String]
 #: ../lib/yard/serializers/file_system_serializer.rb:36
 msgid "the written data (for chaining)"
-msgstr ""
+msgstr "書き込まれるデータ(チェーン用)"
 
 # YARD::Serializers::FileSystemSerializer#serialized_path
 #: ../lib/yard/serializers/file_system_serializer.rb:43
 msgid "Implements the serialized path of a code object."
-msgstr ""
+msgstr "コードオブジェクトのシリアライズされるパスを実装する。"
 
 # @return [String]
 #: ../lib/yard/serializers/file_system_serializer.rb:48
@@ -18767,27 +18769,29 @@ msgid ""
 "if object is a String, returns\n"
 "object, otherwise the path on disk (without the basepath)."
 msgstr ""
+"オブジェクトがStringの場合、オブジェクトを返し、\n"
+"それ以外は、ディスク上のパスを返す。(basepathを含まない)"
 
 # @param [CodeObjects::Base, CodeObjects::ExtraFileObject, String] object
 #: ../lib/yard/serializers/file_system_serializer.rb:48
 msgid ""
 "the object to get a path for. The path of a string is the string itself."
-msgstr ""
+msgstr "パスを取得する為のオブジェクト。文字列のパスはその文字列自身を返す。"
 
 # YARD::Serializers::FileSystemSerializer#exists?
 #: ../lib/yard/serializers/file_system_serializer.rb:84
 msgid "Checks the disk for an object and returns whether it was serialized."
-msgstr ""
+msgstr "オブジェクト用にディスクをチェックしたり、シリアライズされたかどうか返す。"
 
 # @return [Boolean]
 #: ../lib/yard/serializers/file_system_serializer.rb:87
 msgid "whether an object has been serialized to disk"
-msgstr ""
+msgstr "オブジェクトが既にディスクにシリアライズされているかどうか"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/serializers/file_system_serializer.rb:87
 msgid "the object to check"
-msgstr ""
+msgstr "チェックするオブジェクト"
 
 # YARD::Serializers::ProcessSerializer
 #: ../lib/yard/serializers/process_serializer.rb:4
