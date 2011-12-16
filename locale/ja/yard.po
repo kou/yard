@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-16 16:04+0900\n"
+"PO-Revision-Date: 2011-12-16 16:17+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -17170,9 +17170,7 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:237
 #: ../lib/yard/parser/source_parser.rb:303
 msgid "the return value for the block is ignored."
-msgstr ""
-"ブロックが無視される為の戻り値\n"
-"the return value for the block is ignored."
+msgstr "ブロックが無視される為の戻り値"
 
 # YARD::Parser::SourceParser.before_parse_file
 #: ../lib/yard/parser/source_parser.rb:242
@@ -17280,7 +17278,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/source_parser.rb:303
 msgid "tag|example|Printing the length of each file after it is parsed"
-msgstr ""
+msgstr "解析された後でそれぞれのファイルのサイズをプリントする"
 
 # @example Printing the length of each file after it is parsed
 #: ../lib/yard/parser/source_parser.rb:303
