@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-16 15:38+0900\n"
+"PO-Revision-Date: 2011-12-16 16:04+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16812,7 +16812,7 @@ msgstr "様々なエンコーディング用のバイトオーダーマーク"
 # @return [Symbol]
 #: ../lib/yard/parser/source_parser.rb:61
 msgid "the default parser type (defaults to :ruby)"
-msgstr "デフォルトパーサータイプ(デフォルト :ruby)"
+msgstr "デフォルトのパーサータイプ(デフォルト :ruby)"
 
 # YARD::Parser::SourceParser.parse
 #: ../lib/yard/parser/source_parser.rb:68
@@ -16927,7 +16927,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/source_parser.rb:121
 msgid "tag|example|Registering a parser for \"java\" files"
-msgstr ""
+msgstr "\"java\"ファイル用にパーサーを記録する"
 
 # @param [Symbol] type
 #: ../lib/yard/parser/source_parser.rb:121
@@ -16996,19 +16996,20 @@ msgid ""
 "via {parse}. The block passed to this method will be called on \n"
 "subsequent parse calls."
 msgstr ""
-"ファイルのリストが{parse}経由で解析される前に呼び出されるコールバックを記録する。\n"
-"このメソッドの為に渡されるブロックはその後parse呼び出し上で呼び出される。"
+"ファイルのリストが{parse}経由で解析される前に\n"
+"呼び出されるコールバックを記録する。\n"
+"このメソッドに渡されるブロックはそれに続く、parse呼び出し上で呼び出される。"
 
 # @example
 #: ../lib/yard/parser/source_parser.rb:213
 msgid "tag|example|Using a global callback to cancel parsing"
-msgstr ""
+msgstr "解析するのをキャンセルする為にコールバックにglobalを使う"
 
 # @example
 #: ../lib/yard/parser/source_parser.rb:213
 #: ../lib/yard/parser/source_parser.rb:274
 msgid "tag|example|Installing a simple callback"
-msgstr ""
+msgstr "簡単なコールバックを実装する"
 
 # YARD::Parser::SourceParser.before_parse_list
 # YARD::Parser::SourceParser.after_parse_list
@@ -17042,7 +17043,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/source_parser.rb:213
 msgid "tag|example|Setting global state"
-msgstr ""
+msgstr "globalの状態を設定する"
 
 # @example Setting global state
 #: ../lib/yard/parser/source_parser.rb:213
@@ -17147,7 +17148,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/source_parser.rb:237
 msgid "tag|example|Printing results after parsing occurs"
-msgstr ""
+msgstr "解析が終わった後で、結果をプリントする。"
 
 # @example Printing results after parsing occurs
 #: ../lib/yard/parser/source_parser.rb:237
@@ -17209,7 +17210,7 @@ msgstr ""
 # @example
 #: ../lib/yard/parser/source_parser.rb:274
 msgid "tag|example|Cancel parsing of any test_*.rb files"
-msgstr ""
+msgstr "全てのtest_*.rbファイルの解析をキャンセルする"
 
 # @example Cancel parsing of any test_*.rb files
 #: ../lib/yard/parser/source_parser.rb:274
@@ -17392,9 +17393,7 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/parser/source_parser.rb:395
 msgid "the contents of the file to be parsed"
-msgstr ""
-"解析されるファイルの内容。\n"
-"the contents of the file to be parsed"
+msgstr "解析されるファイルの内容。"
 
 # YARD::Parser::SourceParser#initialize
 #: ../lib/yard/parser/source_parser.rb:398
@@ -17412,7 +17411,7 @@ msgstr "ソースパーサーの新しいインスタンス。"
 # @param [OpenStruct] globals
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "global state to be re-used across separate source files"
-msgstr "ソースファイルをまたいで再利用される、globalの状態"
+msgstr "ソースファイルをまたいで再利用される、globals"
 
 # @param [Boolean] load_order_errors
 #: ../lib/yard/parser/source_parser.rb:402
