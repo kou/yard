@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-16 13:10+0900\n"
+"PO-Revision-Date: 2011-12-16 13:20+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -18847,12 +18847,12 @@ msgstr "標準出力にデータを書くシリアライザ"
 # YARD::Serializers::StdoutSerializer#initialize
 #: ../lib/yard/serializers/stdout_serializer.rb:6
 msgid "Creates a serializer to print text to stdout"
-msgstr ""
+msgstr "標準出力にテキストをプリントするシリアライザを作成する。"
 
 # @return [StdoutSerializer]
 #: ../lib/yard/serializers/stdout_serializer.rb:9
 msgid "a new instance of StdoutSerializer"
-msgstr ""
+msgstr "StdoutSerializerの新しいインスタンス"
 
 # @param [Fixnum, nil]
 #: ../lib/yard/serializers/stdout_serializer.rb:9
@@ -18865,16 +18865,18 @@ msgid ""
 "if wrap is a number, wraps text to +wrap+\n"
 "columns, otherwise no wrapping is done."
 msgstr ""
+"wrapが数字の場合、+wrap+ カラムにテキストをラップする。\n"
+"それ以外では、ラップは行わない。"
 
 # YARD::Serializers::StdoutSerializer#serialize
 #: ../lib/yard/serializers/stdout_serializer.rb:14
 msgid "Overrides serialize behaviour to write data to standard output"
-msgstr ""
+msgstr "標準出力にデータを書き込む為にシリアライズの挙動を上書きする。"
 
 # YARD::Serializers::StdoutSerializer#word_wrap
 #: ../lib/yard/serializers/stdout_serializer.rb:21
 msgid "Wraps text to a specific column length"
-msgstr ""
+msgstr "特定のカラムの長さにテキストをラップする。"
 
 # @param [Fixnum]
 #: ../lib/yard/serializers/stdout_serializer.rb:25
@@ -18884,17 +18886,17 @@ msgstr ""
 # @param [Fixnum] length
 #: ../lib/yard/serializers/stdout_serializer.rb:25
 msgid "the column length to wrap to"
-msgstr ""
+msgstr "ラップの為のカラムの長さ"
 
 # @param [String] text
 #: ../lib/yard/serializers/stdout_serializer.rb:25
 msgid "the text to wrap"
-msgstr ""
+msgstr "ラップされるテキスト"
 
 # @return [String]
 #: ../lib/yard/serializers/stdout_serializer.rb:25
 msgid "the wrapped text"
-msgstr ""
+msgstr "ラップされたテキスト"
 
 # YARD::StubProxy
 #: ../lib/yard/serializers/yardoc_serializer.rb:3
