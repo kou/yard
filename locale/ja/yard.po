@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-15 17:49+0900\n"
+"PO-Revision-Date: 2011-12-16 11:35+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -18518,6 +18518,11 @@ msgid ""
 "rendered to various endpoints. For instance, a {FileSystemSerializer}\n"
 "would allow template contents to be written to the filesystem"
 msgstr ""
+"これは抽象的なベースのシリアライザとなる。\n"
+"シリアライザは、様々な出力で表示される\n"
+"テンプレートを受け入れる。\n"
+"例えば、{FileSystemSerializer}は、\n"
+"ファイルシステムに書かれる内容のテンプレートを受け入れる。"
 
 # YARD::Serializers::Base
 #: ../lib/yard/serializers/base.rb:8
@@ -18526,6 +18531,9 @@ msgid ""
 "* {#serialize}\n"
 "* {#serialized_path}"
 msgstr ""
+"カスタムシリアライザを実装するには、次のメソッドを上書きする。:\n"
+"* {#serialize}\n"
+"* {#serialized_path}"
 
 # YARD::Serializers::Base
 #: ../lib/yard/serializers/base.rb:12
@@ -18534,47 +18542,50 @@ msgid ""
 "* {#before_serialize}\n"
 "* {#after_serialize}"
 msgstr ""
+"任意で、シリアライザはフィルターの前後に実装できる。:\n"
+"* {#before_serialize}\n"
+"* {#after_serialize}"
 
 # @abstract
 #: ../lib/yard/serializers/base.rb:16
 msgid "Override this class to implement a custom serializer."
-msgstr ""
+msgstr "カスタムシリアライザを実装する為に、このクラスを上書きする。"
 
 # YARD::Serializers::Base#options
 #: ../lib/yard/serializers/base.rb:18
 msgid ""
 "All serializer options are saved so they can be passed to other serializers."
-msgstr ""
+msgstr "全てのシリアライザのオプションはセーブされるので、他のシリアライザの為に渡す事が出来る。"
 
 # @return [SymbolHash]
 #: ../lib/yard/serializers/base.rb:20
 msgid "the serializer options"
-msgstr ""
+msgstr "シリアライザのオプション"
 
 # YARD::Serializers::Base#initialize
 #: ../lib/yard/serializers/base.rb:25
 msgid "Creates a new serializer with options"
-msgstr ""
+msgstr "オプションと共に新しいシリアライザを作成する。"
 
 # @param [Hash] opts
 #: ../lib/yard/serializers/base.rb:27
 msgid "the options to assign to {#options}"
-msgstr ""
+msgstr "{#options}メソッドに割り当てるオプション"
 
 # YARD::Serializers::Base#initialize
 #: ../lib/yard/serializers/base.rb:27
 msgid "Creating a New Serializer"
-msgstr ""
+msgstr "新しいシリアライザを作成する。"
 
 # YARD::Serializers::Base#serialize
 #: ../lib/yard/serializers/base.rb:34
 msgid "Serializes an object."
-msgstr ""
+msgstr "シリアライズするオブジェクト"
 
 # @param [String] data
 #: ../lib/yard/serializers/base.rb:41
 msgid "the contents that should be serialized"
-msgstr ""
+msgstr "シリアライズされるべき内容"
 
 # @abstract
 #: ../lib/yard/serializers/base.rb:41
@@ -18583,6 +18594,8 @@ msgid ""
 "+data+ to the respective endpoint. This method should also call\n"
 "the before and after callbacks {#before_serialize} and {#after_serialize}"
 msgstr ""
+"このメソッドはそれぞれの出力に +data+ をシリアライズするロジックを実装するべきである。\n"
+"また、このメソッドは前後に{#before_serialize} と {#after_serialize}のコールバックも呼び出す。\n"
 
 # @param [CodeObjects::Base, String] object
 #: ../lib/yard/serializers/base.rb:41
@@ -18590,6 +18603,8 @@ msgid ""
 "the object to serialize the\n"
 "data for. The object can also be a string (for non-object serialization)"
 msgstr ""
+"オブジェクトのデータをシリアライズするオブジェクト、\n"
+"このオブジェクトは文字列にもできる。(非オブジェクトをシリアライズする場合)"
 
 # YARD::Serializers::Base#serialize
 # YARD::Serializers::Base#serialized_path
@@ -18597,12 +18612,12 @@ msgstr ""
 #: ../lib/yard/serializers/base.rb:41 ../lib/yard/serializers/base.rb:50
 #: ../lib/yard/serializers/base.rb:61
 msgid "Serializing an Object"
-msgstr ""
+msgstr "シリアライズするオブジェクト"
 
 # YARD::Serializers::Base#serialized_path
 #: ../lib/yard/serializers/base.rb:44
 msgid "The serialized path of an object"
-msgstr ""
+msgstr "シリアライズされるオブジェクトのパス"
 
 # @abstract
 #: ../lib/yard/serializers/base.rb:50
@@ -18611,21 +18626,23 @@ msgid ""
 "endpoint. For instance, for a file serializer, this should return\n"
 "the filename that represents the object on disk."
 msgstr ""
+"このメソッドは、出力するオブジェクトのパスを返す。\n"
+"例えば、ファイルシリアライザは、ディスクの中のそのオブジェクトを表すファイル名を返す。"
 
 # @return [String]
 #: ../lib/yard/serializers/base.rb:50
 msgid "the serialized path of an object"
-msgstr ""
+msgstr "シリアライズされたオブジェクトのパス"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/serializers/base.rb:50
 msgid "the object to return a path for"
-msgstr ""
+msgstr "パスを返す為のオブジェクト"
 
 # YARD::Serializers::Base#exists?
 #: ../lib/yard/serializers/base.rb:53
 msgid "Returns whether an object has been serialized"
-msgstr ""
+msgstr "シリアライズされたオブジェクトかどうかを返す"
 
 # @abstract
 #: ../lib/yard/serializers/base.rb:61
@@ -18635,21 +18652,27 @@ msgid ""
 "on disk. You will most likely use +#basepath+ and {#serialized_path} to\n"
 "get the endpoint's location."
 msgstr ""
+"このメソッドは既に出力が存在するかどうかを返す。\n"
+"例えば、\n"
+"ファイルがディスク上に存在する場合、\n"
+"ファイルシステムシリアライザは、このチェックを行うだろう。\n"
+"あなたは、恐らく出力される場所を取得する為に、\n"
+"+#basepath+ や {#serialized_path} メソッドを使うだろう。"
 
 # @return [Boolean]
 #: ../lib/yard/serializers/base.rb:61
 msgid "whether the endpoint exists."
-msgstr ""
+msgstr "出力が存在するかどうか"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/serializers/base.rb:61
 msgid "the object to check existence of"
-msgstr ""
+msgstr "存在するかチェックするオブジェクト"
 
 # YARD::Serializers::Base#before_serialize
 #: ../lib/yard/serializers/base.rb:66
 msgid "Called before serialization."
-msgstr ""
+msgstr "シリアライズする前に呼び出される"
 
 # @abstract
 #: ../lib/yard/serializers/base.rb:70
@@ -18657,11 +18680,13 @@ msgid ""
 "Should run code before serialization. Should return false\n"
 "if serialization should not occur."
 msgstr ""
+"シリアライズする前にコードを起動する。\n"
+"シリアライズしても何も存在しない場合、falseを返す。"
 
 # @return [Boolean]
 #: ../lib/yard/serializers/base.rb:70
 msgid "whether or not serialization should occur"
-msgstr ""
+msgstr "シリアライズが存在するかどうか"
 
 # YARD::Serializers::Base#before_serialize
 # YARD::Serializers::Base#after_serialize
@@ -18672,17 +18697,17 @@ msgstr ""
 # YARD::Serializers::Base#after_serialize
 #: ../lib/yard/serializers/base.rb:73
 msgid "Called after serialization."
-msgstr ""
+msgstr "後で呼び出されるシリアライズ"
 
 # @abstract
 #: ../lib/yard/serializers/base.rb:77
 msgid "Should run code after serialization."
-msgstr ""
+msgstr "後でシリアライズのコードを起動する"
 
 # @param [String] data
 #: ../lib/yard/serializers/base.rb:77
 msgid "the data that was serialized."
-msgstr ""
+msgstr "シリアライズされたデータ"
 
 # YARD::Serializers::FileSystemSerializer
 #: ../lib/yard/serializers/file_system_serializer.rb:4
