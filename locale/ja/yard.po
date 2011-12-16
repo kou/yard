@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-16 12:01+0900\n"
+"PO-Revision-Date: 2011-12-16 13:10+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -18796,7 +18796,7 @@ msgstr "チェックするオブジェクト"
 # YARD::Serializers::ProcessSerializer
 #: ../lib/yard/serializers/process_serializer.rb:4
 msgid "Serializes an object to a process (like less)"
-msgstr ""
+msgstr "処理の為のオブジェクトをシリアライズする。(lessのような)"
 
 # @example Serializing to a pager (less)
 #: ../lib/yard/serializers/process_serializer.rb:8
@@ -18808,22 +18808,22 @@ msgstr ""
 # @example
 #: ../lib/yard/serializers/process_serializer.rb:8
 msgid "tag|example|Serializing to a pager (less)"
-msgstr ""
+msgstr "ページャーをシリアライズする(less)"
 
 # YARD::Serializers::ProcessSerializer#initialize
 #: ../lib/yard/serializers/process_serializer.rb:10
 msgid "Creates a new ProcessSerializer for the shell command +cmd+"
-msgstr ""
+msgstr "シェルコマンド +cmd+ 用に新しいProcessSerializerを作成する。"
 
 # @return [ProcessSerializer]
 #: ../lib/yard/serializers/process_serializer.rb:12
 msgid "a new instance of ProcessSerializer"
-msgstr ""
+msgstr "ProcessSerializerの新しいインスタンス"
 
 # @param [String] cmd
 #: ../lib/yard/serializers/process_serializer.rb:12
 msgid "the command that will accept data on stdin"
-msgstr ""
+msgstr "標準入力上でデータを受け入れるコマンド"
 
 # @param [String]
 #: ../lib/yard/serializers/process_serializer.rb:12
@@ -18836,11 +18836,13 @@ msgid ""
 "Overrides serialize behaviour and writes data to standard input\n"
 "of the associated command"
 msgstr ""
+"シリアライズの挙動を上書きし、\n"
+"関連付けられたコマンドの標準入力にデータを書き込む。"
 
 # YARD::Serializers::StdoutSerializer
 #: ../lib/yard/serializers/stdout_serializer.rb:4
 msgid "A serializer that writes data to standard output."
-msgstr ""
+msgstr "標準出力にデータを書くシリアライザ"
 
 # YARD::Serializers::StdoutSerializer#initialize
 #: ../lib/yard/serializers/stdout_serializer.rb:6
