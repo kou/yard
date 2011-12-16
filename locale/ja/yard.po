@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-16 13:20+0900\n"
+"PO-Revision-Date: 2011-12-16 14:45+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8363,7 +8363,7 @@ msgstr "YARDによって利用されるRake taskを持つ"
 #: ../lib/yard/serializers/process_serializer.rb:137
 #: ../lib/yard/serializers/file_system_serializer.rb:137
 msgid "Namespace for components that serialize to various endpoints"
-msgstr "様々な出力先の為にシリアライズする構成の為のNamespace"
+msgstr "様々な出力でシリアライズする構成用のNamespace"
 
 # YARD::Server
 #: ../lib/yard/autoload.rb:145 ../lib/yard/server.rb:145
@@ -18555,7 +18555,7 @@ msgstr "カスタムシリアライザを実装する為に、このクラスを
 #: ../lib/yard/serializers/base.rb:18
 msgid ""
 "All serializer options are saved so they can be passed to other serializers."
-msgstr "全てのシリアライザのオプションはセーブされるので、他のシリアライザの為に渡す事が出来る。"
+msgstr "全てのシリアライザのオプションはセーブされるので、他のシリアライザに渡す事が出来る。"
 
 # @return [SymbolHash]
 #: ../lib/yard/serializers/base.rb:20
@@ -18594,8 +18594,10 @@ msgid ""
 "+data+ to the respective endpoint. This method should also call\n"
 "the before and after callbacks {#before_serialize} and {#after_serialize}"
 msgstr ""
-"このメソッドはそれぞれの出力に +data+ をシリアライズするロジックを実装するべきである。\n"
-"また、このメソッドは前後に{#before_serialize} と {#after_serialize}のコールバックも呼び出す。\n"
+"このメソッドはそれぞれの出力に +data+ をシリアライズするロジックを\n"
+"実装するべきである。\n"
+"また、このメソッドは前後に{#before_serialize} と {#after_serialize}の\n"
+"コールバックも呼び出すべきである。"
 
 # @param [CodeObjects::Base, String] object
 #: ../lib/yard/serializers/base.rb:41
@@ -18901,17 +18903,17 @@ msgstr "ラップされたテキスト"
 # YARD::StubProxy
 #: ../lib/yard/serializers/yardoc_serializer.rb:3
 msgid "Stubs marshal dumps and acts a delegate class for an object by path"
-msgstr ""
+msgstr "引抜き、選別し、出力する。オブジェクトがパスによって委譲クラスのように振る舞う"
 
 # @return [StubProxy]
 #: ../lib/yard/serializers/yardoc_serializer.rb:12
 msgid "a new instance of StubProxy"
-msgstr ""
+msgstr "StubProxyの新しいインスタンス"
 
 # @return [YardocSerializer]
 #: ../lib/yard/serializers/yardoc_serializer.rb:30
 msgid "a new instance of YardocSerializer"
-msgstr ""
+msgstr "YardocSerializerの新しいインスタンス"
 
 # YARD::Server.register_static_path
 #: ../lib/yard/server.rb:4
