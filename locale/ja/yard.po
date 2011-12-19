@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-16 18:17+0900\n"
+"PO-Revision-Date: 2011-12-19 18:27+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9763,16 +9763,18 @@ msgid ""
 "A list of code objects. This array acts like a set (no unique items)\n"
 "but also disallows any {Proxy} objects from being added."
 msgstr ""
+"コードオブジェクトのリスト、この配列はグループ(固有の物ではない)のように振る舞う。\n"
+"しかしながら、追加される任意の{Proxy}オブジェクトを拒否する。"
 
 # YARD::CodeObjects::CodeObjectList#initialize
 #: ../lib/yard/code_objects/base.rb:7
 msgid "Creates a new object list associated with a namespace"
-msgstr ""
+msgstr "namespaceに関連付けられた新しいオブジェクトのリストを作成する。"
 
 # @param [NamespaceObject] owner
 #: ../lib/yard/code_objects/base.rb:10
 msgid "the namespace the list should be associated with"
-msgstr ""
+msgstr "リストで関連付けられるべき、namespace"
 
 # @param [NamespaceObject]
 #: ../lib/yard/code_objects/base.rb:10
@@ -9783,7 +9785,7 @@ msgstr ""
 # YARD::CodeObjects::CodeObjectList#<<
 #: ../lib/yard/code_objects/base.rb:15 ../lib/yard/code_objects/base.rb:28
 msgid "Adds a new value to the list"
-msgstr ""
+msgstr "リストに新しく値を追加する"
 
 # @param
 # @param [Base]
@@ -9831,17 +9833,17 @@ msgstr ""
 # @param [Base] value
 #: ../lib/yard/code_objects/base.rb:18
 msgid "a code object to add"
-msgstr ""
+msgstr "追加するコードオブジェクト"
 
 # YARD::CodeObjects::NSEP
 #: ../lib/yard/code_objects/base.rb:32
 msgid "Namespace separator"
-msgstr ""
+msgstr "Namespace separator(ネームスペース区切り)"
 
 # YARD::CodeObjects::NSEPQ
 #: ../lib/yard/code_objects/base.rb:35
 msgid "Regex-quoted namespace separator"
-msgstr ""
+msgstr "Regex-quoted namespace separator(クオートされた正規表現ネームスペース区切り)"
 
 # YARD::CodeObjects::ISEP
 #: ../lib/yard/code_objects/base.rb:38
@@ -9866,55 +9868,55 @@ msgstr ""
 # YARD::CodeObjects::CONSTANTMATCH
 #: ../lib/yard/code_objects/base.rb:50
 msgid "Regular expression to match constant name"
-msgstr ""
+msgstr "定数名にマッチする正規表現"
 
 # YARD::CodeObjects::NAMESPACEMATCH
 #: ../lib/yard/code_objects/base.rb:53
 msgid "Regular expression to match namespaces (const A or complex path A::B)"
-msgstr ""
+msgstr "namespaceにマッチする正規表現(const A or complex path A::B)"
 
 # YARD::CodeObjects::METHODNAMEMATCH
 #: ../lib/yard/code_objects/base.rb:56
 msgid "Regular expression to match a method name"
-msgstr ""
+msgstr "メソッド名にマッチする正規表現"
 
 # YARD::CodeObjects::METHODMATCH
 #: ../lib/yard/code_objects/base.rb:59
 msgid ""
 "Regular expression to match a fully qualified method def (self.foo, Class."
 "foo)."
-msgstr ""
+msgstr "全てに有効なメソッド定義(self.foo Class.fooなど)にマッチする正規表現"
 
 # YARD::CodeObjects::BUILTIN_EXCEPTIONS
 #: ../lib/yard/code_objects/base.rb:62
 msgid "All builtin Ruby exception classes for inheritance tree."
-msgstr ""
+msgstr "継承ツリー用の全ての組み込みRuby例外クラス"
 
 # YARD::CodeObjects::BUILTIN_CLASSES
 #: ../lib/yard/code_objects/base.rb:68
 msgid "All builtin Ruby classes for inheritance tree."
-msgstr ""
+msgstr "継承ツリー用の全てのRubyクラス"
 
 # @note
 #: ../lib/yard/code_objects/base.rb:69
 msgid "MatchingData is a 1.8.x legacy class"
-msgstr ""
+msgstr "マッチデータが1.8以降のレガシーケースの場合\n"
 
 # YARD::CodeObjects::BUILTIN_MODULES
 #: ../lib/yard/code_objects/base.rb:74
 msgid "All builtin Ruby modules for mixin handling."
-msgstr ""
+msgstr "mixin操作用の全てのRuby組み込みモジュール"
 
 # YARD::CodeObjects::BUILTIN_ALL
 #: ../lib/yard/code_objects/base.rb:77
 msgid "All builtin Ruby classes and modules."
-msgstr ""
+msgstr "全ての組み込みRubyクラスやモジュール"
 
 # YARD::CodeObjects::BUILTIN_EXCEPTIONS_HASH
 #: ../lib/yard/code_objects/base.rb:80
 msgid ""
 "Hash of {BUILTIN_EXCEPTIONS} as keys and true as value (for O(1) lookups)"
-msgstr ""
+msgstr "{BUILTIN_EXCEPTIONS}のキーと,値がtrueのハッシュ,(for O(1) lookups)"
 
 # YARD::CodeObjects::Base
 #: ../lib/yard/code_objects/base.rb:83
@@ -9924,6 +9926,10 @@ msgid ""
 "DSL might subclass +Base+ to create a new custom object representing\n"
 "a new entity type."
 msgstr ""
+"+Base+ は、YARDによって表される全てのコードオブジェクトのスーパークラスとなる。\n"
+"コードオブジェクトは、Ruby言語の中の何らかの(class,method,module)構成要素となる。\n"
+"DSLは新しい構成要素の型で表されるカスタムオブジェクトを作成する為に、\n"
+"+Base+ をサブクラスとするかもしれない。\n"
 
 # YARD::CodeObjects::Base
 #: ../lib/yard/code_objects/base.rb:88
@@ -9935,6 +9941,11 @@ msgid ""
 "in memory. A unique {#path} is essential for this identity map to work\n"
 "correctly."
 msgstr ""
+"== レジストリの統合\n"
+"namespaceと共に関連付けられ作成される任意のオブジェクトは、レジストリと共に直ぐに記録される。\n"
+"これは、メモリの中で一つ以上のRubyオブジェクトによって表される事を保証し、\n"
+"レジストリが独自のマップの様に振る舞う事を受け入れる。\n"
+"固有の{#path}メソッドは、この独自のマップを正常に機能させる為に必須のものである。"
 
 # YARD::CodeObjects::Base
 #: ../lib/yard/code_objects/base.rb:95
@@ -9955,6 +9966,13 @@ msgid ""
 "though a DSL might create a custom {NamespaceObject} to describe a\n"
 "specific set of objects."
 msgstr ""
+"== Namespaces\n"
+"\"namespace\"に呼び出されるオブジェクトの特別な型がある。\n"
+"これらは{NamespaceObject}をサブクラス化し、\n"
+"それらの中で定義されるオブジェクトが持つ事が出来るRubyの構成要素を表す。\n"
+"オーソドックスなこれらのモジュールやクラスは、\n"
+"DSLが特定のオブジェクトのグループを説明する為に、\n"
+"カスタム{NamespaceObject}を作成するかもしれない。\n"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:111
@@ -9967,6 +9985,8 @@ msgid ""
 "This class should not be used directly. Instead, create a\n"
 "subclass that implements {#path}, {#sep} or {#type}."
 msgstr ""
+"このクラスは、直接利用するべきではない。\n"
+"代わりに、{#path}, {#sep} , {#type}メソッドを実装するサブクラスを作成する。"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:111
@@ -9987,6 +10007,8 @@ msgstr ""
 #: ../lib/yard/code_objects/base.rb:113
 msgid "The files the object was defined in. To add a file, use {#add_file}."
 msgstr ""
+"中で定義されたオブジェクトから成るファイル、\n"
+"ファイルを追加するには、{#add_file}メソッドを使う。"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:115
@@ -9996,7 +10018,7 @@ msgstr ""
 # @return [Array<String>]
 #: ../lib/yard/code_objects/base.rb:115 ../lib/yard/rake/yardoc_task.rb:20
 msgid "a list of files"
-msgstr ""
+msgstr "ファイルのリスト"
 
 # YARD::CodeObjects::Base#namespace
 # YARD::CodeObjects::Base#parent
@@ -10005,21 +10027,23 @@ msgid ""
 "The namespace the object is defined in. If the object is in the\n"
 "top level namespace, this is {Registry.root}"
 msgstr ""
+"中で定義されるオブジェクトから成るnamespace,オブジェクトがtop level namespaceの場合、\n"
+"これは、{Registry.root}になる。"
 
 # @return [NamespaceObject]
 #: ../lib/yard/code_objects/base.rb:120
 msgid "the namespace object"
-msgstr ""
+msgstr "namespaceオブジェクト"
 
 # YARD::CodeObjects::Base#source
 #: ../lib/yard/code_objects/base.rb:123
 msgid "The source code associated with the object"
-msgstr ""
+msgstr "オブジェクトに関連付けられたソースコード"
 
 # @return [String, nil]
 #: ../lib/yard/code_objects/base.rb:124
 msgid "source, if present, or nil"
-msgstr ""
+msgstr "存在する場合はソース,そうでなけば、nil"
 
 # YARD::CodeObjects::Base#source_type
 # YARD::CodeObjects::Base#source_type=
@@ -10028,11 +10052,13 @@ msgid ""
 "Language of the source code associated with the object. Defaults to\n"
 "+:ruby+."
 msgstr ""
+"オブジェクトと共に関連付けられたソースコードの言語。\n"
+"デフォルトは +:ruby+ 。"
 
 # @return [Symbol]
 #: ../lib/yard/code_objects/base.rb:130
 msgid "the language type"
-msgstr ""
+msgstr "言語の型"
 
 # YARD::CodeObjects::Base#signature
 # YARD::CodeObjects::Base#signature=
@@ -10042,42 +10068,45 @@ msgid ""
 "be of the form \"def meth(arguments...)\". This is usually the first\n"
 "source line."
 msgstr ""
+"オブジェクトを一行の用法で表している。メソッド用、\n"
+"これは、\"def meth(arguments...)\"のような形式になるだろう。\n"
+"普通は、最初のソースの最初の行となる。"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:137
 msgid "a line of source"
-msgstr ""
+msgstr "ソースの行"
 
 # YARD::CodeObjects::Base#docstring
 #: ../lib/yard/code_objects/base.rb:140
 msgid "The documentation string associated with the object"
-msgstr ""
+msgstr "オブジェクトに関連付けられたドキュメント文字列"
 
 # @return [Docstring]
 #: ../lib/yard/code_objects/base.rb:141 ../lib/yard/code_objects/base.rb:349
 msgid "the documentation string"
-msgstr ""
+msgstr "ドキュメント文字列(docstring)"
 
 # YARD::CodeObjects::Base#dynamic
 # YARD::CodeObjects::Base#dynamic=
 #: ../lib/yard/code_objects/base.rb:144
 msgid "Marks whether or not the method is conditionally defined at runtime"
-msgstr ""
+msgstr "メソッドが実行時に定義された条件となるか、マークする。"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/base.rb:145
 msgid "true if the method is conditionally defined at runtime"
-msgstr ""
+msgstr "メソッドが実行時に定義された条件となる場合、true"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:149
 msgid "the group this object is associated with"
-msgstr ""
+msgstr "このオブジェクトに関連付けられたグループ"
 
 # YARD::CodeObjects::Base#dynamic?
 #: ../lib/yard/code_objects/base.rb:152
 msgid "Is the object defined conditionally at runtime?"
-msgstr ""
+msgstr "オブジェクトが実行時に条件が定義されたか?"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:153
@@ -10087,12 +10116,12 @@ msgstr ""
 # @return [Symbol]
 #: ../lib/yard/code_objects/base.rb:156 ../lib/yard/code_objects/base.rb:158
 msgid "the visibility of an object (:public, :private, :protected)"
-msgstr ""
+msgstr "オブジェクトの可視性(:public, :private, :protected)"
 
 # YARD::CodeObjects::Base.new
 #: ../lib/yard/code_objects/base.rb:162
 msgid "Allocates a new code object"
-msgstr ""
+msgstr "新しいコードオブジェクトを割り当てる。"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:164
@@ -10103,12 +10132,12 @@ msgstr ""
 # YARD::CodeObjects::Base.===
 #: ../lib/yard/code_objects/base.rb:185
 msgid "Compares the class with subclasses"
-msgstr ""
+msgstr "サブクラスとクラスを比較する"
 
 # @param [Object] other
 #: ../lib/yard/code_objects/base.rb:188
 msgid "the other object to compare classes with"
-msgstr ""
+msgstr "クラスと比較する他のオブジェクト"
 
 # @param [Object]
 # @param [Base, Proxy]
@@ -10122,39 +10151,39 @@ msgstr ""
 # @return [Boolean]
 #: ../lib/yard/code_objects/base.rb:188
 msgid "true if other is a subclass of self"
-msgstr ""
+msgstr "otherが自身のサブクラスの場合、true"
 
 # YARD::CodeObjects::Base#initialize
 #: ../lib/yard/code_objects/base.rb:194
 msgid "Creates a new code object"
-msgstr ""
+msgstr "新しいコードオブジェクトを作成する。"
 
 # @return [Base]
 # @return [MacroObject]
 #: ../lib/yard/code_objects/base.rb:207
 #: ../lib/yard/code_objects/macro_object.rb:37
 msgid "the newly created object"
-msgstr ""
+msgstr "新たに作成されたオブジェクト"
 
 # @yieldparam [Base] self
 #: ../lib/yard/code_objects/base.rb:207
 msgid "the newly initialized code object"
-msgstr ""
+msgstr "新たにinitializeされるコードオジェクト"
 
 # @yieldparam [Base]
 #: ../lib/yard/code_objects/base.rb:207
 msgid "tag|yieldparam|self"
-msgstr ""
+msgstr "self"
 
 # @yield [self]
 #: ../lib/yard/code_objects/base.rb:207
 msgid "a block to perform any extra initialization on the object"
-msgstr ""
+msgstr "オブジェクト上で任意の追加のイニシャライズを実行するblock"
 
 # @param [Symbol, String] name
 #: ../lib/yard/code_objects/base.rb:207
 msgid "the name (or complex path) of the object."
-msgstr ""
+msgstr "オブジェクトの名前(又は、complex path)"
 
 # @param [NamespaceObject] namespace
 #: ../lib/yard/code_objects/base.rb:207
@@ -10163,6 +10192,9 @@ msgid ""
 "{Registry.root} or :root should be provided if it is associated with\n"
 "the top level namespace."
 msgstr ""
+"その中でオブジェクトの属するnamespace,\n"
+"top level namespaceと共に、\n"
+"{Registry.root} と :rootは、提供されるべきである。"
 
 # @param [NamespaceObject]
 # @param [CodeObjects::NamespaceObject, nil]
@@ -10171,7 +10203,7 @@ msgstr ""
 #: ../lib/yard/code_objects/method_object.rb:29 ../lib/yard/registry.rb:267
 #: ../lib/yard/registry.rb:350
 msgid "tag|param|namespace"
-msgstr ""
+msgstr "namespace"
 
 # @example Create class Z inside namespace X::Y
 #: ../lib/yard/code_objects/base.rb:207
@@ -10183,7 +10215,7 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/base.rb:207
 msgid "tag|example|Create class Z inside namespace X::Y"
-msgstr ""
+msgstr "namespace X::Yの中にZクラスを作成する。"
 
 # @example Create a method in the root namespace
 #: ../lib/yard/code_objects/base.rb:207
@@ -10193,13 +10225,13 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/base.rb:207
 msgid "tag|example|Create a method in the root namespace"
-msgstr ""
+msgstr "root namespaceの中にメソッドを作成する"
 
 # YARD::CodeObjects::Base#name
 # YARD::CodeObjects::Proxy#name
 #: ../lib/yard/code_objects/base.rb:226 ../lib/yard/code_objects/proxy.rb:70
 msgid "The name of the object"
-msgstr ""
+msgstr "オブジェクトの名前"
 
 # @param [Boolean] prefix
 #: ../lib/yard/code_objects/base.rb:231
@@ -10207,11 +10239,14 @@ msgid ""
 "whether to show a prefix. Implement\n"
 "this in a subclass to define how the prefix is showed."
 msgstr ""
+"prefixを見せるかどうか。\n"
+"prefixがどのようにみせられるか定義する為に、\n"
+"このサブクラスの中で実装する。"
 
 # @return [Symbol]
 #: ../lib/yard/code_objects/base.rb:231
 msgid "if prefix is false, the symbolized name"
-msgstr ""
+msgstr "prefixがfalseの場合、シンボル化される名前"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:231
@@ -10219,12 +10254,14 @@ msgid ""
 "if prefix is true, prefix + the name as a String.\n"
 "This must be implemented by the subclass."
 msgstr ""
+"prefixがtrueの場合、prefix + 名前の文字列となる。\n"
+"これは、サブクラスによって実装されなければならない。"
 
 # @param [Boolean]
 #: ../lib/yard/code_objects/base.rb:231
 #: ../lib/yard/code_objects/method_object.rb:136
 msgid "tag|param|prefix"
-msgstr ""
+msgstr "prefix"
 
 # YARD::CodeObjects::Base#add_file
 #: ../lib/yard/code_objects/base.rb:236
@@ -10234,6 +10271,9 @@ msgid ""
 "By convention, '<stdin>' should be used to associate code that comes form "
 "standard input."
 msgstr ""
+"コードオブジェクトと共に、ファイルを関連付け、\n"
+"定義された場所で任意で行を追加する。\n"
+"慣習で、'<stdin>'は、標準入力形式で入って来るコードに関連付けて利用されるべきである。"
 
 # @param [Boolean] has_comments
 #: ../lib/yard/code_objects/base.rb:243
@@ -10244,26 +10284,29 @@ msgid ""
 "of any empty definitions that might have been parsed before (module "
 "namespaces for instance)."
 msgstr ""
+"定義が関連付けられたコメントを持っているかどうか。\n"
+"これは、解析される前に(例えば、module namespace)、空の定義の代わりに任意の作られたコメントで、\n"
+"定義を返す為に、{#file}メソッドを受け入れる。"
 
 # @param [String] file
 #: ../lib/yard/code_objects/base.rb:243
 msgid "the filename ('<stdin>' for standard input)"
-msgstr ""
+msgstr "ファイル名('<stdin>' は標準入力用)"
 
 # @param [Boolean]
 #: ../lib/yard/code_objects/base.rb:243
 msgid "tag|param|has_comments"
-msgstr ""
+msgstr "has_comments"
 
 # @param [Fixnum, nil]
 #: ../lib/yard/code_objects/base.rb:243
 msgid "tag|param|line"
-msgstr ""
+msgstr "param|line"
 
 # @param [Fixnum, nil] line
 #: ../lib/yard/code_objects/base.rb:243
 msgid "the line number where the object lies in the file"
-msgstr ""
+msgstr "ファイルの中でオブジェクトが位置する,行数"
 
 # YARD::CodeObjects::Base#file
 #: ../lib/yard/code_objects/base.rb:256
@@ -10271,26 +10314,28 @@ msgid ""
 "Returns the filename the object was first parsed at, taking\n"
 "definitions with docstrings first."
 msgstr ""
+"オブジェクトが、最初に解析された所で、\n"
+"最初のdocstringと共に、定義を取ってくるファイル名を返す"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:259
 msgid "a filename"
-msgstr ""
+msgstr "ファイル名"
 
 # YARD::CodeObjects::Base#line
 #: ../lib/yard/code_objects/base.rb:264
 msgid "Returns the line the object was first parsed at (or nil)"
-msgstr ""
+msgstr "オブジェクトが、最初に解析された所(又は、nil)の行を返す"
 
 # @return [nil]
 #: ../lib/yard/code_objects/base.rb:267
 msgid "if there is no line associated with the object"
-msgstr ""
+msgstr "オブジェクトと共に関連付けられた行がない場合"
 
 # @return [Fixnum]
 #: ../lib/yard/code_objects/base.rb:267
 msgid "the line where the object was first defined."
-msgstr ""
+msgstr "オブジェクトが最初に定義された所の行"
 
 # YARD::CodeObjects::Base#equal?
 # YARD::CodeObjects::Base#==
@@ -10298,7 +10343,7 @@ msgstr ""
 #: ../lib/yard/code_objects/base.rb:272 ../lib/yard/code_objects/base.rb:283
 #: ../lib/yard/code_objects/base.rb:284
 msgid "Tests if another object is equal to this, including a proxy"
-msgstr ""
+msgstr "他のオブジェクトがBaseとイコールかProxyを含んでいるかテストする。"
 
 # @param [Base, Proxy] other
 #: ../lib/yard/code_objects/base.rb:275
@@ -10306,36 +10351,38 @@ msgid ""
 "if other is a {Proxy}, tests if\n"
 "the paths are equal"
 msgstr ""
+"pathがイコールの場合、\n"
+"otherが{Proxy}か、テストする。\n"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/base.rb:275
 msgid "whether or not the objects are considered the same"
-msgstr ""
+msgstr "オブジェクトが同じかどうか比較する"
 
 # @return [Integer]
 #: ../lib/yard/code_objects/base.rb:286 ../lib/yard/code_objects/proxy.rb:149
 msgid "the object's hash value (for equality checking)"
-msgstr ""
+msgstr "オブジェクトのハッシュ値(イコールかチェック用)"
 
 # @return [nil]
 #: ../lib/yard/code_objects/base.rb:289
 msgid "this object does not turn into an array"
-msgstr ""
+msgstr "このオブジェクトは配列にはできない"
 
 # YARD::CodeObjects::Base#[]
 #: ../lib/yard/code_objects/base.rb:292
 msgid "Accesses a custom attribute on the object"
-msgstr ""
+msgstr "オブジェクト上のカスタム属性にアクセスする"
 
 # @param [#to_s] key
 #: ../lib/yard/code_objects/base.rb:295 ../lib/yard/code_objects/base.rb:308
 msgid "the name of the custom attribute"
-msgstr ""
+msgstr "カスタム属性の名前"
 
 # @return [Object, nil]
 #: ../lib/yard/code_objects/base.rb:295
 msgid "the custom attribute or nil if not found."
-msgstr ""
+msgstr "カスタム属性や見つからなかった場合はnilを返す"
 
 # @param [#to_s]
 # @param [String, Symbol]
@@ -10347,12 +10394,12 @@ msgstr ""
 #: ../lib/yard/core_ext/symbol_hash.rb:53
 #: ../lib/yard/core_ext/symbol_hash.rb:58
 msgid "tag|param|key"
-msgstr ""
+msgstr "key"
 
 # YARD::CodeObjects::Base#[]=
 #: ../lib/yard/code_objects/base.rb:304
 msgid "Sets a custom attribute on the object"
-msgstr ""
+msgstr "オブジェクトにカスタム属性を設定する"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:308
@@ -10362,22 +10409,22 @@ msgstr ""
 # @param [Object] value
 #: ../lib/yard/code_objects/base.rb:308
 msgid "the value to associate"
-msgstr ""
+msgstr "関連する値"
 
 # @overload
 #: ../lib/yard/code_objects/base.rb:325
 msgid "tag|overload|dynamic_attr_name"
-msgstr ""
+msgstr "dynamic_attr_name"
 
 # @overload
 #: ../lib/yard/code_objects/base.rb:325
 msgid "tag|overload|dynamic_attr_name="
-msgstr ""
+msgstr "dynamic_attr_name="
 
 # YARD::CodeObjects::Base#source=
 #: ../lib/yard/code_objects/base.rb:336
 msgid "Attaches source code to a code object with an optional file location"
-msgstr ""
+msgstr "任意のファイルの場所と共にコードオブジェクトの為にソースコードを追加する。"
 
 # @param [#source, String] statement
 #: ../lib/yard/code_objects/base.rb:340
@@ -10385,13 +10432,16 @@ msgid ""
 "the +Parser::Statement+ holding the source code or the raw source\n"
 "as a +String+ for the definition of the code object only (not the block)"
 msgstr ""
+"+Parser::Statement+ はソースコードや\n"
+"コードオブジェクトだけの定義用に(blockではない)\n"
+" +String+ のような未加工のソースを保持する。"
 
 # @param [#source, String]
 # @param
 #: ../lib/yard/code_objects/base.rb:340 ../lib/yard/handlers/base.rb:198
 #: ../lib/yard/handlers/processor.rb:152
 msgid "tag|param|statement"
-msgstr ""
+msgstr "statement"
 
 # YARD::CodeObjects::Base#docstring=
 #: ../lib/yard/code_objects/base.rb:362
@@ -10400,19 +10450,22 @@ msgid ""
 "the statement\n"
 "and filling the {#tags} and {#docstring} methods with the parsed information."
 msgstr ""
+"ステートメントに添付されたコメントを解析する事によって、\n"
+"コードオブジェクトにdocstringを追加する。\n"
+"そして、解析された情報と共に、{#tags}や{#docstring}メソッドを埋め込む。"
 
 # @param [String, Array<String>, Docstring] comments
 #: ../lib/yard/code_objects/base.rb:367
 msgid ""
 "the comments attached to the code object to be parsed\n"
 "into a docstring and meta tags."
-msgstr ""
+msgstr "docstringとメタタグの中を解析する為に、コードオブジェクトに追加される,コメント"
 
 # @param [String, Array<String>, Docstring]
 # @param [String]
 #: ../lib/yard/code_objects/base.rb:367 ../lib/yard/docstring.rb:317
 msgid "tag|param|comments"
-msgstr ""
+msgstr "comments"
 
 # YARD::CodeObjects::Base#type
 #: ../lib/yard/code_objects/base.rb:379
@@ -10420,11 +10473,13 @@ msgid ""
 "Default type is the lowercase class name without the \"Object\" suffix.\n"
 "Override this method to provide a custom object type"
 msgstr ""
+"デフォルトの型は\"Object\"サフィックスなしの小文字のクラス名となる。\n"
+"このメソッドを上書きする為にカスタムオブジェクト型を提供する。"
 
 # @return [Symbol]
 #: ../lib/yard/code_objects/base.rb:382
 msgid "the type of code object this represents"
-msgstr ""
+msgstr "これを表すコードオブジェクトの型"
 
 # YARD::CodeObjects::Base#path
 # YARD::CodeObjects::Base#to_s
@@ -10435,11 +10490,16 @@ msgid ""
 "Custom code objects should ensure that the path is unique to the code\n"
 "object by either overriding {#sep} or this method."
 msgstr ""
+"オブジェクトの固有のパスを表す。\n"
+"デフォルトの実装は、{#sep}の値を挟んで{#namespace} と {#name}のパスを加えた、\n"
+"実装となる。\n"
+"カスタムコードオブジェクトは、{#sep}メソッドやこのメソッドによって\n"
+"固有のパスが確保されるべきである。"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:395
 msgid "the unique path of the object"
-msgstr ""
+msgstr "オブジェクトの固有のパス"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:395
@@ -10449,7 +10509,7 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/base.rb:395
 msgid "tag|example|The path of an instance method"
-msgstr ""
+msgstr "インスタンスメソッドのパス"
 
 # @example The path of an instance method
 #: ../lib/yard/code_objects/base.rb:395
@@ -10459,22 +10519,22 @@ msgstr ""
 # @param [Base, String] other
 #: ../lib/yard/code_objects/base.rb:407
 msgid "another code object (or object path)"
-msgstr ""
+msgstr "他のコードオブジェクト(又は、オブジェクトのパス)"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:407
 msgid "the shortest relative path from this object to +other+"
-msgstr ""
+msgstr "このオブジェクトから +other+ への最短の相対パス"
 
 # YARD::CodeObjects::Base#format
 #: ../lib/yard/code_objects/base.rb:428
 msgid "Renders the object using the {Templates::Engine templating system}."
-msgstr ""
+msgstr "{Templates::Engine templating system}によってオブジェクトを表示する。"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:440 ../lib/yard/templates/engine.rb:81
 msgid "the rendered template"
-msgstr ""
+msgstr "テンプレートを表示する。"
 
 # @option
 #: ../lib/yard/code_objects/base.rb:440 ../lib/yard/templates/engine.rb:81
@@ -10485,7 +10545,7 @@ msgstr ""
 # @param [Hash] options
 #: ../lib/yard/code_objects/base.rb:440
 msgid "a set of options to pass to the template"
-msgstr ""
+msgstr "テンプレートに渡すoptionのグループ"
 
 # @param [Hash]
 #: ../lib/yard/code_objects/base.rb:440 ../lib/yard/templates/engine.rb:81
@@ -10501,7 +10561,7 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/base.rb:440
 msgid "tag|example|Formats a method in html with rdoc markup"
-msgstr ""
+msgstr "rdocマークアップと共に、htmlで、メソッドを書式化する"
 
 # @example Formats a method in html with rdoc markup
 #: ../lib/yard/code_objects/base.rb:440
@@ -10511,23 +10571,23 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/base.rb:440
 msgid "tag|example|Formats a class in plaintext"
-msgstr ""
+msgstr "プレーンテキストでクラスを書式化する"
 
 # YARD::CodeObjects::Base#inspect
 #: ../lib/yard/code_objects/base.rb:446
 msgid "Inspects the object, returning the type and path"
-msgstr ""
+msgstr "オブジェクトを検査し、型とパスを返す。"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:447
 msgid "a string describing the object"
-msgstr ""
+msgstr "オブジェクトを説明する文字列"
 
 # YARD::CodeObjects::Base#namespace=
 # YARD::CodeObjects::Base#parent=
 #: ../lib/yard/code_objects/base.rb:452 ../lib/yard/code_objects/base.rb:474
 msgid "Sets the namespace the object is defined in."
-msgstr ""
+msgstr "中で定義されるオブジェクトのnamespaceを設定する。"
 
 # @param [String, CodeObjects::Base]
 # @param [NamespaceObject, :root, nil]
@@ -10536,7 +10596,7 @@ msgstr ""
 #: ../lib/yard/code_objects/base.rb:456
 #: ../lib/yard/code_objects/extended_method_object.rb:16
 msgid "tag|param|obj"
-msgstr ""
+msgstr "obj"
 
 # @param [NamespaceObject, :root, nil] obj
 #: ../lib/yard/code_objects/base.rb:456
@@ -10545,11 +10605,13 @@ msgid ""
 "for {Registry.root}). If obj is nil, the object is unregistered\n"
 "from the Registry."
 msgstr ""
+"新しいnamespace({Registry.root}用の:root)\n"
+"objがnilの場合、記録されたオブジェクトはレジストリから戻される。"
 
 # YARD::CodeObjects::Base#tag
 #: ../lib/yard/code_objects/base.rb:476
 msgid "Gets a tag from the {#docstring}"
-msgstr ""
+msgstr "{#docstring}メソッドから、取得する。"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:477
@@ -10559,7 +10621,7 @@ msgstr ""
 # YARD::CodeObjects::Base#tags
 #: ../lib/yard/code_objects/base.rb:480
 msgid "Gets a list of tags from the {#docstring}"
-msgstr ""
+msgstr "{#docstring}メソッドから、タグのリストを取得する。"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:481
@@ -10569,7 +10631,7 @@ msgstr ""
 # YARD::CodeObjects::Base#has_tag?
 #: ../lib/yard/code_objects/base.rb:484
 msgid "Tests if the {#docstring} has a tag"
-msgstr ""
+msgstr "{#docstring}メソッドがタグを持つ場合、テストする。"
 
 # @see
 #: ../lib/yard/code_objects/base.rb:485
@@ -10579,7 +10641,7 @@ msgstr ""
 # @return [Boolean]
 #: ../lib/yard/code_objects/base.rb:488
 msgid "whether or not this object is a RootObject"
-msgstr ""
+msgstr "このオブジェクトがRootObjectかどうか"
 
 # YARD::CodeObjects::Base#sep
 #: ../lib/yard/code_objects/base.rb:493
@@ -10589,18 +10651,23 @@ msgid ""
 "method is instance or class respectively). {#path} depends on this\n"
 "value to generate the full path in the form: namespace.path + sep + name"
 msgstr ""
+"このメソッドは、区切りのカスタム構成を上書きする。\n"
+"例えば、{MethodObject}は'#'や'.'のような区切りを実装する。\n"
+"(メソッドのインスタンスやクラスの関係に依存している)\n"
+"{#path}メソッドは namespace.path + sep + name の形式で、\n"
+"フルパスを生成する為、この値に依存している。"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:499
 msgid ""
 "the component that separates the namespace path\n"
 "and the name (default is {NSEP})"
-msgstr ""
+msgstr "namespace path と name で区切る構成となる。(デフォルトは{NSEP})"
 
 # YARD::CodeObjects::Base#format_source
 #: ../lib/yard/code_objects/base.rb:502
 msgid "Formats source code by removing leading indentation"
-msgstr ""
+msgstr "インデントを読み込み削除する事によってソースコードを書式化する"
 
 # @param [Symbol]
 # @param [String]
@@ -10610,17 +10677,17 @@ msgstr ""
 #: ../lib/yard/templates/helpers/html_helper.rb:143
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:9
 msgid "tag|param|source"
-msgstr ""
+msgstr "source"
 
 # @return [String]
 #: ../lib/yard/code_objects/base.rb:505
 msgid "formatted source"
-msgstr ""
+msgstr "書式化されたソース"
 
 # @param [String] source
 #: ../lib/yard/code_objects/base.rb:505
 msgid "the source code to format"
-msgstr ""
+msgstr "書式化するソースコード"
 
 # YARD::CodeObjects::ClassObject
 #: ../lib/yard/code_objects/class_object.rb:3
@@ -12027,7 +12094,6 @@ msgid ""
 "Represents the root namespace object (the invisible Ruby module that\n"
 "holds all top level modules, class and other objects)."
 msgstr ""
-
 # YARD::Config
 #: ../lib/yard/config.rb:3
 msgid ""
