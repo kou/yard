@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 17:26+0900\n"
+"PO-Revision-Date: 2011-12-20 18:21+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11662,111 +11662,113 @@ msgid ""
 "The two main Ruby objects that can act as namespaces are modules\n"
 "({ModuleObject}) and classes ({ClassObject})."
 msgstr ""
+"namespaceはそれ自身の中で他のオブジェクトを記録できる任意のオブジェクトとなる。\n"
+"namespaceがモジュール({ModuleObject})とクラス({ClassObject})のように振る舞えるオブジェクトとなる。"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:6
 msgid "the value to set the attribute constants to."
-msgstr ""
+msgstr "属性の定数を設定する値"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:6
 msgid "the value to set the attribute cvars to."
-msgstr ""
+msgstr "cvars(クラス変数)の属性を設定する値"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:6
 msgid "the value to set the attribute meths to."
-msgstr ""
+msgstr "meths(メソッド)属性を設定する値"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:6
 msgid "the value to set the attribute child to."
-msgstr ""
+msgstr "child属性を設定する値"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:6
 msgid "the value to set the attribute mixins to."
-msgstr ""
+msgstr "mixinの属性を設定する値"
 
 # YARD::CodeObjects::NamespaceObject#child=
 #: ../lib/yard/code_objects/namespace_object.rb:7
 msgid "Sets the attribute child"
-msgstr ""
+msgstr "child属性を設定する"
 
 # YARD::CodeObjects::NamespaceObject#constants=
 #: ../lib/yard/code_objects/namespace_object.rb:7
 msgid "Sets the attribute constants"
-msgstr ""
+msgstr "定数の属性を設定する"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:7
 msgid "the value to set the attribute class_attributes to."
-msgstr ""
+msgstr "class_attributes属性を設定する値"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:7
 msgid "the value to set the attribute instance_attributes to."
-msgstr ""
+msgstr "instance_attributes属性を設定する値"
 
 # YARD::CodeObjects::NamespaceObject#mixins=
 #: ../lib/yard/code_objects/namespace_object.rb:7
 msgid "Sets the attribute mixins"
-msgstr ""
+msgstr "mixinの属性を設定する"
 
 # YARD::CodeObjects::NamespaceObject#meths=
 #: ../lib/yard/code_objects/namespace_object.rb:7
 msgid "Sets the attribute meths"
-msgstr ""
+msgstr "meths属性を設定する"
 
 # YARD::CodeObjects::NamespaceObject#cvars=
 #: ../lib/yard/code_objects/namespace_object.rb:7
 msgid "Sets the attribute cvars"
-msgstr ""
+msgstr "cvarsの属性を設定する"
 
 # YARD::CodeObjects::NamespaceObject#class_attributes=
 #: ../lib/yard/code_objects/namespace_object.rb:8
 msgid "Sets the attribute class_attributes"
-msgstr ""
+msgstr "class_attributes属性を設定する"
 
 # YARD::CodeObjects::NamespaceObject#instance_attributes=
 #: ../lib/yard/code_objects/namespace_object.rb:8
 msgid "Sets the attribute instance_attributes"
-msgstr ""
+msgstr "instance_attributes属性を設定する"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:8
 msgid "the value to set the attribute included_constants to."
-msgstr ""
+msgstr "included_constants属性を設定する値"
 
 # @param value
 #: ../lib/yard/code_objects/namespace_object.rb:8
 msgid "the value to set the attribute included_meths to."
-msgstr ""
+msgstr "included_meths属性を設定する値"
 
 # YARD::CodeObjects::NamespaceObject#included_constants=
 #: ../lib/yard/code_objects/namespace_object.rb:9
 msgid "Sets the attribute included_constants"
-msgstr ""
+msgstr "included_constants属性を設定する"
 
 # YARD::CodeObjects::NamespaceObject#included_meths=
 #: ../lib/yard/code_objects/namespace_object.rb:9
 msgid "Sets the attribute included_meths"
-msgstr ""
+msgstr "included_meths属性を設定する"
 
 # @return [Array<String>]
 #: ../lib/yard/code_objects/namespace_object.rb:12
 msgid "a list of ordered group names inside the namespace"
-msgstr ""
+msgstr "namespace内部の名前のグループへの命令の入ったリスト"
 
 # YARD::CodeObjects::NamespaceObject#children
 #: ../lib/yard/code_objects/namespace_object.rb:15
 msgid "The list of objects defined in this namespace"
-msgstr ""
+msgstr "このnamespaceの中で定義されたオブジェクトのリスト"
 
 # @return [Array<Base>]
 #: ../lib/yard/code_objects/namespace_object.rb:16
 msgid "a list of objects"
-msgstr ""
+msgstr "オブジェクトのリスト"
 
 # YARD::CodeObjects::NamespaceObject#attributes
 #: ../lib/yard/code_objects/namespace_object.rb:19
@@ -11775,6 +11777,9 @@ msgid ""
 "the attribute name with a { :read, :write } hash for the read and\n"
 "write objects respectively."
 msgstr ""
+"ハッシュはクラスとインスタンスの二つのキーを含んでいる,\n"
+"読み書きオブジェクトそれぞれ{:read, :write}ハッシュと共に\n"
+"属性の名前をそれぞれ含んでいる。"
 
 # @return [Hash]
 # @param [Array<CodeObjects::Base>] list
@@ -11782,7 +11787,7 @@ msgstr ""
 #: ../lib/yard/code_objects/namespace_object.rb:44
 #: ../lib/yard/templates/helpers/module_helper.rb:10
 msgid "a list of methods"
-msgstr ""
+msgstr "メソッドのリスト"
 
 # @example The attributes of an object
 #: ../lib/yard/code_objects/namespace_object.rb:39
@@ -11807,7 +11812,7 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/namespace_object.rb:39
 msgid "tag|example|The attributes of an object"
-msgstr ""
+msgstr "オブジェクトの属性"
 
 # YARD::CodeObjects::NamespaceObject#aliases
 #: ../lib/yard/code_objects/namespace_object.rb:42
@@ -11815,33 +11820,35 @@ msgid ""
 "A hash containing two keys, :class and :instance, each containing\n"
 "a hash of objects and their alias names."
 msgstr ""
+"二つのキーを含んでいるハッシュで,クラスとインスタンスはそれぞれ、\n"
+"オブジェクトのハッシュと、そのエイリアスの名前を含んでいる。"
 
 # YARD::CodeObjects::NamespaceObject#class_mixins
 #: ../lib/yard/code_objects/namespace_object.rb:47
 msgid "Class mixins"
-msgstr ""
+msgstr "mixinのクラス"
 
 # @return [Array<ModuleObject>]
 #: ../lib/yard/code_objects/namespace_object.rb:48
 #: ../lib/yard/code_objects/namespace_object.rb:52
 #: ../lib/yard/code_objects/namespace_object.rb:194
 msgid "a list of mixins"
-msgstr ""
+msgstr "mixinのリスト"
 
 # YARD::CodeObjects::NamespaceObject#instance_mixins
 #: ../lib/yard/code_objects/namespace_object.rb:51
 msgid "Instance mixins"
-msgstr ""
+msgstr "mixinのインスタンス"
 
 # YARD::CodeObjects::NamespaceObject#initialize
 #: ../lib/yard/code_objects/namespace_object.rb:55
 msgid "Creates a new namespace object inside +namespace+ with +name+."
-msgstr ""
+msgstr "+name+ と共に、 +namespace+ の内部で新しいnamespaceオブジェクトを作成する。"
 
 # @return [NamespaceObject]
 #: ../lib/yard/code_objects/namespace_object.rb:56
 msgid "a new instance of NamespaceObject"
-msgstr ""
+msgstr "NamespaceObjectの新しいインスタンス"
 
 # @see
 #: ../lib/yard/code_objects/namespace_object.rb:56
@@ -11851,7 +11858,7 @@ msgstr ""
 # YARD::CodeObjects::NamespaceObject#class_attributes
 #: ../lib/yard/code_objects/namespace_object.rb:67
 msgid "Only the class attributes"
-msgstr ""
+msgstr "クラス属性だけ"
 
 # @see
 #: ../lib/yard/code_objects/namespace_object.rb:69
@@ -11863,27 +11870,27 @@ msgstr ""
 #: ../lib/yard/code_objects/namespace_object.rb:69
 #: ../lib/yard/code_objects/namespace_object.rb:76
 msgid "a list of method names and their read/write objects"
-msgstr ""
+msgstr "メソッド名のリストとそれを読み/書きするオブジェクト"
 
 # YARD::CodeObjects::NamespaceObject#instance_attributes
 #: ../lib/yard/code_objects/namespace_object.rb:74
 msgid "Only the instance attributes"
-msgstr ""
+msgstr "インスタンス属性だけ"
 
 # YARD::CodeObjects::NamespaceObject#child
 #: ../lib/yard/code_objects/namespace_object.rb:81
 msgid "Looks for a child that matches the attributes specified by +opts+."
-msgstr ""
+msgstr "+opts+に指定された属性にマッチする子を検索する"
 
 # @return [Base, nil]
 #: ../lib/yard/code_objects/namespace_object.rb:86
 msgid "the first matched child object, or nil"
-msgstr ""
+msgstr "最初にマッチした子のオブジェクト、又はnil"
 
 # @example
 #: ../lib/yard/code_objects/namespace_object.rb:86
 msgid "tag|example|Finds a child by name and scope"
-msgstr ""
+msgstr "名前とスコープの子を検索する"
 
 # @example Finds a child by name and scope
 #: ../lib/yard/code_objects/namespace_object.rb:86
@@ -11898,11 +11905,13 @@ msgid ""
 "Returns all methods that match the attributes specified by +opts+. If\n"
 "no options are provided, returns all methods."
 msgstr ""
+"+opts+に指定された属性にマッチする全てのメソッドを返す。\n"
+"optionが提供されない場合は、全てのメソッドを返す。"
 
 # @return [Array<MethodObject>]
 #: ../lib/yard/code_objects/namespace_object.rb:113
 msgid "a list of method objects"
-msgstr ""
+msgstr "オブジェクトのメソッドのリスト"
 
 # @example Finds all private and protected class methods
 #: ../lib/yard/code_objects/namespace_object.rb:113
@@ -11914,7 +11923,7 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/namespace_object.rb:113
 msgid "tag|example|Finds all private and protected class methods"
-msgstr ""
+msgstr "全てのprivateとクラスメソッドのprotectedを検索する"
 
 # @param [Hash] opts
 #: ../lib/yard/server/rack_adapter.rb:26
@@ -11924,7 +11933,7 @@ msgstr ""
 #: ../lib/yard/handlers/base.rb:355
 #: ../lib/yard/serializers/file_system_serializer.rb:27
 msgid "a customizable set of options"
-msgstr ""
+msgstr "カスタマイズ可能なオプションのグループ"
 
 # YARD::CodeObjects::NamespaceObject#included_meths
 #: ../lib/yard/code_objects/namespace_object.rb:133
@@ -11933,6 +11942,8 @@ msgid ""
 "specified by +opts+. If no options are specified, returns all included\n"
 "methods."
 msgstr ""
+"+opts+で指定された属性にマッチする任意のmixinから含んでいるメソッドを返す\n"
+"オプションが指定されない場合、全ての含んでいるメソッドを返すmethods."
 
 # @see
 #: ../lib/yard/code_objects/namespace_object.rb:144
@@ -11942,39 +11953,39 @@ msgstr ""
 # YARD::CodeObjects::NamespaceObject#constants
 #: ../lib/yard/code_objects/namespace_object.rb:160
 msgid "Returns all constants in the namespace"
-msgstr ""
+msgstr "namespaceの中の全ての定数を返す"
 
 # @return [Array<ConstantObject>]
 #: ../lib/yard/code_objects/namespace_object.rb:164
 #: ../lib/yard/code_objects/namespace_object.rb:172
 msgid "a list of constant objects"
-msgstr ""
+msgstr "定数オブジェクトのリスト"
 
 # YARD::CodeObjects::NamespaceObject#included_constants
 #: ../lib/yard/code_objects/namespace_object.rb:171
 msgid "Returns constants included from any mixins"
-msgstr ""
+msgstr "任意のmixinから、含んでいる定数を返す"
 
 # YARD::CodeObjects::NamespaceObject#cvars
 #: ../lib/yard/code_objects/namespace_object.rb:185
 msgid "Returns class variables defined in this namespace."
-msgstr ""
+msgstr "このnamespaseの中で定義されたクラス変数を返す"
 
 # @return [Array<ClassVariableObject>]
 #: ../lib/yard/code_objects/namespace_object.rb:186
 msgid "a list of class variable objects"
-msgstr ""
+msgstr "オブジェクトのクラス変数のリスト"
 
 # YARD::CodeObjects::NamespaceObject#mixins
 #: ../lib/yard/code_objects/namespace_object.rb:191
 msgid ""
 "Returns for specific scopes. If no scopes are provided, returns all mixins."
-msgstr ""
+msgstr "固有のスコープを返す。スコープが提供されない場合、全てのmixinを返す"
 
 # @param [Array<Symbol>]
 #: ../lib/yard/code_objects/namespace_object.rb:194
 msgid "tag|param|scopes"
-msgstr ""
+msgstr "scopes"
 
 # @param [Array<Symbol>] scopes
 #: ../lib/yard/code_objects/namespace_object.rb:194
@@ -11982,6 +11993,8 @@ msgid ""
 "a list of scopes (:class, :instance) to\n"
 "return mixins for. If this is empty, all scopes will be returned."
 msgstr ""
+"mixinを返す為のスコープのリスト(:class, :instance).\n"
+"これが空の場合、全てのスコープが、返されるだろう。"
 
 # YARD::CodeObjects::ProxyMethodError
 #: ../lib/yard/code_objects/proxy.rb:4
