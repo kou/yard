@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 11:17+0900\n"
+"PO-Revision-Date: 2011-12-20 11:56+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10869,7 +10869,7 @@ msgstr "定数を設定される値"
 msgid ""
 "Represents an instance method of a module that was mixed into the class\n"
 "scope of another namespace."
-msgstr ""
+msgstr "他のnamespaceのクラススコープの中へ混ぜられたモジュールのインスタンスメソッドを表す。"
 
 # @see
 #: ../lib/yard/code_objects/extended_method_object.rb:21
@@ -10880,29 +10880,31 @@ msgstr ""
 # @return [Symbol]
 #: ../lib/yard/code_objects/extended_method_object.rb:10
 msgid "always +:class+"
-msgstr ""
+msgstr "常に +:class+"
 
 # YARD::CodeObjects::ExtendedMethodObject#initialize
 #: ../lib/yard/code_objects/extended_method_object.rb:13
 msgid "Sets up a delegate for {MethodObject} obj."
-msgstr ""
+msgstr "{MethodObject}オブジェクト用に委譲をセットアップする"
 
 # @param [MethodObject] obj
 #: ../lib/yard/code_objects/extended_method_object.rb:16
 msgid ""
 "the instance method to treat as a mixed in\n"
 "class method on another namespace."
-msgstr ""
+msgstr "別のnamespace上でクラスメソッドを混ぜたような処理をする,インスタンスメソッド"
 
 # @return [ExtendedMethodObject]
 #: ../lib/yard/code_objects/extended_method_object.rb:16
 msgid "a new instance of ExtendedMethodObject"
-msgstr ""
+msgstr "ExtendedMethodObjectの新しいインスタンス"
 
 # YARD::CodeObjects::ExtendedMethodObject#method_missing
 #: ../lib/yard/code_objects/extended_method_object.rb:19
 msgid "Sends all methods to the {MethodObject} assigned in {#initialize}"
 msgstr ""
+"{MethodObject}が{#initialize}メソッドを割り当てる事によって、\n"
+"全てのメソッドを__send__する。"
 
 # YARD::CodeObjects::ExtraFileObject
 #: ../lib/yard/code_objects/extra_file_object.rb:3
@@ -10914,42 +10916,45 @@ msgid ""
 "structurally\n"
 "compatible with most CodeObject interfaces."
 msgstr ""
+"ExtraFileObjectは、追加のドキュメントファイル(README や 他のファイル)を表すけれど、\n"
+"コードオブジェクトに限らず(`Base`から継承はできない)`path`, `name` , `type`を実装できる。\n"
+"従って、殆どのCodeObjectインターフェースと互換性があり、構造上両立されるべきである。"
 
 # @param value
 #: ../lib/yard/code_objects/extra_file_object.rb:9
 msgid "the value to set the attribute filename to."
-msgstr ""
+msgstr "filename属性を設定する値"
 
 # @param value
 #: ../lib/yard/code_objects/extra_file_object.rb:10
 msgid "the value to set the attribute attributes to."
-msgstr ""
+msgstr "attributesの属性を設定する値"
 
 # YARD::CodeObjects::ExtraFileObject#filename=
 #: ../lib/yard/code_objects/extra_file_object.rb:10
 msgid "Sets the attribute filename"
-msgstr ""
+msgstr "filename属性を設定する"
 
 # YARD::CodeObjects::ExtraFileObject#filename
 #: ../lib/yard/code_objects/extra_file_object.rb:10
 msgid "Returns the value of attribute filename"
-msgstr ""
+msgstr "filename属性の値を返す"
 
 # YARD::CodeObjects::ExtraFileObject#attributes=
 #: ../lib/yard/code_objects/extra_file_object.rb:11
 msgid "Sets the attribute attributes"
-msgstr ""
+msgstr "attributes属性を設定する"
 
 # @param value
 #: ../lib/yard/code_objects/extra_file_object.rb:11
 #: ../lib/yard/tags/ref_tag_list.rb:4 ../lib/yard/templates/section.rb:7
 msgid "the value to set the attribute name to."
-msgstr ""
+msgstr "name属性を設定する値"
 
 # YARD::CodeObjects::ExtraFileObject#attributes
 #: ../lib/yard/code_objects/extra_file_object.rb:11
 msgid "Returns the value of attribute attributes"
-msgstr ""
+msgstr "attributes属性の値を返す"
 
 # YARD::CodeObjects::ExtraFileObject#name
 # YARD::CodeObjects::ExtraFileObject#path
@@ -10976,7 +10981,7 @@ msgstr "name属性を設定する"
 # YARD::CodeObjects::ExtraFileObject#initialize
 #: ../lib/yard/code_objects/extra_file_object.rb:14
 msgid "Creates a new extra file object."
-msgstr ""
+msgstr "新しく追加のファイルオブジェクトを作成する"
 
 # @param [String, CodeObjects::ExtraFileObject]
 # @param [String]
@@ -10987,23 +10992,23 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:503
 #: ../lib/yard/templates/helpers/base_helper.rb:143
 msgid "tag|param|filename"
-msgstr ""
+msgstr "filename"
 
 # @param [String] filename
 #: ../lib/yard/code_objects/extra_file_object.rb:17
 msgid "the location on disk of the file"
-msgstr ""
+msgstr "ファイルのディスク上の場所"
 
 # @param [String]
 #: ../lib/yard/code_objects/extra_file_object.rb:17
 #: ../lib/yard/templates/helpers/markup_helper.rb:118
 msgid "tag|param|contents"
-msgstr ""
+msgstr "contents"
 
 # @return [ExtraFileObject]
 #: ../lib/yard/code_objects/extra_file_object.rb:17
 msgid "a new instance of ExtraFileObject"
-msgstr ""
+msgstr "ExtraFileObjectの新しいインスタンス"
 
 # @param [String] contents
 #: ../lib/yard/code_objects/extra_file_object.rb:17
@@ -11011,6 +11016,8 @@ msgid ""
 "the file contents. If not set, the contents\n"
 "will be read from disk using the +filename+."
 msgstr ""
+"ファイルの内容となる。設定しない場合、\n"
+"contentsは、 +filename+ によってディスクから読み込まれるだろう。"
 
 # @param [String] data
 #: ../lib/yard/code_objects/extra_file_object.rb:84
