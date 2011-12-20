@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-19 18:27+0900\n"
+"PO-Revision-Date: 2011-12-20 11:10+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10696,26 +10696,28 @@ msgid ""
 "{ModuleObject}\n"
 "with extra inheritance semantics through the superclass."
 msgstr ""
+"クラスオブジェクトはソースコードの中のRubyクラスを意味する。\n"
+"それは、スーパークラスを介した特別な継承の意味を持つ {ModuleObject} となる。"
 
 # YARD::CodeObjects::ClassObject#superclass
 #: ../lib/yard/code_objects/class_object.rb:6
 msgid "The {ClassObject} that this class object inherits from in Ruby source."
-msgstr ""
+msgstr "このクラスオブジェクトがRubyのソースから継承する{ClassObject}"
 
 # @return [ClassObject]
 #: ../lib/yard/code_objects/class_object.rb:7
 msgid "a class object that is the superclass of this one"
-msgstr ""
+msgstr "このクラスオブジェクトのスーパークラスとなるクラスオブジェクトを返す"
 
 # YARD::CodeObjects::ClassObject#initialize
 #: ../lib/yard/code_objects/class_object.rb:10
 msgid "Creates a new class object in +namespace+ with +name+"
-msgstr ""
+msgstr "+name+ と共に +namespace+ の中で新しいクラスオブジェクトを作成する。"
 
 # @return [ClassObject]
 #: ../lib/yard/code_objects/class_object.rb:12
 msgid "a new instance of ClassObject"
-msgstr ""
+msgstr "クラスオブジェクトの新しいインスタンス"
 
 # @see
 #: ../lib/yard/code_objects/class_object.rb:12
@@ -10725,37 +10727,37 @@ msgstr ""
 # YARD::CodeObjects::ClassObject#is_exception?
 #: ../lib/yard/code_objects/class_object.rb:30
 msgid "Whether or not the class is a Ruby Exception"
-msgstr ""
+msgstr "Ruby Exceptionクラスかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/class_object.rb:32
 msgid "whether the object represents a Ruby exception"
-msgstr ""
+msgstr "Ruby exceptionクラスを表すオブジェクトかどうか"
 
 # YARD::CodeObjects::ClassObject#inheritance_tree
 #: ../lib/yard/code_objects/class_object.rb:37
 msgid "Returns the inheritance tree of the object including self."
-msgstr ""
+msgstr "自身を含んでいるオブジェクトの継承ツリーを返す"
 
 # @param [Boolean]
 #: ../lib/yard/code_objects/class_object.rb:42
 #: ../lib/yard/code_objects/module_object.rb:9
 msgid "tag|param|include_mods"
-msgstr ""
+msgstr "include_mods"
 
 # @param [Boolean] include_mods
 #: ../lib/yard/code_objects/class_object.rb:42
 msgid ""
 "whether or not to include mixins in the\n"
 "inheritance tree."
-msgstr ""
+msgstr "継承ツリーの中でmixinを含んでいるかどうか"
 
 # @return [Array<NamespaceObject>]
 #: ../lib/yard/code_objects/class_object.rb:42
 msgid ""
 "the list of code objects that make up\n"
 "the inheritance tree."
-msgstr ""
+msgstr "継承ツリーを作り上げるコードオブジェクトのリスト"
 
 # YARD::CodeObjects::ClassObject#meths
 #: ../lib/yard/code_objects/class_object.rb:55
@@ -10763,6 +10765,8 @@ msgid ""
 "Returns the list of methods matching the options hash. Returns\n"
 "all methods if hash is empty."
 msgstr ""
+"ハッシュのオプションにマッチするメソッドのリストを返す。\n"
+"(ハッシュが空の場合は、全てのメソッド)"
 
 # @option
 #: ../lib/yard/server/adapter.rb:71 ../lib/yard/server/rack_adapter.rb:26
@@ -10774,58 +10778,58 @@ msgstr ""
 #: ../lib/yard/handlers/base.rb:355 ../lib/yard/parser/ruby/ast_node.rb:139
 #: ../lib/yard/serializers/file_system_serializer.rb:27
 msgid "tag|option|opts"
-msgstr ""
+msgstr "opts"
 
 # @param [Hash] opts
 #: ../lib/yard/code_objects/class_object.rb:63
 #: ../lib/yard/code_objects/class_object.rb:98
 msgid "the options hash to match"
-msgstr ""
+msgstr "マッチするハッシュのオプション"
 
 # @return [Array<MethodObject>]
 #: ../lib/yard/code_objects/class_object.rb:63
 msgid "the list of methods that matched"
-msgstr ""
+msgstr "マッチしたメソッドのリスト"
 
 # YARD::CodeObjects::ClassObject#inherited_meths
 #: ../lib/yard/code_objects/class_object.rb:74
 msgid "Returns only the methods that were inherited."
-msgstr ""
+msgstr "継承したメソッドだけを返す"
 
 # @return [Array<MethodObject>]
 #: ../lib/yard/code_objects/class_object.rb:76
 msgid "the list of inherited method objects"
-msgstr ""
+msgstr "メソッドオブジェクトを継承したリスト"
 
 # YARD::CodeObjects::ClassObject#constants
 #: ../lib/yard/code_objects/class_object.rb:91
 msgid "Returns the list of constants matching the options hash."
-msgstr ""
+msgstr "ハッシュのオプションにマッチする定数のリストを返す"
 
 # @return [Array<ConstantObject>]
 #: ../lib/yard/code_objects/class_object.rb:98
 msgid "the list of constant that matched"
-msgstr ""
+msgstr "マッチした定数のリスト"
 
 # YARD::CodeObjects::ClassObject#inherited_constants
 #: ../lib/yard/code_objects/class_object.rb:104
 msgid "Returns only the constants that were inherited."
-msgstr ""
+msgstr "継承された定数だけ返す"
 
 # @return [Array<ConstantObject>]
 #: ../lib/yard/code_objects/class_object.rb:106
 msgid "the list of inherited constant objects"
-msgstr ""
+msgstr "定数オブジェクトを継承したリスト"
 
 # YARD::CodeObjects::ClassObject#superclass=
 #: ../lib/yard/code_objects/class_object.rb:119
 msgid "Sets the superclass of the object"
-msgstr ""
+msgstr "オブジェクトのスーパークラスをグループ化する。"
 
 # @param [Base, Proxy, String, Symbol, nil] object
 #: ../lib/yard/code_objects/class_object.rb:122
 msgid "the superclass value"
-msgstr ""
+msgstr "スーパークラスの値"
 
 # YARD::CodeObjects::ClassVariableObject
 #: ../lib/yard/code_objects/class_variable_object.rb:3
@@ -10849,7 +10853,7 @@ msgstr ""
 # YARD::CodeObjects::ConstantObject#value
 #: ../lib/yard/code_objects/constant_object.rb:6
 msgid "The source code representing the constant's value"
-msgstr ""
+msgstr "定数の値を表しているソースコード"
 
 # @return [String]
 #: ../lib/yard/code_objects/constant_object.rb:7
