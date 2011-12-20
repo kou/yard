@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 11:56+0900\n"
+"PO-Revision-Date: 2011-12-20 12:44+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11022,7 +11022,7 @@ msgstr ""
 # @param [String] data
 #: ../lib/yard/code_objects/extra_file_object.rb:84
 msgid "the file contents"
-msgstr ""
+msgstr "ファイルの内容"
 
 # YARD::CodeObjects::MacroObject
 #: ../lib/yard/code_objects/macro_object.rb:4
