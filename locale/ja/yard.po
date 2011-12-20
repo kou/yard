@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 11:10+0900\n"
+"PO-Revision-Date: 2011-12-20 11:12+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10837,11 +10837,13 @@ msgid ""
 "Represents a class variable inside a namespace. The path is expressed\n"
 "in the form \"A::B::@@classvariable\""
 msgstr ""
+"namespaceの内部でクラス変数を表す。\n"
+"パスは、\"A::B::@@classvariable\"形式で表される。"
 
 # @return [String]
 #: ../lib/yard/code_objects/class_variable_object.rb:6
 msgid "the class variable's value"
-msgstr ""
+msgstr "クラス変数の値"
 
 # YARD::CodeObjects::ConstantObject
 #: ../lib/yard/code_objects/constant_object.rb:3
