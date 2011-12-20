@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 17:05+0900\n"
+"PO-Revision-Date: 2011-12-20 17:26+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11636,28 +11636,24 @@ msgstr "インスタンスメソッド用の\"#\"、クラス用の\".\"。"
 # YARD::CodeObjects::ModuleObject
 #: ../lib/yard/code_objects/module_object.rb:3
 msgid "Represents a Ruby module."
-msgstr ""
+msgstr "Rubyモジュールを表す。"
 
 # YARD::CodeObjects::ModuleObject#inheritance_tree
 #: ../lib/yard/code_objects/module_object.rb:5
 msgid "Returns the inheritance tree of mixins."
-msgstr ""
+msgstr "mixinの継承ツリーを返す"
 
 # @return [Array<NamespaceObject>]
 #: ../lib/yard/code_objects/module_object.rb:9
 msgid "a list of namespace objects"
-msgstr ""
+msgstr "オブジェクトのnamespaceのリスト"
 
 # @param [Boolean] include_mods
 #: ../lib/yard/code_objects/module_object.rb:9
 msgid ""
 "if true, will include mixed in\n"
 "modules (which is likely what is wanted)."
-msgstr ""
-"\n"
-"\n"
-"if true, will include mixed in\n"
-"modules (which is likely what is wanted)."
+msgstr "trueの場合、mixinされるモジュールを含んでいる(それが何ができそうであるか)"
 
 # YARD::CodeObjects::NamespaceObject
 #: ../lib/yard/code_objects/namespace_object.rb:3
