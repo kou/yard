@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 15:09+0900\n"
+"PO-Revision-Date: 2011-12-20 17:05+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11390,17 +11390,17 @@ msgstr ""
 # YARD::CodeObjects::MethodObject
 #: ../lib/yard/code_objects/method_object.rb:3
 msgid "Represents a Ruby method in source"
-msgstr ""
+msgstr "ソースの中のRubyメソッドを表す。"
 
 # YARD::CodeObjects::MethodObject#scope
 #: ../lib/yard/code_objects/method_object.rb:5
 msgid "The scope of the method (+:class+ or +:instance+)"
-msgstr ""
+msgstr "メソッドのスコープ( +:class+ や +:instance+ )"
 
 # @return [Symbol]
 #: ../lib/yard/code_objects/method_object.rb:7
 msgid "the scope"
-msgstr ""
+msgstr "スコープ"
 
 # YARD::CodeObjects::MethodObject#explicit
 # YARD::CodeObjects::MethodObject#explicit=
@@ -11410,11 +11410,16 @@ msgid ""
 "inferred by a handler. For instance, attribute methods are generally\n"
 "inferred and therefore not explicitly defined in source."
 msgstr ""
+"オブジェクトがソースの中で明確に定義されるかどうかや、\n"
+"それがハンドラーによって推察されたかどうか。\n"
+"例えば、メソッドの属性が、全体的な設定を推察され、\n"
+"従って、ソースの中で明確に定義されず、\n"
+"マーカーはどこも示せない。"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:14
 msgid "whether the object is explicitly defined in source."
-msgstr ""
+msgstr "オブジェクトがソースの中で明確に定義されたかどうか"
 
 # YARD::CodeObjects::MethodObject#parameters
 # YARD::CodeObjects::MethodObject#parameters=
@@ -11422,14 +11427,14 @@ msgstr ""
 msgid ""
 "Returns the list of parameters parsed out of the method signature\n"
 "with their default values."
-msgstr ""
+msgstr "メソッドの用法のデフォルトの値と共に、その出力の解析された引数のリストを返す。"
 
 # @return [Array<Array(String, String)>]
 #: ../lib/yard/code_objects/method_object.rb:21
 msgid ""
 "a list of parameter names followed\n"
 "by their default values (or nil)"
-msgstr ""
+msgstr "引数名のデフォルトの値をフォローする(又は、nil)"
 
 # YARD::CodeObjects::MethodObject#initialize
 #: ../lib/yard/code_objects/method_object.rb:24
@@ -11437,126 +11442,128 @@ msgid ""
 "Creates a new method object in +namespace+ with +name+ and an instance\n"
 "or class +scope+"
 msgstr ""
+"+name+ とインスタンスや +scope+ クラスと共に、\n"
+"+namespace+の中で新しいメソッドオブジェクトを作成する。"
 
 # @param [Symbol]
 #: ../lib/yard/code_objects/method_object.rb:29
 msgid "tag|param|scope"
-msgstr ""
+msgstr "scope"
 
 # @param [NamespaceObject] namespace
 #: ../lib/yard/code_objects/method_object.rb:29
 msgid "the namespace"
-msgstr ""
+msgstr "namespace"
 
 # @param [Symbol] scope
 #: ../lib/yard/code_objects/method_object.rb:29
 msgid "+:instance+ or +:class+"
-msgstr ""
+msgstr "+:instance+ 又は +:class+"
 
 # @param [String, Symbol] name
 #: ../lib/yard/code_objects/method_object.rb:29
 msgid "the method name"
-msgstr ""
+msgstr "メソッド名"
 
 # @return [MethodObject]
 #: ../lib/yard/code_objects/method_object.rb:29
 msgid "a new instance of MethodObject"
-msgstr ""
+msgstr "メソッドオブジェクトの新しいインスタンス"
 
 # YARD::CodeObjects::MethodObject#scope=
 #: ../lib/yard/code_objects/method_object.rb:39
 msgid "Changes the scope of an object from :instance or :class"
-msgstr ""
+msgstr ":instanceや:classからオブジェクトのスコープを変更する。"
 
 # @param [Symbol] v
 #: ../lib/yard/code_objects/method_object.rb:40
 msgid "the new scope"
-msgstr ""
+msgstr "新しいスコープ"
 
 # @param [Symbol]
 #: ../lib/yard/code_objects/method_object.rb:40
 msgid "tag|param|v"
-msgstr ""
+msgstr "v"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:49
 msgid "whether or not the method is the #initialize constructor method"
-msgstr ""
+msgstr "メソッドが#initialize,コンストラクタメソッドかどうか"
 
 # YARD::CodeObjects::MethodObject#attr_info
 #: ../lib/yard/code_objects/method_object.rb:54
 msgid "Returns the read/writer info for the attribute if it is one"
-msgstr ""
+msgstr "属性がひとつだけの場合、読み/書きする為の情報を返す。"
 
 # @return [nil]
 #: ../lib/yard/code_objects/method_object.rb:57
 msgid "if the method is not an attribute"
-msgstr ""
+msgstr "メソッドが属性で無い場合"
 
 # @return [SymbolHash]
 #: ../lib/yard/code_objects/method_object.rb:57
 msgid "if there is information about the attribute"
-msgstr ""
+msgstr "属性についての情報がある場合"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:64
 msgid "whether the method is a writer attribute"
-msgstr ""
+msgstr "メソッドがwriter属性かどうか"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:70
 msgid "whether the method is a reader attribute"
-msgstr ""
+msgstr "メソッドがreader属性かどうか"
 
 # YARD::CodeObjects::MethodObject#is_attribute?
 #: ../lib/yard/code_objects/method_object.rb:75
 msgid "Tests if the object is defined as an attribute in the namespace"
-msgstr ""
+msgstr "オブジェクトがnamespaceの中でその属性を定義される場合、テストする。"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:76
 msgid "whether the object is an attribute"
-msgstr ""
+msgstr "オブジェクトが属性かどうか"
 
 # YARD::CodeObjects::MethodObject#is_alias?
 #: ../lib/yard/code_objects/method_object.rb:82
 msgid "Tests if the object is defined as an alias of another method"
-msgstr ""
+msgstr "オブジェクトが別のメソッドがそのエイリアスに定義される場合、テストする。"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:83
 msgid "whether the object is an alias"
-msgstr ""
+msgstr "オブジェクトがエイリアスかどうか"
 
 # YARD::CodeObjects::MethodObject#is_explicit?
 #: ../lib/yard/code_objects/method_object.rb:89
 msgid "Tests boolean {#explicit} value."
-msgstr ""
+msgstr "ブールの{#explicit}メソッドの値をテストする。"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/method_object.rb:91
 msgid "whether the method is explicitly defined in source"
-msgstr ""
+msgstr "メソッドがソースの中で明確に定義されるかどうか"
 
 # @return [nil]
 #: ../lib/yard/code_objects/method_object.rb:98
 msgid "if it does not override a method"
-msgstr ""
+msgstr "メソッドが上書きされない場合"
 
 # @return [MethodObject]
 #: ../lib/yard/code_objects/method_object.rb:98
 msgid "the object that this method overrides"
-msgstr ""
+msgstr "このメソッドが上書きするオブジェクト"
 
 # YARD::CodeObjects::MethodObject#aliases
 #: ../lib/yard/code_objects/method_object.rb:105
 msgid "Returns all alias names of the object"
-msgstr ""
+msgstr "オブジェクトの全てのエイリアスの名前を返す"
 
 # @return [Array<Symbol>]
 #: ../lib/yard/code_objects/method_object.rb:106
 msgid "the alias names"
-msgstr ""
+msgstr "エイリアスの名前"
 
 # YARD::CodeObjects::MethodObject#path
 #: ../lib/yard/code_objects/method_object.rb:116
@@ -11564,26 +11571,28 @@ msgid ""
 "Override path handling for instance methods in the root namespace\n"
 "(they should still have a separator as a prefix)."
 msgstr ""
+"root namespaseの中のインスタンスメソッド用に操作するパスを上書きする。\n"
+"(root namespaseはプレフィックスとして区切りが必要である)"
 
 # @return [String]
 #: ../lib/yard/code_objects/method_object.rb:118
 msgid "the path of a method"
-msgstr ""
+msgstr "メソッドのパス"
 
 # YARD::CodeObjects::MethodObject#name
 #: ../lib/yard/code_objects/method_object.rb:127
 msgid "Returns the name of the object."
-msgstr ""
+msgstr "オブジェクトの名前を返す"
 
 # @param [Boolean] prefix
 #: ../lib/yard/code_objects/method_object.rb:136
 msgid "whether or not to show the prefix"
-msgstr ""
+msgstr "プレフィックスを見せるかどうか"
 
 # @example
 #: ../lib/yard/code_objects/method_object.rb:136
 msgid "tag|example|The name of a class method (with prefix)"
-msgstr ""
+msgstr "クラスメソッドの名前(プレフィックスを用いる)"
 
 # @example The name of a class method (with prefix)
 #: ../lib/yard/code_objects/method_object.rb:136
@@ -11600,29 +11609,29 @@ msgstr ""
 msgid ""
 "returns {#sep} + +name+ for an instance method if\n"
 "prefix is true"
-msgstr ""
+msgstr "プレフィックスがtrueの場合、インスタンスメソッド用に{#sep} + +name+ を返す"
 
 # @return [Symbol]
 #: ../lib/yard/code_objects/method_object.rb:136
 msgid "the name without {#sep} if prefix is set to false"
-msgstr ""
+msgstr "プレフィックスにfalseを設定する場合、{#sep}メソッド無しの名前となる。"
 
 # @example
 #: ../lib/yard/code_objects/method_object.rb:136
 msgid "tag|example|The name of an instance method (with prefix)"
-msgstr ""
+msgstr "インスタンスメソッドの名前(プレフィックスを用いる)"
 
 # YARD::CodeObjects::MethodObject#sep
 #: ../lib/yard/code_objects/method_object.rb:143
 msgid ""
 "Override separator to differentiate between class and instance\n"
 "methods."
-msgstr ""
+msgstr "インスタンスメソッドとクラスの間で区別する為に区切りを上書きする。"
 
 # @return [String]
 #: ../lib/yard/code_objects/method_object.rb:145
 msgid "\"#\" for an instance method, \".\" for class"
-msgstr ""
+msgstr "インスタンスメソッド用の\"#\"、クラス用の\".\"。"
 
 # YARD::CodeObjects::ModuleObject
 #: ../lib/yard/code_objects/module_object.rb:3
@@ -11645,6 +11654,10 @@ msgid ""
 "if true, will include mixed in\n"
 "modules (which is likely what is wanted)."
 msgstr ""
+"\n"
+"\n"
+"if true, will include mixed in\n"
+"modules (which is likely what is wanted)."
 
 # YARD::CodeObjects::NamespaceObject
 #: ../lib/yard/code_objects/namespace_object.rb:3
