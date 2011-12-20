@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 12:44+0900\n"
+"PO-Revision-Date: 2011-12-20 15:09+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11033,18 +11033,23 @@ msgid ""
 "+attached+ type flag to the macro definition to have it attached to the\n"
 "specific DSL method so it will be implicitly reused."
 msgstr ""
+"マクロオブジェクトは、+@macro NAME+ を通じて定義した docstring を表し、\n"
+"+@macro NAME+ タグを指定する事によって、再利用できる。\n"
+"あなたは、固有のDSLメソッドに加えるマクロ定義の為に\n"
+"+attached+ 型フラグを提供もできる。\n"
+"なので、暗黙の内に再利用されるだろう。"
 
 # YARD::CodeObjects::MacroObject
 #: ../lib/yard/code_objects/macro_object.rb:9
 msgid ""
 "Macros are fully described in the {file:docs/Tags.md#macros Tags Overview}\n"
 "document."
-msgstr ""
+msgstr "マクロは、{file:docs/Tags.md#macros Tags Overview}ドキュメントで詳細に説明されている。"
 
 # @example
 #: ../lib/yard/code_objects/macro_object.rb:27
 msgid "tag|example|Creating a macro that is attached to the method call"
-msgstr ""
+msgstr "メソッド呼び出しの為に加えられるマクロを作成する。"
 
 # @example Creating a basic named macro
 #: ../lib/yard/code_objects/macro_object.rb:27
@@ -11072,12 +11077,12 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/macro_object.rb:27
 msgid "tag|example|Creating a basic named macro"
-msgstr ""
+msgstr "一般的なマクロを作成"
 
 # YARD::CodeObjects::MacroObject.create
 #: ../lib/yard/code_objects/macro_object.rb:32
 msgid "Creates a new macro and fills in the relevant properties."
-msgstr ""
+msgstr "関連したプロパティのファイルと新しいマクロを作成する。"
 
 # @param [CodeObjects::Base] method_object
 #: ../lib/yard/code_objects/macro_object.rb:37
@@ -11085,42 +11090,44 @@ msgid ""
 "an object to attach this\n"
 "macro to. If supplied, {#attached?} will be true"
 msgstr ""
+"このマクロに加えるオブジェクト。もし提供された場合、\n"
+"{#attached?}はtrueになる。"
 
 # @param [CodeObjects::Base]
 #: ../lib/yard/code_objects/macro_object.rb:37
 #: ../lib/yard/code_objects/macro_object.rb:66
 msgid "tag|param|method_object"
-msgstr ""
+msgstr "method_object"
 
 # @param [String] data
 #: ../lib/yard/code_objects/macro_object.rb:37
 msgid "the data the macro should expand when re-used"
-msgstr ""
+msgstr "再利用された時、マクロが展開するであろうデータ"
 
 # @param [String] macro_name
 #: ../lib/yard/code_objects/macro_object.rb:37
 msgid "the name of the macro, must be unique."
-msgstr ""
+msgstr "マクロの名前、固有のものにしなければならない"
 
 # @param [String]
 #: ../lib/yard/code_objects/macro_object.rb:37
 msgid "tag|param|macro_name"
-msgstr ""
+msgstr "macro_name"
 
 # YARD::CodeObjects::MacroObject.find
 #: ../lib/yard/code_objects/macro_object.rb:45
 msgid "Finds a macro using +macro_name+"
-msgstr ""
+msgstr "+macro_name+ のマクロを見つける"
 
 # @return [MacroObject]
 #: ../lib/yard/code_objects/macro_object.rb:47
 msgid "if a macro is found"
-msgstr ""
+msgstr "マクロが見つかった場合"
 
 # @return [nil]
 #: ../lib/yard/code_objects/macro_object.rb:47
 msgid "if there is no registered macro by that name"
-msgstr ""
+msgstr "マクロの名前が記録されない場合"
 
 # YARD::CodeObjects::MacroObject.find_or_create
 # YARD::CodeObjects::MacroObject.create_docstring
@@ -11131,6 +11138,9 @@ msgid ""
 "not. If the macro has $variable names or if it has a @macro tag\n"
 "with the [new] or [attached] flag, it is considered new."
 msgstr ""
+"マクロが\"new\"されるかされないかで、与えられるdocstringを解析する。\n"
+"マクロが$変数名や@macroタグと一緒に[new]や[attached]フラグを持っている場合、\n"
+"newと見なされる。"
 
 # YARD::CodeObjects::MacroObject.find_or_create
 # YARD::CodeObjects::MacroObject.create_docstring
@@ -11141,6 +11151,9 @@ msgid ""
 "the macro name is searched and returned. If a macro is not found,\n"
 "nil is returned."
 msgstr ""
+"新しいマクロが見つかった場合、作成され記録される。\n"
+"その他の場合、マクロ名が検索され返される。\n"
+"マクロが見つからなかった場合は、nilが返される。"
 
 # @return [MacroObject]
 #: ../lib/yard/code_objects/macro_object.rb:66
@@ -11148,6 +11161,8 @@ msgid ""
 "the newly created or existing macro, depending\n"
 "on whether the @macro tag was a new tag or not."
 msgstr ""
+"新たに作成された、又は、既存のマクロを返す。\n"
+"@macroタグが新しいタグかどうかに依存する。"
 
 # @return [nil]
 #: ../lib/yard/code_objects/macro_object.rb:66
@@ -11155,6 +11170,9 @@ msgid ""
 "if the +data+ has no macro tag or if the macro is\n"
 "not new and no macro by the macro name is found."
 msgstr ""
+"+data+ がマクロタグを持っていないか、\n"
+"マクロが、\"new\"でなかったり、\n"
+"macro name is foundによって、マクロ自体が無い場合、nilを返す。"
 
 # @param [CodeObjects::Base] method_object
 #: ../lib/yard/code_objects/macro_object.rb:66
@@ -11163,11 +11181,14 @@ msgid ""
 "the macro to. Only used if the macro is being created, otherwise\n"
 "this argument is ignored."
 msgstr ""
+"マクロを加える為の任意のメソッド\n"
+"マクロが作成される場合、利用されるだけである。\n"
+"さもなければ、この引数は無視される。"
 
 # YARD::CodeObjects::MacroObject.expand
 #: ../lib/yard/code_objects/macro_object.rb:80
 msgid "Expands +macro_data+ using the interpolation parameters."
-msgstr ""
+msgstr "補完の引数によって、 +macro_data+ を展開する。"
 
 # YARD::CodeObjects::MacroObject.expand
 #: ../lib/yard/code_objects/macro_object.rb:82
@@ -11178,6 +11199,11 @@ msgid ""
 "* Also supports $!{N-M} ranges, as well as negative indexes on N or M\n"
 "* Use \\$ to escape the variable name in a macro."
 msgstr ""
+"補完のルール:\n"
+"* $0, $1, $2, ... = +call_params+ の中のN番目の引数\n"
+"* $* = 完全なステートメントのソース(blockを除外する)\n"
+"* $!{N-M}の範囲もサポートし,マイナスのインデックスも利用できる\n"
+"* マクロの中の変数名のエスケープには\\$を使う"
 
 # @param [String]
 #: ../lib/yard/code_objects/macro_object.rb:96
@@ -11185,7 +11211,7 @@ msgstr ""
 #: ../lib/yard/code_objects/macro_object.rb:131
 #: ../lib/yard/code_objects/macro_object.rb:210
 msgid "tag|param|full_source"
-msgstr ""
+msgstr "full_source"
 
 # @param [Array<String>] call_params
 #: ../lib/yard/code_objects/macro_object.rb:96
@@ -11195,6 +11221,8 @@ msgid ""
 "the method name and parameters\n"
 "to the method call. These arguments will fill $0-N"
 msgstr ""
+"メソッド名やメソッド呼び出しの為のパラメータ。\n"
+"これらの引数には、$0-Nを入れる。"
 
 # @param [String] full_source
 #: ../lib/yard/code_objects/macro_object.rb:96
@@ -11203,7 +11231,7 @@ msgstr ""
 msgid ""
 "the full source line (excluding block) \n"
 "interpolated as $*"
-msgstr ""
+msgstr "$*のように、補完される完全なソースの行(blockを除外する)"
 
 # @param [String] block_source
 #: ../lib/yard/code_objects/macro_object.rb:96
@@ -11213,23 +11241,25 @@ msgid ""
 "Currently unused. Will support \n"
 "interpolating the block data as a variable."
 msgstr ""
+"実際には、使われない。\n"
+"変数のように補完するブロックデータをサポートする。"
 
 # @return [String]
 #: ../lib/yard/code_objects/macro_object.rb:96
 #: ../lib/yard/code_objects/macro_object.rb:120
 #: ../lib/yard/code_objects/macro_object.rb:131
 msgid "the expanded macro data"
-msgstr ""
+msgstr "拡張されたマクロデータ"
 
 # @param [String]
 #: ../lib/yard/code_objects/macro_object.rb:96
 msgid "tag|param|macro_data"
-msgstr ""
+msgstr "マクロデータ"
 
 # @param [String] macro_data
 #: ../lib/yard/code_objects/macro_object.rb:96
 msgid "the macro data to expand (taken from {#macro_data})"
-msgstr ""
+msgstr "拡張する為のマクロデータ({#macro_data}メソッドから取得する)"
 
 # @param [Array<String>]
 #: ../lib/yard/code_objects/macro_object.rb:96
@@ -11237,7 +11267,7 @@ msgstr ""
 #: ../lib/yard/code_objects/macro_object.rb:131
 #: ../lib/yard/code_objects/macro_object.rb:210
 msgid "tag|param|call_params"
-msgstr ""
+msgstr "call_params"
 
 # @param [String]
 #: ../lib/yard/code_objects/macro_object.rb:96
@@ -11245,7 +11275,7 @@ msgstr ""
 #: ../lib/yard/code_objects/macro_object.rb:131
 #: ../lib/yard/code_objects/macro_object.rb:210
 msgid "tag|param|block_source"
-msgstr ""
+msgstr "block_source"
 
 # YARD::CodeObjects::MacroObject.apply
 #: ../lib/yard/code_objects/macro_object.rb:114
@@ -11255,16 +11285,20 @@ msgid ""
 "{apply_macro}\n"
 "on the new macro object."
 msgstr ""
+"最初にdocstringの内部の何らかのマクロデータを作成する事によって\n"
+"docstring上のマクロを適用する。\n"
+"{find_or_create}と、\n"
+"新しいマクロオブジェクト上で{apply_macro}を呼び出すのは同様である。"
 
 # @param [Docstring] docstring
 #: ../lib/yard/code_objects/macro_object.rb:120
 msgid "the docstring to create a macro out of"
-msgstr ""
+msgstr "マクロの出力を作成する為のdocstrng"
 
 # @param [Docstring]
 #: ../lib/yard/code_objects/macro_object.rb:120
 msgid "tag|param|docstring"
-msgstr ""
+msgstr "docstring"
 
 # @see
 #: ../lib/yard/code_objects/macro_object.rb:120
@@ -11278,64 +11312,68 @@ msgid ""
 "docstring and appending any extra local docstring data that was in\n"
 "the original +docstring+ object."
 msgstr ""
+"docstringにmacroが適用され、\n"
+"docstring上のマクロデータを補完する。\n"
+"そして、元の +docstring+ オブジェクトの中の\n"
+"任意で加えられるローカルなdocstringのデータを適用する。\n"
 
 # @param [MacroObject]
 # @param [CodeObjects::MacroObject]
 #: ../lib/yard/code_objects/macro_object.rb:131
 #: ../lib/yard/handlers/base.rb:561
 msgid "tag|param|macro"
-msgstr ""
+msgstr "macro"
 
 # @param [MacroObject] macro
 #: ../lib/yard/code_objects/macro_object.rb:131
 msgid "the macro object"
-msgstr ""
+msgstr "マクロオブジェクト"
 
 # @return [String]
 #: ../lib/yard/code_objects/macro_object.rb:189
 msgid "the macro data stored on the object"
-msgstr ""
+msgstr "マクロ上で記録されるデータ"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/code_objects/macro_object.rb:193
 msgid ""
 "the method object that this macro is\n"
 "attached to."
-msgstr ""
+msgstr "このマクロが追加されるメソッドオブジェクト\n"
 
 # @return [Boolean]
 #: ../lib/yard/code_objects/macro_object.rb:196
 msgid "whether this macro is attached to a method"
-msgstr ""
+msgstr "このマクロがメソッドに加えられるかどうか"
 
 # YARD::CodeObjects::MacroObject#expand
 #: ../lib/yard/code_objects/macro_object.rb:201
 msgid "Expands the macro using"
-msgstr ""
+msgstr "マクロによって展開される"
 
 # @param [String] block_source
 #: ../lib/yard/code_objects/macro_object.rb:210
 msgid ""
 "the source passed in the block of the method\n"
 "call, if there is a block."
-msgstr ""
+msgstr "ブロックがある場合、メソッド呼び出しのブロックの中で解析されたソース。"
 
 # @param [String] full_source
 #: ../lib/yard/code_objects/macro_object.rb:210
 msgid "the full method call (not including the block)"
-msgstr ""
+msgstr "全てのメソッド呼び出し(blockを含んでいない)"
 
 # @param [Array<String>] call_params
 #: ../lib/yard/code_objects/macro_object.rb:210
 msgid ""
 "a list of tokens that are passed\n"
 "to the method call"
-msgstr ""
+msgstr "メソッド呼び出しに渡されるトークンのリスト"
 
 # @example
 #: ../lib/yard/code_objects/macro_object.rb:210
 msgid "tag|example|Expanding a Macro"
-msgstr ""
+msgstr "マクロを展開する"
 
 # @example Expanding a Macro
 #: ../lib/yard/code_objects/macro_object.rb:210
