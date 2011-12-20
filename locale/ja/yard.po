@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 11:12+0900\n"
+"PO-Revision-Date: 2011-12-20 11:17+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10851,6 +10851,8 @@ msgid ""
 "A +ConstantObject+ represents a Ruby constant (not a module or class).\n"
 "To access the constant's (source code) value, use {#value}."
 msgstr ""
+"+ConstantObject+ は、Ruby定数を表す。(モジュールやクラスではない)\n"
+"定数(ソースコード)の値にアクセスする為には、{#value}メソッドを利用する。"
 
 # YARD::CodeObjects::ConstantObject#value
 #: ../lib/yard/code_objects/constant_object.rb:6
@@ -10860,7 +10862,7 @@ msgstr "定数の値を表しているソースコード"
 # @return [String]
 #: ../lib/yard/code_objects/constant_object.rb:7
 msgid "the value the constant is set to"
-msgstr ""
+msgstr "定数を設定される値"
 
 # YARD::CodeObjects::ExtendedMethodObject
 #: ../lib/yard/code_objects/extended_method_object.rb:3
