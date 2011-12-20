@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 18:21+0900\n"
+"PO-Revision-Date: 2011-12-20 19:19+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -11999,7 +11999,7 @@ msgstr ""
 # YARD::CodeObjects::ProxyMethodError
 #: ../lib/yard/code_objects/proxy.rb:4
 msgid "A special type of +NoMethodError+ when raised from a {Proxy}"
-msgstr ""
+msgstr "{Proxy}から、例外が上げられる時の、+NoMethodError+の特別な型"
 
 # YARD::CodeObjects::Proxy
 #: ../lib/yard/code_objects/proxy.rb:7
@@ -12010,6 +12010,11 @@ msgid ""
 "point it does a lookup using {Registry.resolve}. If the object is\n"
 "not found, a warning is raised and {ProxyMethodError} might be raised."
 msgstr ""
+"Proxyクラスは、オブジェクトがまだ存在しないかもしれないケースで、\n"
+"コードオブジェクトを簡単に解決する為の方法である。\n"
+"単純にproxyは、メソッドが解決されなかったパスを記録し、\n"
+"オブジェクト上で呼び出され{Registry.resolve}によって検索する。\n"
+"オブジェクトが見つからない場合、警告がでたり、{ProxyMethodError}が出るかもしれない。"
 
 # @see
 #: ../lib/yard/code_objects/proxy.rb:18
@@ -12024,7 +12029,7 @@ msgstr ""
 # @example
 #: ../lib/yard/code_objects/proxy.rb:18
 msgid "tag|example|Creates a Proxy to the String class from a module"
-msgstr ""
+msgstr "モジュールからStringクラスの為のProxyを作成する"
 
 # @example Creates a Proxy to the String class from a module
 #: ../lib/yard/code_objects/proxy.rb:18
@@ -12038,27 +12043,27 @@ msgstr ""
 # YARD::CodeObjects::Proxy#parent
 #: ../lib/yard/code_objects/proxy.rb:22 ../lib/yard/code_objects/proxy.rb:23
 msgid "Returns the value of attribute namespace"
-msgstr ""
+msgstr "namespaxe属性の値を返す"
 
 # YARD::CodeObjects::Proxy#initialize
 #: ../lib/yard/code_objects/proxy.rb:25
 msgid "Creates a new Proxy"
-msgstr ""
+msgstr "新しいProxyを返す"
 
 # @raise [ArgumentError]
 #: ../lib/yard/code_objects/proxy.rb:28
 msgid "if namespace is not a NamespaceObject"
-msgstr ""
+msgstr "namespaceがNamespaceObjectでない場合"
 
 # YARD::CodeObjects::Proxy#inspect
 #: ../lib/yard/code_objects/proxy.rb:75
 msgid "Returns a text representation of the Proxy"
-msgstr ""
+msgstr "Proxyのテキスト表現を返す"
 
 # @return [String]
 #: ../lib/yard/code_objects/proxy.rb:76
 msgid "the object's #inspect method or P(OBJECTPATH)"
-msgstr ""
+msgstr "#inspectメソッドやP(OBJECTPATH)のオブジェクト"
 
 # YARD::CodeObjects::Proxy#path
 # YARD::CodeObjects::Proxy#to_s
@@ -12069,13 +12074,16 @@ msgid ""
 "If the proxy resolves to an object, returns its path, otherwise\n"
 "guesses at the correct path using the original namespace and name."
 msgstr ""
+"proxyがオブジェクトを解決する場合、パスを返す。\n"
+"他の場合、\n"
+"元のnamespaceとnameによって正しいパスを推測する"
 
 # @return [String]
 #: ../lib/yard/code_objects/proxy.rb:89
 msgid ""
 "the assumed path of the proxy (or the real path\n"
 "of the resolved object)"
-msgstr ""
+msgstr "proxyのパスを装う(又は、解決したオブジェクトの実際のパス)"
 
 # YARD::CodeObjects::Proxy#class
 #: ../lib/yard/code_objects/proxy.rb:152
@@ -12083,11 +12091,13 @@ msgid ""
 "Returns the class name of the object the proxy is mimicking, if\n"
 "resolved. Otherwise returns +Proxy+."
 msgstr ""
+"解決した場合、proxyが模倣するオブジェクトのクラス名を返す。\n"
+"他の場合、+Proxy+を返す。"
 
 # @return [Class]
 #: ../lib/yard/code_objects/proxy.rb:154
 msgid "the resolved object's class or +Proxy+"
-msgstr ""
+msgstr "解決したオブジェクトのクラスや +Proxy+"
 
 # YARD::CodeObjects::Proxy#type
 #: ../lib/yard/code_objects/proxy.rb:163
@@ -12096,11 +12106,13 @@ msgid ""
 "time of the call, it will either return the inferred proxy type\n"
 "(see {#type=}) or +:proxy+"
 msgstr ""
+"proxyの型を返す。呼び出される時間で解決できない場合、\n"
+"予想されるproxyの型(see {#type=})や +:proxy+ を返す。"
 
 # @return [Symbol]
 #: ../lib/yard/code_objects/proxy.rb:167
 msgid "the Proxy's type"
-msgstr ""
+msgstr "Proxyの型"
 
 # @see
 #: ../lib/yard/code_objects/proxy.rb:167
@@ -12110,7 +12122,7 @@ msgstr ""
 # YARD::CodeObjects::Proxy#type=
 #: ../lib/yard/code_objects/proxy.rb:176
 msgid "Allows a parser to infer the type of the proxy by its path."
-msgstr ""
+msgstr "パスによってproxyの型を推測する為に、パーサーを受け入れる。"
 
 # @param [#to_sym]
 # @param [Symbol]
@@ -12123,32 +12135,34 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:163
 #: ../lib/yard/templates/helpers/html_helper.rb:143
 msgid "tag|param|type"
-msgstr ""
+msgstr "type"
 
 # @param [#to_sym] type
 #: ../lib/yard/code_objects/proxy.rb:178
 msgid "the proxy's inferred type"
-msgstr ""
+msgstr "推察されたproxyの型"
 
 # YARD::CodeObjects::Proxy#method_missing
 #: ../lib/yard/code_objects/proxy.rb:200
 msgid "Dispatches the method to the resolved object."
-msgstr ""
+msgstr "解決したオブジェクトにメソッドを送る"
 
 # @raise [ProxyMethodError]
 #: ../lib/yard/code_objects/proxy.rb:202
 msgid "if the proxy cannot find the real object"
-msgstr ""
+msgstr "proxyが実際のオブジェクトを見つけられない場合"
 
 # YARD::CodeObjects::Proxy#root?
 #: ../lib/yard/code_objects/proxy.rb:224
 msgid "This class is never a root object"
-msgstr ""
+msgstr "このクラスrootオブジェクトにはならない"
 
 # @note
 #: ../lib/yard/code_objects/proxy.rb:229
 msgid "this method fixes a bug in 1.9.2: http://gist.github.com/437136"
 msgstr ""
+"このメソッドはバグを修正する。\n"
+"(in 1.9.2: http://gist.github.com/4371369)"
 
 # YARD::CodeObjects::Proxy#to_obj
 #: ../lib/yard/code_objects/proxy.rb:232
@@ -12157,11 +12171,15 @@ msgid ""
 "references by checking if any objects by this name are\n"
 "registered all the way up the namespace tree."
 msgstr ""
+"この名前によって任意のオブジェクトが\n"
+"namespaceツリーの変更を記録する場合、\n"
+"これがチェックするオブジェクトの参照が\n"
+"未解決だったオブジェクトを見つける為に試みる。"
 
 # @return [Base, nil]
 #: ../lib/yard/code_objects/proxy.rb:236
 msgid "the registered code object or nil"
-msgstr ""
+msgstr "記録されるコードオブジェクト、又は、nil"
 
 # YARD::CodeObjects::RootObject
 #: ../lib/yard/code_objects/root_object.rb:4
