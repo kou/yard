@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 10:16+0900\n"
+"PO-Revision-Date: 2011-12-21 10:46+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -10357,7 +10357,7 @@ msgstr ""
 # @return [Boolean]
 #: ../lib/yard/code_objects/base.rb:275
 msgid "whether or not the objects are considered the same"
-msgstr "オブジェクトが同じかどうか比較する"
+msgstr "オブジェクトが同じものかどうか判断する"
 
 # @return [Integer]
 #: ../lib/yard/code_objects/base.rb:286 ../lib/yard/code_objects/proxy.rb:149
