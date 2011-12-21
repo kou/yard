@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 15:48+0900\n"
+"PO-Revision-Date: 2011-12-21 15:57+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12689,13 +12689,13 @@ msgstr "きれいにされたパス"
 #: ../lib/yard/templates/template.rb:156 ../lib/yard/registry.rb:234
 #: ../lib/yard/core_ext/file.rb:35
 msgid "tag|param|path"
-msgstr ""
+msgstr "path"
 
 # File.open!
 #: ../lib/yard/core_ext/file.rb:51
 msgid ""
 "Forces opening a file (for writing) by first creating the file's directory"
-msgstr ""
+msgstr "最初にファイルのディレクトリを作成する事によって、開くファイル(書込み用)を強制する。"
 
 # @since
 #: ../lib/yard/core_ext/file.rb:53
@@ -12705,23 +12705,23 @@ msgstr ""
 # @param [String] file
 #: ../lib/yard/core_ext/file.rb:53
 msgid "the filename to open"
-msgstr ""
+msgstr "展開するファイル名"
 
 # File.open!
 # File.read_binary
 #: ../lib/yard/core_ext/file.rb:53 ../lib/yard/core_ext/file.rb:62
 msgid "Reading Files"
-msgstr ""
+msgstr "ファイルを読み込む"
 
 # File.read_binary
 #: ../lib/yard/core_ext/file.rb:60
 msgid "Reads a file with binary encoding"
-msgstr ""
+msgstr "バイナリコードにしてファイルを読み込む"
 
 # @return [String]
 #: ../lib/yard/core_ext/file.rb:62
 msgid "the ascii-8bit encoded data"
-msgstr ""
+msgstr "ascii-8bitにエンコードされたデータ"
 
 # Insertion
 #: ../lib/yard/core_ext/insertion.rb:2
