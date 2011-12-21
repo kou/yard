@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 17:25+0900\n"
+"PO-Revision-Date: 2011-12-21 17:36+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12572,7 +12572,7 @@ msgstr "values"
 # @example
 #: ../lib/yard/core_ext/array.rb:14
 msgid "tag|example|Places an item after another"
-msgstr "後ろに別のものを置く"
+msgstr "後ろに別の要素を置く"
 
 # @example Places an item after another
 #: ../lib/yard/core_ext/array.rb:14
@@ -12582,7 +12582,7 @@ msgstr ""
 # @example
 #: ../lib/yard/core_ext/array.rb:14
 msgid "tag|example|Places an item before another"
-msgstr "前に別のものを置く"
+msgstr "前に別の要素を置く"
 
 # @example Places an item before another
 #: ../lib/yard/core_ext/array.rb:14
