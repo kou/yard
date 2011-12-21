@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 11:15+0900\n"
+"PO-Revision-Date: 2011-12-21 13:39+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -23071,6 +23071,8 @@ msgid ""
 "Similar to a Proc, but runs a set of Ruby expressions using a small\n"
 "DSL to make tag lookups easier."
 msgstr ""
+"Procと同様であるが、検索しやすいタグを作る為に、\n"
+"ちょっとしたDSLによって、Rubyの式のグループを起動する。"
 
 # YARD::Verifier
 #: ../lib/yard/verifier.rb:6
@@ -23082,6 +23084,12 @@ msgid ""
 "* +@@TAGNAME+ is translated into +object.tags('TAGNAME')+\n"
 "* +object+ can be omitted as target for method calls (it is implied)"
 msgstr ""
+"次の様な構文となる:\n"
+"* 全ての構文は、Rubyと互換性がある。\n"
+"* +object+ (略字は +o+)は検証されるオブジェクトにアクセスする為に存在する。\n"
+"* +@TAGNAME+ は +object.tag('TAGNAME')+ の中で変換される\n"
+"* +@@TAGNAME+ は +object.tags('TAGNAME')+ の中で変換される\n"
+"* +object+ は、メソッド呼び出し用に対象を省略できる。(それを暗示する)??c"
 
 # @example Specifying multiple expressions
 #: ../lib/yard/verifier.rb:33
@@ -23090,18 +23098,21 @@ msgid ""
 "# Equivalent to:\n"
 "Verifier.new('@return && @param && @yield')"
 msgstr ""
+"Verifier.new('@return', '@param', '@yield')\n"
+"# 以下は上と同様\n"
+"Verifier.new('@return && @param && @yield')"
 
 # @example
 #: ../lib/yard/verifier.rb:33
 msgid "tag|example|Specifying multiple expressions"
-msgstr ""
+msgstr "複数の表現を指定する"
 
 # @example
 #: ../lib/yard/verifier.rb:33
 msgid ""
 "tag|example|Create a verifier to check for objects that don't have @private "
 "tags"
-msgstr ""
+msgstr "@privateタグを持たないオブジェクト用にチェックする検証器を作成する。"
 
 # @example Create a verifier to check for objects that don't have @private tags
 #: ../lib/yard/verifier.rb:33
@@ -23120,12 +23131,12 @@ msgstr ""
 msgid ""
 "tag|example|Create a verifier to find any return tag with an empty "
 "description"
-msgstr ""
+msgstr "空の説明と共に、任意のreturnタグを見つける検証器を作成する。"
 
 # @example
 #: ../lib/yard/verifier.rb:33
 msgid "tag|example|Without using +object+ or +o+"
-msgstr ""
+msgstr "+object+ と +o+ を使わない例"
 
 # @example Using +object+ or +o+ to look up object attributes directly
 #: ../lib/yard/verifier.rb:33
@@ -23134,6 +23145,9 @@ msgid ""
 "# Equivalent to:\n"
 "Verifier.new('o.docstring == \"hello world\"')"
 msgstr ""
+"Verifier.new('object.docstring == \"hello world\"')\n"
+"# 下は上と同様\n"
+"Verifier.new('o.docstring == \"hello world\"')"
 
 # @example Create a verifier to find any return tag with an empty description
 #: ../lib/yard/verifier.rb:33
@@ -23142,6 +23156,9 @@ msgid ""
 "# Equivalent to:\n"
 "Verifier.new('object.tag(:return).text.empty?')"
 msgstr ""
+"Verifier.new('@return.text.empty?')\n"
+"# 下は上と同様\n"
+"Verifier.new('object.tag(:return).text.empty?')"
 
 # @example Check if there are any @param tags
 #: ../lib/yard/verifier.rb:33
@@ -23150,97 +23167,100 @@ msgid ""
 "# Equivalent to:\n"
 "Verifier.new('object.tags(:param).empty?')"
 msgstr ""
+"Verifier.new('@@param.empty?')\n"
+"# 下は上と同様\n"
+"Verifier.new('object.tags(:param).empty?')"
 
 # @example
 #: ../lib/yard/verifier.rb:33
 msgid "tag|example|Check if there are any @param tags"
-msgstr ""
+msgstr "@paramタグがあるかチェックする"
 
 # @example
 #: ../lib/yard/verifier.rb:33
 msgid "tag|example|Using +object+ or +o+ to look up object attributes directly"
-msgstr ""
+msgstr "直接オブジェクト属性を検索するには、+object+ や +o+を使う"
 
 # @return [Array<String>]
 #: ../lib/yard/verifier.rb:36
 msgid "a list of all expressions the verifier checks for"
-msgstr ""
+msgstr "チェックする検証器用の全ての式のリスト"
 
 # YARD::Verifier#initialize
 #: ../lib/yard/verifier.rb:44
 msgid "Creates a verifier from a set of expressions"
-msgstr ""
+msgstr "式のグループから検証器を作成する。"
 
 # @return [Verifier]
 #: ../lib/yard/verifier.rb:47
 msgid "a new instance of Verifier"
-msgstr ""
+msgstr "検証器の新しいインスタンス"
 
 # @param [Array<String>]
 #: ../lib/yard/verifier.rb:47 ../lib/yard/verifier.rb:57
 msgid "tag|param|expressions"
-msgstr ""
+msgstr "式"
 
 # @param [Array<String>] expressions
 #: ../lib/yard/verifier.rb:47
 msgid ""
 "a list of Ruby expressions to\n"
 "parse."
-msgstr ""
+msgstr "解析するRubyの式のリスト"
 
 # YARD::Verifier#add_expressions
 #: ../lib/yard/verifier.rb:53
 msgid "Adds a set of expressions and recompiles the verifier"
-msgstr ""
+msgstr "式のグループを追加し、検証器を再編集する。"
 
 # @param [Array<String>] expressions
 #: ../lib/yard/verifier.rb:57
 msgid "a list of expressions"
-msgstr ""
+msgstr "式のリスト"
 
 # YARD::Verifier#method_missing
 #: ../lib/yard/verifier.rb:62
 msgid "Passes any method calls to the object from the {#call}"
-msgstr ""
+msgstr "{#call}メソッドからオブジェクトに任意のメソッド呼び出しを解析する"
 
 # YARD::Verifier#call
 #: ../lib/yard/verifier.rb:71
 msgid "Tests the expressions on the object."
-msgstr ""
+msgstr "オブジェクト上の式をテストする"
 
 # @note
 #: ../lib/yard/verifier.rb:75
 msgid "If the object is a {CodeObjects::Proxy} the result will always be true."
-msgstr ""
+msgstr "オブジェクトが{CodeObjects::Proxy}なら、評価結果は,常にtrueになる。"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/verifier.rb:75
 msgid "the object to verify"
-msgstr ""
+msgstr "検証するオブジェクト"
 
 # @return [Boolean]
 #: ../lib/yard/verifier.rb:75
 msgid "the result of the expressions"
-msgstr ""
+msgstr "式の結果"
 
 # YARD::Verifier#run
 #: ../lib/yard/verifier.rb:85
 msgid ""
 "Runs a list of objects against the verifier and returns the subset\n"
 "of verified objects."
-msgstr ""
+msgstr "オブジェクトに対する検証器のリストを起動し、検証されるオブジェクトの下位集合を返す"
 
 # @return [Array<CodeObjects::Base>]
 #: ../lib/yard/verifier.rb:90
 msgid ""
 "a list of code objects that match\n"
 "the verifier."
-msgstr ""
+msgstr "検証器にマッチするコードオブジェクトのリスト"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/verifier.rb:97
 msgid "the current object being tested"
-msgstr ""
+msgstr "テストされる現在のオブジェクト"
 
 # YARD::Verifier#modify_nilclass
 #: ../lib/yard/verifier.rb:106
@@ -23250,23 +23270,27 @@ msgid ""
 "call returns nil, which means users don't need to perform\n"
 "stringent nil checking"
 msgstr ""
+"NoMethodErrorsにthrowせずnil classに変更する。\n"
+"#tagメソッド呼び出しがnilを返す場合、\n"
+"これはobject.tag(:return).textのような構文を受け入れる。\n"
+"ユーザーが厳密なnilのチェックする為に必要としない事を意味する。"
 
 # YARD::Verifier#unmodify_nilclass
 #: ../lib/yard/verifier.rb:118
 msgid "Returns the state of NilClass back to normal"
-msgstr ""
+msgstr "NilClassの状態を元に戻す"
 
 # YARD::Verifier#create_method_from_expressions
 #: ../lib/yard/verifier.rb:126
 msgid ""
 "Creates the +__execute+ method by evaluating the expressions\n"
 "as Ruby code"
-msgstr ""
+msgstr "Rubyのコードのような式を評価する事によって +__execute+ メソッドを作成する。"
 
 # YARD::Verifier#parse_expression
 #: ../lib/yard/verifier.rb:137
 msgid "Parses a single expression, handling some of the DSL syntax."
-msgstr ""
+msgstr "単独の式を解析し、いくつかのDSL構文を操作する。"
 
 # YARD::Verifier#parse_expression
 #: ../lib/yard/verifier.rb:139
@@ -23274,9 +23298,10 @@ msgid ""
 "The syntax \"@tag\" should be turned into object.tag(:tag),\n"
 "and \"@@tag\" should be turned into object.tags(:tag)"
 msgstr ""
+"\"@tag\"構文は、object.tag(:tag)へ渡され、\n"
+"\"@tags\"構文は、object.tags(:tag)へ渡される。"
 
 # @return [String]
 #: ../lib/yard/verifier.rb:142
 msgid "the parsed expression"
 msgstr ""
-
