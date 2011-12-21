@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 17:43+0900\n"
+"PO-Revision-Date: 2011-12-21 17:51+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12855,7 +12855,7 @@ msgstr "オブジェクトが置かれる所の相対インデックス(0又は1
 # Module#class_name
 #: ../lib/yard/core_ext/module.rb:3
 msgid "Returns the class name of a full module namespace path"
-msgstr "完全なモジュールのnamespaceパスのクラス名を返す"
+msgstr "モジュールの完全なnamespaceパスのクラス名を返す"
 
 # @example 
 #: ../lib/yard/core_ext/module.rb:7
