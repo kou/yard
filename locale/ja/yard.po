@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 15:57+0900\n"
+"PO-Revision-Date: 2011-12-21 16:19+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12728,7 +12728,7 @@ msgstr "ascii-8bitにエンコードされたデータ"
 msgid ""
 "The Insertion class inserts a value before or after another\n"
 "value in a list."
-msgstr ""
+msgstr "Insertionクラスはリストの中の前後に他の値を挿入する。"
 
 # @example 
 #: ../lib/yard/core_ext/insertion.rb:6
@@ -12742,6 +12742,8 @@ msgid ""
 "inserted. To finalize the insertion, call {#before} or\n"
 "{#after} on the object."
 msgstr ""
+"挿入される値と共にリスト上のinsertionオブジェクトを作成する。\n"
+"最終的にinsertionは、オブジェクト上の{#before}や{#after}メソッドを呼び出す。"
 
 # @param [Array<CodeObjects::Base>]
 # @param [Array<String>]
@@ -12752,66 +12754,66 @@ msgstr ""
 #: ../lib/yard/verifier.rb:90 ../lib/yard/core_ext/insertion.rb:13
 #: ../lib/yard/core_ext/insertion.rb:45
 msgid "tag|param|list"
-msgstr ""
+msgstr "list"
 
 # @return [Insertion]
 #: ../lib/yard/core_ext/insertion.rb:13
 msgid "a new instance of Insertion"
-msgstr ""
+msgstr "Insertionの新しいインスタンス"
 
 # @param [Object] value
 # @param [Object] val
 #: ../lib/yard/core_ext/insertion.rb:13 ../lib/yard/core_ext/insertion.rb:45
 msgid "the value to insert"
-msgstr ""
+msgstr "挿入する値"
 
 # @param [Array] list
 #: ../lib/yard/core_ext/insertion.rb:13
 msgid "the list to perform the insertion on"
-msgstr ""
+msgstr "insertionで実行するリスト"
 
 # Insertion#before
 #: ../lib/yard/core_ext/insertion.rb:16
 msgid "Inserts the value before +val+"
-msgstr ""
+msgstr "+val+ の前に値を挿入する"
 
 # @param [Object] val
 #: ../lib/yard/core_ext/insertion.rb:18
 msgid "the object the value will be inserted before"
-msgstr ""
+msgstr "値が前に挿入される,オブジェクト"
 
 # @param [Boolean] recursive
 #: ../lib/yard/core_ext/insertion.rb:18 ../lib/yard/core_ext/insertion.rb:26
 #: ../lib/yard/core_ext/insertion.rb:45
 msgid "look inside sublists"
-msgstr ""
+msgstr "ネストした配列の内部をみるかどうか"
 
 # @param [Boolean]
 #: ../lib/yard/core_ext/insertion.rb:18 ../lib/yard/core_ext/insertion.rb:26
 #: ../lib/yard/core_ext/insertion.rb:45
 msgid "tag|param|recursive"
-msgstr ""
+msgstr "recursive"
 
 # @param [Object]
 #: ../lib/yard/core_ext/insertion.rb:18 ../lib/yard/core_ext/insertion.rb:26
 #: ../lib/yard/core_ext/insertion.rb:45
 msgid "tag|param|val"
-msgstr ""
+msgstr "val"
 
 # Insertion#after
 #: ../lib/yard/core_ext/insertion.rb:21
 msgid "Inserts the value after +val+."
-msgstr ""
+msgstr "+val+ の前に値を挿入する"
 
 # @param [Object] val
 #: ../lib/yard/core_ext/insertion.rb:26
 msgid "the object the value will be inserted after"
-msgstr ""
+msgstr "値が前に挿入される,オブジェクト"
 
 # @example
 #: ../lib/yard/core_ext/insertion.rb:26
 msgid "tag|example|If subsections are ignored"
-msgstr ""
+msgstr "ネストした配列が無視される場合"
 
 # @example If subsections are ignored
 #: ../lib/yard/core_ext/insertion.rb:26
@@ -12821,34 +12823,34 @@ msgstr ""
 # Insertion#before_any
 #: ../lib/yard/core_ext/insertion.rb:29
 msgid "Alias for {#before} with +recursive+ set to true"
-msgstr ""
+msgstr "+recursive+ にtrueを設定する{#before}メソッド用のエイリアス"
 
 # Insertion#after_any
 #: ../lib/yard/core_ext/insertion.rb:33
 msgid "Alias for {#after} with +recursive+ set to true"
-msgstr ""
+msgstr "+recursive+ にtrueを設定する{#after}メソッド用のエイリアス"
 
 # Insertion#insertion
 #: ../lib/yard/core_ext/insertion.rb:39
 msgid "This method performs the actual insertion"
-msgstr ""
+msgstr "このメソッドが、実際にinsertionを実行する。"
 
 # @param [Fixnum]
 #: ../lib/yard/core_ext/insertion.rb:45
 msgid "tag|param|rel"
-msgstr ""
+msgstr "rel"
 
 # @param [Array] list
 #: ../lib/yard/core_ext/insertion.rb:45
 msgid "the list to place objects into"
-msgstr ""
+msgstr "オブジェクトの情報を置く為のリスト"
 
 # @param [Fixnum] rel
 #: ../lib/yard/core_ext/insertion.rb:45
 msgid ""
 "the relative index (0 or 1) of where the object\n"
 "should be placed"
-msgstr ""
+msgstr "オブジェクトが置かれる所の相対インデックス(0又は1)"
 
 # Module#class_name
 #: ../lib/yard/core_ext/module.rb:3
@@ -13018,7 +13020,6 @@ msgstr ""
 #: ../lib/yard/core_ext/symbol_hash.rb:72
 msgid "the hash of objects to copy"
 msgstr ""
-
 # YARD::Docstring
 #: ../lib/yard/docstring.rb:3
 msgid ""
