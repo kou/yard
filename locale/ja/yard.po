@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 16:49+0900\n"
+"PO-Revision-Date: 2011-12-21 17:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12905,16 +12905,18 @@ msgid ""
 "A subclass of Hash where all keys are converted into Symbols, and\n"
 "optionally, all String values are converted into Symbols."
 msgstr ""
+"全てのキーがSymbolsに変換される所のハッシュのサブクラス、\n"
+"自由に全てのStringの値をSymblosに変換できる。"
 
 # SymbolHash#initialize
 #: ../lib/yard/core_ext/symbol_hash.rb:5
 msgid "Creates a new SymbolHash object"
-msgstr ""
+msgstr "新しいSymbolHashオブジェクトを作成する"
 
 # @return [SymbolHash]
 #: ../lib/yard/core_ext/symbol_hash.rb:8
 msgid "a new instance of SymbolHash"
-msgstr ""
+msgstr "SymbolHashの新しいインスタンス"
 
 # @param [Boolean] symbolize_value
 #: ../lib/yard/core_ext/symbol_hash.rb:8
@@ -12922,11 +12924,13 @@ msgid ""
 "converts any String values into Symbols\n"
 "if this is set to +true+."
 msgstr ""
+"この設定がtrueの場合、\n"
+"全てのStringの値をSymbolへ変換する。"
 
 # @param [Boolean]
 #: ../lib/yard/core_ext/symbol_hash.rb:8
 msgid "tag|param|symbolize_value"
-msgstr ""
+msgstr "symbolize_value"
 
 # @overload
 #: ../lib/yard/core_ext/symbol_hash.rb:27
@@ -12936,12 +12940,12 @@ msgstr ""
 # SymbolHash#[]=
 #: ../lib/yard/core_ext/symbol_hash.rb:38
 msgid "Assigns a value to a symbolized key"
-msgstr ""
+msgstr "シンボル化されたキーに値を割り当てる"
 
 # @param [#to_sym] key
 #: ../lib/yard/core_ext/symbol_hash.rb:41
 msgid "the key"
-msgstr ""
+msgstr "キー"
 
 # @param [Object] value
 #: ../lib/yard/core_ext/symbol_hash.rb:41
@@ -12949,46 +12953,49 @@ msgid ""
 "the value to be assigned. If this is a String and\n"
 "values are set to be symbolized, it will be converted into a Symbol."
 msgstr ""
+"割り当てられる値。\n"
+"これが、文字列の場合には、値がシンボル化される為に設定され、\n"
+"シンボルへ変換されるだろう。"
 
 # SymbolHash#[]
 #: ../lib/yard/core_ext/symbol_hash.rb:46
 msgid "Accessed a symbolized key"
-msgstr ""
+msgstr "シンボル化されるキーにアクセスされる"
 
 # @param [#to_sym] key
 #: ../lib/yard/core_ext/symbol_hash.rb:48
 msgid "the key to access"
-msgstr ""
+msgstr "アクセスする為のキー"
 
 # @return [Object]
 #: ../lib/yard/core_ext/symbol_hash.rb:48
 msgid "the value associated with the key"
-msgstr ""
+msgstr "キーに関連付けられた値"
 
 # SymbolHash#delete
 #: ../lib/yard/core_ext/symbol_hash.rb:51
 msgid "Deleted a key and value associated with it"
-msgstr ""
+msgstr "関連付けられたキーと値が削除される"
 
 # @param [#to_sym] key
 #: ../lib/yard/core_ext/symbol_hash.rb:53
 msgid "the key to delete"
-msgstr ""
+msgstr "削除するキー"
 
 # SymbolHash#has_key?
 #: ../lib/yard/core_ext/symbol_hash.rb:56
 msgid "Tests if a symbolized key exists"
-msgstr ""
+msgstr "シンボル化されたキーがあるかテストする"
 
 # @param [#to_sym] key
 #: ../lib/yard/core_ext/symbol_hash.rb:58
 msgid "the key to test"
-msgstr ""
+msgstr "テストするキー"
 
 # @return [Boolean]
 #: ../lib/yard/core_ext/symbol_hash.rb:58
 msgid "whether the key exists"
-msgstr ""
+msgstr "キーが存在するかどうか"
 
 # SymbolHash#update
 # SymbolHash#merge!
@@ -12998,32 +13005,36 @@ msgid ""
 "Updates the object with the contents of another Hash object\n"
 "This method modifies the original SymbolHash object"
 msgstr ""
+"\"Updates the object with the contents of another Hash object\\n\"<= .(typo)??e\n"
+"\"This method modifies the original SymbolHash object\"\n"
+"他のハッシュオブジェクトの内容と共に、オブジェクトを更新する。\n"
+"このメソッドは、元のSymbolHashオブジェクトを変更する。"
 
 # @param [Hash] hash
 #: ../lib/yard/core_ext/symbol_hash.rb:65
 msgid "the hash object to copy the values from"
-msgstr ""
+msgstr "ハッシュオブジェクトから値をコピーする,ハッシュ"
 
 # @param [Hash]
 #: ../lib/yard/core_ext/symbol_hash.rb:65
 #: ../lib/yard/core_ext/symbol_hash.rb:72
 msgid "tag|param|hash"
-msgstr ""
+msgstr "hash"
 
 # SymbolHash#merge
 #: ../lib/yard/core_ext/symbol_hash.rb:69
 msgid "Merges the contents of another hash into a new SymbolHash object"
-msgstr ""
+msgstr "新しいSymbolHashオブジェクトへ他のハッシュの内容をマージする。"
 
 # @return [SymbolHash]
 #: ../lib/yard/core_ext/symbol_hash.rb:72
 msgid "a new SymbolHash containing the merged data"
-msgstr ""
+msgstr "マージされたデータを含んでいる新しいSymbolHash"
 
 # @param [Hash] hash
 #: ../lib/yard/core_ext/symbol_hash.rb:72
 msgid "the hash of objects to copy"
-msgstr ""
+msgstr "コピーするオブジェクトのハッシュ"
 # YARD::Docstring
 #: ../lib/yard/docstring.rb:3
 msgid ""
