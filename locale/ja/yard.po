@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 13:39+0900\n"
+"PO-Revision-Date: 2011-12-21 13:54+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21394,7 +21394,7 @@ msgstr ""
 # @param [Array<CodeObjects::Base>] list
 #: ../lib/yard/templates/helpers/base_helper.rb:23 ../lib/yard/verifier.rb:90
 msgid "a list of code objects"
-msgstr ""
+msgstr "コードオブジェクトのリスト"
 
 # YARD::Templates::Helpers::BaseHelper#run_verifier
 #: ../lib/yard/templates/helpers/base_helper.rb:23
