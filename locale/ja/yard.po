@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 14:43+0900\n"
+"PO-Revision-Date: 2011-12-21 14:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16932,7 +16932,7 @@ msgstr ""
 # @param [Continuation]
 #: ../lib/yard/parser/source_parser.rb:27
 msgid "tag|param|context"
-msgstr ""
+msgstr "context"
 
 # @return [LoadOrderError]
 #: ../lib/yard/parser/source_parser.rb:27
@@ -16996,18 +16996,18 @@ msgstr "パス,glob,解析の為のパスのリスト"
 # @param [Array<String, Regexp>]
 #: ../lib/yard/parser/source_parser.rb:75
 msgid "tag|param|excluded"
-msgstr ""
+msgstr "excluded"
 
 # @param [Fixnum]
 #: ../lib/yard/parser/source_parser.rb:75
 msgid "tag|param|level"
-msgstr ""
+msgstr "level"
 
 # @param [Array<String>]
 # @param [String, Array<String>]
 #: ../lib/yard/server/router.rb:120 ../lib/yard/parser/source_parser.rb:75
 msgid "tag|param|paths"
-msgstr ""
+msgstr "paths"
 
 # @param [Array<String, Regexp>] excluded
 #: ../lib/yard/parser/source_parser.rb:75
@@ -17044,7 +17044,7 @@ msgstr "+content+ を解析する為に利用されるパーサーオブジェ�
 #: ../lib/yard/parser/source_parser.rb:98
 #: ../lib/yard/parser/source_parser.rb:107
 msgid "tag|param|ptype"
-msgstr ""
+msgstr "ptype"
 
 # @param [Symbol] ptype
 #: ../lib/yard/parser/source_parser.rb:98
@@ -17104,7 +17104,7 @@ msgstr "パーサー型用のシンボリック名。"
 # @param [Base]
 #: ../lib/yard/parser/source_parser.rb:121
 msgid "tag|param|parser_klass"
-msgstr ""
+msgstr "parser_klass"
 
 # @param [Base] parser_klass
 #: ../lib/yard/parser/source_parser.rb:121
@@ -17114,7 +17114,7 @@ msgstr "解析やトークナイズを実装するクラス。"
 # @param [Array<String>, String, Regexp]
 #: ../lib/yard/parser/source_parser.rb:121
 msgid "tag|param|extensions"
-msgstr ""
+msgstr "extensions"
 
 # @return [Hash{Symbol=>Object}]
 #: ../lib/yard/parser/source_parser.rb:132
@@ -17252,7 +17252,7 @@ msgstr "yieldされるブロックは全てのファイルを解析する前に�
 #: ../lib/yard/parser/source_parser.rb:213
 #: ../lib/yard/parser/source_parser.rb:237
 msgid "tag|yieldparam|files"
-msgstr ""
+msgstr "files"
 
 # @yieldparam [Array<String>] files
 #: ../lib/yard/parser/source_parser.rb:213
@@ -17264,7 +17264,7 @@ msgstr "解析されるファイルのリスト。"
 #: ../lib/yard/parser/source_parser.rb:213
 #: ../lib/yard/parser/source_parser.rb:237
 msgid "tag|yieldparam|globals"
-msgstr ""
+msgstr "globals"
 
 # @yieldparam [OpenStruct] globals
 #: ../lib/yard/parser/source_parser.rb:213
@@ -17399,7 +17399,7 @@ msgstr ""
 #: ../lib/yard/parser/source_parser.rb:274
 #: ../lib/yard/parser/source_parser.rb:303
 msgid "tag|yieldparam|parser"
-msgstr ""
+msgstr "parser"
 
 # @yieldparam [SourceParser] parser
 #: ../lib/yard/parser/source_parser.rb:274
@@ -17586,7 +17586,7 @@ msgstr "{LoadOrderError}の例外を上げるかどうか"
 # @param [Boolean]
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "tag|param|load_order_errors"
-msgstr ""
+msgstr "load_order_errors"
 
 # @param [Symbol] parser_type
 #: ../lib/yard/parser/source_parser.rb:402
