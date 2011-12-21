@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-20 19:19+0900\n"
+"PO-Revision-Date: 2011-12-21 10:16+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8287,10 +8287,10 @@ msgid ""
 "major objects, but DSL languages can create their own by inheriting\n"
 "from {CodeObjects::Base}."
 msgstr ""
-"\"code object\"は、Ruby言語の中の任意の物が定義される。\n"
-"クラスや、モジュール、メソッド、クラス変数、定数は重要なオブジェクトとなる、\n"
-"しかしDSL言語は、{CodeObjects::Base}からの継承によって\n"
-"それ自身を作成できる。"
+"\"code object\"は、Ruby言語の中の任意の構成要素が定義される。\n"
+"クラスや、モジュール、メソッド、クラス変数、定数は重要なオブジェクトとなる。\\n\n"
+"そして、DSL言語は、{CodeObjects::Base}からの継承によって\n"
+"DSL言語自身を作成できる。"
 
 # YARD::Handlers
 #: ../lib/yard/autoload.rb:57 ../lib/yard/handlers/base.rb:57
@@ -9848,27 +9848,27 @@ msgstr "Regex-quoted namespace separator(クオートされた正規表現ネー
 # YARD::CodeObjects::ISEP
 #: ../lib/yard/code_objects/base.rb:38
 msgid "Instance method separator"
-msgstr ""
+msgstr "Instance method separator(インスタンスメソッドの区切り)"
 
 # YARD::CodeObjects::ISEPQ
 #: ../lib/yard/code_objects/base.rb:41
 msgid "Regex-quoted instance method separator"
-msgstr ""
+msgstr "Regex-quoted instance method separator(正規表現でクオートされたインスタンスメソッド区切り)"
 
 # YARD::CodeObjects::CSEP
 #: ../lib/yard/code_objects/base.rb:44
 msgid "Class method separator"
-msgstr ""
+msgstr "Class method separator(クラスメソッド区切り)"
 
 # YARD::CodeObjects::CSEPQ
 #: ../lib/yard/code_objects/base.rb:47
 msgid "Regex-quoted class method separator"
-msgstr ""
+msgstr "Regex-quoted class method separator(正規表現でクオートされたクラスメソッド区切り)"
 
 # YARD::CodeObjects::CONSTANTMATCH
 #: ../lib/yard/code_objects/base.rb:50
 msgid "Regular expression to match constant name"
-msgstr "定数名にマッチする正規表現"
+msgstr "Regular expression to match constant name(定数名にマッチする正規表現)"
 
 # YARD::CodeObjects::NAMESPACEMATCH
 #: ../lib/yard/code_objects/base.rb:53
@@ -23280,3 +23280,4 @@ msgstr ""
 #: ../lib/yard/verifier.rb:142
 msgid "the parsed expression"
 msgstr ""
+
