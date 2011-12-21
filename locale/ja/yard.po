@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 14:48+0900\n"
+"PO-Revision-Date: 2011-12-21 15:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12561,16 +12561,18 @@ msgid ""
 "an array. This is used in tandem with the before and after\n"
 "methods of the {Insertion} class."
 msgstr ""
+"配列の前後に他のオブジェクト(値として)の値を置く\n"
+"これは、前後に{Insertion}クラスのメソッドを用いている。"
 
 # @param [Array]
 #: ../lib/yard/core_ext/array.rb:14
 msgid "tag|param|values"
-msgstr ""
+msgstr "values"
 
 # @example
 #: ../lib/yard/core_ext/array.rb:14
 msgid "tag|example|Places an item after another"
-msgstr ""
+msgstr "後ろに別のものを置く"
 
 # @example Places an item after another
 #: ../lib/yard/core_ext/array.rb:14
@@ -12580,7 +12582,7 @@ msgstr ""
 # @example
 #: ../lib/yard/core_ext/array.rb:14
 msgid "tag|example|Places an item before another"
-msgstr ""
+msgstr "前に別のものを置く"
 
 # @example Places an item before another
 #: ../lib/yard/core_ext/array.rb:14
@@ -12595,12 +12597,12 @@ msgstr ""
 # @param [Array] values
 #: ../lib/yard/core_ext/array.rb:14
 msgid "value to insert"
-msgstr ""
+msgstr "挿入する値"
 
 # @return [Insertion]
 #: ../lib/yard/core_ext/array.rb:14
 msgid "an insertion object to"
-msgstr ""
+msgstr "挿入されたオブジェクト"
 
 # @see
 #: ../lib/yard/core_ext/array.rb:14
@@ -12615,49 +12617,53 @@ msgid ""
 "a filename. To treat it as a directory, make sure it\n"
 "ends in +File::SEPARATOR+ ('/' on UNIX filesystems)."
 msgstr ""
+"+from+ で始まる場所から、相対パスの情報へパスを変える。\n"
+"+from+ の引数は、ファイル名になるように処理される。\n"
+"ディレクトリとして取得するには、+File::SEPARATOR+で終わる必要がある。\n"
+"(UNIX上のファイルシステムなら、'/')"
 
 # @param [String] from
 #: ../lib/yard/core_ext/file.rb:18
 msgid ""
 "the starting filename\n"
 "(or directory with +from_isdir+ set to +true+)."
-msgstr ""
+msgstr "ファイル名(又は +from_isdir+ を +true+ を設定した場合はディレクトリ)の文字列"
 
 # @param [String]
 #: ../lib/yard/core_ext/file.rb:18
 msgid "tag|param|from"
-msgstr ""
+msgstr "from"
 
 # File.relative_path
 # File.cleanpath
 #: ../lib/yard/core_ext/file.rb:18 ../lib/yard/core_ext/file.rb:35
 msgid "Manipulating Paths"
-msgstr ""
+msgstr "パスを操作する"
 
 # @param [String]
 #: ../lib/yard/core_ext/file.rb:18
 msgid "tag|param|to"
-msgstr ""
+msgstr "to"
 
 # @param [String] to
 #: ../lib/yard/core_ext/file.rb:18
 msgid "the final path that should be made relative."
-msgstr ""
+msgstr "対応して作られる最後のパス"
 
 # @return [String]
 #: ../lib/yard/core_ext/file.rb:18
 msgid "the relative path from +from+ to +to+."
-msgstr ""
+msgstr "+from+ から +to+ への相対パス"
 
 # File.cleanpath
 #: ../lib/yard/core_ext/file.rb:30
 msgid "Cleans a path by removing extraneous '..', '.' and '/' characters"
-msgstr ""
+msgstr "無関係の'..','.','/'文字を削除し、パスをスッキリする。"
 
 # @example
 #: ../lib/yard/core_ext/file.rb:35
 msgid "tag|example|Clean a path"
-msgstr ""
+msgstr "pathをクリーンする"
 
 # @example Clean a path
 #: ../lib/yard/core_ext/file.rb:35
@@ -12667,12 +12673,12 @@ msgstr ""
 # @param [String] path
 #: ../lib/yard/core_ext/file.rb:35
 msgid "the path to clean"
-msgstr ""
+msgstr "クリーンするパス"
 
 # @return [String]
 #: ../lib/yard/core_ext/file.rb:35
 msgid "the sanitized path"
-msgstr ""
+msgstr "きれいにされたパス"
 
 # @param [String]
 # @param [Array<String, Symbol>]
