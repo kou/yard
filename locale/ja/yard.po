@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 14:39+0900\n"
+"PO-Revision-Date: 2011-12-21 14:43+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15492,12 +15492,12 @@ msgstr ""
 # @return [LocaleInfoCollector]
 #: ../lib/yard/i18n.rb:52
 msgid "a new instance of LocaleInfoCollector"
-msgstr ""
+msgstr "LocaleInfoCollectorの新しいインスタンス"
 
 # @return [Text]
 #: ../lib/yard/i18n.rb:86
 msgid "a new instance of Text"
-msgstr ""
+msgstr "Textの新しいインスタンス"
 
 # YARD::Logger
 #: ../lib/yard/logging.rb:5
