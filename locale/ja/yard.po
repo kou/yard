@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 16:19+0900\n"
+"PO-Revision-Date: 2011-12-21 16:49+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12855,7 +12855,7 @@ msgstr "オブジェクトが置かれる所の相対インデックス(0又は1
 # Module#class_name
 #: ../lib/yard/core_ext/module.rb:3
 msgid "Returns the class name of a full module namespace path"
-msgstr ""
+msgstr "完全なモジュールのnamespaceパスのクラス名を返す"
 
 # @example 
 #: ../lib/yard/core_ext/module.rb:7
@@ -12865,12 +12865,12 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/core_ext/module.rb:7
 msgid "the last part of a module path"
-msgstr ""
+msgstr "モジュールパスの最後の部分"
 
 # Module#namespace_name
 #: ../lib/yard/core_ext/module.rb:12
 msgid "Returns the module namespace path minus the class/module name"
-msgstr ""
+msgstr "クラス/モジュール名を引いたモジュールのnamespaceのパスを返す"
 
 # @example 
 #: ../lib/yard/core_ext/module.rb:16
@@ -12880,7 +12880,7 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/core_ext/module.rb:16
 msgid "the namespace minus the class/module name"
-msgstr ""
+msgstr "クラス/モジュール名を引いたnamespace"
 
 # String#shell_split
 #: ../lib/yard/core_ext/string.rb:3
@@ -12889,11 +12889,15 @@ msgid ""
 "text as a single token. Use '\\\"' and \"\\'\" to escape quotes and\n"
 "'\\\\' to escape a backslash."
 msgstr ""
+"シェルの場合テキスト情報のトークンを分割し、\n"
+"単一のトークンとしてクオートされたテキストを操作する。\n"
+"エスケープをクオートするには、'\\\"'と\"\\'\"、\n"
+"バックスラッシュをエスケープするには'\\\\'を使う。"
 
 # @return [Array]
 #: ../lib/yard/core_ext/string.rb:7
 msgid "an array representing the tokens"
-msgstr ""
+msgstr "トークンを表す配列"
 
 # SymbolHash
 #: ../lib/yard/core_ext/symbol_hash.rb:2
