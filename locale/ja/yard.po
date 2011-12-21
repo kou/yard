@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 13:54+0900\n"
+"PO-Revision-Date: 2011-12-21 14:39+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15505,36 +15505,38 @@ msgid ""
 "Handles console logging for info, warnings and errors.\n"
 "Uses the stdlib Logger class in Ruby for all the backend logic."
 msgstr ""
+"コンソールがinfoや,警告や,エラー用にロギングし操作する。\n"
+"全てのバックエンドの処理の為にRuby標準ライブラリのloggerクラスを使う。"
 
 # @param value
 #: ../lib/yard/logging.rb:7
 msgid "the value to set the attribute show_backtraces to."
-msgstr ""
+msgstr "show_backtraces属性を設定する値"
 
 # YARD::Logger#show_backtraces=
 #: ../lib/yard/logging.rb:8
 msgid "Sets the attribute show_backtraces"
-msgstr ""
+msgstr "show_backtraces属性を設定する"
 
 # YARD::Logger.instance
 #: ../lib/yard/logging.rb:11
 msgid "The logger instance"
-msgstr ""
+msgstr "loggerインスタンス"
 
 # @return [Logger]
 #: ../lib/yard/logging.rb:12
 msgid "the logger instance"
-msgstr ""
+msgstr "loggerインスタンス"
 
 # YARD::Logger#initialize
 #: ../lib/yard/logging.rb:17
 msgid "Creates a new logger"
-msgstr ""
+msgstr "新しいloggerを作成する"
 
 # @return [Logger]
 #: ../lib/yard/logging.rb:17
 msgid "a new instance of Logger"
-msgstr ""
+msgstr "Loggerの新しいインスタンス"
 
 # YARD::Logger#debug
 #: ../lib/yard/logging.rb:25
@@ -15542,21 +15544,23 @@ msgid ""
 "Changes the debug level to DEBUG if $DEBUG is set\n"
 "and writes a debugging message."
 msgstr ""
+"$DEBUGが設定された場合、debug levelをDEBUGに変更し、\n"
+"デバッグメッセージを書き込む。"
 
 # YARD::Logger#backtrace
 #: ../lib/yard/logging.rb:32
 msgid "Prints the backtrace +exc+ to the logger as error data."
-msgstr ""
+msgstr "+exc+ のバックトレースをエラーデータとしてloggerにプリントする。"
 
 # @param [Array<String>]
 #: ../lib/yard/logging.rb:35
 msgid "tag|param|exc"
-msgstr ""
+msgstr "exc"
 
 # @param [Array<String>] exc
 #: ../lib/yard/logging.rb:35
 msgid "the backtrace list"
-msgstr ""
+msgstr "バックトレースのリスト"
 
 # YARD::Logger#warn_no_continuations
 #: ../lib/yard/logging.rb:43
@@ -15565,16 +15569,19 @@ msgid ""
 "to JRuby, Rubinius and MacRuby. This warning will only display once\n"
 "per Ruby process."
 msgstr ""
+"Rubyの環境がcontinuationをサポートしない警告を出す。\n"
+"JRuby,Rubinius,MacRubyに適用される。\n"
+"この警告は、Rubyの処理毎に一度だけ表示されるだろう"
 
 # YARD::Logger#enter_level
 #: ../lib/yard/logging.rb:56
 msgid "Sets the logger level for the duration of the block"
-msgstr ""
+msgstr "ブロックの継続するlogger levelを設定する。"
 
 # @param [Fixnum]
 #: ../lib/yard/logging.rb:64
 msgid "tag|param|new_level"
-msgstr ""
+msgstr "new_level"
 
 # @example 
 #: ../lib/yard/logging.rb:64
@@ -15590,16 +15597,18 @@ msgid ""
 "the logger level for the duration of the block.\n"
 "values can be found in Ruby's Logger class."
 msgstr ""
+"ブロックの継続するlogger level.\n"
+"値はRuby loggerクラスで見つける事が出来る。"
 
 # @yield
 #: ../lib/yard/logging.rb:64
 msgid "the block with the logger temporarily set to +new_level+"
-msgstr ""
+msgstr "loggerが一時的に+new_level+を設定するブロック"
 
 # YARD::Logger#format_log
 #: ../lib/yard/logging.rb:73
 msgid "Log format (from Logger implementation). Used by Logger internally"
-msgstr ""
+msgstr "ログ書式(loggerの実装から)。Loggerによって内部で利用される。"
 
 # YARD::Parser::Base
 #: ../lib/yard/parser/base.rb:4
