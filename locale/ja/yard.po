@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-21 17:36+0900\n"
+"PO-Revision-Date: 2011-12-21 17:43+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -12619,7 +12619,7 @@ msgid ""
 msgstr ""
 "+from+ で始まる場所から、相対パスの情報へパスを変える。\n"
 "+from+ の引数は、ファイル名になるように処理される。\n"
-"ディレクトリとして取得するには、+File::SEPARATOR+で終わる必要がある。\n"
+"ディレクトリとして取得するには、 +File::SEPARATOR+ で終わる必要がある。\n"
 "(UNIX上のファイルシステムなら、'/')"
 
 # @param [String] from
@@ -12658,12 +12658,12 @@ msgstr "+from+ から +to+ への相対パス"
 # File.cleanpath
 #: ../lib/yard/core_ext/file.rb:30
 msgid "Cleans a path by removing extraneous '..', '.' and '/' characters"
-msgstr "無関係の'..','.','/'文字を削除し、パスをスッキリする。"
+msgstr "無関係の '..', '.', '/' 文字を削除し、パスをきれいにする。"
 
 # @example
 #: ../lib/yard/core_ext/file.rb:35
 msgid "tag|example|Clean a path"
-msgstr "pathをクリーンする"
+msgstr "pathをきれいにする"
 
 # @example Clean a path
 #: ../lib/yard/core_ext/file.rb:35
@@ -12673,7 +12673,7 @@ msgstr ""
 # @param [String] path
 #: ../lib/yard/core_ext/file.rb:35
 msgid "the path to clean"
-msgstr "クリーンするパス"
+msgstr "きれいにするパス"
 
 # @return [String]
 #: ../lib/yard/core_ext/file.rb:35
