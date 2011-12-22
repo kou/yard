@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-22 13:49+0900\n"
+"PO-Revision-Date: 2011-12-22 14:13+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14929,12 +14929,12 @@ msgstr "マクロを処理する"
 msgid ""
 "Matches if/unless conditions inside classes and attempts to process only\n"
 "one branch (by evaluating the condition if possible)."
-msgstr ""
+msgstr "クラス内部のif/unless条件にマッチし、一つのブランチだけを処理する。(条件を評価し可能ならば)"
 
 # @example
 #: ../lib/yard/handlers/ruby/class_condition_handler.rb:11
 msgid "tag|example|A simple class conditional"
-msgstr ""
+msgstr "シンプルな条件のクラス"
 
 # @example A simple class conditional
 #: ../lib/yard/handlers/ruby/class_condition_handler.rb:11
@@ -14946,13 +14946,19 @@ msgid ""
 "  end\n"
 "end"
 msgstr ""
+"class Foo\n"
+"  if 0\n"
+"    # このメソッドは無視される\n"
+"    def xyz; end\n"
+"  end\n"
+"end"
 
 # YARD::Handlers::Ruby::Legacy::ClassConditionHandler#parse_condition
 # YARD::Handlers::Ruby::ClassConditionHandler#parse_condition
 #: ../lib/yard/handlers/ruby/legacy/class_condition_handler.rb:23
 #: ../lib/yard/handlers/ruby/class_condition_handler.rb:31
 msgid "Parses the condition part of the if/unless statement"
-msgstr ""
+msgstr "if/unlessステートメントの部分の条件を解析する。"
 
 # @return [true, false, nil]
 #: ../lib/yard/handlers/ruby/legacy/class_condition_handler.rb:28
@@ -14962,13 +14968,17 @@ msgid ""
 "parsed to true, false if not, and nil if the condition cannot be\n"
 "parsed with certainty (it's dynamic)"
 msgstr ""
+"条件が間違いなく解析できる場合、true\n"
+"そうでない場合、falseや、\n"
+"条件が完璧に解析できない場合、nilとなる。\n"
+"(it's dynamic)"
 
 # YARD::Handlers::Ruby::Legacy::ClassHandler
 # YARD::Handlers::Ruby::ClassHandler
 #: ../lib/yard/handlers/ruby/legacy/class_handler.rb:2
 #: ../lib/yard/handlers/ruby/class_handler.rb:2
 msgid "Handles class declarations"
-msgstr ""
+msgstr "クラスの宣言を操作する"
 
 # YARD::Handlers::Ruby::ClassHandler#extract_parameters
 # YARD::Handlers::Ruby::ConstantHandler#extract_parameters
@@ -14978,7 +14988,7 @@ msgid ""
 "Extract the parameters from the Struct.new AST node, returning them as a "
 "list\n"
 "of strings"
-msgstr ""
+msgstr "パラメータをStrct.new Astノードから抽出し、文字列のリストとしてAstノードを返す。"
 
 # @param [MethodCallNode]
 # @param [String]
@@ -14986,20 +14996,19 @@ msgstr ""
 #: ../lib/yard/handlers/ruby/constant_handler.rb:39
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:90
 msgid "tag|param|superclass"
-msgstr ""
+msgstr "superclass"
 
 # @param [MethodCallNode] superclass
 #: ../lib/yard/handlers/ruby/class_handler.rb:67
 #: ../lib/yard/handlers/ruby/constant_handler.rb:39
 msgid "the AST node for the Struct.new call"
-msgstr ""
+msgstr "Struct.new呼び出し用のASTノード"
 
 # @return [Array<String>]
 #: ../lib/yard/handlers/ruby/class_handler.rb:67
 #: ../lib/yard/handlers/ruby/constant_handler.rb:39
 msgid "the member names to generate methods for"
-msgstr ""
-
+msgstr "member名にメソッドを生成する,member名"
 # YARD::Handlers::Ruby::Legacy::ClassVariableHandler
 # YARD::Handlers::Ruby::ClassVariableHandler
 #: ../lib/yard/handlers/ruby/legacy/class_variable_handler.rb:2
