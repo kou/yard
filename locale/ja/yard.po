@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-22 14:13+0900\n"
+"PO-Revision-Date: 2011-12-22 14:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15014,21 +15014,21 @@ msgstr "member名にメソッドを生成する,member名"
 #: ../lib/yard/handlers/ruby/legacy/class_variable_handler.rb:2
 #: ../lib/yard/handlers/ruby/class_variable_handler.rb:2
 msgid "Handles a class variable (@@variable)"
-msgstr ""
+msgstr "クラス変数を操作する(@@変数)"
 
 # YARD::Handlers::Ruby::Legacy::ConstantHandler
 # YARD::Handlers::Ruby::ConstantHandler
 #: ../lib/yard/handlers/ruby/legacy/constant_handler.rb:2
 #: ../lib/yard/handlers/ruby/constant_handler.rb:2
 msgid "Handles any constant assignment"
-msgstr ""
+msgstr "任意の定数割り当てを操作する"
 
 # YARD::Handlers::Ruby::Legacy::ExceptionHandler
 # YARD::Handlers::Ruby::ExceptionHandler
 #: ../lib/yard/handlers/ruby/legacy/exception_handler.rb:2
 #: ../lib/yard/handlers/ruby/exception_handler.rb:2
 msgid "Handles 'raise' calls inside methods"
-msgstr ""
+msgstr "メソッドの内部で呼び出す'raise'を操作する"
 
 # YARD::Handlers::Ruby::Legacy::ExtendHandler
 # YARD::Handlers::Ruby::ExtendHandler
@@ -15036,7 +15036,7 @@ msgstr ""
 #: ../lib/yard/handlers/ruby/extend_handler.rb:2
 msgid ""
 "Handles 'extend' call to include modules into the class scope of another"
-msgstr ""
+msgstr "他のクラススコープの中へモジュールを含める為に、'extend'呼び出しを操作する。"
 
 # @see
 #: ../lib/yard/handlers/ruby/extend_handler.rb:3
