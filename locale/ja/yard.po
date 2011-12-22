@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-22 16:24+0900\n"
+"PO-Revision-Date: 2011-12-22 17:00+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15283,54 +15283,54 @@ msgstr "superstring"
 #: ../lib/yard/handlers/ruby/legacy/macro_handler.rb:6
 #: ../lib/yard/handlers/ruby/macro_handler.rb:5
 msgid "Handles a macro (dsl-style method)"
-msgstr ""
+msgstr "マクロを操作する(dsl-styleメソッド)"
 
 # YARD::Handlers::Ruby::Legacy::MethodHandler
 # YARD::Handlers::Ruby::MethodHandler
 #: ../lib/yard/handlers/ruby/legacy/method_handler.rb:2
 #: ../lib/yard/handlers/ruby/method_handler.rb:2
 msgid "Handles a method definition"
-msgstr ""
+msgstr "メソッドの定義を操作する"
 
 # YARD::Handlers::Ruby::Legacy::MixinHandler
 # YARD::Handlers::Ruby::MixinHandler
 #: ../lib/yard/handlers/ruby/legacy/mixin_handler.rb:2
 #: ../lib/yard/handlers/ruby/mixin_handler.rb:2
 msgid "Handles the 'include' statement to mixin a module in the instance scope"
-msgstr ""
+msgstr "インスタンススコープのモジュールをmixinする為に、'include'ステートメントを操作する。"
 
 # YARD::Handlers::Ruby::Legacy::ModuleHandler
 # YARD::Handlers::Ruby::ModuleHandler
 #: ../lib/yard/handlers/ruby/legacy/module_handler.rb:2
 #: ../lib/yard/handlers/ruby/module_handler.rb:2
 msgid "Handles the declaration of a module"
-msgstr ""
+msgstr "モジュールの宣言を操作する"
 
 # YARD::Handlers::Ruby::Legacy::PrivateConstantHandler
 # YARD::Handlers::Ruby::PrivateConstantHandler
 #: ../lib/yard/handlers/ruby/legacy/private_constant_handler.rb:2
 #: ../lib/yard/handlers/ruby/private_constant_handler.rb:2
 msgid "Sets visibility of a constant (class, module, const)"
-msgstr ""
+msgstr "定数の可視性を設定する(クラス,モジュール,定数)"
 
 # YARD::Handlers::Ruby::Legacy::VisibilityHandler
 # YARD::Handlers::Ruby::VisibilityHandler
 #: ../lib/yard/handlers/ruby/legacy/visibility_handler.rb:2
 #: ../lib/yard/handlers/ruby/visibility_handler.rb:2
 msgid "Handles 'private', 'protected', and 'public' calls."
-msgstr ""
+msgstr "'private', 'protected', 'public' 呼び出しを操作する。"
 
 # YARD::Handlers::Ruby::Legacy::YieldHandler
 # YARD::Handlers::Ruby::YieldHandler
 #: ../lib/yard/handlers/ruby/legacy/yield_handler.rb:2
 #: ../lib/yard/handlers/ruby/yield_handler.rb:2
 msgid "Handles 'yield' calls"
-msgstr ""
+msgstr "'yield'を呼び出し操作する"
 
 # YARD::Handlers::Ruby::MethodConditionHandler
 #: ../lib/yard/handlers/ruby/method_condition_handler.rb:2
 msgid "Handles a conditional inside a method"
-msgstr ""
+msgstr "メソッドの内部の条件を操作する"
 
 # YARD::Handlers::Ruby::StructHandlerMethods
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:2
