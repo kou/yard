@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-22 17:48+0900\n"
+"PO-Revision-Date: 2011-12-22 18:13+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8306,7 +8306,7 @@ msgid ""
 msgstr ""
 "ハンドラーは、YARDの解析段階でデータの処理の間に呼び出される。\n"
 "これは、ソースの解析や後で使う為に記録される{CodeObjects}を生成する為に\n"
-"YARDも任意のカスタム拡張も受け入れる。"
+"YARD本体も任意のカスタム拡張も受け入れる。"
 
 # YARD::Handlers::Ruby
 #: ../lib/yard/autoload.rb:61 ../lib/yard/handlers/ruby/base.rb:61
@@ -15442,8 +15442,8 @@ msgid ""
 "the user-declared type of the struct member, or [Object] if\n"
 "the user did not define a type for this member."
 msgstr ""
-"構造体memberのuser-declaredの型、\\n\n"
-"又はこのmember用にuserが、型を定義しなかった場合[Object]となる。"
+"構造体memberの宣言されたユーザーの型、\\n\n"
+"又はこのmember用にuserが、型を定義しなかった場合 [Object] となる。"
 
 # @param [String] member
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:49
@@ -15486,6 +15486,11 @@ msgid ""
 "that\n"
 "of an attribute defined using attr_accessor."
 msgstr ""
+"\n"
+"\n"
+"Creates the auto-generated docstring for the setter method of a struct's\n"
+"member. This is used so the generated documentation will look just like that\n"
+"of an attribute defined using attr_accessor."
 
 # @return [String]
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:75
