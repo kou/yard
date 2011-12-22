@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-22 14:25+0900\n"
+"PO-Revision-Date: 2011-12-22 16:24+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15049,6 +15049,8 @@ msgid ""
 "This is the base handler for the legacy parser. To implement a legacy\n"
 "handler, subclass this class."
 msgstr ""
+"これは、legacy parser用のbase handlerとなる。\n"
+"legacy handlerの実装には、このクラスをサブクラスにする。"
 
 # @return [Boolean]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:14
@@ -15056,6 +15058,8 @@ msgid ""
 "whether or not a {Parser::Ruby::Legacy::Statement} object should be handled\n"
 "by this handler."
 msgstr ""
+"{Parser::Ruby::Legacy::Statement}オブジェクトが、\n"
+"このハンドラーによって操作されるかどうか"
 
 # YARD::Handlers::Ruby::Legacy::Base#parse_block
 #: ../lib/yard/handlers/ruby/legacy/base.rb:30
@@ -15064,6 +15068,9 @@ msgid ""
 "statement has no block, nothing happens. A description of state\n"
 "values can be found at {Handlers::Base#push_state}"
 msgstr ""
+"値の状態のグループと共に、ブロックの文を解析する。\n"
+"ステートメントがブロックを持たない場合、何も起こらない。\n"
+"値の状態の説明は、{Handlers::Base#push_state}で見つけられる。"
 
 # @see
 #: ../lib/yard/handlers/ruby/legacy/base.rb:36
@@ -15073,7 +15080,7 @@ msgstr ""
 # @param [Hash] opts
 #: ../lib/yard/handlers/ruby/legacy/base.rb:36
 msgid "State options"
-msgstr ""
+msgstr "オプションの状態"
 
 # @see Handlers::Base#push_state
 #: ../lib/yard/handlers/ruby/legacy/base.rb:36
@@ -15092,11 +15099,15 @@ msgid ""
 "'test' would be the same value: 'test'. Here is a list of common types and\n"
 "their return values:"
 msgstr ""
+"トークンの文字列の値。例えば、シンボル:sym用に返す値は、:symになる。\n"
+"文字列 +\"foo #{ bar}\"+ 用に返す値は、補完を含まない +\"foo #{ bar}\"+ リテラルになる。\n"
+"'test'識別子の返す値は、'test'と同じ値になるだろう。\n"
+"ここでは、一般的な型のリストやそれらの値を返す。"
 
 # @param [Token]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:94
 msgid "tag|param|token"
-msgstr ""
+msgstr "token"
 
 # @example 
 #: ../lib/yard/handlers/ruby/legacy/base.rb:94
@@ -15113,14 +15124,14 @@ msgstr ""
 # @param [Token] token
 #: ../lib/yard/handlers/ruby/legacy/base.rb:94
 msgid "The token of the class"
-msgstr ""
+msgstr "クラスのトークン"
 
 # @param [Array<Class<Token>>, Symbol]
 # @param [Array<Class<Token>>]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:94
 #: ../lib/yard/handlers/ruby/legacy/base.rb:160
 msgid "tag|param|accepted_types"
-msgstr ""
+msgstr "accepted_types"
 
 # @param [Array<Class<Token>>, Symbol] accepted_types
 #: ../lib/yard/handlers/ruby/legacy/base.rb:94
@@ -15138,11 +15149,25 @@ msgid ""
 "  :identifier   => +TkIDENTIFIER, +TkFID+ and +TkGVAR+.\n"
 "  :number       => +TkFLOAT+, +TkINTEGER+"
 msgstr ""
+"トークンにできる受け入れられるトークンの型となる。\n"
+"デフォルトでは、[{TkVal}]になる。\n"
+"型のリストになる、\n"
+"\n"
+"例えば、[+TkSTRING+, +TkSYMBOL+]は、\n"
+"どちらかがこれらの型の場合、トークンの値を返す。\n"
+"+TkVal+が受け入れられる場合、+TkNode+も受け入れられる。\n"
+"\n"
+"特定のシンボルキーは、一つで複数の型を一気に指定する為に受け入れられる。\n"
+"このようなシンボルとなる:\n"
+"  :string       => +TkSTRING+, +TkDSTRING+, +TkDXSTRING+ and +TkXSTRING+\n"
+"  :attr         => +TkSYMBOL+ and +TkSTRING+\n"
+"  :identifier   => +TkIDENTIFIER, +TkFID+ and +TkGVAR+.\n"
+"  :number       => +TkFLOAT+, +TkINTEGER+"
 
 # @return [nil]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:94
 msgid "if the token is not any of the specified accepted types"
-msgstr ""
+msgstr "トークンが指定され受け入れられる型のどれでもない場合、"
 
 # @return [Object]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:94
@@ -15150,6 +15175,8 @@ msgid ""
 "if the token is one of the accepted types, in its real value form.\n"
 "It should be noted that identifiers and constants are kept in String form."
 msgstr ""
+"トークンが受け入れられる型の一つの場合、その中は、実際の値の形式になる。\n"
+"そして、識別子と定数がString形式で注釈される。"
 
 # YARD::Handlers::Ruby::Legacy::Base#tokval_list
 #: ../lib/yard/handlers/ruby/legacy/base.rb:140
@@ -15158,6 +15185,9 @@ msgid ""
 "The list must be a valid comma delimited list, and values\n"
 "will only be returned to the end of the list only."
 msgstr ""
+"ステートメントから、シンボル,又は,文字列の値のリストを返す。\n"
+"リストは、有効なカンマで区切られたリストでなければならない、\n"
+"そして、値はリストで返されるだけにしなければならない。"
 
 # YARD::Handlers::Ruby::Legacy::Base#tokval_list
 #: ../lib/yard/handlers/ruby/legacy/base.rb:144
@@ -15174,6 +15204,8 @@ msgid ""
 "code would be the {#tokval} value of :a, 'b',\n"
 ":c and :d."
 msgstr ""
+"上のコード{Parser::Ruby::Legacy::TokenList}のtokvalのリストは、\n"
+":a, 'b', :c, :d の入った{#tokval}の値になる。"
 
 # YARD::Handlers::Ruby::Legacy::Base#tokval_list
 #: ../lib/yard/handlers/ruby/legacy/base.rb:152
@@ -15182,26 +15214,29 @@ msgid ""
 "any ruby keyword encountered:\n"
 "  \"attr_accessor :a, :b, :c if x == 5\"  => ['a', 'b', 'c']"
 msgstr ""
+"それは、この機能が任意のrubyキーワードが出会った所で、\n"
+"直後に止めて注釈される。\n"
+"  \"attr_accessor :a, :b, :c if x == 5\"  => ['a', 'b', 'c']"
 
 # @param [TokenList]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:160
 msgid "tag|param|tokenlist"
-msgstr ""
+msgstr "tokenlist"
 
 # @param [Array<Class<Token>>] accepted_types
 #: ../lib/yard/handlers/ruby/legacy/base.rb:160
 msgid "passed to {#tokval}"
-msgstr ""
+msgstr "{#tokval}に渡される"
 
 # @return [Array<String>]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:160
 msgid "the list of tokvalues in the list."
-msgstr ""
+msgstr "リストの中のtokvaluesのリスト"
 
 # @return [Array<EMPTY>]
 #: ../lib/yard/handlers/ruby/legacy/base.rb:160
 msgid "if there are no symbols or Strings in the list"
-msgstr ""
+msgstr "シンボルやリストの文字列がない場合"
 
 # @see
 #: ../lib/yard/handlers/ruby/legacy/base.rb:160
@@ -15211,7 +15246,7 @@ msgstr ""
 # @param [TokenList] tokenlist
 #: ../lib/yard/handlers/ruby/legacy/base.rb:160
 msgid "The list of tokens to process."
-msgstr ""
+msgstr "処理されるトークンのリスト"
 
 # YARD::Handlers::Ruby::Legacy::ClassHandler#extract_parameters
 #: ../lib/yard/handlers/ruby/legacy/class_handler.rb:62
@@ -15221,23 +15256,27 @@ msgid ""
 "symbols\n"
 "to define the struct member names"
 msgstr ""
+"Struct.new宣言から、引数のリストを抽出し、\n"
+"それをメンバー名のリストとして、書式化して返す\n"
+"ユーザーは、structメンバー名を定義する為に、シンボルを\n"
+"利用する事を要求するだろう。"
 
 # @param [String] superstring
 #: ../lib/yard/handlers/ruby/legacy/class_handler.rb:67
 msgid "the string declaring the superclass"
-msgstr ""
+msgstr "文字列で宣言しているsuperclass"
 
 # @return [Array<String>]
 # @param [Array<String>] members
 #: ../lib/yard/handlers/ruby/legacy/class_handler.rb:67
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:132
 msgid "a list of member names"
-msgstr ""
+msgstr "メンバー名のリスト"
 
 # @param [String]
 #: ../lib/yard/handlers/ruby/legacy/class_handler.rb:67
 msgid "tag|param|superstring"
-msgstr ""
+msgstr "superstring"
 
 # YARD::Handlers::Ruby::Legacy::MacroHandler
 # YARD::Handlers::Ruby::MacroHandler
