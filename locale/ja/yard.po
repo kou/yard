@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-22 13:17+0900\n"
+"PO-Revision-Date: 2011-12-22 13:27+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14493,7 +14493,7 @@ msgstr "パーサー型(:ruby, :ruby18, :c)"
 # @return [OpenStruct]
 #: ../lib/yard/handlers/processor.rb:79
 msgid "global shared state for post-processing stage"
-msgstr ""
+msgstr "後処理環境用に状態を共有される,global"
 
 # @example Sharing state among two handlers
 #: ../lib/yard/handlers/processor.rb:79
@@ -14512,7 +14512,7 @@ msgstr ""
 # @example
 #: ../lib/yard/handlers/processor.rb:79
 msgid "tag|example|Sharing state among two handlers"
-msgstr ""
+msgstr "2つのハンドラーの間で状態を共有する"
 
 # @see
 #: ../lib/yard/handlers/processor.rb:79
@@ -14547,7 +14547,7 @@ msgstr ""
 #: ../lib/yard/handlers/processor.rb:105
 #: ../lib/yard/parser/source_parser.rb:402
 msgid "tag|param|parser_type"
-msgstr ""
+msgstr "parser_type"
 
 # @param [Boolean] load_order_error
 #: ../lib/yard/handlers/processor.rb:105
@@ -14566,7 +14566,7 @@ msgstr ""
 # @param [Boolean]
 #: ../lib/yard/handlers/processor.rb:105
 msgid "tag|param|load_order_error"
-msgstr ""
+msgstr "load_order_error"
 
 # @param [OpenStruct]
 #: ../lib/yard/handlers/processor.rb:105
@@ -14579,7 +14579,7 @@ msgstr ""
 msgid ""
 "the object holding all state during the\n"
 "post processing stage"
-msgstr ""
+msgstr "後処理段階の間に全ての状態を保持するオブジェクト"
 
 # @return [Processor]
 #: ../lib/yard/handlers/processor.rb:105
@@ -14614,7 +14614,7 @@ msgstr "ステートメントのリスト"
 # @param [Array]
 #: ../lib/yard/handlers/processor.rb:124
 msgid "tag|param|statements"
-msgstr ""
+msgstr "statements"
 
 # YARD::Handlers::Processor#find_handlers
 #: ../lib/yard/handlers/processor.rb:149
