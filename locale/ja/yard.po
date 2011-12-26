@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-26 11:41+0900\n"
+"PO-Revision-Date: 2011-12-26 14:17+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -13562,8 +13562,8 @@ msgid ""
 "documentation in a very explicit format by treating them as first-\n"
 "class objects in any outputted documentation."
 msgstr ""
-"ハンドラーは、YARDがコード生成段階用の\n"
-"プラグイン可能な意味のあるパーサーである。\n"
+"ハンドラーは、YARDがコード生成段階で、\n"
+"プラグイン可能という意味のパーサーである。\n"
 "ハンドラーは、YARDによって生成される情報や、\n"
 "その情報に機能を与える為や、\n"
 "例えば、利用するかもしれない\n"
@@ -13573,9 +13573,9 @@ msgstr ""
 "RSpec testing フレームワークの'describe'宣言のように、\n"
 "ドキュメント作成やメタデータを生成する機能である。\n"
 "同様に、クラスレベル宣言から利用する何らかのRubyAPIは、\n"
-"出力したドキュメントの中で、\n"
-"最初のクラスオブジェクトのようにそれらを処理することによって、\n"
-"明確な書式で記述する為にこれらを追加できた。"
+"出力されたドキュメントで、\n"
+"最初のクラスオブジェクトとしてそれらを処理することによって、\n"
+"明確な書式でドキュメントにこれらを追加できた。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:26
@@ -13606,8 +13606,8 @@ msgid ""
 "Handlers are usually simple and take up to a page of code to process\n"
 "and register a new object or add new attributes to the current +namespace+."
 msgstr ""
-"ハンドラーは一般的にシンプルで、処理の為にコードのページを取り上げたり、\n"
-"新しくオブジェクトを登録や現在の +namespace+ に新しい属性を追加したりする。"
+"ハンドラーは一般的にシンプルで、処理の為にコードのページを取り上げ、\n"
+"新しいオブジェクトを登録し、現在の +namespace+ に新しい属性を追加する。"
 
 # YARD::Handlers::Base
 #: ../lib/yard/handlers/base.rb:39
@@ -13734,8 +13734,8 @@ msgstr ""
 "ハンドラー処理が'class MyClass'ステートメントを解析する場合、\n"
 "class My ClassがSomeModuleモジュールの内部に\n"
 "属していることを知ることが必須になる。\n"
-"ステートメントのような処理(class MyClassを解析)をしている時に、\n"
-"SomeModuleは +namespace+ 値となり返すだろう。\n"
+"ステートメントのような処理(class MyClassを解析)をしている時、\n"
+"SomeModuleが +namespace+ 値となり返されるだろう。\n"
 "もしMyClassがエントリーされたり、\n"
 "他のハンドラーがメソッド上で呼び出された場合、\n"
 "'MyClass'コードオブジェクトが +namespace+ に設定される。"
@@ -14047,9 +14047,9 @@ msgid ""
 "module so that the handler class can be extended with mixins that\n"
 "override the +process+ method without alias chaining."
 msgstr ""
-"+process+ メソッドを生成する、+def process; ...end+ と同等となる。\n"
+"+process+ メソッドを生成する、 +def process; ...end+ と同等となる。\n"
 "この構文を用いた定義されるブロックは、無名モジュールの内部でラップされる。\n"
-"理由としては、ハンドラークラスが+procecc+ メソッドの上書きを\n"
+"理由としては、ハンドラークラスが +procecc+ メソッドの上書きを\n"
 "エイリアスチェーン無しでmixinを用い拡張できるようにする為である。"
 
 # @macro
@@ -14121,7 +14121,7 @@ msgstr ""
 # YARD::Handlers::Base#parse_block
 #: ../lib/yard/handlers/base.rb:294
 msgid "Parses the semantic \"block\" contained in the statement node."
-msgstr "文ノードに含まれている意味のある\"block\"を解析する。"
+msgstr "ステートメントノードに含まれている意味のある\"block\"を解析する。"
 
 # @abstract
 #: ../lib/yard/handlers/base.rb:296
@@ -14156,7 +14156,7 @@ msgid ""
 "this attribute. Note that post processing stage spans multiple files.\n"
 "To share state only within a single file, use {#extra_state}"
 msgstr ""
-"ハンドラーはこの属性を通ると全体の後処理環境用の状態を共有できる。\n"
+"ハンドラーはこの属性を通して全体の後処理環境用の状態を共有できる。\n"
 "以下の事に留意する。\n"
 "後処理の状態は、複数ファイルに渡す。\n"
 "単一のファイルの中でだけ状態を共有するには、 {#extra_state} を使用する。"
@@ -14179,7 +14179,7 @@ msgstr ""
 "全て維持するという点で {#visibility}, {#scope}, {#namespace}, {#owner}属性と似ている。\n"
 "この属性を使って、あなたのハンドラーが必要とするかもしれないデータを格納し\n"
 "ファイルの解析中に保存する。\n"
-"あなたがファイル全体の状態の保存が必要な場合、 {#globals} を参照。"
+"ファイル全体の状態の保存が必要な場合、 {#globals} を参照。"
 
 # YARD::Handlers::Base#push_state
 #: ../lib/yard/handlers/base.rb:344
@@ -14218,7 +14218,7 @@ msgstr ""
 "ファイル名、行数、{CodeObjects::Base#dynamic} 、ソースコード、\n"
 "{CodeObjects::Base#docstring}のようなオブジェクトのリストに、\n"
 "基本属性を追加する。\n"
-"しかし、それらが存在しない場合だけです。"
+"しかし、それらが存在しない場合だけである。"
 
 # @param [Array<CodeObjects::Base>] objects
 #: ../lib/yard/handlers/base.rb:388
@@ -14286,7 +14286,7 @@ msgstr ""
 # @example
 #: ../lib/yard/handlers/base.rb:469
 msgid "tag|example|Adding a mixin to the String class programmatically"
-msgstr ""
+msgstr "Stringクラスのプログラムにmixinを追加する"
 
 # @param [Integer] max_retries
 #: ../lib/yard/handlers/base.rb:469
