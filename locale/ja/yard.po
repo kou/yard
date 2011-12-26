@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-26 14:17+0900\n"
+"PO-Revision-Date: 2011-12-26 14:46+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14875,15 +14875,14 @@ msgid ""
 "Some examples are: \"condition\", \"call\", \"literal\", \"kw\", \"token\",\n"
 "\"ref\"."
 msgstr ""
-"メタタイプは、\"?\"で終わる{AstNode}クラス上の任意のメソッドとなる。\n"
-"とはいえ、??e 英訳\n"
-"あなたは、自身の宣言の中で\"?\"サフィックスを含んでいないはずである。\n"
+"メタタイプは、\"?\"で終わる{AstNode}クラスの任意のメソッドである。\n"
+"なので、あなたは、自身の宣言の中で\"?\"サフィックスを含むべきではない。\n"
 "いくつかの例を上げると、\"condition\", \"call\", \"literal\", \"kw\", \"token\",\"ref\" となる。"
 
 # @example Handling any conditional statement (if, unless)
 #: ../lib/yard/handlers/ruby/base.rb:102
 msgid "handles meta_type(:condition)"
-msgstr "メタタイプ(:condition)を操作する"
+msgstr ""
 
 # @param [Symbol] type
 #: ../lib/yard/handlers/ruby/base.rb:102
