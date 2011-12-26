@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-26 16:20+0900\n"
+"PO-Revision-Date: 2011-12-26 16:28+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -23155,7 +23155,7 @@ msgstr ""
 "* +object+ (略字は +o+)は検証されるオブジェクトにアクセスする為に存在する。\n"
 "* +@TAGNAME+ は +object.tag('TAGNAME')+ の中で変換される\n"
 "* +@@TAGNAME+ は +object.tags('TAGNAME')+ の中で変換される\n"
-"* +object+ は、メソッド呼び出し用に対象を省略できる。(それを暗示する)??c"
+"* +object+ は、メソッド呼び出し用の対象として省略できる。(ほのめかす)"
 
 # @example Specifying multiple expressions
 #: ../lib/yard/verifier.rb:33
