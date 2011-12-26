@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-22 18:13+0900\n"
+"PO-Revision-Date: 2011-12-26 11:41+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15486,16 +15486,14 @@ msgid ""
 "that\n"
 "of an attribute defined using attr_accessor."
 msgstr ""
-"\n"
-"\n"
-"Creates the auto-generated docstring for the setter method of a struct's\n"
-"member. This is used so the generated documentation will look just like that\n"
-"of an attribute defined using attr_accessor."
+"構造体のメンバーのsetterメソッド用に、自動生成されたdocstringを作成する。\n"
+"これは、生成されたドキュメントが、\n"
+"attr_accessorによって定義された属性のように見えるように利用される。"
 
 # @return [String]
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:75
 msgid "a docstring to be attached to the setter method for this member"
-msgstr ""
+msgstr "このメンバー用にsetterメソッドに加えられるdocstring"
 
 # YARD::Handlers::Ruby::StructHandlerMethods#create_class
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:85
@@ -15504,26 +15502,29 @@ msgid ""
 "name.\n"
 "Returns it for further use."
 msgstr ""
+"与えられたクラス名、スーパークラス名と共に、\n"
+"クラスオブジェクトを作成,記録する。\n"
+"更に利用する為に返す。"
 
 # @return [ClassObject]
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:90
 msgid "the class object for further processing/method attaching"
-msgstr ""
+msgstr "処理/メソッドを加える為のクラスオブジェクト"
 
 # @param [String]
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:90
 msgid "tag|param|classname"
-msgstr ""
+msgstr "classname"
 
 # @param [String] superclass
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:90
 msgid "the name of the superclass"
-msgstr ""
+msgstr "スーパークラスの名前"
 
 # @param [String] classname
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:90
 msgid "the name of the class"
-msgstr ""
+msgstr "クラスの名前"
 
 # YARD::Handlers::Ruby::StructHandlerMethods#create_writer
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:98
@@ -15532,18 +15533,20 @@ msgid ""
 "attribute.\n"
 "Also sets up the docstring to prettify the documentation output."
 msgstr ""
+"setter(writer)メソッドを作成し、属性としてクラスに追加する。\n"
+"それに加え、ドキュメント出力を装飾する為にdocstringをセットアップする。"
 
 # @param [ClassObject] klass
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:102
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:119
 msgid "the class to attach the method to"
-msgstr ""
+msgstr "クラスにメソッドを追加するクラス"
 
 # @param [String] member
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:102
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:119
 msgid "the name of the member we're generating a method for"
-msgstr ""
+msgstr "私達がメソッド用に生成するメンバーの名前"
 
 # YARD::Handlers::Ruby::StructHandlerMethods#create_reader
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:115
@@ -15552,22 +15555,24 @@ msgid ""
 "attribute.\n"
 "Also sets up the docstring to prettify the documentation output."
 msgstr ""
+"getter(reader)メソッドを作成し、属性として、クラスに追加する。\n"
+"さらに、ドキュメント出力を装飾する為に、docstringをセットアップする。"
 
 # YARD::Handlers::Ruby::StructHandlerMethods#create_attributes
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:129
 msgid ""
 "Creates the given member methods and attaches them to the given ClassObject."
-msgstr ""
+msgstr "与えられたメンバーメソッドを作成し、与えられたClassObjectにそれらを加える。"
 
 # @param [ClassObject] klass
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:132
 msgid "the class to generate attributes for"
-msgstr ""
+msgstr "属性を生成するクラス用のクラス"
 
 # @param [Array<String>]
 #: ../lib/yard/handlers/ruby/struct_handler_methods.rb:132
 msgid "tag|param|members"
-msgstr ""
+msgstr "members"
 
 # @return [LocaleInfoCollector]
 #: ../lib/yard/i18n.rb:52
