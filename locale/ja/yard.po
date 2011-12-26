@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-26 14:46+0900\n"
+"PO-Revision-Date: 2011-12-26 14:59+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14714,7 +14714,7 @@ msgid ""
 "To implement a custom handler matcher, subclass this class and implement\n"
 "{#matches?} to return whether a node matches the handler."
 msgstr ""
-"カスタムハンドラーマッチャーを実装する為には、このクラスをサブクラス化する。\n"
+"カスタムハンドラーのマッチャーを実装するには、このクラスをサブクラス化する。\n"
 "そして、ノードがハンドラーにマッチするかどうかを返す為に{#matches?}メソッドを実装する。"
 
 # @example A Custom Handler Matcher Extension
@@ -14737,7 +14737,7 @@ msgstr ""
 "  def matches?(node) node.source.include?(name) end\n"
 "end\n"
 "\n"
-"# このハンドラーは'foo'を含んでいるソースで任意のノードを操作する。??c(Rubyのinclude)\n"
+"# このハンドラーは'foo'を含んでいるソースの所で任意のノードを操作する。\n"
 "class MyHandler < Handlers::Ruby::Base\n"
 "  handles MyExtension.new('foo')\n"
 "end"
@@ -14745,7 +14745,7 @@ msgstr ""
 # @example
 #: ../lib/yard/handlers/ruby/base.rb:18
 msgid "tag|example|A Custom Handler Matcher Extension"
-msgstr "カスタムハンドラーマッチャーの拡張"
+msgstr "カスタムハンドラーのマッチャーの拡張"
 
 # YARD::Handlers::Ruby::HandlesExtension#initialize
 #: ../lib/yard/handlers/ruby/base.rb:20
