@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-27 15:39+0900\n"
+"PO-Revision-Date: 2011-12-27 15:42+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21850,27 +21850,27 @@ msgstr "書式化されたソースコード"
 # YARD::Templates::Helpers::FilterHelper
 #: ../lib/yard/templates/helpers/filter_helper.rb:4
 msgid "Helpers for various object types"
-msgstr ""
+msgstr "様々なオブジェクト型用のHelperメソッド"
 
 # @return [Boolean]
 #: ../lib/yard/templates/helpers/filter_helper.rb:6
 msgid "whether an object is a method"
-msgstr ""
+msgstr "オブジェクトがメソッドかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/templates/helpers/filter_helper.rb:11
 msgid "whether an object is a namespace"
-msgstr ""
+msgstr "オブジェクトがnamespaceかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/templates/helpers/filter_helper.rb:16
 msgid "whether an object is a class"
-msgstr ""
+msgstr "オブジェクトがクラスかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/templates/helpers/filter_helper.rb:21
 msgid "whether an object is a module"
-msgstr ""
+msgstr "オブジェクトがモジュールかどうか"
 
 # YARD::Templates::Helpers::HtmlHelper
 #: ../lib/yard/templates/helpers/html_helper.rb:6
