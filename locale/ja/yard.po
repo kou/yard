@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-27 15:42+0900\n"
+"PO-Revision-Date: 2011-12-27 17:59+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21875,54 +21875,54 @@ msgstr "オブジェクトがモジュールかどうか"
 # YARD::Templates::Helpers::HtmlHelper
 #: ../lib/yard/templates/helpers/html_helper.rb:6
 msgid "The helper module for HTML templates."
-msgstr ""
+msgstr "HTMLテンプレート用のhelperモジュール。"
 
 # YARD::Templates::Helpers::HtmlHelper#h
 #: ../lib/yard/templates/helpers/html_helper.rb:13
 msgid "Escapes HTML entities"
-msgstr ""
+msgstr "HTMLの構成要素をエスケープする。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:16
 msgid "the HTML with escaped entities"
-msgstr ""
+msgstr "エスケープされたものと一緒のHTML"
 
 # YARD::Templates::Helpers::HtmlHelper#h
 # YARD::Templates::Helpers::HtmlHelper#urlencode
 #: ../lib/yard/templates/helpers/html_helper.rb:16
 #: ../lib/yard/templates/helpers/html_helper.rb:24
 msgid "Escaping Template Data"
-msgstr ""
+msgstr "テンプレートのデータをエスケープする。"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:16
 msgid "the text to escape"
-msgstr ""
+msgstr "エスケープするテキスト"
 
 # YARD::Templates::Helpers::HtmlHelper#urlencode
 #: ../lib/yard/templates/helpers/html_helper.rb:21
 msgid "Escapes a URL"
-msgstr ""
+msgstr "URLをエスケープする"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:24
 msgid "the escaped URL"
-msgstr ""
+msgstr "エスケープされたURL"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:24
 msgid "the URL"
-msgstr ""
+msgstr "URL"
 
 # YARD::Templates::Helpers::HtmlHelper#htmlify
 #: ../lib/yard/templates/helpers/html_helper.rb:31
 msgid "Turns text into HTML using +markup+ style formatting."
-msgstr ""
+msgstr "+markup+ スタイル書式にする事によって、HTMLへテキストを切り替える。"
 
 # @param [Symbol]
 #: ../lib/yard/templates/helpers/html_helper.rb:36
 msgid "tag|param|markup"
-msgstr ""
+msgstr "markup"
 
 # @param [Symbol] markup
 #: ../lib/yard/templates/helpers/html_helper.rb:36
@@ -21930,11 +21930,13 @@ msgid ""
 "examples are +:markdown+, +:textile+, +:rdoc+.\n"
 "To add a custom markup type, see {MarkupHelper}"
 msgstr ""
+"例えば、 +:markdown+ , +:textile+ , +:rdoc+ がある。\n"
+"カスタムマークアップの型を追加するには、 {MarkupHelper}参照。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:36
 msgid "the HTML"
-msgstr ""
+msgstr "HTML"
 
 # YARD::Templates::Helpers::HtmlHelper#htmlify
 # YARD::Templates::Helpers::HtmlHelper#html_markup_markdown
@@ -21955,22 +21957,22 @@ msgstr ""
 #: ../lib/yard/templates/helpers/html_helper.rb:123
 #: ../lib/yard/templates/helpers/html_helper.rb:128
 msgid "Converting Markup to HTML"
-msgstr ""
+msgstr "HTMLへMarkupを変換する。"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:36
 msgid "the text to format"
-msgstr ""
+msgstr "書式するテキスト"
 
 # YARD::Templates::Helpers::HtmlHelper#html_markup_markdown
 #: ../lib/yard/templates/helpers/html_helper.rb:59
 msgid "Converts Markdown to HTML"
-msgstr ""
+msgstr "HTMLへMarkdownを変換する。"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:62
 msgid "input Markdown text"
-msgstr ""
+msgstr "Markdownテキストを入力する"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:62
@@ -21978,42 +21980,42 @@ msgstr ""
 #: ../lib/yard/templates/helpers/html_helper.rb:88
 #: ../lib/yard/templates/helpers/html_helper.rb:112
 msgid "output HTML"
-msgstr ""
+msgstr "HTMLを出力する"
 
 # YARD::Templates::Helpers::HtmlHelper#html_markup_textile
 #: ../lib/yard/templates/helpers/html_helper.rb:75
 msgid "Converts Textile to HTML"
-msgstr ""
+msgstr "HTMLへTextileを変換する。"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:78
 msgid "the input Textile text"
-msgstr ""
+msgstr "入力するTextileテキスト"
 
 # YARD::Templates::Helpers::HtmlHelper#html_markup_rdoc
 #: ../lib/yard/templates/helpers/html_helper.rb:85
 msgid "Converts RDoc formatting (SimpleMarkup) to HTML"
-msgstr ""
+msgstr "RDoc書式(SimpleMarkup)をHTMLへ変換する。"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:88
 msgid "the input RDoc formatted text"
-msgstr ""
+msgstr "入力する書式化されたRDocのテキスト"
 
 # YARD::Templates::Helpers::HtmlHelper#html_markup_text
 #: ../lib/yard/templates/helpers/html_helper.rb:95
 msgid "Converts plaintext to HTML"
-msgstr ""
+msgstr "プレーンテキストをHTMLへ変換する。"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:98
 msgid "the input text"
-msgstr ""
+msgstr "入力するテキスト"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:98
 msgid "the output HTML"
-msgstr ""
+msgstr "出力するHTML"
 
 # @since
 #: ../lib/yard/templates/helpers/html_helper.rb:104
@@ -22023,17 +22025,17 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:104
 msgid "the same text with no markup"
-msgstr ""
+msgstr "markupの無い、同じテキスト"
 
 # YARD::Templates::Helpers::HtmlHelper#html_markup_html
 #: ../lib/yard/templates/helpers/html_helper.rb:109
 msgid "Converts HTML to HTML"
-msgstr ""
+msgstr "HTMLからHTMLへ変換する"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:112
 msgid "input html"
-msgstr ""
+msgstr "htmlを入力する"
 
 # YARD::Templates::Helpers::HtmlHelper#html_markup_ruby
 #: ../lib/yard/templates/helpers/html_helper.rb:117
@@ -22042,43 +22044,47 @@ msgid ""
 "this method is meant to be called from {#htmlify} when markup is\n"
 "set to \"ruby\"."
 msgstr ""
+"Rubyのソースをハイライトする。\n"
+"{#html_syntax_highlight}メソッドと同様である。\n"
+"しかし、このメソッドはmarkupが\"ruby\"を設定する時に、\n"
+"{htmlify}から呼び出される事を意味している。"
 
 # @param [String] source
 #: ../lib/yard/templates/helpers/html_helper.rb:123
 msgid "the Ruby source"
-msgstr ""
+msgstr "Rubyのソース"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:123
 msgid "the highlighted HTML"
-msgstr ""
+msgstr "ハイライトされたHTML"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:128
 msgid "HTMLified text as a single line (paragraphs removed)"
-msgstr ""
+msgstr "単一の行として、HTML化された(パラグラフが削除された)テキスト"
 
 # YARD::Templates::Helpers::HtmlHelper#html_syntax_highlight
 #: ../lib/yard/templates/helpers/html_helper.rb:135
 msgid "Syntax highlights +source+ in language +type+."
-msgstr ""
+msgstr "構文は、+type+ の言語で +source+ をハイライトする。"
 
 # YARD::Templates::Helpers::HtmlHelper#html_syntax_highlight
 # YARD::Templates::Helpers::HtmlHelper#html_syntax_highlight_plain
 #: ../lib/yard/templates/helpers/html_helper.rb:143
 #: ../lib/yard/templates/helpers/html_helper.rb:160
 msgid "Syntax Highlighting Source Code"
-msgstr ""
+msgstr "ソースコードをハイライトする構文"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:143
 msgid "the highlighted source"
-msgstr ""
+msgstr "ハイライトされたソース"
 
 # @param [String] source
 #: ../lib/yard/templates/helpers/html_helper.rb:143
 msgid "the source code to highlight"
-msgstr ""
+msgstr "ハイライトするソースコード"
 
 # @note
 #: ../lib/yard/templates/helpers/html_helper.rb:143
@@ -22086,6 +22092,8 @@ msgid ""
 "To support a specific language +type+, implement the method\n"
 "+html_syntax_highlight_TYPE+ in this class."
 msgstr ""
+"特定の +type+ の言語をサポートするには、\n"
+"このクラスの中の、+html_syntax_highlight_TYPE+メソッドを実装する。"
 
 # @param [Symbol] type
 #: ../lib/yard/templates/helpers/html_helper.rb:143
@@ -22093,11 +22101,13 @@ msgid ""
 "the language type (:ruby, :plain, etc). Use\n"
 ":plain for no syntax highlighting."
 msgstr ""
+"言語の型(:ruby, :plain, etc.)。\n"
+"ハイライト無しの構文には、 :plain を使う"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:160
 msgid "unhighlighted source"
-msgstr ""
+msgstr "ハイライトを戻されたソース"
 
 # YARD::Templates::Helpers::HtmlHelper#resolve_links
 #: ../lib/yard/templates/helpers/html_helper.rb:167
@@ -22105,21 +22115,24 @@ msgid ""
 "Resolves any text in the form of +{Name}+ to the object specified by\n"
 "Name. Also supports link titles in the form +{Name title}+."
 msgstr ""
+"Nameによって指定されたオブジェクトに +{Name}+ の形式で\n"
+"任意のテキストを解決する。\n"
+"さらに、 +{Name title}+ 形式のタイトルのリンクもサポートする。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:175
 msgid "HTML with linkified references"
-msgstr ""
+msgstr "リンクされた参照を用いたHTML"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/html_helper.rb:175
 msgid "the text to resolve links in"
-msgstr ""
+msgstr "リンクを解決する為のテキスト"
 
 # @example
 #: ../lib/yard/templates/helpers/html_helper.rb:175
 msgid "tag|example|Linking to an instance method"
-msgstr ""
+msgstr "インスタンスメソッドにリンクする"
 
 # @example Linking to an instance method
 #: ../lib/yard/templates/helpers/html_helper.rb:175
@@ -22130,7 +22143,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/helpers/html_helper.rb:175
 msgid "tag|example|Linking to a class with a title"
-msgstr ""
+msgstr "タイトルと共にクラスにリンクする"
 
 # @example Linking to a class with a title
 #: ../lib/yard/templates/helpers/html_helper.rb:175
@@ -22142,12 +22155,12 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:274
 msgid "the anchor for a specific object"
-msgstr ""
+msgstr "固有のオブジェクト用のアンカー"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/helpers/html_helper.rb:274
 msgid "the object to get an anchor for"
-msgstr ""
+msgstr "アンカーを取得するオブジェクト"
 
 # YARD::Templates::Helpers::HtmlHelper#anchor_for
 # YARD::Templates::Helpers::HtmlHelper#url_for
@@ -22161,12 +22174,12 @@ msgstr ""
 # YARD::Templates::Helpers::HtmlHelper#url_for
 #: ../lib/yard/templates/helpers/html_helper.rb:290
 msgid "Returns the URL for an object."
-msgstr ""
+msgstr "オブジェクト用にURLを返す"
 
 # @param [String] anchor
 #: ../lib/yard/templates/helpers/html_helper.rb:295
 msgid "the anchor to link to"
-msgstr ""
+msgstr "リンクする為のアンカー"
 
 # @param [Boolean]
 #: ../lib/yard/templates/helpers/html_helper.rb:295
@@ -22176,32 +22189,32 @@ msgstr ""
 # @param [Boolean] relative
 #: ../lib/yard/templates/helpers/html_helper.rb:295
 msgid "use a relative or absolute link"
-msgstr ""
+msgstr "相対or絶対リンクを使うかどうか(trueで相対リンク)"
 
 # @param [String, CodeObjects::Base] obj
 #: ../lib/yard/templates/helpers/html_helper.rb:295
 msgid "the object (or object path) to link to"
-msgstr ""
+msgstr "リンクするオブジェクト(又は、オブジェクトパス)"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:295
 msgid "the URL location of the object"
-msgstr ""
+msgstr "オブジェクトのURLの場所"
 
 # YARD::Templates::Helpers::HtmlHelper#url_for_file
 #: ../lib/yard/templates/helpers/html_helper.rb:324
 msgid "Returns the URL for a specific file"
-msgstr ""
+msgstr "固有のファイル用のURLを返す"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:328
 msgid "the URL pointing to the file"
-msgstr ""
+msgstr "ファイルの場所を指し示す、URL"
 
 # YARD::Templates::Helpers::HtmlHelper#format_object_name_list
 #: ../lib/yard/templates/helpers/html_helper.rb:348
 msgid "Formats a list of objects and links them"
-msgstr ""
+msgstr "オブジェクトのリストを書式化し、それをリンクする。"
 
 # YARD::Templates::Helpers::HtmlHelper#format_object_name_list
 # YARD::Templates::Helpers::HtmlHelper#format_types
@@ -22212,27 +22225,27 @@ msgstr ""
 #: ../lib/yard/templates/helpers/html_helper.rb:383
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid "Formatting Objects and Attributes"
-msgstr ""
+msgstr "オブジェクトと属性を書式化する。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:349
 msgid "a formatted list of objects"
-msgstr ""
+msgstr "オブジェクトのリストを返す"
 
 # YARD::Templates::Helpers::HtmlHelper#format_types
 #: ../lib/yard/templates/helpers/html_helper.rb:356
 msgid "Formats a list of types from a tag."
-msgstr ""
+msgstr "タグから型のリストを書式化する。"
 
 # @param [Array<String>, FalseClass]
 #: ../lib/yard/templates/helpers/html_helper.rb:367
 msgid "tag|param|typelist"
-msgstr ""
+msgstr "typelist"
 
 # @param [Array<String>, FalseClass] typelist
 #: ../lib/yard/templates/helpers/html_helper.rb:367
 msgid "the list of types to be formatted."
-msgstr ""
+msgstr "書式化される型のリスト"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:367
@@ -22241,6 +22254,8 @@ msgid ""
 "as [Type1, Type2, ...] with the types linked\n"
 "to their respective descriptions."
 msgstr ""
+"それらの関連する説明にリンクした型と共に、\n"
+"[Type1, Type2, ...]として書式化された型のリスト"
 
 # @param [Boolean] brackets
 #: ../lib/yard/templates/helpers/html_helper.rb:367
@@ -22248,76 +22263,78 @@ msgid ""
 "omits the surrounding\n"
 "brackets if +brackets+ is set to +false+."
 msgstr ""
+"+brackets+ に +false+ が設定された場合、\n"
+"周りのブラケット(括弧)を除外する。"
 
 # YARD::Templates::Helpers::HtmlHelper#signature_types
 #: ../lib/yard/templates/helpers/html_helper.rb:378
 msgid "Get the return types for a method signature."
-msgstr ""
+msgstr "メソッドのシグネチャ用に、返す型を取得する。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:383
 msgid "the signature types"
-msgstr ""
+msgstr "シグネチャの型"
 
 # @param [CodeObjects::MethodObject] meth
 #: ../lib/yard/templates/helpers/html_helper.rb:383
 msgid "the method object"
-msgstr ""
+msgstr "メソッドのオブジェクト"
 
 # @param [Boolean] link
 #: ../lib/yard/templates/helpers/html_helper.rb:383
 msgid "whether to link the types"
-msgstr ""
+msgstr "型をリンクするかどうか"
 
 # @param [Boolean]
 #: ../lib/yard/templates/helpers/html_helper.rb:383
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid "tag|param|link"
-msgstr ""
+msgstr "link"
 
 # YARD::Templates::Helpers::HtmlHelper#signature
 #: ../lib/yard/templates/helpers/html_helper.rb:412
 msgid "Formats the signature of method +meth+."
-msgstr ""
+msgstr "+meth+ メソッドのシグネチャを書式化する"
 
 # @param [Boolean]
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid "tag|param|show_extras"
-msgstr ""
+msgstr "show_extras"
 
 # @param [Boolean] link
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid "whether to link the method signature to the details view"
-msgstr ""
+msgstr "詳細の一覧にメソッドのシグネチャをリンクするかどうか"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid "the formatted method signature"
-msgstr ""
+msgstr "書式化されたメソッドのシグネチャ"
 
 # @param [Boolean] show_extras
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid "whether to show extra meta-data (visibility, attribute info)"
-msgstr ""
+msgstr "追加のメタデータを見せるかどうか(可視性、infoの属性)"
 
 # @param [Boolean]
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid "tag|param|full_attr_name"
-msgstr ""
+msgstr "full_attr_name"
 
 # @param [Boolean] full_attr_name
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid ""
 "whether to show the full attribute name\n"
 "(\"name=\" instead of \"name\")"
-msgstr ""
+msgstr "完全なnameの属性を見せるかどうか(\"name=\" instead of \"name\")"
 
 # @param [CodeObjects::MethodObject] meth
 #: ../lib/yard/templates/helpers/html_helper.rb:420
 msgid ""
 "the method object to list\n"
 "the signature of"
-msgstr ""
+msgstr "シグネチャを記述するメソッドオブジェクト"
 
 # YARD::Templates::Helpers::HtmlHelper#charset
 #: ../lib/yard/templates/helpers/html_helper.rb:456
@@ -22327,36 +22344,41 @@ msgid ""
 "method. In Ruby 1.9 you can also modify this value by setting\n"
 "+Encoding.default_external+."
 msgstr ""
+"現在の文字集合を返す。\n"
+"デフォルトの値は、 +LANG+ 環境変数を設定したり、このメソッドを上書きする事によって\n"
+"上書きできる。\n"
+"又、Ruby1.9では +Encoding.default_external+ を設定する事によって、\n"
+"この値を変更できる。"
 
 # YARD::Templates::Helpers::HtmlHelper#charset
 #: ../lib/yard/templates/helpers/html_helper.rb:462
 msgid "Getting the Character Encoding"
-msgstr ""
+msgstr "Character Encodingを取得する"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:462
 msgid "the current character set"
-msgstr ""
+msgstr "現在の文字集合"
 
 # YARD::Templates::Helpers::HtmlHelper#tag_attrs
 #: ../lib/yard/templates/helpers/html_helper.rb:485
 msgid "Converts a set of hash options into HTML attributes for a tag"
-msgstr ""
+msgstr "タグ用にHTML属性へハッシュのオプションのグループを変換する。"
 
 # @param [Hash{String => String}] opts
 #: ../lib/yard/templates/helpers/html_helper.rb:488
 msgid "the tag options"
-msgstr ""
+msgstr "そのタグのオプション"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:488
 msgid "the tag attributes of an HTML tag"
-msgstr ""
+msgstr "HTMLタグのタグ属性"
 
 # YARD::Templates::Helpers::HtmlHelper#convert_method_to_overload
 #: ../lib/yard/templates/helpers/html_helper.rb:493
 msgid "Converts a {CodeObjects::MethodObject} into an overload object"
-msgstr ""
+msgstr "上書きするオブジェクトへ{CodeObjects::MethodObject}を変換する"
 
 # YARD::Templates::Helpers::HtmlSyntaxHighlightHelper
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:5
