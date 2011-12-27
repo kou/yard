@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-27 18:25+0900\n"
+"PO-Revision-Date: 2011-12-27 18:40+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21514,7 +21514,7 @@ msgid ""
 "be some helper to \"clean up\" text for whatever, this is it."
 msgstr ""
 "テキストをエスケープする。これは、HtmlHelperに多く利用され、\n"
-"いつでもテキストを\"clean up\"する為にいくつか支援されるべきである。"
+"どんなテキストでも仕上げる為にいくつかのhelperメソッドになる。"
 
 # YARD::Templates::Helpers::BaseHelper#h
 #: ../lib/yard/templates/helpers/base_helper.rb:31
