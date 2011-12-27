@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-27 17:59+0900\n"
+"PO-Revision-Date: 2011-12-27 18:01+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22383,22 +22383,22 @@ msgstr "上書きするオブジェクトへ{CodeObjects::MethodObject}を変換
 # YARD::Templates::Helpers::HtmlSyntaxHighlightHelper
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:5
 msgid "Helper methods for syntax highlighting."
-msgstr ""
+msgstr "構文ハイライト用のHelperメソッド"
 
 # YARD::Templates::Helpers::HtmlSyntaxHighlightHelper#html_syntax_highlight_ruby
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:7
 msgid "Highlights Ruby source"
-msgstr ""
+msgstr "Rubyのソースをハイライトする"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:9
 msgid "the highlighted Ruby source"
-msgstr ""
+msgstr "ハイライトされたRubyのソース"
 
 # @param [String] source
 #: ../lib/yard/templates/helpers/html_syntax_highlight_helper.rb:9
 msgid "the Ruby source code"
-msgstr ""
+msgstr "Rubyのソースコード"
 
 # @param value
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:22
