@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-27 14:27+0900\n"
+"PO-Revision-Date: 2011-12-27 15:39+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21429,42 +21429,42 @@ msgstr ""
 #: ../lib/yard/templates/helpers/markup_helper.rb:155
 #: ../lib/yard/templates/engine.rb:193
 msgid "tag|param|the"
-msgstr ""
+msgstr "??c typo paramの使い方がオカシイ the?<本当は、hash + @optionを使う"
 
 # YARD::Templates::Helpers::BaseHelper
 #: ../lib/yard/templates/helpers/base_helper.rb:3
 msgid "The base helper module included in all templates."
-msgstr ""
+msgstr "ベースへルパーモジュールは、全てのテンプレートを含んでいる。"
 
 # @param value
 #: ../lib/yard/templates/helpers/base_helper.rb:4
 msgid "the value to set the attribute serializer to."
-msgstr ""
+msgstr "シリアライザーの属性を設定する値"
 
 # @param value
 #: ../lib/yard/templates/helpers/base_helper.rb:4
 msgid "the value to set the attribute object to."
-msgstr ""
+msgstr "オブジェクトの属性を設定する値"
 
 # YARD::Templates::Helpers::BaseHelper#serializer=
 #: ../lib/yard/templates/helpers/base_helper.rb:5
 msgid "Sets the attribute serializer"
-msgstr ""
+msgstr "シリアライザーの属性を設定する。"
 
 # YARD::Templates::Helpers::BaseHelper#serializer
 #: ../lib/yard/templates/helpers/base_helper.rb:5
 msgid "Returns the value of attribute serializer"
-msgstr ""
+msgstr "シリアライザーの属性の値を返す"
 
 # YARD::Templates::Helpers::BaseHelper#object=
 #: ../lib/yard/templates/helpers/base_helper.rb:5
 msgid "Sets the attribute object"
-msgstr ""
+msgstr "オブジェクトの属性を設定する。"
 
 # YARD::Templates::Helpers::BaseHelper#object
 #: ../lib/yard/templates/helpers/base_helper.rb:5
 msgid "Returns the value of attribute object"
-msgstr ""
+msgstr "オブジェクトの属性の値を返す"
 
 # YARD::Templates::Helpers::BaseHelper#globals
 #: ../lib/yard/templates/helpers/base_helper.rb:9
@@ -21472,16 +21472,18 @@ msgid ""
 "An object that keeps track of global state throughout the entire template\n"
 "rendering process (including any sub-templates)."
 msgstr ""
+"全体のテンプレートの表示処理を通じて、globalの状態の軌跡を保持するオブジェクト。\n"
+"(任意のサブテンプレートを含んでいる)"
 
 # YARD::Templates::Helpers::BaseHelper#globals
 #: ../lib/yard/templates/helpers/base_helper.rb:13
 msgid "Managing Global Template State"
-msgstr ""
+msgstr "グローバルなテンプレートの状態を管理する。"
 
 # @return [OpenStruct]
 #: ../lib/yard/templates/helpers/base_helper.rb:13
 msgid "a struct object that stores state"
-msgstr ""
+msgstr "状態を記憶する構造体オブジェクト"
 
 # @param [Array<CodeObjects::Base>] list
 #: ../lib/yard/templates/helpers/base_helper.rb:23 ../lib/yard/verifier.rb:90
@@ -21491,7 +21493,7 @@ msgstr "コードオブジェクトのリスト"
 # YARD::Templates::Helpers::BaseHelper#run_verifier
 #: ../lib/yard/templates/helpers/base_helper.rb:23
 msgid "Running the Verifier"
-msgstr ""
+msgstr "Verifierを起動する。"
 
 # @return [Array<CodeObjects::Base>]
 #: ../lib/yard/templates/helpers/base_helper.rb:23
@@ -21499,6 +21501,8 @@ msgid ""
 "a list of code objects that match\n"
 "the verifier. If no verifier is supplied, all objects are returned."
 msgstr ""
+"verifierにマッチするコードオブジェクトのリスト\n"
+"verifierが提供されない場合、全てのオブジェクトが、返される。"
 
 # YARD::Templates::Helpers::BaseHelper#h
 #: ../lib/yard/templates/helpers/base_helper.rb:30
@@ -21506,11 +21510,13 @@ msgid ""
 "Escapes text. This is used a lot by the HtmlHelper and there should\n"
 "be some helper to \"clean up\" text for whatever, this is it."
 msgstr ""
+"テキストをエスケープする。これは、HtmlHelperに多く利用され、\n"
+"いつでもテキストを\"clean up\"する為にいくつか支援されるべきである。"
 
 # YARD::Templates::Helpers::BaseHelper#h
 #: ../lib/yard/templates/helpers/base_helper.rb:31
 msgid "Escaping Text"
-msgstr ""
+msgstr "テキストをエスケープする。"
 
 # YARD::Templates::Helpers::BaseHelper#linkify
 #: ../lib/yard/templates/helpers/base_helper.rb:38
@@ -21518,16 +21524,18 @@ msgid ""
 "Links objects or URLs. This method will delegate to the correct +link_+\n"
 "method depending on the arguments passed in."
 msgstr ""
+"オブジェクトやURLをリンクする。このメソッドは、\n"
+"渡された引数に応じて、妥当な +link_+ メソッドに委譲するだろう。"
 
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:48
 msgid "tag|example|Including docstring contents of an object"
-msgstr ""
+msgstr "インクルードしているdocstringは、オブジェクトの内容となる。"
 
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:48
 msgid "tag|example|Linking a URL"
-msgstr ""
+msgstr "URLにリンクする。"
 
 # @example Including docstring contents of an object
 #: ../lib/yard/templates/helpers/base_helper.rb:48
@@ -21537,7 +21545,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:48
 msgid "tag|example|Linking to an extra file"
-msgstr ""
+msgstr "extraファイル(追加のファイル)にリンクする。"
 
 # @example Linking to an extra file
 #: ../lib/yard/templates/helpers/base_helper.rb:48
@@ -21547,7 +21555,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:48
 msgid "tag|example|Linking an object by path"
-msgstr ""
+msgstr "パスによってオブジェクトにリンクする"
 
 # @example Linking an object by path
 #: ../lib/yard/templates/helpers/base_helper.rb:48
@@ -21579,7 +21587,7 @@ msgstr ""
 #: ../lib/yard/templates/helpers/html_helper.rb:238
 #: ../lib/yard/templates/helpers/html_helper.rb:259
 msgid "Linking Objects and URLs"
-msgstr ""
+msgstr "オブジェクトとURLにリンクする。"
 
 # @example Linking a URL
 #: ../lib/yard/templates/helpers/base_helper.rb:48
@@ -21591,158 +21599,158 @@ msgstr ""
 #: ../lib/yard/templates/helpers/base_helper.rb:93
 #: ../lib/yard/templates/helpers/html_helper.rb:233
 msgid "Includes an object's docstring into output."
-msgstr ""
+msgstr "出力へ、オブジェクトのdocstringを含める"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/helpers/base_helper.rb:96
 msgid "the object to include"
-msgstr ""
+msgstr "含めるオブジェクト"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:96
 msgid "the object's docstring (no tags)"
-msgstr ""
+msgstr "docstringオブジェクト(タグ無し)"
 
 # YARD::Templates::Helpers::BaseHelper#link_include_file
 # YARD::Templates::Helpers::HtmlHelper#link_include_file
 #: ../lib/yard/templates/helpers/base_helper.rb:101
 #: ../lib/yard/templates/helpers/html_helper.rb:224
 msgid "Include a file as a docstring in output"
-msgstr ""
+msgstr "出力でdocstringとして、ファイルを含める"
 
 # @param [String] file
 #: ../lib/yard/templates/helpers/base_helper.rb:104
 msgid "the filename to include"
-msgstr ""
+msgstr "含めるファイル名"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:104
 msgid "the file's contents"
-msgstr ""
+msgstr "ファイルの内容"
 
 # YARD::Templates::Helpers::BaseHelper#link_object
 # YARD::Templates::Helpers::HtmlHelper#link_object
 #: ../lib/yard/templates/helpers/base_helper.rb:109
 #: ../lib/yard/templates/helpers/html_helper.rb:238
 msgid "Links to an object with an optional title"
-msgstr ""
+msgstr "任意のタイトルと共にオブジェクトにリンクする"
 
 # @param [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:113
 #: ../lib/yard/templates/helpers/base_helper.rb:132
 #: ../lib/yard/templates/helpers/base_helper.rb:143
 msgid "tag|param|title"
-msgstr ""
+msgstr "title"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:113
 msgid "the linked object"
-msgstr ""
+msgstr "リンクしたオブジェクト"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/helpers/base_helper.rb:113
 msgid "the object to link to"
-msgstr ""
+msgstr "リンクするオブジェクト"
 
 # @param [String] title
 #: ../lib/yard/templates/helpers/base_helper.rb:113
 msgid "the title to use for the link"
-msgstr ""
+msgstr "リンク用に利用するタイトル"
 
 # YARD::Templates::Helpers::BaseHelper#link_url
 # YARD::Templates::Helpers::HtmlHelper#link_url
 #: ../lib/yard/templates/helpers/base_helper.rb:127
 #: ../lib/yard/templates/helpers/html_helper.rb:259
 msgid "Links to a URL"
-msgstr ""
+msgstr "URLにリンクする"
 
 # @param [String] url
 #: ../lib/yard/templates/helpers/base_helper.rb:132
 msgid "the URL to link to"
-msgstr ""
+msgstr "リンクするURL"
 
 # @param [String] title
 #: ../lib/yard/templates/helpers/base_helper.rb:132
 msgid "the optional title to display the link as"
-msgstr ""
+msgstr "任意のタイトルとして、リンクに表示する"
 
 # @param [Hash] params
 #: ../lib/yard/templates/helpers/base_helper.rb:132
 msgid "optional parameters for the link"
-msgstr ""
+msgstr "リンク用の任意のパラメーター"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:132
 msgid "the linked URL"
-msgstr ""
+msgstr "リンクしたURL"
 
 # YARD::Templates::Helpers::BaseHelper#link_file
 # YARD::Templates::Helpers::HtmlHelper#link_file
 #: ../lib/yard/templates/helpers/base_helper.rb:137
 #: ../lib/yard/templates/helpers/html_helper.rb:212
 msgid "Links to an extra file"
-msgstr ""
+msgstr "extarファイルにリンクする"
 
 # @param [String] title
 #: ../lib/yard/templates/helpers/base_helper.rb:143
 msgid "the title of the link"
-msgstr ""
+msgstr "リンクのタイトル"
 
 # @param [String]
 #: ../lib/yard/templates/helpers/html_helper.rb:295
 #: ../lib/yard/templates/helpers/html_helper.rb:328
 #: ../lib/yard/templates/helpers/base_helper.rb:143
 msgid "tag|param|anchor"
-msgstr ""
+msgstr "anchor"
 
 # @param [String, CodeObjects::ExtraFileObject] filename
 # @param [String] filename
 #: ../lib/yard/templates/helpers/html_helper.rb:328
 #: ../lib/yard/templates/helpers/base_helper.rb:143
 msgid "the filename to link to"
-msgstr ""
+msgstr "リンクするファイル名"
 
 # @param [String] anchor
 #: ../lib/yard/templates/helpers/html_helper.rb:328
 #: ../lib/yard/templates/helpers/base_helper.rb:143
 msgid "optional anchor"
-msgstr ""
+msgstr "任意のアンカー"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:143
 msgid "the link to the file"
-msgstr ""
+msgstr "ファイルへのリンク"
 
 # YARD::Templates::Helpers::BaseHelper#format_types
 #: ../lib/yard/templates/helpers/base_helper.rb:151
 msgid "Formats a list of return types for output and links each type."
-msgstr ""
+msgstr "出力用に戻りの型のリストを書式化し、それぞれの型にリンクする。"
 
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "tag|example|Formatting types without surrounding brackets"
-msgstr ""
+msgstr "周りをブラケット(括弧)無しの型へ書式化する"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "the formatted list of Ruby types"
-msgstr ""
+msgstr "書式化されたRubyの型のリスト"
 
 # @param [Boolean] brackets
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "whether to surround the types in brackets"
-msgstr ""
+msgstr "ブラケット(括弧)の型で囲むかどうか"
 
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "tag|example|Formatting types"
-msgstr ""
+msgstr "型を書式する"
 
 # @param [Boolean]
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 #: ../lib/yard/templates/helpers/html_helper.rb:367
 msgid "tag|param|brackets"
-msgstr ""
+msgstr "brackets"
 
 # @example Formatting types
 #: ../lib/yard/templates/helpers/base_helper.rb:159
@@ -21752,7 +21760,7 @@ msgstr ""
 # @param [Array<String>] list
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "a list of types"
-msgstr ""
+msgstr "型のリスト"
 
 # YARD::Templates::Helpers::BaseHelper#format_types
 # YARD::Templates::Helpers::BaseHelper#format_object_type
@@ -21763,7 +21771,7 @@ msgstr ""
 #: ../lib/yard/templates/helpers/base_helper.rb:187
 #: ../lib/yard/templates/helpers/base_helper.rb:200
 msgid "Formatting Object Attributes"
-msgstr ""
+msgstr "オブジェクトの属性を書式化する"
 
 # @example Formatting types without surrounding brackets
 #: ../lib/yard/templates/helpers/base_helper.rb:159
@@ -21773,7 +21781,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:173
 msgid "tag|example|Formatted type of a method"
-msgstr ""
+msgstr "メソッドの入った書式化された型"
 
 # @example Formatted type of a method
 #: ../lib/yard/templates/helpers/base_helper.rb:173
@@ -21785,19 +21793,19 @@ msgstr ""
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/helpers/base_helper.rb:173
 msgid "the object to retrieve the type for"
-msgstr ""
+msgstr "型を回収するオブジェクト"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:173
 msgid ""
 "the human-readable formatted {CodeObjects::Base#type #type}\n"
 "for the object"
-msgstr ""
+msgstr "人が読みやすく書式化されたオブジェクト用の{CodeObjects::Base#type #type}メソッド"
 
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:173
 msgid "tag|example|Formatted type of an exception class"
-msgstr ""
+msgstr "exceptionクラスの書式された型"
 
 # @example Formatted type of an exception class
 #: ../lib/yard/templates/helpers/base_helper.rb:173
@@ -21810,7 +21818,7 @@ msgstr ""
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/helpers/base_helper.rb:187
 msgid "the object to retrieve a title for"
-msgstr ""
+msgstr "タイトルを回収するオブジェクト"
 
 # @example 
 #: ../lib/yard/templates/helpers/base_helper.rb:187
@@ -21822,22 +21830,22 @@ msgstr ""
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:187
 msgid "the page title name for a given object"
-msgstr ""
+msgstr "与えられたオブジェクト用のページのタイトル名"
 
 # YARD::Templates::Helpers::BaseHelper#format_source
 #: ../lib/yard/templates/helpers/base_helper.rb:197
 msgid "Indents and formats source code"
-msgstr ""
+msgstr "インデントし、ソースコードを書式化する"
 
 # @param [String] value
 #: ../lib/yard/templates/helpers/base_helper.rb:200
 msgid "the input source code"
-msgstr ""
+msgstr "入力のソースコード"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:200
 msgid "formatted source code"
-msgstr ""
+msgstr "書式化されたソースコード"
 
 # YARD::Templates::Helpers::FilterHelper
 #: ../lib/yard/templates/helpers/filter_helper.rb:4
