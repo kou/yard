@@ -2,6 +2,7 @@ module YARD
   module Templates
     module Helpers
       module Markup
+        begin require 'rdoc'; rescue LoadError; end
         begin
           require 'rdoc/markup'
           require 'rdoc/markup/to_html'
@@ -41,14 +42,16 @@ module YARD
           #
           # @todo Refactor into own SimpleMarkup subclass
           def fix_typewriter(text)
-            text.gsub(/(\s|^|>)\+(?! )([^\n\+]{1,900})(?! )\+/) do
-              first_text, type_text, pre_text, no_match = $1, $2, $`, $&
-              pre_match = (pre_text+first_text).scan(%r(</?(?:(?:pre|tt|code).*?>|[^>]+)\Z))
-              if pre_match.last.nil? || pre_match.last[1,1] == '/'
-                first_text + '<tt>' + CGI.escapeHTML(type_text) + '</tt>'
-              else
-                no_match
+            code_tags = 0
+            text.gsub(/<(\/)?(pre|code|tt)|(\s|^|>)\+(?! )([^\n\+]{1,900})(?! )\+/) do |str|
+              closed, tag, first_text, type_text, pre_text, no_match = $1, $2, $3, $4, $`, $&
+              
+              if tag
+                code_tags += (closed ? -1 : 1)
+                next str
               end
+              next str unless code_tags == 0
+              first_text + '<tt>' + CGI.escapeHTML(type_text) + '</tt>'
             end
           end
 

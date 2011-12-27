@@ -22,21 +22,25 @@ module YARD
       # The default list of markup providers for each markup type
       MARKUP_PROVIDERS = {
         :markdown => [
+          {:lib => :redcarpet, :const => 'RedcarpetCompat'},
           {:lib => :rdiscount, :const => 'RDiscount'},
           {:lib => :kramdown, :const => 'Kramdown::Document'},
           {:lib => :bluecloth, :const => 'BlueCloth'},
           {:lib => :maruku, :const => 'Maruku'},
-          {:lib => :redcarpet, :const => 'RedcarpetCompat'},
           {:lib => :'rpeg-markdown', :const => 'PEGMarkdown'},
         ],
         :textile => [
           {:lib => :redcloth, :const => 'RedCloth'},
         ],
+        :textile_strict => [
+          {:lib => :redcloth, :const => 'RedCloth'},
+        ],
         :rdoc => [
-          {:lib => :rdoc, :const => 'YARD::Templates::Helpers::Markup::RDocMarkup'},
+          {:lib => nil, :const => 'YARD::Templates::Helpers::Markup::RDocMarkup'},
         ],
         :ruby => [],
         :text => [],
+        :pre  => [],
         :html => [],
         :none => [],
       }

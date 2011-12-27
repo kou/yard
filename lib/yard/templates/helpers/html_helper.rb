@@ -51,7 +51,7 @@ module YARD
           string = html_syntax_highlight(CGI.unescapeHTML(string), language) unless options[:no_highlight]
           classes = ['code', language].compact.join(' ')
           %Q{<pre class="#{classes}">#{string}</pre>}
-        end unless markup == :text
+        end unless [:text, :none, :pre].include?(markup)
         html
       end
 
@@ -63,11 +63,11 @@ module YARD
         # TODO: other libraries might be more complex
         provider = markup_class(:markdown)
         if provider.to_s == 'RDiscount'
-          markup_class(:markdown).new(text, :autolink).to_html
+          provider.new(text, :autolink).to_html
         elsif provider.to_s == 'RedcarpetCompat'
-          provider.new(text, :gh_blockcode, :fenced_code).to_html
+          provider.new(text, :gh_blockcode, :fenced_code, :autolink).to_html
         else
-          markup_class(:markdown).new(text).to_html
+          provider.new(text).to_html
         end
       end
 
@@ -81,6 +81,14 @@ module YARD
         doc.to_html
       end
 
+      # Converts plaintext to strict Textile (hard breaks)
+      # @param [String] text the input textile data
+      # @return [String] the output HTML
+      # @since 0.6.0
+      def html_markup_textile_strict(text)
+        markup_class(:textile).new(text).to_html
+      end
+
       # Converts RDoc formatting (SimpleMarkup) to HTML
       # @param [String] text the input RDoc formatted text
       # @return [String] output HTML
@@ -91,18 +99,26 @@ module YARD
         doc.to_html
       end
 
-      # Converts plaintext to HTML
+      # Converts plaintext to pre-formatted HTML
+      # @param [String] text the input text
+      # @return [String] the output HTML
+      # @since 0.6.0
+      def html_markup_pre(text)
+        "<pre>" + h(text) + "</pre>"
+      end
+
+      # Converts plaintext to regular HTML
       # @param [String] text the input text
       # @return [String] the output HTML
       # @since 0.6.0
       def html_markup_text(text)
-        "<pre>" + h(text) + "</pre>"
+        h(text).gsub(/\r?\n/, '<br/>')
       end
 
       # @return [String] the same text with no markup
       # @since 0.6.6
       def html_markup_none(text)
-        h(text).gsub(/(?:\r?\n){2}/, '<br/>')
+        h(text)
       end
 
       # Converts HTML to HTML

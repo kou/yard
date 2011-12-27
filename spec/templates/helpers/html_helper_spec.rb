@@ -103,15 +103,28 @@ describe YARD::Templates::Helpers::HtmlHelper do
       htmlify("A\nB", :textile).should_not include("<br")
     end
     
+    it "should use hard breaks for textile_strict markup (RedCloth specific)" do
+      begin; require 'redcloth'; rescue LoadError; pending 'test requires redcloth gem' end
+      htmlify("A\nB", :textile_strict).should include("<br")
+    end
+
     it "should handle various encodings" do
       stub!(:object).and_return(Registry.root)
       Encoding.default_internal = 'utf-8' if defined?(Encoding)
       htmlify("\xB0\xB1", :text)
       # TODO: add more encoding tests
     end
+
+    it "should return pre-formatted text with :pre markup" do
+      htmlify("fo\no\n\nbar<>", :pre).should == "<pre>fo\no\n\nbar&lt;&gt;</pre>"
+    end
     
-    it "should return regular text with :none markup" do
-      htmlify("fo\no\n\nbar<>", :none).should == "fo\no<br/>bar&lt;&gt;"
+    it "should return regular text with :text markup" do
+      htmlify("fo\no\n\nbar<>", :text).should == "fo<br/>o<br/><br/>bar&lt;&gt;"
+    end
+
+    it "should return unmodified text with :none markup" do
+      htmlify("fo\no\n\nbar<>", :none).should == "fo\no\n\nbar&lt;&gt;"
     end
     
     it "should highlight ruby if markup is :ruby" do
@@ -121,8 +134,8 @@ describe YARD::Templates::Helpers::HtmlHelper do
     it "should include file and htmlify it" do
       load_markup_provider(:rdoc)
       File.should_receive(:file?).with('foo.rdoc').and_return(true)
-      File.should_receive(:read).with('foo.rdoc').and_return('= HI')
-      htmlify("{include:file:foo.rdoc}", :rdoc).gsub(/\s+/, '').should == "<p><h1>HI</h1></p>"
+      File.should_receive(:read).with('foo.rdoc').and_return('HI')
+      htmlify("{include:file:foo.rdoc}", :rdoc).gsub(/\s+/, '').should == "<p><p>HI</p></p>"
     end
     
     it "should autolink URLs (markdown specific)" do
