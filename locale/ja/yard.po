@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-27 18:01+0900\n"
+"PO-Revision-Date: 2011-12-27 18:03+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22404,37 +22404,37 @@ msgstr "Rubyのソースコード"
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:22
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:65
 msgid "the value to set the attribute from_path to."
-msgstr ""
+msgstr "from_path属性を設定する値"
 
 # YARD::Templates::Helpers::Markup::RDocMarkup#from_path
 # YARD::Templates::Helpers::Markup::RDocMarkupToHtml#from_path
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:23
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:66
 msgid "Returns the value of attribute from_path"
-msgstr ""
+msgstr "from_path属性の値を返す"
 
 # YARD::Templates::Helpers::Markup::RDocMarkup#from_path=
 # YARD::Templates::Helpers::Markup::RDocMarkupToHtml#from_path=
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:23
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:66
 msgid "Sets the attribute from_path"
-msgstr ""
+msgstr "from_path属性を設定する"
 
 # @return [RDocMarkup]
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:24
 msgid "a new instance of RDocMarkup"
-msgstr ""
+msgstr "RDocMarkupの新しいインスタンス"
 
 # YARD::Templates::Helpers::Markup::RDocMarkup#fix_typewriter
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:41
 msgid "Fixes RDoc behaviour with ++ only supporting alphanumeric text."
-msgstr ""
+msgstr "RDocの振舞いを修正する(アルファベットと数字を組み合わせたテキストのサポートだけ追加)"
 
 # @todo
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:43
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:59
 msgid "Refactor into own SimpleMarkup subclass"
-msgstr ""
+msgstr "自身をSimpleMarkupサブクラスへリファクタリング予定"
 
 # YARD::Templates::Helpers::Markup::RDocMarkup#fix_dash_dash
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:56
