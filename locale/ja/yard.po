@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-26 16:48+0900\n"
+"PO-Revision-Date: 2011-12-27 14:27+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21166,7 +21166,7 @@ msgstr "指定される型のリストの最初の部分"
 msgid ""
 "This module manages all creation, handling and rendering of {Template}\n"
 "objects."
-msgstr ""
+msgstr "このモジュールは、全ての作成を管理し,操作する。そして、{Template}オブジェクトから表示する。"
 
 # YARD::Templates::Engine
 #: ../lib/yard/templates/engine.rb:9
@@ -21180,17 +21180,17 @@ msgstr ""
 # @return [Array<String>]
 #: ../lib/yard/templates/engine.rb:14
 msgid "the list of registered template paths"
-msgstr ""
+msgstr "渡されたテンプレートパスのリスト"
 
 # YARD::Templates::Engine.register_template_path
 #: ../lib/yard/templates/engine.rb:17
 msgid "Registers a new template path in {template_paths}"
-msgstr ""
+msgstr "{template_paths}の中で、新しいテンプレートパスを記録する"
 
 # @param [String] path
 #: ../lib/yard/templates/engine.rb:20
 msgid "a new template path"
-msgstr ""
+msgstr "新しいテンプレートパス"
 
 # YARD::Templates::Engine.template
 #: ../lib/yard/templates/engine.rb:25
@@ -21201,28 +21201,37 @@ msgid ""
 "directories in other template paths will be included in the\n"
 "generated module as mixins (for overriding)."
 msgstr ""
+"パスを表すテンプレートモジュールを作成する。\n"
+"テンプレートパスの内部で、\n"
+"+path+ と名付けられた最初のディレクトリ('/'区切り)用に、\n"
+"ディスク上をサーチする。\n"
+"そして、テンプレートモジュール用にビルドする。\n"
+"他にマッチするテンプレートパスの中のディレクトリ全ては、mixinとして(オーバーライド用に)、\n"
+"生成されたモジュールが含まれる。"
 
 # @return [Template]
 #: ../lib/yard/templates/engine.rb:34
 msgid "the module representing the template"
-msgstr ""
+msgstr "モジュールの表しているテンプレート"
 
 # @raise [ArgumentError]
 #: ../lib/yard/templates/engine.rb:34
 msgid ""
 "if the path does not exist within one of the\n"
 "{template_paths} on disk."
-msgstr ""
+msgstr "ディスク上に{template_paths}が一つも存在しない場合、例外を上げる。"
 
 # @param [Array<String, Symbol>] path
 #: ../lib/yard/templates/engine.rb:34
 msgid "a list of path components"
-msgstr ""
+msgstr "構成要素のパスのリスト"
 
 # YARD::Templates::Engine.template!
 #: ../lib/yard/templates/engine.rb:48
 msgid "Forces creation of a template at +path+ within a +full_path+."
 msgstr ""
+"+fullpath+ 内部の\n"
+"+path+ で、テンプレートの作成を強制する。"
 
 # @param [Array<String>]
 #: ../lib/yard/templates/engine.rb:52
@@ -21237,12 +21246,12 @@ msgstr ""
 # @param [Array<String>] full_paths
 #: ../lib/yard/templates/engine.rb:52
 msgid "the full path on disk of the template"
-msgstr ""
+msgstr "テンプレートのディスク上のフルパス"
 
 # @return [Template]
 #: ../lib/yard/templates/engine.rb:52
 msgid "the template module representing the +path+"
-msgstr ""
+msgstr "テンプレートモジュールは、+path+ を表している。"
 
 # YARD::Templates::Engine.render
 #: ../lib/yard/templates/engine.rb:65
@@ -21251,6 +21260,9 @@ msgid ""
 "a set of default (overridable) options. Either the +:object+\n"
 "or +:type+ keys must be provided."
 msgstr ""
+"デフォルトのオプション(上書き可能)のグループによって、\n"
+"{Codeobject::base code objct}のテンプレートを表示する。\n"
+"+:object+ か +:type+ キーが提供されければならない。"
 
 # YARD::Templates::Engine.render
 #: ../lib/yard/templates/engine.rb:69
@@ -21260,6 +21272,9 @@ msgid ""
 "Base}\n"
 "object. See {with_serializer}."
 msgstr ""
+"+:serializer+ キーは,提供され、そして、 +:serialize+ は、falseを設定できない。\n"
+"表示された内容は、{Serializers::Base}オブジェクトを通して、シリアライズされるだろう。\n"
+"{with_serializer}参照。\n"
 
 # @example Renders an object with html formatting
 #: ../lib/yard/templates/engine.rb:81
@@ -21269,12 +21284,12 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/engine.rb:81
 msgid "tag|example|Renders an object with html formatting"
-msgstr ""
+msgstr "html書式化すると共にオブジェクトを表示する"
 
 # @example
 #: ../lib/yard/templates/engine.rb:81
 msgid "tag|example|Renders without an object"
-msgstr ""
+msgstr "オブジェクト無しの表示"
 
 # @example Renders without an object
 #: ../lib/yard/templates/engine.rb:81
@@ -21284,7 +21299,7 @@ msgstr ""
 # @param [Hash] options
 #: ../lib/yard/templates/engine.rb:81 ../lib/yard/templates/engine.rb:162
 msgid "the options hash"
-msgstr ""
+msgstr "ハッシュのオプション"
 
 # YARD::Templates::Engine.generate
 #: ../lib/yard/templates/engine.rb:93
@@ -21294,6 +21309,10 @@ msgid ""
 "This is called by {CLI::Yardoc} to most commonly perform HTML\n"
 "documentation generation."
 msgstr ""
+"完璧なドキュメント生成用に、+:fulldoc+ テンプレートに\n"
+"オブジェクトのグループが渡される。\n"
+"これは、{CLI::Yardoc}によって呼び出される\n"
+"一般的にhtmlドキュメント生成を実行しなければならない。"
 
 # @param [Array<CodeObjects::Base>] objects
 #: ../lib/yard/templates/engine.rb:100
@@ -21301,6 +21320,8 @@ msgid ""
 "a list of {CodeObjects::Base}\n"
 "objects to pass to the template"
 msgstr ""
+"テンプレートに渡す為の\n"
+"{CodeObjects::Base} オブジェクトのリスト"
 
 # @param [Hash] options
 #: ../lib/yard/templates/engine.rb:100
@@ -21310,17 +21331,17 @@ msgstr ""
 # YARD::Templates::Engine.with_serializer
 #: ../lib/yard/templates/engine.rb:107
 msgid "Serializes the results of a block with a +serializer+ object."
-msgstr ""
+msgstr "+serializer+ オブジェクトを用いブロックの結果をシリアライズする。"
 
 # @param [Serializers::Base]
 #: ../lib/yard/templates/engine.rb:113
 msgid "tag|param|serializer"
-msgstr ""
+msgstr "serializer"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/engine.rb:113
 msgid "the code object to serialize"
-msgstr ""
+msgstr "シリアライズする為のコードオブジェクト"
 
 # @see
 #: ../lib/yard/templates/engine.rb:113
@@ -21330,22 +21351,22 @@ msgstr ""
 # @param [Serializers::Base] serializer
 #: ../lib/yard/templates/engine.rb:113
 msgid "the serializer object"
-msgstr ""
+msgstr "シリアライザーオブジェクト"
 
 # @yieldreturn [String]
 #: ../lib/yard/templates/engine.rb:113
 msgid "the contents to serialize"
-msgstr ""
+msgstr "シリアライズする為の内容"
 
 # @yield
 #: ../lib/yard/templates/engine.rb:113
 msgid "a block whose result will be serialize"
-msgstr ""
+msgstr "結果がシリアライズされるブロック"
 
 # YARD::Templates::Engine.set_default_options
 #: ../lib/yard/templates/engine.rb:156
 msgid "Sets default options on the options hash"
-msgstr ""
+msgstr "ハッシュのオプションのデフォルトのオプションを設定する。"
 
 # YARD::Templates::Engine.find_template_paths
 #: ../lib/yard/templates/engine.rb:170
@@ -21353,6 +21374,8 @@ msgid ""
 "Searches through the registered {template_paths} and returns\n"
 "all full directories that have the +path+ within them on disk."
 msgstr ""
+"記録される{template_paths}を通して、検索され、\n"
+"ディスク上に +path+ を持つ全てのディレクトリを返す。\n"
 
 # @param [Template] from_template
 #: ../lib/yard/templates/engine.rb:178
@@ -21360,40 +21383,45 @@ msgid ""
 "if provided, allows a relative\n"
 "path to be specified from this template's full path."
 msgstr ""
+"提供された場合、\n"
+"このテンプレートのフルパスから指定される相対パスを受入れる。"
 
 # @param [Template]
 #: ../lib/yard/templates/engine.rb:178
 msgid "tag|param|from_template"
-msgstr ""
+msgstr "from_template"
 
 # @param [String] path
 #: ../lib/yard/templates/engine.rb:178
 msgid ""
 "the path component to search for in the\n"
 "{template_paths}"
-msgstr ""
+msgstr "{template_paths}用に検索する為のパスの構成"
 
 # @return [Array<String>]
 #: ../lib/yard/templates/engine.rb:178
 msgid ""
 "a list of full paths that are existing\n"
 "candidates for a template module"
-msgstr ""
+msgstr "テンプレートモジュール用の候補が存在するフルパスのリスト"
 
 # YARD::Templates::Engine.template_module_name
 #: ../lib/yard/templates/engine.rb:190
 msgid "The name of the module that represents a +path+"
-msgstr ""
+msgstr "+path+ を表すモジュール名"
 
 # @return [String]
 #: ../lib/yard/templates/engine.rb:193
 msgid "the module name"
-msgstr ""
+msgstr "モジュール名"
 
 # @param [String] the
 #: ../lib/yard/templates/engine.rb:193
 msgid "path toe generate a module name for"
 msgstr ""
+"origin:path toe generate a module name for\n"
+"yamada-traslate:モジュール名を生成する為のパス\n"
+"??e typo? toe -> to??\n"
 
 # @param [Symbol]
 # @param [String]
