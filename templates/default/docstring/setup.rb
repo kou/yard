@@ -42,7 +42,8 @@ def docstring_text
   end
   
   if text.strip.empty? && object.tags(:return).size == 1 && object.tag(:return).text
-    text = object.tag(:return).text.gsub(/\A([a-z])/) {|x| x.upcase }
+    localized_text = Docstring.new(object.tag(:return).text).document
+    text = localized_text.gsub(/\A([a-z])/) {|x| x.upcase }
   end
   
   text.strip
