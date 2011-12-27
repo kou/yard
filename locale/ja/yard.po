@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-27 18:03+0900\n"
+"PO-Revision-Date: 2011-12-27 18:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21176,6 +21176,9 @@ msgid ""
 "* To register a template path in the lookup paths, call "
 "{register_template_path}."
 msgstr ""
+"* パスでテンプレートオブジェクトを作成するには、{template}を使う\n"
+"* テンプレートを表示するには、{render}を呼び出す\n"
+"* 検索するパスでテンプレートパスを記録するには、{register_template_path}を呼び出す。"
 
 # @return [Array<String>]
 #: ../lib/yard/templates/engine.rb:14
@@ -21261,7 +21264,7 @@ msgid ""
 "or +:type+ keys must be provided."
 msgstr ""
 "デフォルトのオプション(上書き可能)のグループによって、\n"
-"{Codeobject::base code objct}のテンプレートを表示する。\n"
+"{Codeobject::base code object}のテンプレートを表示する。\n"
 "+:object+ か +:type+ キーが提供されければならない。"
 
 # YARD::Templates::Engine.render
