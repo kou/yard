@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-28 14:56+0900\n"
+"PO-Revision-Date: 2011-12-28 15:00+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22804,12 +22804,12 @@ msgstr "整えられたテキスト"
 msgid ""
 "Abstracts the structure for a section and its subsections into an ordered\n"
 "list of sections and subsections."
-msgstr ""
+msgstr "セクションに構造体を抽象化し、セクションとサブセクションのオーダーされたリストをサブサクションにする。"
 
 # @return [Section]
 #: ../lib/yard/templates/section.rb:9
 msgid "a new instance of Section"
-msgstr ""
+msgstr "セクションの新しいインスタンス"
 
 # @param value
 #: ../lib/yard/templates/template.rb:6
