@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-28 15:00+0900\n"
+"PO-Revision-Date: 2011-12-28 16:50+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22814,74 +22814,74 @@ msgstr "セクションの新しいインスタンス"
 # @param value
 #: ../lib/yard/templates/template.rb:6
 msgid "the value to set the attribute class to."
-msgstr ""
+msgstr "class属性を設定する値"
 
 # @param value
 #: ../lib/yard/templates/template.rb:6
 msgid "the value to set the attribute section to."
-msgstr ""
+msgstr "section属性を設定する値"
 
 # YARD::Templates::Template#class=
 #: ../lib/yard/templates/template.rb:7
 msgid "Sets the attribute class"
-msgstr ""
+msgstr "classの属性を設定する"
 
 # YARD::Templates::Template#section
 #: ../lib/yard/templates/template.rb:7
 msgid "Returns the value of attribute section"
-msgstr ""
+msgstr "section属性の値を返す"
 
 # YARD::Templates::Template#class
 #: ../lib/yard/templates/template.rb:7
 msgid "Returns the value of attribute class"
-msgstr ""
+msgstr "class属性の値を返す"
 
 # YARD::Templates::Template#section=
 #: ../lib/yard/templates/template.rb:7
 msgid "Sets the attribute section"
-msgstr ""
+msgstr "section属性を設定する"
 
 # @return [Array<Module>]
 #: ../lib/yard/templates/template.rb:12
 msgid ""
 "a list of modules to be automatically included\n"
 "into any new template module"
-msgstr ""
+msgstr "任意の新しいテンプレートモジュールへ自動でインクルードされるモジュールのリスト"
 
 # @param value
 #: ../lib/yard/templates/template.rb:30
 msgid "the value to set the attribute full_path to."
-msgstr ""
+msgstr "full_path属性を設定する値"
 
 # @param value
 #: ../lib/yard/templates/template.rb:30
 msgid "the value to set the attribute path to."
-msgstr ""
+msgstr "path属性を設定する値"
 
 # YARD::Templates::Template::ClassMethods#path
 #: ../lib/yard/templates/template.rb:31
 msgid "Returns the value of attribute path"
-msgstr ""
+msgstr "path属性の値を返す"
 
 # YARD::Templates::Template::ClassMethods#path=
 #: ../lib/yard/templates/template.rb:31
 msgid "Sets the attribute path"
-msgstr ""
+msgstr "path属性を設定する"
 
 # YARD::Templates::Template::ClassMethods#full_path=
 #: ../lib/yard/templates/template.rb:31
 msgid "Sets the attribute full_path"
-msgstr ""
+msgstr "full_path属性を設定する"
 
 # YARD::Templates::Template::ClassMethods#full_path
 #: ../lib/yard/templates/template.rb:31
 msgid "Returns the value of attribute full_path"
-msgstr ""
+msgstr "full_path属性の値を返す"
 
 # @return [ClassMethods]
 #: ../lib/yard/templates/template.rb:39
 msgid "a new instance of ClassMethods"
-msgstr ""
+msgstr "ClassMethodsの新しいインスタンス"
 
 # YARD::Templates::Template::ClassMethods#find_file
 #: ../lib/yard/templates/template.rb:49
@@ -22890,29 +22890,32 @@ msgid ""
 "path as well as any mixed in template paths. Equivalent to calling\n"
 "{ClassMethods#find_nth_file} with index of 1."
 msgstr ""
+"テンプレートパスも\n"
+"任意の混ぜられたテンプレートパスも +basename+ でファイルが一致する為に検索する。\n"
+"{ClassMethods#find_nth_file}メソッドを index 1 で呼び出すのと同様である。"
 
 # @param [String] basename
 #: ../lib/yard/templates/template.rb:56 ../lib/yard/templates/template.rb:67
 msgid "the filename to search for"
-msgstr ""
+msgstr "検索するファイル名"
 
 # @param [String]
 #: ../lib/yard/templates/template.rb:56 ../lib/yard/templates/template.rb:67
 #: ../lib/yard/templates/template.rb:264
 msgid "tag|param|basename"
-msgstr ""
+msgstr "basename"
 
 # @see
 #: ../lib/yard/templates/template.rb:56
 msgid "tag|see|find_nth_file"
-msgstr ""
+msgstr "find_nth_file"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:56
 msgid ""
 "the full path of a file on disk with filename\n"
 "+basename+ in one of the template's paths."
-msgstr ""
+msgstr "テンプレートパスの一つである +basename+ の入ったディスク上のファイルのフルパスを返す"
 
 # YARD::Templates::Template::ClassMethods#find_nth_file
 #: ../lib/yard/templates/template.rb:61
@@ -22920,43 +22923,45 @@ msgid ""
 "Searches for the nth file (where n = +index+) identified\n"
 "by basename in the template's path and any mixed in template paths."
 msgstr ""
+"n番目のファイルがテンプレートパスか任意の混ぜられたテンプレートパスのbasenameによって\n"
+"一致するかサーチする。"
 
 # @param [Fixnum] index
 #: ../lib/yard/templates/template.rb:67
 msgid "the nth existing file to return"
-msgstr ""
+msgstr "n番目に存在するファイルを戻すindex"
 
 # @param [Fixnum]
 #: ../lib/yard/templates/template.rb:67
 msgid "tag|param|index"
-msgstr ""
+msgstr "index"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:67
 msgid ""
 "the full path of the nth file on disk with\n"
 "filename +basename+ in one of the template paths"
-msgstr ""
+msgstr "テンプレートパスの一つの +basename+ を用いたディスク上のn番目のファイルフルパス"
 
 # YARD::Templates::Template::ClassMethods#new
 #: ../lib/yard/templates/template.rb:86
 msgid "Creates a new template object to be rendered with {Template#run}"
-msgstr ""
+msgstr "{Template#run}と共に表示される新しいテンプレートオブジェクトを作成する"
 
 # YARD::Templates::Template::ClassMethods#S
 #: ../lib/yard/templates/template.rb:102
 msgid "Alias for creating a {Section} with arguments"
-msgstr ""
+msgstr "引数と共に{Section}の作成用のエイリアス"
 
 # @see
 #: ../lib/yard/templates/template.rb:104
 msgid "tag|see|Section#initialize"
-msgstr ""
+msgstr "Section#initialize"
 
 # @return [Template]
 #: ../lib/yard/templates/template.rb:137
 msgid "a new instance of Template"
-msgstr ""
+msgstr "テンプレートの新しいインスタンス"
 
 # YARD::Templates::Template#T
 #: ../lib/yard/templates/template.rb:151
@@ -22965,26 +22970,29 @@ msgid ""
 "specified in the {#options} hash, they are prepended and appended\n"
 "to the path respectively."
 msgstr ""
+"pathによって指定されたテンプレートをロードする。\n"
+"+:template+ や +:format+ が{#options}ハッシュメソッドで指定される場合、\n"
+"#optionsメソッドに関係するパスが前後に加えられる。"
 
 # @param [Array<String, Symbol>] path
 #: ../lib/yard/templates/template.rb:156
 msgid "the path of the template"
-msgstr ""
+msgstr "テンプレートのパス"
 
 # @return [Template]
 #: ../lib/yard/templates/template.rb:156
 msgid "the loaded template module"
-msgstr ""
+msgstr "ロードされたテンプレートモジュール"
 
 # YARD::Templates::Template#sections
 #: ../lib/yard/templates/template.rb:163
 msgid "Sets the sections (and subsections) to be rendered for the template"
-msgstr ""
+msgstr "テンプレート用に表示されるセクション(とサブサクション)を設定する。"
 
 # @example
 #: ../lib/yard/templates/template.rb:178
 msgid "tag|example|Sets a set of method and erb sections"
-msgstr ""
+msgstr "メソッドのグループとercセクションを設定する"
 
 # @param [Array<Symbol, String, Template, Array>] args
 #: ../lib/yard/templates/template.rb:178
@@ -22996,6 +23004,11 @@ msgid ""
 "templates, they will have {Template::ClassMethods#run} called on them.\n"
 "Any subsections can be yielded to using yield or {#yieldall}"
 msgstr ""
+"テンプレートを表示する為に利用するセクション。\n"
+"symbolとstringでセクションは、メソッドとして実行される。(存在する場合)\n"
+"又、nameがsection名の所で\"name.erb\"ファイルから表示される\n"
+"テンプレート用に、呼び出された{Template::ClassMethods#run}を持つだろう。\n"
+"任意のsubsectionは、yieldや{#yieldall}メソッドによってyieldされる。"
 
 # @example Sections with subsections
 #: ../lib/yard/templates/template.rb:178
@@ -23004,6 +23017,9 @@ msgid ""
 "# the above will call header.erb and only renders the subsections\n"
 "# if they are yielded by the template (see #yieldall)"
 msgstr ""
+"sections :header, [:name, :children]\n"
+"# 上は、header.erbが呼び出され、subsectionをが表示する。\n"
+"# テンプレートでyieldしたい場合は (see #yieldall) 参照"
 
 # @example Sets a set of method and erb sections
 #: ../lib/yard/templates/template.rb:178
@@ -23013,7 +23029,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/template.rb:178
 msgid "tag|example|Sections with subsections"
-msgstr ""
+msgstr "subsectionsを用いたsection"
 
 # @example Sets a set of erb sections
 #: ../lib/yard/templates/template.rb:178
@@ -23023,7 +23039,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/template.rb:178
 msgid "tag|example|Sets a set of erb sections"
-msgstr ""
+msgstr "erb sectionのグループを設置する"
 
 # YARD::Templates::Template#init
 #: ../lib/yard/templates/template.rb:184
@@ -23031,6 +23047,8 @@ msgid ""
 "Initialization called on the template. Override this in a 'setup.rb'\n"
 "file in the template's path to implement a template"
 msgstr ""
+"テンプレート上で呼び出される初期化処理。\n"
+"テンプレートを実装するテンプレートのパスで'setup.rb'ファイルを上書きする。"
 
 # @see
 #: ../lib/yard/templates/template.rb:191
@@ -23048,7 +23066,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/template.rb:191
 msgid "tag|example|A default set of sections"
-msgstr ""
+msgstr "セクションのデフォルトのグループ"
 
 # YARD::Templates::Template#run
 #: ../lib/yard/templates/template.rb:195
@@ -23056,46 +23074,49 @@ msgid ""
 "Runs a template on +sects+ using extra options. This method should\n"
 "not be called directly. Instead, call the class method {ClassMethods#run}"
 msgstr ""
+"追加のオプションによって、+sects+上でテンプレートを起動する。\n"
+"このメソッドは、直接呼び出されないだろう。\n"
+"代わりに、{ClassMethods#run}クラスメソッドを呼び出す。"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:204
 msgid "the rendered sections joined together"
-msgstr ""
+msgstr "一緒に加えられた,表示されたsection"
 
 # @param [Section, Array]
 #: ../lib/yard/templates/template.rb:204
 msgid "tag|param|sects"
-msgstr ""
+msgstr "sects"
 
 # @param [Section, Array] sects
 #: ../lib/yard/templates/template.rb:204
 msgid "a section list of sections to render"
-msgstr ""
+msgstr "表示する為のsectionのリスト"
 
 # @param [Fixnum]
 #: ../lib/yard/templates/template.rb:204
 msgid "tag|param|start_at"
-msgstr ""
+msgstr "start_at"
 
 # @param [Fixnum] start_at
 #: ../lib/yard/templates/template.rb:204
 msgid "the index in the section list to start from"
-msgstr ""
+msgstr "sectionのリストの最初のindex"
 
 # @param [Boolean]
 #: ../lib/yard/templates/template.rb:204
 msgid "tag|param|break_first"
-msgstr ""
+msgstr " break_first"
 
 # @param [Hash, nil] opts
 #: ../lib/yard/templates/template.rb:204
 msgid "any extra options to apply to sections"
-msgstr ""
+msgstr "sectionに追加する任意の追加のオプション"
 
 # @yield [opts]
 #: ../lib/yard/templates/template.rb:204
 msgid "calls for the subsections to be rendered"
-msgstr ""
+msgstr "表示されるsubsection用に呼び出される"
 
 # @yieldparam [Hash]
 #: ../lib/yard/templates/template.rb:204
@@ -23105,43 +23126,43 @@ msgstr ""
 # @yieldparam [Hash] opts
 #: ../lib/yard/templates/template.rb:204
 msgid "any extra options to yield"
-msgstr ""
+msgstr "yieldする任意の追加のオプション"
 
 # @param [Boolean] break_first
 #: ../lib/yard/templates/template.rb:204
 msgid "if true, renders only the first section"
-msgstr ""
+msgstr "trueなら、最初のsectionだけ表示される"
 
 # YARD::Templates::Template#yieldall
 #: ../lib/yard/templates/template.rb:228
 msgid "Yields all subsections with any extra options"
-msgstr ""
+msgstr "任意の追加のオプションと共に全てのsubsectionをyieldする。"
 
 # @param [Hash] opts
 #: ../lib/yard/templates/template.rb:230
 msgid "extra options to be applied to subsections"
-msgstr ""
+msgstr "subsectionに適用される追加のオプション"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:237
 msgid "the contents of the ERB rendered section"
-msgstr ""
+msgstr "sectionに表示されたERBの内容"
 
 # @param [String, Symbol] section
 #: ../lib/yard/templates/template.rb:237
 msgid "the section name"
-msgstr ""
+msgstr "section名"
 
 # @param [String, Symbol]
 # @param [Symbol, String]
 #: ../lib/yard/templates/template.rb:237 ../lib/yard/templates/template.rb:282
 msgid "tag|param|section"
-msgstr ""
+msgstr "section"
 
 # @yield
 #: ../lib/yard/templates/template.rb:237
 msgid "calls subsections to be rendered"
-msgstr ""
+msgstr "表示されるsubsectionを呼び出す"
 
 # YARD::Templates::Template#file
 #: ../lib/yard/templates/template.rb:245
@@ -23154,6 +23175,16 @@ msgid ""
 "both file contents can be retrieved by having +templates/b/test.css+ look\n"
 "like:"
 msgstr ""
+"ファイルの内容を返す。\n"
+"+allow_inherited+ が +true+ に設定される場合、\n"
+"継承されたテンプレートから\n"
+"ファイルの入った内容を挿入する為、\n"
+"ファイルの内容の内部で\n"
+"+{{{__super__}}}+ を使う。\n"
+"例えば、 +templates/b+ が +templates/a+ から継承され、 \"test.css\"ファイルが存在する\n"
+"ディレクトリの中で両方とも存在している場合、\n"
+"両方ファイルの内容は、以下の用に\n"
+"+templates/b/test.css+ を持つ事によって回収できる。"
 
 # YARD::Templates::Template#file
 #: ../lib/yard/templates/template.rb:252
@@ -23167,7 +23198,7 @@ msgstr ""
 # @param [Boolean]
 #: ../lib/yard/templates/template.rb:264
 msgid "tag|param|allow_inherited"
-msgstr ""
+msgstr "allow_inherited"
 
 # @see
 #: ../lib/yard/templates/template.rb:264
@@ -23179,7 +23210,7 @@ msgstr ""
 msgid ""
 "whether inherited templates can\n"
 "be inserted with +{{{__super__}}}+"
-msgstr ""
+msgstr "継承されたテンプレートが +{{{__super__}}}+ を用いて継承されるかどうか"
 
 # @see
 #: ../lib/yard/templates/template.rb:264
@@ -23189,7 +23220,7 @@ msgstr ""
 # @param [String] basename
 #: ../lib/yard/templates/template.rb:264
 msgid "the name of the file"
-msgstr ""
+msgstr "ファイルの名前"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:264
@@ -23198,23 +23229,26 @@ msgid ""
 "template paths (including any mixed in templates) are searched for\n"
 "the file"
 msgstr ""
+"+basename+ によって指定されたファイルの内容。\n"
+"全てのテンプレートパスは(任意の混ぜられたテンプレートを含んでいる)、\n"
+"ファイル用に検索される。"
 
 # YARD::Templates::Template#superb
 #: ../lib/yard/templates/template.rb:278
 msgid "Calls the ERB file from the last inherited template with {#section}.erb"
-msgstr ""
+msgstr "{#section}.erbと共に継承されたテンプレートの最後からERBファイルを呼び出す。"
 
 # @param [Symbol, String] section
 #: ../lib/yard/templates/template.rb:282
 msgid "if provided, uses a specific section name"
-msgstr ""
+msgstr "提供された場合、固有のsecstion名を使う"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:282
 msgid ""
 "the rendered ERB file in any of the inherited template\n"
 "paths."
-msgstr ""
+msgstr "継承されたテンプレートパスの任意で表示されるERBファイル"
 
 # YARD::Verifier
 #: ../lib/yard/verifier.rb:3
