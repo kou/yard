@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-28 10:12+0900\n"
+"PO-Revision-Date: 2011-12-28 13:49+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22445,21 +22445,25 @@ msgid ""
 "Don't allow -- to turn into &#8212; element. The chances of this being\n"
 "some --option is far more likely than the typographical meaning."
 msgstr ""
+"--を&#8212へ変換する事は許可していない。\n"
+"表示している意味よりも、いくつかの--optionになる可能性が高い。"
 
 # YARD::Templates::Helpers::Markup::RDocMarkupToHtml#handle_special_HYPERLINK
 #: ../lib/yard/templates/helpers/markup/rdoc_markup.rb:68
 msgid "Disable auto-link of URLs"
-msgstr ""
+msgstr "URLの自動リンクを無効にする"
 
 # YARD::Templates::Helpers::MarkupHelper
 #: ../lib/yard/templates/helpers/markup_helper.rb:6
 msgid "Helper methods for loading and managing markup types."
-msgstr ""
+msgstr "読み込みと,型のmarkupの管理用のHelperメソッド"
 
 # YARD::Templates::Helpers::MarkupHelper.clear_markup_cache
 #: ../lib/yard/templates/helpers/markup_helper.rb:9
 msgid "Clears the markup provider cache information. Mainly used for testing."
 msgstr ""
+"マークアッププロバイダーのキャッシュ情報を初期化する。\n"
+"主にtest用に利用される。"
 
 # @since
 #: ../lib/yard/templates/helpers/markup_helper.rb:17
@@ -22469,12 +22473,14 @@ msgstr ""
 # @return [Hash{Symbol=>{(:provider,:class)=>Object}}]
 #: ../lib/yard/templates/helpers/markup_helper.rb:17
 msgid "the cached markup providers"
-msgstr ""
+msgstr "キャッシュされたマークアッププロバイダー"
 
 # YARD::Templates::Helpers::MarkupHelper::MARKUP_PROVIDERS
 #: ../lib/yard/templates/helpers/markup_helper.rb:23
 msgid "The default list of markup providers for each markup type"
 msgstr ""
+"それぞれのマークアップの型用の\n"
+"マークアッププロバイダーのデフォルトのリスト。"
 
 # YARD::Templates::Helpers::MarkupHelper::MARKUP_EXTENSIONS
 #: ../lib/yard/templates/helpers/markup_helper.rb:45
@@ -22483,6 +22489,8 @@ msgid ""
 "extensions for a type, add them to the array of extensions for the\n"
 "type."
 msgstr ""
+"様々なmarkupの型の為に拡張のリストを返す。\n"
+"型用に拡張を記録するには、型用の拡張の配列に拡張を追加する。"
 
 # YARD::Templates::Helpers::MarkupHelper::MARKUP_FILE_SHEBANG
 #: ../lib/yard/templates/helpers/markup_helper.rb:58
@@ -22490,6 +22498,9 @@ msgid ""
 "Contains the Regexp object that matches the shebang line of extra\n"
 "files to detect the markup type."
 msgstr ""
+"markup型を認識する為に、\n"
+"追加のファイルのshebang行にマッチする\n"
+"Regexpオブジェクトを含んでいる。"
 
 # YARD::Templates::Helpers::MarkupHelper#load_markup_provider
 #: ../lib/yard/templates/helpers/markup_helper.rb:62
@@ -22497,6 +22508,8 @@ msgid ""
 "Attempts to load the first valid markup provider in {MARKUP_PROVIDERS}.\n"
 "If a provider is specified, immediately try to load it."
 msgstr ""
+"{MARKUP_PROVIDERS}で最初の有効なマークアップロバイダーを読み込む。\n"
+"プロバイダーが指定される場合、直ぐにロードするか試す。"
 
 # YARD::Templates::Helpers::MarkupHelper#load_markup_provider
 #: ../lib/yard/templates/helpers/markup_helper.rb:65
@@ -22505,6 +22518,10 @@ msgid ""
 "the provider name and library constant class/module respectively for\n"
 "the loaded provider."
 msgstr ""
+"これは成功した場合、プロバイダー名に\n"
+"`@markup_provider`と`@markup_class`を設定し、\n"
+"ロードされたプロバイダーの為に、\n"
+"それぞれライブラリ,定数,クラス/モジュールとなる。"
 
 # YARD::Templates::Helpers::MarkupHelper#load_markup_provider
 #: ../lib/yard/templates/helpers/markup_helper.rb:69
@@ -22512,11 +22529,13 @@ msgid ""
 "On failure this method will inform the user that no provider could be\n"
 "found and exit the program."
 msgstr ""
+"失敗した場合、このメソッドは、\n"
+"プロバイダーが見つける事ができないユーザーを知らせて、プラグラムを脱出するだろう。"
 
 # @return [Boolean]
 #: ../lib/yard/templates/helpers/markup_helper.rb:72
 msgid "whether the markup provider was successfully loaded."
-msgstr ""
+msgstr "マークアップのプロバイダーが正常に読み込まれたかどうか"
 
 # YARD::Templates::Helpers::MarkupHelper#markup_for_file
 #: ../lib/yard/templates/helpers/markup_helper.rb:104
@@ -22525,11 +22544,14 @@ msgid ""
 "the markup type for the file contents. File extensions are registered\n"
 "for a markup type in {MARKUP_EXTENSIONS}."
 msgstr ""
+"shebangをチェックし、\n"
+"ファイルの内容の為にマークアップの型を決めるファイル拡張子を探す。\n"
+"ファイル拡張子は、{MARKUP_EXTENSIONS}のマークアップの型が記録される。"
 
 # YARD::Templates::Helpers::MarkupHelper#markup_for_file
 #: ../lib/yard/templates/helpers/markup_helper.rb:108
 msgid "A shebang should be on the first line of a file and be in the form:"
-msgstr ""
+msgstr "shebangは、ファイルの最初の行になり、次のような形式となる。"
 
 # YARD::Templates::Helpers::MarkupHelper#markup_for_file
 #: ../lib/yard/templates/helpers/markup_helper.rb:110
@@ -22539,7 +22561,7 @@ msgstr ""
 # YARD::Templates::Helpers::MarkupHelper#markup_for_file
 #: ../lib/yard/templates/helpers/markup_helper.rb:112
 msgid "Standard markup types are text, html, rdoc, markdown, textile"
-msgstr ""
+msgstr "標準のマークアップは、text,htmlcrdoc,markdown,textileとなる。"
 
 # @param [String] contents
 #: ../lib/yard/templates/helpers/markup_helper.rb:118
@@ -22547,6 +22569,8 @@ msgid ""
 "Unused. Was necessary prior to 0.7.0.\n"
 "Newer versions of YARD use {CodeObjects::ExtraFileObject#contents}"
 msgstr ""
+"利用されない。0.7.0.より前では、必須だった。\n"
+"YARDの最新バージョンでは、{CodeObjects::ExtraFileObject#contents}を用いる。"
 
 # @see
 #: ../lib/yard/templates/helpers/markup_helper.rb:118
@@ -22556,7 +22580,7 @@ msgstr ""
 # @return [Symbol]
 #: ../lib/yard/templates/helpers/markup_helper.rb:118
 msgid "the markup type recognized for the file"
-msgstr ""
+msgstr "ファイルに認識されたマークアップタイプ"
 
 # YARD::Templates::Helpers::MarkupHelper#markup_file_contents
 #: ../lib/yard/templates/helpers/markup_helper.rb:131
@@ -22564,81 +22588,83 @@ msgid ""
 "Strips any shebang lines on the file contents that pertain to\n"
 "markup or preprocessing data."
 msgstr ""
+"マークアップや処理するデータに関係があるファイルの内容の\n"
+"任意のshebang行をStripする。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/markup_helper.rb:136
 msgid "the file contents minus any preprocessing tags"
-msgstr ""
+msgstr "ファイルの内容が任意のtagを表す\n\n"
 
 # @deprecated
 #: ../lib/yard/templates/helpers/markup_helper.rb:136
 msgid "Use {CodeObjects::ExtraFileObject#contents} instead"
-msgstr ""
+msgstr "替わりに{CodeObjects::ExtraFileObject#contents}を使う"
 
 # YARD::Templates::Helpers::MarkupHelper#markup_class
 #: ../lib/yard/templates/helpers/markup_helper.rb:141
 msgid ""
 "Gets the markup provider class/module constant for a markup type\n"
 "Call {#load_markup_provider} before using this method."
-msgstr ""
+msgstr "マークアップ型がこのメソッドを使う前に{#load_markup_provider}を呼び出すマークアッププロバイダーのクラス/モジュールの定数を取得する。"
 
 # @return [Class]
 #: ../lib/yard/templates/helpers/markup_helper.rb:145
 msgid "the markup class"
-msgstr ""
+msgstr "マークアップのクラス"
 
 # @param [Symbol] the
 #: ../lib/yard/templates/helpers/markup_helper.rb:145
 #: ../lib/yard/templates/helpers/markup_helper.rb:155
 msgid "markup type (:rdoc, :markdown, etc.)"
-msgstr ""
+msgstr "マークアップの型(:rdoc, :markdown, etc.)"
 
 # YARD::Templates::Helpers::MarkupHelper#markup_provider
 #: ../lib/yard/templates/helpers/markup_helper.rb:151
 msgid ""
 "Gets the markup provider name for a markup type\n"
 "Call {#load_markup_provider} before using this method."
-msgstr ""
+msgstr "マークアップ型がこのメソッド使う前に{#load_markup_provider}を呼び出すマークアッププロバイダー名を取得する。"
 
 # @return [Symbol]
 #: ../lib/yard/templates/helpers/markup_helper.rb:155
 msgid "the markup provider name (usually the gem name of the library)"
-msgstr ""
+msgstr "マークアッププロバイダー名(慣習では、ライブラリのgem名)"
 
 # YARD::Templates::Helpers::MethodHelper
 #: ../lib/yard/templates/helpers/method_helper.rb:4
 msgid "Helper methods for method objects."
-msgstr ""
+msgstr "メソッドオブジェクト用のHelperメソッド"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/method_helper.rb:6
 msgid "formatted arguments for a method"
-msgstr ""
+msgstr "メソッド用にフォーマットされた引数"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/method_helper.rb:25
 msgid "formatted and linked return types for a method"
-msgstr ""
+msgstr "メソッド用にフォーマットとリンクされた型を返す"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/method_helper.rb:32
 msgid "formatted block if one exists"
-msgstr ""
+msgstr "何か渡された場合、フォーマットされたブロックを返す"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/method_helper.rb:47
 msgid "formats line numbers for source code of an object"
-msgstr ""
+msgstr "オブジェクトのソースコード用に行数をフォーマットする"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/method_helper.rb:54
 msgid "formats source of an object"
-msgstr ""
+msgstr "オブジェクトのソースをフォーマットする"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/method_helper.rb:65
 msgid "formats source code of a constant value"
-msgstr ""
+msgstr "定数の値の入ったソースコードをフォーマットする"
 
 # YARD::Templates::Helpers::ModuleHelper
 #: ../lib/yard/templates/helpers/module_helper.rb:5
