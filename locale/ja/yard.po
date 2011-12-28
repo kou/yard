@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-28 14:02+0900\n"
+"PO-Revision-Date: 2011-12-28 14:23+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22696,42 +22696,42 @@ msgstr "hide_attributes"
 # YARD::Templates::Helpers::TextHelper
 #: ../lib/yard/templates/helpers/text_helper.rb:5
 msgid "Helper methods for text template formats."
-msgstr ""
+msgstr "テキストテンプレートフォーマット用のHelperメソッド"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/text_helper.rb:7
 msgid "escapes text"
-msgstr ""
+msgstr "テキストをエスケープする"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/text_helper.rb:22
 msgid "wraps text at +col+ columns."
-msgstr ""
+msgstr "+col+ 列でテキストをラップする。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/text_helper.rb:27
 msgid "indents +text+ by +len+ characters."
-msgstr ""
+msgstr "+len+ 文字で +text+ をインデントする"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/text_helper.rb:32
 msgid "aligns a title to the right"
-msgstr ""
+msgstr "右にタイトルを並べる"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/text_helper.rb:37
 msgid "aligns text to the right"
-msgstr ""
+msgstr "右にテキストを並べる"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/text_helper.rb:43
 msgid "returns a horizontal rule for output"
-msgstr ""
+msgstr "出力用に横方向の罫線を返す"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/text_helper.rb:48
 msgid "the formatted signature for a method"
-msgstr ""
+msgstr "メソッド用にフォーマットされたシグネチャ"
 
 # YARD::Templates::Helpers::UMLHelper
 #: ../lib/yard/templates/helpers/uml_helper.rb:4
