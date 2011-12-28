@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-28 14:23+0900\n"
+"PO-Revision-Date: 2011-12-28 14:56+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -22736,68 +22736,68 @@ msgstr "メソッド用にフォーマットされたシグネチャ"
 # YARD::Templates::Helpers::UMLHelper
 #: ../lib/yard/templates/helpers/uml_helper.rb:4
 msgid "Helpers for UML template format"
-msgstr ""
+msgstr "UMLテンプレートフォーマット用のHelperメソッド"
 
 # YARD::Templates::Helpers::UMLHelper#uml_visibility
 #: ../lib/yard/templates/helpers/uml_helper.rb:6
 msgid ""
 "Official UML visibility prefix syntax for an object given its visibility"
-msgstr ""
+msgstr "オブジェクト用に与えられた可視性の為の公式のUMLプレフィックス構文"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/uml_helper.rb:8
 msgid "the UML visibility prefix"
-msgstr ""
+msgstr "UML可視性のプレフィックス"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/helpers/uml_helper.rb:8
 msgid "the object to retrieve visibility for"
-msgstr ""
+msgstr "可視性を回収するオブジェクト"
 
 # YARD::Templates::Helpers::UMLHelper#format_path
 #: ../lib/yard/templates/helpers/uml_helper.rb:17
 msgid "Formats the path of an object for Graphviz syntax"
-msgstr ""
+msgstr "Graphviz構文用にオブジェクトのパスをフォーマットする。"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/uml_helper.rb:19
 msgid "the encoded path"
-msgstr ""
+msgstr "エンコードされたパス"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/templates/helpers/uml_helper.rb:19
 msgid "an object to format the path of"
-msgstr ""
+msgstr "パスをフォーマットするオブジェクト"
 
 # YARD::Templates::Helpers::UMLHelper#h
 #: ../lib/yard/templates/helpers/uml_helper.rb:24
 msgid "Encodes text in escaped Graphviz syntax"
-msgstr ""
+msgstr "Graphviz構文用にエスケープされたテキストをエンコードする"
 
 # @param [String] text
 #: ../lib/yard/templates/helpers/uml_helper.rb:26
 msgid "text to encode"
-msgstr ""
+msgstr "エンコードするテキスト"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/uml_helper.rb:26
 msgid "the encoded text"
-msgstr ""
+msgstr "エンコードされたテキスト"
 
 # YARD::Templates::Helpers::UMLHelper#tidy
 #: ../lib/yard/templates/helpers/uml_helper.rb:31
 msgid "Tidies data by formatting and indenting text"
-msgstr ""
+msgstr "フォーマットによってデータを整える、テキストをインデントする。"
 
 # @param [String] data
 #: ../lib/yard/templates/helpers/uml_helper.rb:33
 msgid "pre-formatted text"
-msgstr ""
+msgstr "フォーマットされる前のテキスト"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/uml_helper.rb:33
 msgid "tidied text."
-msgstr ""
+msgstr "整えられたテキスト"
 
 # YARD::Templates::Section
 #: ../lib/yard/templates/section.rb:4
