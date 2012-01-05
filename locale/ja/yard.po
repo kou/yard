@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 15:41+0900\n"
+"PO-Revision-Date: 2012-01-05 15:43+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8757,25 +8757,25 @@ msgstr "Diffの新しいインスタンス"
 # @return [Gems]
 #: ../lib/yard/cli/gems.rb:5
 msgid "a new instance of Gems"
-msgstr ""
+msgstr "Gemsの新しいインスタンス"
 
 # YARD::CLI::Gems#run
 #: ../lib/yard/cli/gems.rb:13
 msgid ""
 "Runs the commandline utility, parsing arguments and generating\n"
 "YARD indexes for gems."
-msgstr ""
+msgstr "コマンドラインユーティリティを起動し、引数を解析し、gem用のYARDインデックスを生成する。"
 
 # @param [Array<String>] args
 #: ../lib/yard/cli/gems.rb:17 ../lib/yard/cli/stats.rb:33
 #: ../lib/yard/cli/yardoc.rb:263
 msgid "the list of arguments"
-msgstr ""
+msgstr "引数のリスト"
 
 # YARD::CLI::Gems#build_gems
 #: ../lib/yard/cli/gems.rb:26
 msgid "Builds .yardoc files for all non-existing gems"
-msgstr ""
+msgstr "存在しないgem用に.yardocファイルをビルドする。"
 
 # @param [Array]
 #: ../lib/yard/cli/gems.rb:27
@@ -8785,7 +8785,7 @@ msgstr ""
 # YARD::CLI::Gems#optparse
 #: ../lib/yard/cli/gems.rb:59
 msgid "Parses options"
-msgstr ""
+msgstr "オプションを解析する。"
 
 # YARD::CLI::Graph
 #: ../lib/yard/cli/graph.rb:4
