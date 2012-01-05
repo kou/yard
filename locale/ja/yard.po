@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2011-12-28 16:50+0900\n"
+"PO-Revision-Date: 2012-01-05 10:29+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -5640,17 +5640,15 @@ msgid ""
 "endpoint,\n"
 "which enables inter-document linking."
 msgstr ""
-"??? endpoint\n"
-"このクラスは\n"
-"処理の終りを予期し、\n"
-"データをシリアライズする方法の決定し\n"
-"関連するロジックを抽象化する。\n"
+"このクラスは期待された出力先へ\n"
+"データをシリアライズする為に、\n"
+"決定方法,関連するロジックを抽象化する。\n"
 "例えば、コンソールや個々のファイルの為の出力用の\n"
 "{YARD::Serializers::StdoutSerializer StdoutSerializer}と、\n"
 "{YARD::Serializers::FileSystemSerializer FileSystemSerializer} クラスがある。\n"
-"場所と一緒にendpointが利用される時に(ファイルやURLのような)\n"
+"出力先が指定される時(ファイルやURLのような)、\n"
 "シリアライザーは、{YARD::Serializers::Base#serialized_path #serialized_path}メソッドを実装する。\n"
-"これは、コードオブジェクトからendpointのパスまでの翻訳を受け入れ、\n"
+"これは、コードオブジェクトから出力先のパスまでの翻訳を受け入れ、\n"
 "そして、内部のドキュメントのリンクを可能にする。"
 
 #: ../docs/Templates.md:85
@@ -21275,9 +21273,9 @@ msgid ""
 "Base}\n"
 "object. See {with_serializer}."
 msgstr ""
-"+:serializer+ キーは,提供され、そして、 +:serialize+ は、falseを設定できない。\n"
-"表示された内容は、{Serializers::Base}オブジェクトを通して、シリアライズされるだろう。\n"
-"{with_serializer}参照。\n"
+"+:serializer+ キーが提供されるか、 +:serialize+ にfalseを設定しない場合、\n"
+"表示される内容は、{Serializers::Base}オブジェクトを通して、シリアライズされるだろう。\n"
+"{with_serializer}参照。"
 
 # @example Renders an object with html formatting
 #: ../lib/yard/templates/engine.rb:81
@@ -21287,7 +21285,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/engine.rb:81
 msgid "tag|example|Renders an object with html formatting"
-msgstr "html書式化すると共にオブジェクトを表示する"
+msgstr "htmlフォーマットと共にオブジェクトを表示する"
 
 # @example
 #: ../lib/yard/templates/engine.rb:81
