@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 17:15+0900\n"
+"PO-Revision-Date: 2012-01-05 17:21+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8863,7 +8863,7 @@ msgstr "コマンド用のヘルプを操作する。"
 #: ../lib/yard/cli/list.rb:4
 msgid ""
 "Lists all constant and method names in the codebase. Uses {Yardoc} --list."
-msgstr ""
+msgstr "全ての定数とコードベースの中のメソッド名を記述する。{yardoc} --list で利用する。"
 
 # YARD::CLI::List#run
 #: ../lib/yard/cli/list.rb:8
@@ -8871,11 +8871,13 @@ msgid ""
 "Runs the commandline utility, parsing arguments and displaying a\n"
 "list of objects"
 msgstr ""
+"コマンドラインユーティリティを起動し、引数を解析する。\n"
+"そして、オブジェクトのリストを表示する。"
 
 # @param [Array<String>] args
 #: ../lib/yard/cli/list.rb:12
 msgid "the list of arguments."
-msgstr ""
+msgstr "引数のリスト"
 
 # YARD::CLI::Server
 #: ../lib/yard/cli/server.rb:4
