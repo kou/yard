@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 13:59+0900\n"
+"PO-Revision-Date: 2012-01-05 14:44+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8476,12 +8476,14 @@ msgid ""
 "Abstract base class for CLI utilities. Provides some helper methods for\n"
 "the option parser"
 msgstr ""
+"CLIユーティリティ用の抽象的なベースクラス。\n"
+"オプションパーサー用のいくつかのヘルパーメソッドを提供する。"
 
 # YARD::CLI::YRI.run
 # YARD::CLI::Command.run
 #: ../lib/yard/cli/yri.rb:27 ../lib/yard/cli/command.rb:12
 msgid "Helper method to run the utility on an instance."
-msgstr ""
+msgstr "インスタンス上のユーティリティを起動する為のヘルパーメソッド。"
 
 # @see
 #: ../lib/yard/server/commands/base.rb:33 ../lib/yard/cli/yri.rb:28
@@ -8492,12 +8494,12 @@ msgstr ""
 # YARD::CLI::Command#common_options
 #: ../lib/yard/cli/command.rb:20
 msgid "Adds a set of common options to the tail of the OptionParser"
-msgstr ""
+msgstr "OptionParserの末尾に一般的なオプションのグループを追加する。"
 
 # @param [OptionParser] opts
 #: ../lib/yard/cli/command.rb:23 ../lib/yard/cli/command.rb:51
 msgid "the option parser object"
-msgstr ""
+msgstr "パーサーオブジェクトのオプション"
 
 # @param [Hash]
 # @param [OptionParser]
@@ -8522,7 +8524,7 @@ msgstr ""
 # YARD::CLI::Command#parse_options
 #: ../lib/yard/cli/command.rb:46
 msgid "Parses the option and gracefully handles invalid switches"
-msgstr ""
+msgstr "オプションを解析し、無効な引数を処理する。"
 
 # @param [Array<String>]
 # @param [Array<Symbol, String, Template, Array>]
@@ -8542,6 +8544,8 @@ msgid ""
 "the arguments passed from input. This\n"
 "array will be modified."
 msgstr ""
+"引数は入力から解析される。\n"
+"この配列は、変更されるだろう。"
 
 # @since
 #: ../lib/yard/server/commands/display_object_command.rb:40
@@ -8580,6 +8584,9 @@ msgid ""
 "Loads a Ruby script. If +Config.options[:safe_mode]+ is enabled,\n"
 "this method will do nothing."
 msgstr ""
+"Rubyスクリプトをロードする。\n"
+"+Config.options[:safe_mode]+ が有効の場合、\n"
+"このメソッドは、何もしないだろう。"
 
 # @param [String]
 # @param [String, nil]
@@ -8596,7 +8603,7 @@ msgstr ""
 # @param [String] file
 #: ../lib/yard/cli/command.rb:64
 msgid "the path to the script to load"
-msgstr ""
+msgstr "ロードするスクリプトの為のパス"
 
 # @since
 #: ../lib/yard/config.rb:253 ../lib/yard/server.rb:7
