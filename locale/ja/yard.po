@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 17:02+0900\n"
+"PO-Revision-Date: 2012-01-05 17:15+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8857,7 +8857,7 @@ msgstr "コマンドラインオプションを解析する。"
 # YARD::CLI::Help
 #: ../lib/yard/cli/help.rb:4
 msgid "Handles help for commands"
-msgstr ""
+msgstr "コマンド用のヘルプを操作する。"
 
 # YARD::CLI::List
 #: ../lib/yard/cli/list.rb:4
