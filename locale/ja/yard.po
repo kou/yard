@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 16:25+0900\n"
+"PO-Revision-Date: 2012-01-05 17:02+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8852,7 +8852,7 @@ msgstr ""
 #: ../lib/yard/cli/yri.rb:167 ../lib/yard/cli/graph.rb:47
 #: ../lib/yard/cli/stats.rb:161 ../lib/yard/cli/yardoc.rb:467
 msgid "Parses commandline options."
-msgstr ""
+msgstr "コマンドラインオプションを解析する。"
 
 # YARD::CLI::Help
 #: ../lib/yard/cli/help.rb:4
@@ -9622,14 +9622,14 @@ msgstr ""
 # YARD::CLI::YRI
 #: ../lib/yard/cli/yri.rb:6
 msgid "A tool to view documentation in the console like `ri`"
-msgstr ""
+msgstr "`ri`のようなコンソールでドキュメントを調べる為のツール"
 
 # YARD::CLI::YRI::CACHE_FILE
 #: ../lib/yard/cli/yri.rb:8
 msgid ""
 "The location in {YARD::CONFIG_DIR} where the YRI cache file is loaded\n"
 "from."
-msgstr ""
+msgstr "YRIキャッシュファイルがロードされる、{YARD::CONFIG_DIR}の中の場所"
 
 # YARD::CLI::YRI::SEARCH_PATHS_FILE
 #: ../lib/yard/cli/yri.rb:12
@@ -9637,6 +9637,8 @@ msgid ""
 "A file containing all paths, delimited by newlines, to search for\n"
 "yardoc databases."
 msgstr ""
+"ファイルは、改行によって区切られたyardocデータベース用の検索する為の\n"
+"全てのパスを含んでいる。"
 
 # YARD::CLI::YRI::DEFAULT_SEARCH_PATHS
 #: ../lib/yard/cli/yri.rb:17
@@ -9646,6 +9648,9 @@ msgid ""
 "take precedence over all other paths ({SEARCH_PATHS_FILE} and RubyGems\n"
 "paths). To add a path, call:"
 msgstr ""
+"デフォルトでは、YRIへ動的にロードされるべきパスを検索する。\n"
+"これらのパスは、他のパス全てより優先して取得する({SEARCH_PATHS_FILE}とRubyGemsパス)。\n"
+"パスを追加するには、次のように呼び出す。"
 
 # YARD::CLI::YRI::DEFAULT_SEARCH_PATHS
 #: ../lib/yard/cli/yri.rb:21
@@ -9655,12 +9660,12 @@ msgstr ""
 # @return [Array<String>]
 #: ../lib/yard/cli/yri.rb:24
 msgid "a list of extra search paths"
-msgstr ""
+msgstr "追加の検索パスのリスト"
 
 # @return [YRI]
 #: ../lib/yard/cli/yri.rb:30
 msgid "a new instance of YRI"
-msgstr ""
+msgstr "YRIの新しいインスタンス"
 
 # @example 
 #: ../lib/yard/cli/yri.rb:49
@@ -9670,23 +9675,25 @@ msgstr ""
 # YARD::CLI::YRI#print_usage
 #: ../lib/yard/cli/yri.rb:72
 msgid "Prints the command usage"
-msgstr ""
+msgstr "コマンドの使用法をプリントする。"
 
 # YARD::CLI::YRI#cache_object
 #: ../lib/yard/cli/yri.rb:80
 msgid ""
 "Caches the .yardoc file where an object can be found in the {CACHE_FILE}"
 msgstr ""
+"オブジェクトが{CACHE_FILE}の中を見つけられる場合、\n"
+".yardocファイルをキャッシュする。"
 
 # @param [CodeObjects::Base] object
 #: ../lib/yard/cli/yri.rb:94
 msgid "the object to print."
-msgstr ""
+msgstr "プリントする為のオブジェクト"
 
 # @return [String]
 #: ../lib/yard/cli/yri.rb:94
 msgid "the formatted output for an object."
-msgstr ""
+msgstr "オブジェクト用にフォーマットされた出力"
 
 # @param [CodeObjects::Base, nil]
 # @param [CodeObjects::Base]
@@ -9720,36 +9727,38 @@ msgid ""
 "Locates an object by name starting in the cached paths and then\n"
 "searching through any search paths."
 msgstr ""
+"キャッシュされたパスで始まる名前のオブジェクトを示し、\n"
+"その時、任意の検索パスを通して検索する。"
 
 # @param [String] name
 #: ../lib/yard/cli/yri.rb:109
 msgid "the full name of the object"
-msgstr ""
+msgstr "オブジェクトのフルネーム"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/cli/yri.rb:109
 msgid "an object if found"
-msgstr ""
+msgstr "見つかった場合は、オブジェクト"
 
 # @return [nil]
 #: ../lib/yard/cli/yri.rb:109 ../lib/yard/registry.rb:234
 msgid "if no object is found"
-msgstr ""
+msgstr "オブジェクトが見つからない場合"
 
 # YARD::CLI::YRI#load_cache
 #: ../lib/yard/cli/yri.rb:130
 msgid "Loads {CACHE_FILE}"
-msgstr ""
+msgstr "{CACHE_FILE}をロードする"
 
 # YARD::CLI::YRI#add_gem_paths
 #: ../lib/yard/cli/yri.rb:140
 msgid "Adds all RubyGems yardoc files to search paths"
-msgstr ""
+msgstr "パスを検索する為に全てのRubyGemsyardocファイルを追加する\n"
 
 # YARD::CLI::YRI#add_default_paths
 #: ../lib/yard/cli/yri.rb:158
 msgid "Adds paths in {SEARCH_PATHS_FILE}"
-msgstr ""
+msgstr "{SEARCH_PATHS_FILE}の中のパスを追加する。"
 
 # YARD::CodeObjects::CodeObjectList
 #: ../lib/yard/code_objects/base.rb:4
