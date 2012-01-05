@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 14:44+0900\n"
+"PO-Revision-Date: 2012-01-05 15:10+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8619,6 +8619,8 @@ msgid ""
 "This class parses a command name out of the +yard+ CLI command and calls\n"
 "that command in the form:"
 msgstr ""
+"このクラスは、 +yard+ CLIコマンド出力のコマンド名を解析する。\n"
+"以下の形式のコマンド呼び出しとなる。"
 
 # YARD::CLI::CommandParser
 #: ../lib/yard/cli/command_parser.rb:7
@@ -8632,11 +8634,14 @@ msgid ""
 "begin with a +--opt+ (not +--help+), the {default_command} will be used\n"
 "(which itself defaults to +:doc+)."
 msgstr ""
+"コマンドが無い場合や、引数が指定される場合、\n"
+"又は、引数が直後に +--opt+ ( +--help+ ではない)で始まる場合、\n"
+"{default_command}が利用される。(そして自身の +:doc+ をデフォルトにする)"
 
 # YARD::CLI::CommandParser
 #: ../lib/yard/cli/command_parser.rb:13
 msgid "== Adding a Command"
-msgstr ""
+msgstr "== コマンドを追加する"
 
 # YARD::CLI::CommandParser
 #: ../lib/yard/cli/command_parser.rb:15
@@ -8646,6 +8651,11 @@ msgid ""
 "command. To implement a command, see the documentation for the {Command}\n"
 "class."
 msgstr ""
+"プラグイン経由でカスタムコマンドを追加するには、\n"
+"シンボリックコマンド名から\n"
+"コマンドを実装する{Command}クラスに\n"
+"{commands}の中のマッピングを作成する。\n"
+"コマンドを実装するには、{Command}クラス用のドキュメントを参照。"
 
 # @see
 #: ../lib/yard/cli/command_parser.rb:22
@@ -8667,31 +8677,31 @@ msgstr ""
 msgid ""
 "the mapping of command names to\n"
 "command classes to parse the user command."
-msgstr ""
+msgstr "ユーザーコマンドを解析するコマンドクラスの為のコマンド名のマッピング"
 
 # @return [Symbol]
 #: ../lib/yard/cli/command_parser.rb:30
 msgid ""
 "the default command name to use when no options\n"
 "are specified or"
-msgstr ""
+msgstr "オプションが指定されない時に利用するデフォルトのコマンド名"
 
 # YARD::CLI::CommandParser.run
 #: ../lib/yard/cli/command_parser.rb:49
 msgid "Convenience method to create a new CommandParser and call {#run}"
-msgstr ""
+msgstr "新しいCommandParserを作成し、{#rub}メソッドを呼び出す為の便利メソッド。"
 
 # @return [CommandParser]
 #: ../lib/yard/cli/command_parser.rb:52
 msgid "a new instance of CommandParser"
-msgstr ""
+msgstr "CommandParserの新しいインスタンス"
 
 # YARD::CLI::CommandParser#run
 #: ../lib/yard/cli/command_parser.rb:57
 msgid ""
 "Runs the {Command} object matching the command name of the first\n"
 "argument."
-msgstr ""
+msgstr "最初の引数のコマンド名にマッチする{Command}オブジェクトを起動する。"
 
 # YARD::CLI::Config
 #: ../lib/yard/cli/config.rb:4
