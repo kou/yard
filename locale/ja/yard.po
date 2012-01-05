@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 15:43+0900\n"
+"PO-Revision-Date: 2012-01-05 16:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8792,7 +8792,7 @@ msgstr "オプションを解析する。"
 msgid ""
 "A command-line utility to generate Graphviz graphs from\n"
 "a set of objects"
-msgstr ""
+msgstr "オブジェクトのグループからGraphvizのグラフを生成する為のコマンドラインユーティリティ"
 
 # @see
 #: ../lib/yard/cli/graph.rb:8
@@ -8806,34 +8806,37 @@ msgid ""
 "Default options are:\n"
 "  :format => :dot"
 msgstr ""
+"optionsはコマンドラインの出力を解析する。\n"
+"optionsのデフォルトは:\n"
+"  :format => dot"
 
 # YARD::CLI::Graph#objects
 #: ../lib/yard/cli/graph.rb:15
 msgid "The set of objects to include in the graph."
-msgstr ""
+msgstr "graphでインクルードする為のオブジェクトのグループ"
 
 # @return [Graph]
 #: ../lib/yard/cli/graph.rb:18
 msgid "a new instance of Graph"
-msgstr ""
+msgstr "Graphの新しいインスタンス"
 
 # YARD::CLI::Graph#initialize
 #: ../lib/yard/cli/graph.rb:18
 msgid "Creates a new instance of the command-line utility"
-msgstr ""
+msgstr "コマンドラインユーティリティの新しいインスタンスを作成する。"
 
 # YARD::CLI::YRI#run
 # YARD::CLI::Graph#run
 #: ../lib/yard/cli/yri.rb:45 ../lib/yard/cli/graph.rb:29
 msgid "Runs the command-line utility."
-msgstr ""
+msgstr "コマンドラインユーティリティを起動する。"
 
 # @param [Array<String>] args
 #: ../lib/yard/cli/yri.rb:49 ../lib/yard/cli/yri.rb:168
 #: ../lib/yard/cli/graph.rb:34 ../lib/yard/cli/graph.rb:48
 #: ../lib/yard/cli/stats.rb:162 ../lib/yard/cli/yardoc.rb:468
 msgid "each tokenized argument"
-msgstr ""
+msgstr "個々にトークナイズされた引数"
 
 # @example 
 #: ../lib/yard/cli/graph.rb:34
