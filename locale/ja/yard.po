@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 17:21+0900\n"
+"PO-Revision-Date: 2012-01-05 17:44+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8882,37 +8882,37 @@ msgstr "引数のリスト"
 # YARD::CLI::Server
 #: ../lib/yard/cli/server.rb:4
 msgid "A local documentation server"
-msgstr ""
+msgstr "ローカルのドキュメント確認用サーバー"
 
 # @return [Hash]
 #: ../lib/yard/cli/server.rb:7
 msgid "a list of options to pass to the doc server"
-msgstr ""
+msgstr "ドキュメントサーバーに渡す為のオプションのリスト"
 
 # @return [Hash]
 #: ../lib/yard/cli/server.rb:10
 msgid "a list of options to pass to the web server"
-msgstr ""
+msgstr "webサーバーに渡す為のオプションのリスト"
 
 # @return [Hash]
 #: ../lib/yard/cli/server.rb:13
 msgid "a list of library names and yardoc files to serve"
-msgstr ""
+msgstr "ライブラリ名のリストと提供する為のyardocファイル"
 
 # @return [Adapter]
 #: ../lib/yard/cli/server.rb:16
 msgid "the adapter to use for loading the web server"
-msgstr ""
+msgstr "ロードするwebサーバー用に利用されるアダプタ"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/server.rb:20
 msgid "a list of scripts to load"
-msgstr ""
+msgstr "ロードする為のスクリプトのリスト"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/server.rb:24
 msgid "a list of template paths to register"
-msgstr ""
+msgstr "登録するテンプレートのパスのリスト"
 
 # YARD::CLI::Stats::STATS_ORDER
 #: ../lib/yard/cli/stats.rb:8
