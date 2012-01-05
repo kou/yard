@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 11:09+0900\n"
+"PO-Revision-Date: 2012-01-05 11:42+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19693,7 +19693,7 @@ msgstr ""
 #: ../lib/yard/server/commands/library_index_command.rb:7
 #: ../lib/yard/templates/template.rb:8
 msgid "Returns the value of attribute options"
-msgstr ""
+msgstr "options属性の値を返す"
 
 # YARD::Server::Commands::ListCommand
 #: ../lib/yard/server/commands/list_command.rb:5
@@ -23099,7 +23099,7 @@ msgstr "start_at"
 # @param [Fixnum] start_at
 #: ../lib/yard/templates/template.rb:204
 msgid "the index in the section list to start from"
-msgstr "sectionのリストの最初のindex"
+msgstr "セクションのリストの最初のindex"
 
 # @param [Boolean]
 #: ../lib/yard/templates/template.rb:204
@@ -23109,12 +23109,12 @@ msgstr " break_first"
 # @param [Hash, nil] opts
 #: ../lib/yard/templates/template.rb:204
 msgid "any extra options to apply to sections"
-msgstr "sectionに追加する任意の追加のオプション"
+msgstr "sectionsに適用する任意の追加のオプション"
 
 # @yield [opts]
 #: ../lib/yard/templates/template.rb:204
 msgid "calls for the subsections to be rendered"
-msgstr "表示されるsubsection用に呼び出される"
+msgstr "表示されるサブセクション用に呼び出される"
 
 # @yieldparam [Hash]
 #: ../lib/yard/templates/template.rb:204
@@ -23129,27 +23129,27 @@ msgstr "yieldする任意の追加のオプション"
 # @param [Boolean] break_first
 #: ../lib/yard/templates/template.rb:204
 msgid "if true, renders only the first section"
-msgstr "trueなら、最初のsectionだけ表示される"
+msgstr "trueなら、最初のセクションだけ表示される"
 
 # YARD::Templates::Template#yieldall
 #: ../lib/yard/templates/template.rb:228
 msgid "Yields all subsections with any extra options"
-msgstr "任意の追加のオプションと共に全てのsubsectionをyieldする。"
+msgstr "任意の追加のオプションと共に全てのサブセクションをyieldする。"
 
 # @param [Hash] opts
 #: ../lib/yard/templates/template.rb:230
 msgid "extra options to be applied to subsections"
-msgstr "subsectionに適用される追加のオプション"
+msgstr "サブセクションに適用される追加のオプション"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:237
 msgid "the contents of the ERB rendered section"
-msgstr "sectionに表示されたERBの内容"
+msgstr "セクションに表示されるERBの内容"
 
 # @param [String, Symbol] section
 #: ../lib/yard/templates/template.rb:237
 msgid "the section name"
-msgstr "section名"
+msgstr "セクション名"
 
 # @param [String, Symbol]
 # @param [Symbol, String]
@@ -23160,7 +23160,7 @@ msgstr "section"
 # @yield
 #: ../lib/yard/templates/template.rb:237
 msgid "calls subsections to be rendered"
-msgstr "表示されるsubsectionを呼び出す"
+msgstr "表示されるサブセクションを呼び出す"
 
 # YARD::Templates::Template#file
 #: ../lib/yard/templates/template.rb:245
@@ -23239,7 +23239,7 @@ msgstr "{#section}.erbと共に継承されたテンプレートの最後からE
 # @param [Symbol, String] section
 #: ../lib/yard/templates/template.rb:282
 msgid "if provided, uses a specific section name"
-msgstr "提供された場合、固有のsecstion名を使う"
+msgstr "提供された場合、固有のセクション名を使う"
 
 # @return [String]
 #: ../lib/yard/templates/template.rb:282
