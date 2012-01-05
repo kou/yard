@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 15:10+0900\n"
+"PO-Revision-Date: 2012-01-05 15:40+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8707,36 +8707,38 @@ msgstr "最初の引数のコマンド名にマッチする{Command}オブジェ
 #: ../lib/yard/cli/config.rb:4
 msgid "CLI command to view or edit configuration options"
 msgstr ""
+"CLIコマンドを調べる。\n"
+"又は、設定オプションを編集する。"
 
 # @return [Symbol, nil]
 #: ../lib/yard/cli/config.rb:7
 msgid "the key to view/edit, if any"
-msgstr ""
+msgstr "調べたり、編集する為のkey"
 
 # @return [Array, nil]
 #: ../lib/yard/cli/config.rb:10
 msgid "the list of values to set (or single value), if modifying"
-msgstr ""
+msgstr "変更する場合、セットする値のリストを返す(又は、単一の値)"
 
 # @return [Boolean]
 #: ../lib/yard/cli/config.rb:13
 msgid "whether to reset the {#key}"
-msgstr ""
+msgstr "{#key}をリセットするかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/cli/config.rb:16
 msgid "whether the value being set should be inside a list"
-msgstr ""
+msgstr "設定される値がリストの内部になるかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/cli/config.rb:19
 msgid "whether to append values to existing key"
-msgstr ""
+msgstr "既存のkeyに値を追加するかどうか"
 
 # @return [Config]
 #: ../lib/yard/cli/config.rb:21
 msgid "a new instance of Config"
-msgstr ""
+msgstr "Configの新しいインスタンス"
 
 # YARD::CLI::Diff
 #: ../lib/yard/cli/diff.rb:8
