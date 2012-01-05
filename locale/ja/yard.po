@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 17:44+0900\n"
+"PO-Revision-Date: 2012-01-05 18:21+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8919,7 +8919,7 @@ msgstr "登録するテンプレートのパスのリスト"
 msgid ""
 "Maintains the order in which +stats_for_+ statistics methods should be\n"
 "printed."
-msgstr ""
+msgstr "オーダーを継続する。そして統計用の +stats_for_+ メソッドは、プリントされるべきである。"
 
 # @see
 #: ../lib/yard/cli/stats.rb:11
@@ -8929,7 +8929,7 @@ msgstr ""
 # @return [Boolean]
 #: ../lib/yard/cli/stats.rb:14
 msgid "whether to parse and load registry"
-msgstr ""
+msgstr "解析するかレジストリをロードするかどうか"
 
 # @param [Boolean]
 #: ../lib/yard/cli/stats.rb:17
@@ -8939,12 +8939,12 @@ msgstr ""
 # @return [Stats]
 #: ../lib/yard/cli/stats.rb:17
 msgid "a new instance of Stats"
-msgstr ""
+msgstr "Statsの新しいインスタンス"
 
 # @param [Boolean] parse
 #: ../lib/yard/cli/stats.rb:17
 msgid "whether to parse and load registry (see {#parse})"
-msgstr ""
+msgstr "解析するかレジストリがロードされるかどうか(see {#parse})"
 
 # YARD::CLI::Stats#run
 # YARD::CLI::Yardoc#run
@@ -8953,11 +8953,13 @@ msgid ""
 "Runs the commandline utility, parsing arguments and generating\n"
 "output if set."
 msgstr ""
+"コマンドラインユーティリティを起動し、引数を解析する。\n"
+"そしてグループの場合、出力を生成する。"
 
 # YARD::CLI::Stats#print_statistics
 #: ../lib/yard/cli/stats.rb:50
 msgid "Prints statistics for different object types"
-msgstr ""
+msgstr "色々なオブジェクト型用に統計値をプリントする。"
 
 # YARD::CLI::Stats#print_statistics
 #: ../lib/yard/cli/stats.rb:52
@@ -8965,11 +8967,13 @@ msgid ""
 "To add statistics for a specific type, add a method +#stats_for_TYPE+\n"
 "to this class that calls {#output}."
 msgstr ""
+"特定の型用に統計値を追加するには、\n"
+"{#output}メソッドに呼び出されるこのクラスに +#stats_for_TYPE+ メソッドを追加する。"
 
 # YARD::CLI::Stats#print_undocumented_objects
 #: ../lib/yard/cli/stats.rb:69
 msgid "Prints list of undocumented objects"
-msgstr ""
+msgstr "記述されなかったオブジェクトのリストをプリントする。"
 
 # @return [Array<CodeObjects::Base>]
 #: ../lib/yard/cli/stats.rb:96
@@ -8978,31 +8982,33 @@ msgid ""
 "removing any objects that are not visible (private, protected) depending\n"
 "on the arguments passed to the command."
 msgstr ""
+"レジストリの中の全ての解析されたオブジェクト,\n"
+"コマンドに渡された引数に応じて不可視(private,protected)のオブジェクトを削除している。"
 
 # YARD::CLI::Stats#stats_for_files
 #: ../lib/yard/cli/stats.rb:101
 msgid "Statistics for files"
-msgstr ""
+msgstr "ファイル用の統計値"
 
 # YARD::CLI::Stats#stats_for_modules
 #: ../lib/yard/cli/stats.rb:108
 msgid "Statistics for modules"
-msgstr ""
+msgstr "モジュール用の統計値"
 
 # YARD::CLI::Stats#stats_for_classes
 #: ../lib/yard/cli/stats.rb:113
 msgid "Statistics for classes"
-msgstr ""
+msgstr "クラス用の統計値"
 
 # YARD::CLI::Stats#stats_for_constants
 #: ../lib/yard/cli/stats.rb:118
 msgid "Statistics for constants"
-msgstr ""
+msgstr "定数用の統計値"
 
 # YARD::CLI::Stats#stats_for_methods
 #: ../lib/yard/cli/stats.rb:123
 msgid "Statistics for methods"
-msgstr ""
+msgstr "メソッド用の統計値"
 
 # YARD::CLI::Stats#output
 #: ../lib/yard/cli/stats.rb:132
@@ -9010,6 +9016,8 @@ msgid ""
 "Prints a statistic to standard out. This method is optimized for\n"
 "getting Integer values, though it allows any data to be printed."
 msgstr ""
+"標準出力に統計値をプリントする。このメソッドは、\n"
+"Integerの値の取得用に最適化され、プリントされる為に任意のデータを受入れる。"
 
 # @param [String]
 # @param [Integer, String]
@@ -9024,7 +9032,7 @@ msgstr ""
 # @param [String] name
 #: ../lib/yard/cli/stats.rb:140
 msgid "the statistic name"
-msgstr ""
+msgstr "統計値の名前"
 
 # @param [Integer, nil]
 #: ../lib/yard/cli/stats.rb:140
@@ -9038,6 +9046,8 @@ msgid ""
 "the statistic. If +data+ is an Integer, it should represent the\n"
 "total objects of a type."
 msgstr ""
+"数(又は何か)のデータを表す統計値。\n"
+"+data+ がIntegerの場合、型の全体のオブジェクトを表すはずである。"
 
 # @param [String]
 # @param [Symbol, String]
@@ -9059,7 +9069,7 @@ msgstr ""
 # @param [Integer, nil] undoc
 #: ../lib/yard/cli/stats.rb:140
 msgid "number of undocumented objects for the type"
-msgstr ""
+msgstr "型によって記述されなかったオブジェクトの数"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:7
