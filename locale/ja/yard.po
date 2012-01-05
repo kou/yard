@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 10:29+0900\n"
+"PO-Revision-Date: 2012-01-05 10:50+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21725,17 +21725,17 @@ msgstr "ファイルへのリンク"
 # YARD::Templates::Helpers::BaseHelper#format_types
 #: ../lib/yard/templates/helpers/base_helper.rb:151
 msgid "Formats a list of return types for output and links each type."
-msgstr "出力用に戻りの型のリストを書式化し、それぞれの型にリンクする。"
+msgstr "出力用に戻りの型のリストをフォーマットし、それぞれの型にリンクする。"
 
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "tag|example|Formatting types without surrounding brackets"
-msgstr "周りをブラケット(括弧)無しの型へ書式化する"
+msgstr "周りをブラケット(括弧)無しの型へフォーマットする"
 
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "the formatted list of Ruby types"
-msgstr "書式化されたRubyの型のリスト"
+msgstr "フォーマットされたRubyの型のリスト"
 
 # @param [Boolean] brackets
 #: ../lib/yard/templates/helpers/base_helper.rb:159
@@ -21745,7 +21745,7 @@ msgstr "ブラケット(括弧)の型で囲むかどうか"
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:159
 msgid "tag|example|Formatting types"
-msgstr "型を書式する"
+msgstr "型をフォーマットする"
 
 # @param [Boolean]
 #: ../lib/yard/templates/helpers/base_helper.rb:159
@@ -21772,7 +21772,7 @@ msgstr "型のリスト"
 #: ../lib/yard/templates/helpers/base_helper.rb:187
 #: ../lib/yard/templates/helpers/base_helper.rb:200
 msgid "Formatting Object Attributes"
-msgstr "オブジェクトの属性を書式化する"
+msgstr "オブジェクトの属性をフォーマットする"
 
 # @example Formatting types without surrounding brackets
 #: ../lib/yard/templates/helpers/base_helper.rb:159
@@ -21782,7 +21782,7 @@ msgstr ""
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:173
 msgid "tag|example|Formatted type of a method"
-msgstr "メソッドの入った書式化された型"
+msgstr "メソッドの入ったフォーマットされた型"
 
 # @example Formatted type of a method
 #: ../lib/yard/templates/helpers/base_helper.rb:173
@@ -21801,12 +21801,12 @@ msgstr "型を回収するオブジェクト"
 msgid ""
 "the human-readable formatted {CodeObjects::Base#type #type}\n"
 "for the object"
-msgstr "人が読みやすく書式化されたオブジェクト用の{CodeObjects::Base#type #type}メソッド"
+msgstr "人が読みやすくフォーマットされたオブジェクト用の{CodeObjects::Base#type #type}メソッド"
 
 # @example
 #: ../lib/yard/templates/helpers/base_helper.rb:173
 msgid "tag|example|Formatted type of an exception class"
-msgstr "exceptionクラスの書式された型"
+msgstr "exceptionクラスのフォーマットされた型"
 
 # @example Formatted type of an exception class
 #: ../lib/yard/templates/helpers/base_helper.rb:173
@@ -21836,7 +21836,7 @@ msgstr "与えられたオブジェクト用のページのタイトル名"
 # YARD::Templates::Helpers::BaseHelper#format_source
 #: ../lib/yard/templates/helpers/base_helper.rb:197
 msgid "Indents and formats source code"
-msgstr "インデントし、ソースコードを書式化する"
+msgstr "インデントし、ソースコードをフォーマットする"
 
 # @param [String] value
 #: ../lib/yard/templates/helpers/base_helper.rb:200
@@ -21846,7 +21846,7 @@ msgstr "入力のソースコード"
 # @return [String]
 #: ../lib/yard/templates/helpers/base_helper.rb:200
 msgid "formatted source code"
-msgstr "書式化されたソースコード"
+msgstr "フォーマットされたソースコード"
 
 # YARD::Templates::Helpers::FilterHelper
 #: ../lib/yard/templates/helpers/filter_helper.rb:4
