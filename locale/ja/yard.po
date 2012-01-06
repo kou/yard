@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-06 16:18+0900\n"
+"PO-Revision-Date: 2012-01-06 16:31+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -8651,9 +8651,9 @@ msgid ""
 "class."
 msgstr ""
 "プラグイン経由でカスタムコマンドを追加するには、\n"
-"シンボリックコマンド名から\n"
+"そのコマンド名の象徴から\n"
 "コマンドを実装する{Command}クラスに\n"
-"{commands}の中のマッピングを作成する。\n"
+"{commands}のマッピングを作成する。\n"
 "コマンドを実装するには、{Command}クラス用のドキュメントを参照。"
 
 # @see
@@ -8688,7 +8688,7 @@ msgstr "オプションが指定されない時に利用するデフォルトの
 # YARD::CLI::CommandParser.run
 #: ../lib/yard/cli/command_parser.rb:49
 msgid "Convenience method to create a new CommandParser and call {#run}"
-msgstr "新しいCommandParserを作成し、{#rub}メソッドを呼び出す為の便利メソッド。"
+msgstr "新しいCommandParserを作成し、{#run}メソッドを呼び出す為の便利メソッド。"
 
 # @return [CommandParser]
 #: ../lib/yard/cli/command_parser.rb:52
