@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-06 16:31+0900\n"
+"PO-Revision-Date: 2012-01-06 16:50+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9088,7 +9088,7 @@ msgstr "== 使用法"
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:13
 msgid "Main usage for this command is:"
-msgstr "このコマンド主な使用法は次のようになる:"
+msgstr "このコマンドの主な使用法は次のようになる:"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:15
@@ -9116,7 +9116,7 @@ msgstr ""
 "+.yardopts+ ファイルが、処理されるソースディレクトリで見つかった場合、\n"
 "YARDは、コマンドに引数としてファイルの内容を利用し、改行をスペースとして処理する。\n"
 "あなたはスペースで区切られた引数のグループに、\n"
-"シェルスタイルの引用を利用でき、コマンドラインのようになる。"
+"コマンドラインのようなシェルスタイルの引用を利用できる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:26
@@ -9140,8 +9140,8 @@ msgid ""
 "Note that Yardoc also supports the legacy RDoc style +.document+ file,\n"
 "though this file can only specify source globs to parse, not options."
 msgstr ""
-"次の事に留意する。Yardocは、古いRDocスタイルの +.document+ ファイルもサポートするけれども、\n"
-"このファイルは、解析の為にソースのglobだけ指定でき、オプションはいらない。"
+"次の事に留意する。Yardocは、レガシーなRDocスタイルの +.document+ ファイルもサポートするけれども、\n"
+"このファイルは、オプションはなしで、解析の為にソースのglobだけ指定できる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:38
@@ -9194,7 +9194,7 @@ msgid ""
 "easier, Yardoc has a few command-line switches for creating basic tags\n"
 "and displaying them in generated HTML output."
 msgstr ""
-"YARDは、{YARD::Tags::Library}クラス経由でプラグラムされた{file:docs/Tags.md meta-data tags}の仕様を受入れが、時々これは、ユーザーが書いているドキュメントとはそぐわない場合がある。\n"
+"YARDは、{YARD::Tags::Library}クラス経由でプラグラムされた{file:docs/Tags.md meta-data tags}の仕様を受入れるが、時々これは、ユーザーが書いているドキュメントとはそぐわない場合がある。\n"
 "簡単なカスタムタグを作成するには、\n"
 "Yardocが基本的なタグ作成用にいくつかのコマンドライン引数を持っており、\n"
 "それをHTML出力し表示できる。"
@@ -9219,7 +9219,7 @@ msgstr ""
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:69
 msgid "\"TAG:TITLE\" is of the form: name:\"Display Title\", for example:"
-msgstr "\"TAG:TITLE\" は、 形式: 名前:\"表示されるタイトル\" となる。\\n例えば:"
+msgstr "以下のように\"TAG:TITLE\" は、 形式: 名前:\"表示されるタイトル\" とする。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:71
