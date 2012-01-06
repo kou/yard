@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-05 18:21+0900\n"
+"PO-Revision-Date: 2012-01-06 15:24+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -9078,16 +9078,18 @@ msgid ""
 "executable) used to generate and output (mainly) HTML documentation given\n"
 "a set of source files."
 msgstr ""
+"Yardocは、デフォルトのYARD CLIコマンドとなり( +yard doc+ と省略表記の +yardoc+ が実行可能)、\n"
+"生成し、与えられたソースファイルのグループのHTMLドキュメントの出力(主な機能)の為に利用される。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:11
 msgid "== Usage"
-msgstr ""
+msgstr "== 使用法"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:13
 msgid "Main usage for this command is:"
-msgstr ""
+msgstr "このコマンド主な使用法は次のようになる:"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:15
@@ -9097,12 +9099,12 @@ msgstr ""
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:17
 msgid "See +yardoc --help+ for details on valid options."
-msgstr ""
+msgstr "有効なオプションの詳細は +yardoc --help+ で参照できる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:19
 msgid "== Options File (+.yardopts+)"
-msgstr ""
+msgstr "== オプションファイル (+.yardopts+)"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:21
@@ -9112,11 +9114,15 @@ msgid ""
 "treating newlines as spaces. You can use shell-style quotations to\n"
 "group space delimited arguments, just like on the command line."
 msgstr ""
+"+.yardopts+ ファイルが、処理されるソースディレクトリで見つかった場合、\n"
+"YARDは、コマンドに引数としてファイルの内容を利用し、改行をスペースとして処理する。\n"
+"あなたはスペースで区切られた引数のグループに、\n"
+"シェルスタイルの引用を利用でき、コマンドラインのようになる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:26
 msgid "A valid +.yardopts+ file might look like:"
-msgstr ""
+msgstr "有効な +.yardopts+ ファイルは、次のようになる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:28
@@ -9135,11 +9141,13 @@ msgid ""
 "Note that Yardoc also supports the legacy RDoc style +.document+ file,\n"
 "though this file can only specify source globs to parse, not options."
 msgstr ""
+"次の事に留意する。Yardocは、古いRDocスタイルの +.document+ ファイルもサポートするけれども、\n"
+"このファイルは、解析の為にソースのglobだけ指定でき、オプションはいらない。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:38
 msgid "== Queries (+--query+)"
-msgstr ""
+msgstr "== クエリー (+--query+)"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:40
@@ -9150,6 +9158,12 @@ msgid ""
 "methods with +@api public+, you can use the following query to select\n"
 "all of these objects:"
 msgstr ""
+"Yardocは、ドキュメントを生成する時に、\n"
+"特定のコードオブジェクトを選択する為にクエリーをサポートする。\n"
+"例えば、あなたが、\n"
+"自分のpublic APIの為だけにドキュメント生成したいかもしれない。\n"
+"あなたが、 +@api public+ を用いて記述されたpublicメソッドを持っていた場合、\n"
+"これらのオブジェクトの全てを選択する為に、次の様なクエリーを利用できる:"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:46
@@ -9163,11 +9177,14 @@ msgid ""
 "simplifications for meta-data tags. See the {Verifier} class for an\n"
 "overview of this syntax."
 msgstr ""
+"次の事に留意する。クエリー用の構文は、\n"
+"主にRuby構文で、メタデータタグ用のいくつかの構文の簡単にしたものも用いている。\n"
+"この構文の概要は、{Verifier}クラス参照。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:52
 msgid "== Adding Custom Ad-Hoc Meta-data Tags (+--tag+)"
-msgstr ""
+msgstr "== カスタムした特別なメタデータタグ(+--tag+)を追加する"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:54
@@ -9178,13 +9195,17 @@ msgid ""
 "easier, Yardoc has a few command-line switches for creating basic tags\n"
 "and displaying them in generated HTML output."
 msgstr ""
+"YARDは、{YARD::Tags::Library}クラス経由でプラグラムされた{file:docs/Tags.md meta-data tags}の仕様を受入れが、時々これは、ユーザーが書いているドキュメントとはそぐわない場合がある。\n"
+"簡単なカスタムタグを作成するには、\n"
+"Yardocが基本的なタグ作成用にいくつかのコマンドライン引数を持っており、\n"
+"それをHTML出力し表示できる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:60
 msgid ""
 "To specify a custom tag to be displayed in output, use any of the\n"
 "following:"
-msgstr ""
+msgstr "出力に表示されるカスタムタグを指定するには、次のように利用できる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:63
@@ -9199,7 +9220,7 @@ msgstr ""
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:69
 msgid "\"TAG:TITLE\" is of the form: name:\"Display Title\", for example:"
-msgstr ""
+msgstr "\"TAG:TITLE\" は、 形式: 名前:\"表示されるタイトル\" となる。\\n例えば:"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:71
@@ -9209,7 +9230,7 @@ msgstr ""
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:73
 msgid "See +yardoc --help+ for a description of the various options."
-msgstr ""
+msgstr "様々なオプションの説明は +yardoc --help+ 参照。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:75
@@ -9219,11 +9240,15 @@ msgid ""
 "Note that you can also use this option on existing tags to hide\n"
 "builtin tags, for instance."
 msgstr ""
+"この方法で追加したタグは、自動的に出力で表示される。\n"
+"出力に表示しないでメタデータタグを追加するには、 +--hide-tag TAG+ を使う。\n"
+"次の事に留意する。あなたは、\n"
+"組み込みタグを隠す為に既存のタグ上でこのオプションも利用できる。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:80
 msgid "== Processed Data Storage (+.yardoc+ directory)"
-msgstr ""
+msgstr "== 処理されたデータストレージ (+.yardoc+ ディレクトリ)"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:82
@@ -9235,6 +9260,13 @@ msgid ""
 "This directory is also used as a cache for any future calls to +yardoc+\n"
 "so as to process only the files which have changed since the last call."
 msgstr ""
+"Yardocがソースディレクトリを解析する時、プロジェクトのルートで +.yardoc+ ディレクトリを作成する。\n"
+"(デフォルトで、 +-b+ と共に上書きする)\n"
+"このディレクトリは、\n"
+"全てのソースの生のオブジェクトデータ用に整理されたダンプを含んでいるので、\n"
+"後で様々なコマンド用(+stats+, +graph+ 等)にアクセスできる。\n"
+"このディレクトリは、いつか +yardoc+ を呼び出す為にもキャッシュとして利用する。\n"
+"最後の呼び出しから変更した所のファイルだけ処理する為に。"
 
 # YARD::CLI::Yardoc
 #: ../lib/yard/cli/yardoc.rb:89
@@ -9247,6 +9279,12 @@ msgid ""
 "You can do this by deleting the +.yardoc+ directory manually, or running\n"
 "Yardoc without +--use-cache+ (+-c+)."
 msgstr ""
+"Yardocが +yardoc+ 呼び出しに続くキャッシュを使う時、\n"
+"最後に解析しているのでソースから削除されているメソッドやクラスは、\n"
+"キャッシュから削除されない。(YARDはオブジェクトを決して削除しない)\n"
+"このような場合、あなたは、キャッシュを一掃し、クリーンなソースツリーの解析にするべきである。\n"
+"+.yardoc+ ディレクトリを手動で削除する事に上記の事ができる。\n"
+"又は、yardoc の +--use-cache+ (+-c+)無しで起動する。"
 
 # @see
 #: ../lib/yard/cli/yardoc.rb:97 ../lib/yard/rake/yardoc_task.rb:34
@@ -9256,7 +9294,7 @@ msgstr ""
 # YARD::CLI::Yardoc::DEFAULT_YARDOPTS_FILE
 #: ../lib/yard/cli/yardoc.rb:99
 msgid "The configuration filename to load extra options from"
-msgstr ""
+msgstr "追加のオプションをロードする設定ファイル名"
 
 # @see
 #: ../lib/yard/cli/yardoc.rb:103 ../lib/yard/code_objects/base.rb:440
@@ -9266,17 +9304,17 @@ msgstr ""
 # @return [Hash]
 #: ../lib/yard/cli/yardoc.rb:103
 msgid "the hash of options passed to the template."
-msgstr ""
+msgstr "テンプレートに解析された、optionsのハッシュ"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:106
 msgid "list of Ruby source files to process"
-msgstr ""
+msgstr "処理する為のRubyソースファイルのリスト"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:110
 msgid "list of excluded paths (regexp matches)"
-msgstr ""
+msgstr "除外されたパス(正規表現にマッチする)のリスト"
 
 # @since
 #: ../lib/yard/cli/yardoc.rb:110 ../lib/yard/code_objects/base.rb:407
@@ -9297,31 +9335,33 @@ msgid ""
 ".yardoc already exists. Also makes use of file checksums to\n"
 "parse only changed files."
 msgstr ""
+".yardocが既に存在する場合、既存のyardoc dbを利用するかどうか。\n"
+"従って、変更されたファイルだけ解析する為にファイルチェックサムを活用する。"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:118
 msgid "whether to parse options from .yardopts"
-msgstr ""
+msgstr ".yardoptsから、オプションを解析するかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:121
 msgid "whether to parse options from .document"
-msgstr ""
+msgstr ".documentからオプションを解析するかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:124
 msgid "whether objects should be serialized to .yardoc db"
-msgstr ""
+msgstr "オブジェクトが.yardoc dbにシリアライズされるかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:127
 msgid "whether to generate output"
-msgstr ""
+msgstr "出力を生成するかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:131
 msgid "whether to print a list of objects"
-msgstr ""
+msgstr "オブジェクトのリストをプリントするかどうか"
 
 # @since
 #: ../lib/yard/cli/yardoc.rb:131 ../lib/yard/cli/yardoc.rb:374
@@ -9336,18 +9376,18 @@ msgstr ""
 # YARD::CLI::Yardoc#options_file=
 #: ../lib/yard/cli/yardoc.rb:134
 msgid "The options file name (defaults to {DEFAULT_YARDOPTS_FILE})"
-msgstr ""
+msgstr "ファイル名のオプション(デフォルトでは{DEFAULT_YARDOPTS_FILE}になる)"
 
 # @return [String]
 #: ../lib/yard/cli/yardoc.rb:135
 msgid "the filename to load extra options from"
-msgstr ""
+msgstr "追加のオプションをロードする為のファイル名"
 
 # YARD::CLI::Yardoc#visibilities
 # YARD::CLI::Yardoc#visibilities=
 #: ../lib/yard/cli/yardoc.rb:138
 msgid "Keep track of which visibilities are to be shown"
-msgstr ""
+msgstr "visibilitiesで示されるその中で手順を維持する。"
 
 # @since
 #: ../lib/yard/cli/yri.rb:74 ../lib/yard/cli/yardoc.rb:140
@@ -9368,27 +9408,27 @@ msgstr ""
 # @return [Array<Symbol>]
 #: ../lib/yard/cli/yardoc.rb:140
 msgid "a list of visibilities"
-msgstr ""
+msgstr "visibilitiesのリスト"
 
 # @return [Array<Symbol>]
 #: ../lib/yard/cli/yardoc.rb:144
 msgid "a list of tags to hide from templates"
-msgstr ""
+msgstr "テンプレートから隠すタグのリスト"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:148
 msgid "whether to print statistics after parsing"
-msgstr ""
+msgstr "解析の後で統計値をプリントするかどうか"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:152
 msgid "a list of assets to copy after generation"
-msgstr ""
+msgstr "生成の後でコピーする資産のリスト"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:156
 msgid "whether markup option was specified"
-msgstr ""
+msgstr "マークアップオプションが指定されたかどうか"
 
 # @since
 #: ../lib/yard/cli/yardoc.rb:156 ../lib/yard/parser/source_parser.rb:50
@@ -9418,32 +9458,32 @@ msgstr ""
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:160
 msgid "a list of locale path."
-msgstr ""
+msgstr "ロケールパスのリスト"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:164
 msgid "the default list of locale path."
-msgstr ""
+msgstr "デフォルトのロケールパスのリスト"
 
 # @return [String]
 #: ../lib/yard/cli/yardoc.rb:168
 msgid "a language for output document."
-msgstr ""
+msgstr "ドキュメント出力用の言語"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:172
 msgid "whether to report missing translations."
-msgstr ""
+msgstr "見つからない変換をレポートするかどうか"
 
 # @return [Yardoc]
 #: ../lib/yard/cli/yardoc.rb:175
 msgid "a new instance of Yardoc"
-msgstr ""
+msgstr "Yardocの新しいインスタンス"
 
 # YARD::CLI::Yardoc#initialize
 #: ../lib/yard/cli/yardoc.rb:175
 msgid "Creates a new instance of the commandline utility"
-msgstr ""
+msgstr "コマンドラインユーティリティの新しいインスタンスを作成する。"
 
 # @param [Array<String>] args
 #: ../lib/yard/cli/yardoc.rb:224
@@ -9451,16 +9491,18 @@ msgid ""
 "the list of arguments. If the list only\n"
 "contains a single nil value, skip calling of {#parse_arguments}"
 msgstr ""
+"引数のリスト。リストがnilだけの場合、\n"
+"{#parse_arguments}メソッドを呼び出しスキップする。"
 
 # YARD::CLI::Yardoc#parse_arguments
 #: ../lib/yard/cli/yardoc.rb:260
 msgid "Parses commandline arguments"
-msgstr ""
+msgstr "コマンドライン引数を解析する"
 
 # @return [Boolean]
 #: ../lib/yard/cli/yardoc.rb:263
 msgid "whether or not arguments are valid"
-msgstr ""
+msgstr "引数が有効かどうか"
 
 # YARD::CLI::Yardoc#all_objects
 #: ../lib/yard/cli/yardoc.rb:290
@@ -9468,31 +9510,34 @@ msgid ""
 "The list of all objects to process. Override this method to change\n"
 "which objects YARD should generate documentation for."
 msgstr ""
+"処理する上での全てのオブジェクトのリスト。\n"
+"変更するたびに、このメソッドは上書きするので、\n"
+"YARDのオブジェクトは、ドキュメントを生成するべきである。"
 
 # @return [Array<CodeObjects::Base>]
 #: ../lib/yard/cli/yardoc.rb:294
 msgid "a list of code objects to process"
-msgstr ""
+msgstr "処理する為のコードオブジェクトのリスト"
 
 # @deprecated
 #: ../lib/yard/cli/yardoc.rb:294
 msgid "To hide methods use the +@private+ tag instead."
-msgstr ""
+msgstr "メソッドを隠すには、代わりに、 +@private+ タグを使う"
 
 # YARD::CLI::Yardoc#yardopts
 #: ../lib/yard/cli/yardoc.rb:299
 msgid "Parses the .yardopts file for default yard options"
-msgstr ""
+msgstr "デフォルトのyardオプション用に.yardoptsファイルを解析する。"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:300
 msgid "an array of options parsed from .yardopts"
-msgstr ""
+msgstr ".yardoptsから解析されたオプションの配列"
 
 # YARD::CLI::Yardoc#run_generate
 #: ../lib/yard/cli/yardoc.rb:310
 msgid "Generates output for objects"
-msgstr ""
+msgstr "オブジェクト用の出力を生成する"
 
 # @since
 #: ../lib/yard/cli/yri.rb:14 ../lib/yard/cli/yri.rb:159
@@ -9509,7 +9554,7 @@ msgstr ""
 # @param [Hash, nil] checksums
 #: ../lib/yard/cli/yardoc.rb:313
 msgid "if supplied, a list of checkums for files."
-msgstr ""
+msgstr "提供する場合は、ファイルの為のチェックサムのリスト"
 
 # YARD::CLI::Yardoc#verify_markup_options
 #: ../lib/yard/cli/yardoc.rb:334
@@ -9517,36 +9562,38 @@ msgid ""
 "Verifies that the markup options are valid before parsing any code.\n"
 "Failing early is better than failing late."
 msgstr ""
+"任意のコードを解析する前に、有効なマークアップオプションを認証する。\n"
+"(早期に失敗が分かるほうが、後で失敗するよりいいので)"
 
 # YARD::CLI::Yardoc#copy_assets
 #: ../lib/yard/cli/yardoc.rb:359
 msgid "Copies any assets to the output directory"
-msgstr ""
+msgstr "出力ディレクトリに任意の資産をコピーする。"
 
 # YARD::CLI::Yardoc#print_list
 #: ../lib/yard/cli/yardoc.rb:372
 msgid "Prints a list of all objects"
-msgstr ""
+msgstr "全てのオブジェクトのリストをプリントする"
 
 # YARD::CLI::Yardoc#parse_yardopts_options
 #: ../lib/yard/cli/yardoc.rb:383
 msgid "Parses out the yardopts/document options"
-msgstr ""
+msgstr "yardopts/documentオプションの出力を解析する"
 
 # YARD::CLI::Yardoc#support_rdoc_document_file!
 #: ../lib/yard/cli/yardoc.rb:398
 msgid "Reads a .document file in the directory to get source file globs"
-msgstr ""
+msgstr "ソースファイルのglobを取得する為にディレクトリの中の.documentファイルをロードする"
 
 # @return [Array<String>]
 #: ../lib/yard/cli/yardoc.rb:399
 msgid "an array of files parsed from .document"
-msgstr ""
+msgstr ".documentから解析されたファイルの配列"
 
 # YARD::CLI::Yardoc#add_extra_files
 #: ../lib/yard/cli/yardoc.rb:407
 msgid "Adds a set of extra documentation files to be processed"
-msgstr ""
+msgstr "処理される追加のドキュメントファイルのグループを追加する"
 
 # @param [Array<String>]
 # @param [String, Array]
@@ -9558,7 +9605,7 @@ msgstr ""
 # @param [Array<String>] files
 #: ../lib/yard/cli/yardoc.rb:408
 msgid "the set of documentation files"
-msgstr ""
+msgstr "ドキュメントファイルのグループ"
 
 # YARD::CLI::Yardoc#parse_files
 #: ../lib/yard/cli/yardoc.rb:420
@@ -9566,6 +9613,8 @@ msgid ""
 "Parses the file arguments into Ruby files and extra files, which are\n"
 "separated by a '-' element."
 msgstr ""
+"Rubyのファイルと追加のファイルをfilesの引数として解析する。\n"
+"それは、'-'要素によって区切られる。"
 
 # @example Parses a set of Ruby source files
 #: ../lib/yard/cli/yardoc.rb:428
@@ -9575,7 +9624,7 @@ msgstr ""
 # @example
 #: ../lib/yard/cli/yardoc.rb:428
 msgid "tag|example|Parses a set of Ruby source files"
-msgstr ""
+msgstr "Rubyソースファイルのグループを解析する"
 
 # @example Parses a set of Ruby files with a separator and extra files
 #: ../lib/yard/cli/yardoc.rb:428
@@ -9585,17 +9634,17 @@ msgstr ""
 # @param [Array<String>] files
 #: ../lib/yard/cli/yardoc.rb:428
 msgid "the list of files to parse"
-msgstr ""
+msgstr "解析するファイルのリスト"
 
 # @example
 #: ../lib/yard/cli/yardoc.rb:428
 msgid "tag|example|Parses a set of Ruby files with a separator and extra files"
-msgstr ""
+msgstr "Rubyのファイルと区切りを用いた追加のファイルのグループを解析する"
 
 # YARD::CLI::Yardoc#add_visibility_verifier
 #: ../lib/yard/cli/yardoc.rb:446
 msgid "Adds verifier rule for visibilities"
-msgstr ""
+msgstr "visibilities用に認証ルールを追加する"
 
 # YARD::CLI::Yardoc#run_verifier
 # YARD::Templates::Helpers::BaseHelper#run_verifier
@@ -9605,11 +9654,13 @@ msgid ""
 "Runs a list of objects against the {Verifier} object passed into the\n"
 "template and returns the subset of verified objects."
 msgstr ""
+"テンプレートへ渡された{Verifier}オブジェクトに対してオブジェクトのリストを起動する。\n"
+"そして、認証されたオブジェクトのサブセットを返す。"
 
 # YARD::CLI::Yardoc#general_options
 #: ../lib/yard/cli/yardoc.rb:493
 msgid "Adds general options"
-msgstr ""
+msgstr "全体的なオプションを追加する。"
 
 # YARD::CLI::Yardoc#yardopts_options
 #: ../lib/yard/cli/yardoc.rb:546
@@ -9624,12 +9675,12 @@ msgstr ""
 # YARD::CLI::Yardoc#output_options
 #: ../lib/yard/cli/yardoc.rb:565
 msgid "Adds output options"
-msgstr ""
+msgstr "オプションの出力を追加する。"
 
 # YARD::CLI::Yardoc#tag_options
 #: ../lib/yard/cli/yardoc.rb:697
 msgid "Adds tag options"
-msgstr ""
+msgstr "タグのオプションを追加する。"
 
 # YARD::CLI::YRI
 #: ../lib/yard/cli/yri.rb:6
