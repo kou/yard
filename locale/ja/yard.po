@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 15:48+0900\n"
+"PO-Revision-Date: 2012-01-10 16:00+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19756,7 +19756,7 @@ msgstr "リダイレクトするURL"
 # @raise [FinishRequest]
 #: ../lib/yard/server/commands/base.rb:184
 msgid "causes the request to terminate."
-msgstr "終わらせる為にリクエストする。"
+msgstr "打ち切る為にリクエストする。"
 
 # @param [String]
 #: ../lib/yard/server/commands/base.rb:184
@@ -19772,7 +19772,7 @@ msgstr ""
 # @todo
 #: ../lib/yard/server/commands/display_file_command.rb:7
 msgid "Implement better support for detecting binary (image) filetypes"
-msgstr ""
+msgstr "Implement better support for detecting binary (image) filetypes"
 
 # YARD::Server::Commands::DisplayObjectCommand
 #: ../lib/yard/server/commands/display_object_command.rb:5
