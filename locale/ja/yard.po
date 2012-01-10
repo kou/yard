@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 17:09+0900\n"
+"PO-Revision-Date: 2012-01-10 17:16+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19858,22 +19858,22 @@ msgstr "options属性の値を返す"
 # YARD::Server::Commands::ListCommand
 #: ../lib/yard/server/commands/list_command.rb:5
 msgid "Returns a list of objects of a specific type"
-msgstr ""
+msgstr "特定の型のオブジェクトのリストを返す"
 
 # YARD::Server::Commands::ListClassesCommand
 #: ../lib/yard/server/commands/list_command.rb:19
 msgid "Returns the list of classes / modules in a library"
-msgstr ""
+msgstr "ライブラリの中のクラスとモジュールのリストを返す"
 
 # YARD::Server::Commands::ListMethodsCommand
 #: ../lib/yard/server/commands/list_command.rb:29
 msgid "Returns the list of methods in a library"
-msgstr ""
+msgstr "ライブラリの中のメソッドのリストを返す"
 
 # YARD::Server::Commands::ListFilesCommand
 #: ../lib/yard/server/commands/list_command.rb:42
 msgid "Returns the list of README/extra files in a library"
-msgstr ""
+msgstr "ライブラリの中のREADMEと追加のファイルのリストを返す"
 
 # YARD::Server::Commands::SearchCommand
 #: ../lib/yard/server/commands/search_command.rb:5
