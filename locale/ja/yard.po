@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 13:45+0900\n"
+"PO-Revision-Date: 2012-01-10 15:48+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19416,6 +19416,9 @@ msgid ""
 "a server. A command will be routed to by the {Router} class and return\n"
 "a Rack-style response."
 msgstr ""
+"これは、サーバー用にカスタムコマンドを実装する為に、\n"
+"利用されるベースコマンドクラスである。\n"
+"コマンドは、{Router}クラスによって送られ、Rack-styleレスポンスを返す。\n"
 
 # YARD::Server::Commands::Base
 #: ../lib/yard/server/commands/base.rb:11
@@ -19425,6 +19428,10 @@ msgid ""
 "method. When creating a custom command, the {Adapter#options} will\n"
 "automatically be mapped to attributes by the same name on your class."
 msgstr ""
+"== 初期化子の属性\n"
+"全ての属性は、{#initialize}メソッドへ渡されたoptions経由でイニシャライズされる。\n"
+"カスタムメソッドが作成される時、{Adapter#options}メソッドは、\n"
+"あなたのクラスの属性と同じ名前で自動的にマッピングされるだろう。"
 
 # YARD::Server::Commands::Base
 #: ../lib/yard/server/commands/base.rb:16
@@ -19452,6 +19459,10 @@ msgid ""
 "In your implementation, you should set the body and status for requests.\n"
 "See details in the +#run+ method documentation."
 msgstr ""
+"== サブクラス化する時の注意\n"
+"カスタムコマンドを実装するには、{#run}メソッドを上書きする({#call}メソッドではない)。\n"
+"あなたの実装で、あなたがボディと、リクエスト用のステータスを設定するべきである。\n"
+"詳細は +#run+ メソッドのドキュメントを参照。"
 
 # YARD::Server::Commands::Base
 #: ../lib/yard/server/commands/base.rb:29
@@ -19459,11 +19470,14 @@ msgid ""
 "Note that if your command deals directly with libraries, you should\n"
 "consider subclassing the more specific {LibraryCommand} class instead."
 msgstr ""
+"次の事に留意する。あなたのコマンドが\n"
+"直接ライブラリを用い処理する場合、代わりに、\n"
+"サブクラス化する{LibraryCommand}クラスの詳細を考慮するべきである。"
 
 # @return [Hash]
 #: ../lib/yard/server/commands/base.rb:37
 msgid "the options passed to the command's constructor"
-msgstr ""
+msgstr "コマンドのコンストラクタに渡されたoptions"
 
 # YARD::Server::Commands::Base#command_options
 # YARD::Server::Commands::Base#command_options=
@@ -19475,22 +19489,22 @@ msgstr ""
 #: ../lib/yard/server/commands/base.rb:40
 #: ../lib/yard/server/commands/base.rb:43
 msgid "Basic Command and Adapter Options"
-msgstr ""
+msgstr "基本的なコマンドとアダプターオプション"
 
 # @return [Adapter]
 #: ../lib/yard/server/commands/base.rb:40
 msgid "the server adapter"
-msgstr ""
+msgstr "サーバーアダプター"
 
 # @return [Boolean]
 #: ../lib/yard/server/commands/base.rb:43
 msgid "whether to cache"
-msgstr ""
+msgstr "キャッシュするかどうか"
 
 # @return [Request]
 #: ../lib/yard/server/commands/base.rb:48
 msgid "request object"
-msgstr ""
+msgstr "オブジェクトのリクエスト"
 
 # YARD::Server::Commands::Base#request
 # YARD::Server::Commands::Base#request=
@@ -19508,27 +19522,27 @@ msgstr ""
 #: ../lib/yard/server/commands/base.rb:57
 #: ../lib/yard/server/commands/base.rb:60
 msgid "Attributes Set Per Request"
-msgstr ""
+msgstr "リクエスト毎のグループを属性化する。"
 
 # @return [String]
 #: ../lib/yard/server/commands/base.rb:51
 msgid "the path after the command base URI"
-msgstr ""
+msgstr "コマンドのベースURIの後で返す、パス"
 
 # @return [Hash{String => String}]
 #: ../lib/yard/server/commands/base.rb:54
 msgid "response headers"
-msgstr ""
+msgstr "ヘッダーのレスポンス"
 
 # @return [Numeric]
 #: ../lib/yard/server/commands/base.rb:57
 msgid "status code. Defaults to 200 per request"
-msgstr ""
+msgstr "コードの状態。デフォルトで200リクエスト毎。"
 
 # @return [String]
 #: ../lib/yard/server/commands/base.rb:60
 msgid "the response body. Defaults to empty string."
-msgstr ""
+msgstr "ボディのレスポンス。デフォルトでは空の文字列になる。"
 
 # YARD::Server::Commands::Base#initialize
 #: ../lib/yard/server/commands/base.rb:65
@@ -19537,11 +19551,15 @@ msgid ""
 "in the options hash. After initialization, the options hash\n"
 "is saved in {#command_options} for further inspection."
 msgstr ""
+"新しいコマンドオブジェクトを作成し、\n"
+"ハッシュオプションのキーによって、名付けられた属性をセッティングする。\n"
+"イニシャライズの後でハッシュのオプションは、\n"
+"調査を進める為に{#command_options}メソッドの中でセーブされる。"
 
 # @example
 #: ../lib/yard/server/commands/base.rb:74
 msgid "tag|example|Creating a Command"
-msgstr ""
+msgstr "コマンドを作成する"
 
 # @example Creating a Command
 #: ../lib/yard/server/commands/base.rb:74
@@ -19557,18 +19575,22 @@ msgid ""
 "the options hash, saved to {#command_options}\n"
 "after initialization."
 msgstr ""
+"ハッシュのオプション、イニシャライズされた後で、\n"
+"{#command_options}にセーブされる。"
 
 # YARD::Server::Commands::Base#initialize
 # YARD::Server::Commands::Base#call
 #: ../lib/yard/server/commands/base.rb:74
 #: ../lib/yard/server/commands/base.rb:88
 msgid "Instance Method Summary"
-msgstr ""
+msgstr "インスタンスメソッドの概要"
 
 # YARD::Server::Commands::Base#call
 #: ../lib/yard/server/commands/base.rb:82
 msgid "The main method called by a router with a request object."
 msgstr ""
+"主なメソッドは、requestオブジェクトを用い\n"
+"routerによって呼び出される。"
 
 # @param [Adapter Dependent]
 #: ../lib/yard/server/commands/base.rb:88 ../lib/yard/server/router.rb:52
@@ -19578,7 +19600,7 @@ msgstr ""
 # @param [Adapter Dependent] request
 #: ../lib/yard/server/commands/base.rb:88 ../lib/yard/server/router.rb:52
 msgid "the request object"
-msgstr ""
+msgstr "リクエストするオブジェクト"
 
 # @note
 #: ../lib/yard/server/commands/base.rb:88
@@ -19586,6 +19608,8 @@ msgid ""
 "This command should not be overridden by subclasses. Implement\n"
 "the callback method {#run} instead."
 msgstr ""
+"このコマンドは、サブクラスによって上書きされるべきではない、\n"
+"代わりにコールバックの{#run}メソッドを実装する。"
 
 # @return [Array(Number,Hash,Array<String>)]
 #: ../lib/yard/server/commands/base.rb:88
@@ -19593,6 +19617,8 @@ msgid ""
 "a Rack-style response\n"
 "of status, headers, and body wrapped in an array."
 msgstr ""
+"配列でラップされた\n"
+"Rack-styleのステータス、ヘッダー、ボディのレスポンス"
 
 # YARD::Server::Commands::Base#run
 #: ../lib/yard/server/commands/base.rb:108
@@ -19601,6 +19627,10 @@ msgid ""
 "should set the {#status} and {#body}, and optionally modify the\n"
 "{#headers}. Note that +#status+ defaults to 200."
 msgstr ""
+"カスタムコマンドを実装する為にこのメソッドをサブクラス化する。\n"
+"このメソッドは、{#status}と{#body}を設定するべきで、\n"
+"任意で、{#headers}を変更する。\n"
+"留意する事として、 +#status+ はデフォルトで200になる。"
 
 # @example A custom command
 #: ../lib/yard/server/commands/base.rb:122
@@ -19617,12 +19647,12 @@ msgstr ""
 # @example
 #: ../lib/yard/server/commands/base.rb:122
 msgid "tag|example|A custom command"
-msgstr ""
+msgstr "カスタムコマンド"
 
 # YARD::Server::Commands::Base#run
 #: ../lib/yard/server/commands/base.rb:122
 msgid "Abstract Methods"
-msgstr ""
+msgstr "抽象メソッド"
 
 # YARD::Server::Commands::Base#render
 #: ../lib/yard/server/commands/base.rb:131
@@ -19630,6 +19660,8 @@ msgid ""
 "Renders a specific object if provided, or a regular template rendering\n"
 "if object is not provided."
 msgstr ""
+"提供された場合、特定のオブジェクトを表示するか、\n"
+"オブジェクトが提供されない場合、規定のテンプレートが表示される。"
 
 # YARD::Server::Commands::Base#render
 # YARD::Server::Commands::Base#cache
@@ -19640,13 +19672,15 @@ msgstr ""
 #: ../lib/yard/server/commands/base.rb:174
 #: ../lib/yard/server/commands/base.rb:184
 msgid "Helper Methods"
-msgstr ""
+msgstr "ヘルパーメソッド"
 
 # @todo
 #: ../lib/yard/server/commands/base.rb:138
 msgid ""
 "This method is dependent on +#options+, it should be in {LibraryCommand}."
 msgstr ""
+"このメソッドは、 +#options+ メソッドに依存している。\n"
+"+#options+ メソッドは {LibraryCommand} にするべきである。"
 
 # @param [CodeObjects::Base, nil] object
 #: ../lib/yard/server/commands/base.rb:138
@@ -19655,21 +19689,26 @@ msgid ""
 "an object is provided, or {Templates::Engine.render} if object is nil. Both\n"
 "receive +#options+ as an argument."
 msgstr ""
+"オブジェクトが提供される場合、\n"
+"{CodeObjects::Base#format}を呼び出す、\n"
+"又は、オブジェクトがnilの場合\n"
+"{Templates::Engine.render}を呼び出す。\n"
+"両者は、引数として +#options+ メソッドを受け取る。"
 
 # @return [String]
 #: ../lib/yard/server/commands/base.rb:138
 msgid "the resulting output to display"
-msgstr ""
+msgstr "表示する出力結果"
 
 # YARD::Server::Commands::Base#cache
 #: ../lib/yard/server/commands/base.rb:150
 msgid "Override this method to implement custom caching mechanisms for"
-msgstr ""
+msgstr "カスタムキャッシュメカニズムを実装する為にこのメソッドを上書きする。"
 
 # @example
 #: ../lib/yard/server/commands/base.rb:159
 msgid "tag|example|Caching to memory"
-msgstr ""
+msgstr "メモリーにキャッシュする"
 
 # @example Caching to memory
 #: ../lib/yard/server/commands/base.rb:159
@@ -19683,12 +19722,12 @@ msgstr ""
 # @param [String] data
 #: ../lib/yard/server/commands/base.rb:159
 msgid "the data to cache"
-msgstr ""
+msgstr "キャッシュするデータ"
 
 # @return [String]
 #: ../lib/yard/server/commands/base.rb:159
 msgid "the same cached data (for chaining)"
-msgstr ""
+msgstr "同じキャッシュされたデータ(メソッドチェーン用)"
 
 # @see
 #: ../lib/yard/server/commands/base.rb:159
@@ -19701,21 +19740,23 @@ msgid ""
 "Sets the body and headers (but not status) for a 404 response. Does\n"
 "nothing if the body is already set."
 msgstr ""
+"404レスポンス用にボディとヘッダー(しかしステータスはない)を設定する。\n"
+"ボディが既に設定されている場合は何もしない。"
 
 # YARD::Server::Commands::Base#redirect
 #: ../lib/yard/server/commands/base.rb:182
 msgid "Sets the headers and status code for a redirection to a given URL"
-msgstr ""
+msgstr "与えられたURLへのリダイレクト用にヘッダーとステータスコードを設定する。"
 
 # @param [String] url
 #: ../lib/yard/server/commands/base.rb:184
 msgid "the URL to redirect to"
-msgstr ""
+msgstr "リダイレクトするURL"
 
 # @raise [FinishRequest]
 #: ../lib/yard/server/commands/base.rb:184
 msgid "causes the request to terminate."
-msgstr ""
+msgstr "終わらせる為にリクエストする。"
 
 # @param [String]
 #: ../lib/yard/server/commands/base.rb:184
