@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 17:16+0900\n"
+"PO-Revision-Date: 2012-01-10 17:24+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19881,36 +19881,38 @@ msgid ""
 "Performs a search over the objects inside of a library and returns\n"
 "the results as HTML or plaintext"
 msgstr ""
+"ライブラリの内部オブジェクトの検索を実行し、\n"
+"HTMLやプレーンテキストとして結果を返す。"
 
 # @param value
 #: ../lib/yard/server/commands/search_command.rb:7
 msgid "the value to set the attribute results to."
-msgstr ""
+msgstr "results属性を設定する値"
 
 # @param value
 #: ../lib/yard/server/commands/search_command.rb:7
 msgid "the value to set the attribute query to."
-msgstr ""
+msgstr "query属性を設定する値"
 
 # YARD::Server::Commands::SearchCommand#query
 #: ../lib/yard/server/commands/search_command.rb:8
 msgid "Returns the value of attribute query"
-msgstr ""
+msgstr "query属性の値を返す"
 
 # YARD::Server::Commands::SearchCommand#query=
 #: ../lib/yard/server/commands/search_command.rb:8
 msgid "Sets the attribute query"
-msgstr ""
+msgstr "query属性を設定する"
 
 # YARD::Server::Commands::SearchCommand#results=
 #: ../lib/yard/server/commands/search_command.rb:8
 msgid "Sets the attribute results"
-msgstr ""
+msgstr "results属性を設定する"
 
 # YARD::Server::Commands::SearchCommand#results
 #: ../lib/yard/server/commands/search_command.rb:8
 msgid "Returns the value of attribute results"
-msgstr ""
+msgstr "results属性の値を返す"
 
 # YARD::Server::Commands::StaticFileCommand
 #: ../lib/yard/server/commands/static_file_command.rb:7
