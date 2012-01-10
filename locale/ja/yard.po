@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 18:10+0900\n"
+"PO-Revision-Date: 2012-01-10 18:19+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19998,11 +19998,13 @@ msgid ""
 "of\n"
 "static relative paths to files on disk."
 msgstr ""
+"カスタム{Serializers::Base serializer}。\n"
+"ディスク上のファイルの為に静的な相対パスの代わりに、URLリソースを返す。"
 
 # @return [DocServerSerializer]
 #: ../lib/yard/server/doc_server_serializer.rb:10
 msgid "a new instance of DocServerSerializer"
-msgstr ""
+msgstr "DocServerSerializerの新しいインスタンス"
 
 # YARD::Server::LibraryNotPreparedError
 #: ../lib/yard/server/library_version.rb:6
