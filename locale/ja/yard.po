@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 17:24+0900\n"
+"PO-Revision-Date: 2012-01-10 17:55+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19917,7 +19917,7 @@ msgstr "results属性の値を返す"
 # YARD::Server::Commands::StaticFileCommand
 #: ../lib/yard/server/commands/static_file_command.rb:7
 msgid "Serves static content when no other router matches a request"
-msgstr ""
+msgstr "リクエストにマッチする他のrouterが無い時、静的な内容を提供する。"
 
 # YARD::Server::Commands::StaticFileCommand::STATIC_PATHS
 #: ../lib/yard/server/commands/static_file_command.rb:13
@@ -19927,6 +19927,11 @@ msgid ""
 "modifying this constant directly. Also note that files in the\n"
 "document root will always take precedence over these paths."
 msgstr ""
+"静的な資産用に検索に利用されるパスを定義する。\n"
+"追加のパスを定義するには、直接この定数を変更するよりも\n"
+"{YARD::Server.register_static_path}を利用する。\n"
+"従って、次の事に留意する。\n"
+"ドキュメントのrootのファイルは常時これらのパスより優先する。"
 
 # YARD::Server::Commands::StaticFileCommand#favicon?
 #: ../lib/yard/server/commands/static_file_command.rb:39
@@ -19934,6 +19939,8 @@ msgid ""
 "Return an empty favicon.ico if it does not exist so that\n"
 "browsers don't complain."
 msgstr ""
+"favicon.icoが存在しない場合、空のfavicon.icoを返す。\n"
+"その為、ブラウザに問題は発生しない。"
 
 # YARD::Server::DocServerHelper
 #: ../lib/yard/server/doc_server_helper.rb:4
