@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 16:00+0900\n"
+"PO-Revision-Date: 2012-01-10 16:40+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19767,17 +19767,17 @@ msgstr ""
 # YARD::Server::Commands::DisplayFileCommand
 #: ../lib/yard/server/commands/display_file_command.rb:5
 msgid "Displays a README or extra file."
-msgstr ""
+msgstr "README 又は、追加のファイルを表示する。"
 
 # @todo
 #: ../lib/yard/server/commands/display_file_command.rb:7
 msgid "Implement better support for detecting binary (image) filetypes"
-msgstr "Implement better support for detecting binary (image) filetypes"
+msgstr "バイナリ(画像)ファイルタイプを見つける為のより良いサポートを実装する。"
 
 # YARD::Server::Commands::DisplayObjectCommand
 #: ../lib/yard/server/commands/display_object_command.rb:5
 msgid "Displays documentation for a specific object identified by the path"
-msgstr ""
+msgstr "パスによって識別された固有のオブジェクト用にドキュメントを表示する。"
 
 # YARD::Server::Commands::FramesCommand
 #: ../lib/yard/server/commands/frames_command.rb:5
