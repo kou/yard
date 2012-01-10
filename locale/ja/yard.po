@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 16:41+0900\n"
+"PO-Revision-Date: 2012-01-10 17:03+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19793,41 +19793,45 @@ msgid ""
 "command deals with libraries directly, subclass this class instead.\n"
 "See {Base} for notes on how to subclass a command."
 msgstr ""
+"これは、ライブラリを用い直接処理する全てのコマンドの為のベースコマンド。\n"
+"いくつかのコマンドには、用いないが({DisplayObjectCommand}のように)大抵の事は行う。\n"
+"あなたのコマンドが直接ライブラリを用い処理する場合、代わりにこのクラスをサブクラス化する。\n"
+"コマンドをサブクラス化する為の方法については{Base}を参照。\n"
 
 # @return [LibraryVersion]
 #: ../lib/yard/server/commands/library_command.rb:14
 msgid "the object containing library information"
-msgstr ""
+msgstr "ライブラリの情報含んでいるオブジェクト"
 
 # @return [Hash{Symbol => Object}]
 #: ../lib/yard/server/commands/library_command.rb:17
 msgid "default options for the library"
-msgstr ""
+msgstr "ライブラリ用のデフォルトのoptions"
 
 # @return [Serializers::Base]
 #: ../lib/yard/server/commands/library_command.rb:20
 msgid "the serializer used to perform file linking"
-msgstr ""
+msgstr "ファイルリンクを実行する為に利用されるシリアライザ"
 
 # @return [Boolean]
 #: ../lib/yard/server/commands/library_command.rb:23
 msgid "whether router should route for multiple libraries"
-msgstr ""
+msgstr "routerが複数のライブラリ用に送るべきかどうか"
 
 # @return [Boolean]
 #: ../lib/yard/server/commands/library_command.rb:26
 msgid "whether to reparse data"
-msgstr ""
+msgstr "データを再解析するかどうか"
 
 # YARD::Server::Commands::LibraryCommand::@@library_chdir_lock
 #: ../lib/yard/server/commands/library_command.rb:29
 msgid "Needed to synchronize threads in {#setup_yardopts}"
-msgstr ""
+msgstr "{#setup_yardopts}メソッドの中で、スレッドを同期する為の必要とされる"
 
 # @return [LibraryCommand]
 #: ../lib/yard/server/commands/library_command.rb:32
 msgid "a new instance of LibraryCommand"
-msgstr ""
+msgstr "LibraryCommandの新しいインスタンス"
 
 # YARD::Server::Commands::LibraryIndexCommand
 #: ../lib/yard/server/commands/library_index_command.rb:5
