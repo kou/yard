@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 17:03+0900\n"
+"PO-Revision-Date: 2012-01-10 17:09+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19836,17 +19836,17 @@ msgstr "LibraryCommandの新しいインスタンス"
 # YARD::Server::Commands::LibraryIndexCommand
 #: ../lib/yard/server/commands/library_index_command.rb:5
 msgid "Returns the index of libraries served by the server."
-msgstr ""
+msgstr "サーバーによって提供されたライブラリのインデックスを返す"
 
 # @param value
 #: ../lib/yard/server/commands/library_index_command.rb:6
 msgid "the value to set the attribute options to."
-msgstr ""
+msgstr "options属性を設定する為の値"
 
 # YARD::Server::Commands::LibraryIndexCommand#options=
 #: ../lib/yard/server/commands/library_index_command.rb:7
 msgid "Sets the attribute options"
-msgstr ""
+msgstr "options属性を設定する"
 
 # YARD::Server::Commands::LibraryIndexCommand#options
 # YARD::Templates::Template#options
