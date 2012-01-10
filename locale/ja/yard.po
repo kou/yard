@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-10 17:55+0900\n"
+"PO-Revision-Date: 2012-01-10 18:10+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19948,13 +19948,15 @@ msgid ""
 "A module that is mixed into {Templates::Template} in order to customize\n"
 "certain template methods."
 msgstr ""
+"テンプレートメソッドをカスタマイズする為に、\n"
+"{Templates::Template}へmixinされるモジュール。"
 
 # YARD::Server::DocServerHelper#url_for
 #: ../lib/yard/server/doc_server_helper.rb:7
 msgid ""
 "Modifies {Templates::Helpers::HtmlHelper#url_for} to return a URL instead\n"
 "of a disk location."
-msgstr ""
+msgstr "ディスクの上の場所の代わりにURLを返す{Templates::Helpers::HtmlHelper#url_for}を変更する。"
 
 # YARD::Server::DocServerHelper#url_for_file
 #: ../lib/yard/server/doc_server_helper.rb:17
@@ -19962,12 +19964,12 @@ msgid ""
 "Modifies {Templates::Helpers::HtmlHelper#url_for_file} to return a URL "
 "instead\n"
 "of a disk location."
-msgstr ""
+msgstr "ディスク上の場所の代わりにURLを返す{Templates::Helpers::HtmlHelper#url_for_file}を変更する。"
 
 # @example
 #: ../lib/yard/server/doc_server_helper.rb:32
 msgid "tag|example|The base path for a library 'foo'"
-msgstr ""
+msgstr "'foo'ライブラリ用のベースパス"
 
 # @example The base path for a library 'foo'
 #: ../lib/yard/server/doc_server_helper.rb:32
@@ -19977,17 +19979,17 @@ msgstr ""
 # @param [String] path
 #: ../lib/yard/server/doc_server_helper.rb:32
 msgid "the path prefix for a base path URI"
-msgstr ""
+msgstr "URIベースパス用のパスのプレフィックス"
 
 # @return [String]
 #: ../lib/yard/server/doc_server_helper.rb:32
 msgid "the base URI for a library with an extra +path+ prefix"
-msgstr ""
+msgstr "追加の +path+ のプレフィックスを用いたライブラリ用のベースURI"
 
 # @return [Router]
 #: ../lib/yard/server/doc_server_helper.rb:37
 msgid "convenience method for accessing the router"
-msgstr ""
+msgstr "routerにアクセスする為の便利メソッド"
 
 # YARD::Server::DocServerSerializer
 #: ../lib/yard/server/doc_server_serializer.rb:6
