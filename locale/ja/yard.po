@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-06 16:50+0900\n"
+"PO-Revision-Date: 2012-01-10 13:45+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19220,12 +19220,12 @@ msgstr "YardocSerializerの新しいインスタンス"
 # YARD::Server.register_static_path
 #: ../lib/yard/server.rb:4
 msgid "Registers a static path to be used in static asset lookup."
-msgstr ""
+msgstr "静的な資源の検索の中で利用される静的パスを記録する。"
 
 # @param [String] path
 #: ../lib/yard/server.rb:7
 msgid "the pathname to register"
-msgstr ""
+msgstr "記録する為のパス名"
 
 # YARD::Server::FinishRequest
 #: ../lib/yard/server/adapter.rb:5
@@ -19233,6 +19233,10 @@ msgid ""
 "Short circuits a request by raising an error. This exception is caught\n"
 "by {Commands::Base#call} to immedaitely end a request and return a response."
 msgstr ""
+"エラーを上げることによって、リクエストを省く。\n"
+"この例外は、すぐに、リクエストの終了とレスポンスを返す為に\n"
+"{Commands::Base#call}によってキャッチされる。\n"
+"??e typo? immedaitely => immediately"
 
 # YARD::Server::NotFoundError
 #: ../lib/yard/server/adapter.rb:9
@@ -19242,6 +19246,10 @@ msgid ""
 "response\n"
 "code. If a message is provided, the body is set to the exception message."
 msgstr ""
+"リソースが見つからない場合、エラーを上げる。\n"
+"この例外は、すぐにリクエストの終りと404レスポンスコードを返す為に\n"
+"{Commands::Base#call}によってキャッチされる。\n"
+"メッセージが提供される場合、本体に、例外メッサージが設定される。"
 
 # YARD::Server::Adapter
 #: ../lib/yard/server/adapter.rb:14
@@ -19251,6 +19259,11 @@ msgid ""
 "for WEBrick and Rack respectively, though other adapters can be made\n"
 "for other server architectures."
 msgstr ""
+"このクラスは {Router} と固有のサーバータイプ用にサーバーバックエンドの間の\n"
+"ブリッジを実装する。\n"
+"YARDはWEBrickとRackそれぞれに\n"
+"具体的なアダプターを実装するけれども、\n"
+"他のアダプターを、他のサーバーアーキテクチャ用に作る事も出来る。"
 
 # YARD::Server::Adapter
 #: ../lib/yard/server/adapter.rb:19
@@ -19259,6 +19272,9 @@ msgid ""
 "To create a concrete adapter class, implement the {#start} method to\n"
 "initiate the server backend."
 msgstr ""
+"== サブクラス化する注意\n"
+"具体的なアダプタークラスを作成するには、\n"
+"サーバーバックエンドを開始する為に{#start}メソッドを実装する。"
 
 # @return [String]
 #: ../lib/yard/server/adapter.rb:27
@@ -19267,11 +19283,15 @@ msgid ""
 "To set this field on initialization, pass +:DocumentRoot+ to the\n"
 "+server_opts+ argument in {#initialize}"
 msgstr ""
+"任意で、スタティックファイルが示される場所。\n"
+"初期にこのフィールドを設定するには、\n"
+"{#initialize}メソッドの中の +server_opts+ 引数に\n"
+"+:DocumentRoot+ を渡す。"
 
 # @return [Hash{String=>Array<LibraryVersion>}]
 #: ../lib/yard/server/adapter.rb:32
 msgid "a map of libraries."
-msgstr ""
+msgstr "ライブラリのマップ"
 
 # @see
 #: ../lib/yard/server/adapter.rb:32
@@ -19295,6 +19315,8 @@ msgid ""
 "options passed and processed by adapters. The actual\n"
 "options mostly depend on the adapters themselves."
 msgstr ""
+"アダプターによって渡され、処理されたoptions。\n"
+"実際のoptionsの大抵は、アダプター自身に依存する。"
 
 # @return [Hash]
 #: ../lib/yard/server/adapter.rb:40
@@ -19302,31 +19324,35 @@ msgid ""
 "a set of options to pass to the server backend. Note\n"
 "that +:DocumentRoot+ also sets the {#document_root}."
 msgstr ""
+"サーバーのバックエンドに渡す為のoptionsのグループ\n"
+"次の事に留意する。 +:DocumentRoot+ は {#document_root} にも設定する。"
 
 # @return [Router]
 #: ../lib/yard/server/adapter.rb:43
 msgid "the router object used to route URLs to commands"
-msgstr ""
+msgstr "コマンドにURLを送る為に利用された、routerオブジェクト"
 
 # YARD::Server::Adapter.setup
 #: ../lib/yard/server/adapter.rb:46
 msgid "Performs any global initialization for the adapter."
-msgstr ""
+msgstr "アダプター用に任意で全体の初期化を実行する。"
 
 # @note
 #: ../lib/yard/server/adapter.rb:48 ../lib/yard/server/adapter.rb:56
 msgid "If you subclass this method, make sure to call +super+."
 msgstr ""
+"あなたがこのメソッドをサブクラス化する場合、\n"
+"+super+ を呼び出すか確認する事。"
 
 # YARD::Server::Adapter.shutdown
 #: ../lib/yard/server/adapter.rb:54
 msgid "Performs any global shutdown procedures for the adapter."
-msgstr ""
+msgstr "任意で全体的なアダプター用の手続きのシャットダウンを実行する。"
 
 # YARD::Server::Adapter#initialize
 #: ../lib/yard/server/adapter.rb:62
 msgid "Creates a new adapter object"
-msgstr ""
+msgstr "新しいアダプターオブジェクトを作成する。"
 
 # @param [Hash{String=>Array<LibraryVersion>}] libs
 #: ../lib/yard/server/adapter.rb:71
@@ -19334,16 +19360,18 @@ msgid ""
 "a list of libraries,\n"
 "see {#libraries} for formulating this list."
 msgstr ""
+"ライブラリのリスト、\n"
+"このリストを公式化する為には、{#librathries}を参照。"
 
 # @return [Adapter]
 #: ../lib/yard/server/adapter.rb:71
 msgid "a new instance of Adapter"
-msgstr ""
+msgstr "アダプターの新しいインスタンス"
 
 # @param [Hash] opts
 #: ../lib/yard/server/adapter.rb:71
 msgid "extra options to pass to the adapter"
-msgstr ""
+msgstr "アダプターに渡す為の追加のoptions"
 
 # @param [Hash{String=>Array<LibraryVersion>}]
 #: ../lib/yard/server/adapter.rb:71
@@ -19353,12 +19381,12 @@ msgstr ""
 # YARD::Server::Adapter#add_library
 #: ../lib/yard/server/adapter.rb:85
 msgid "Adds a library to the {#libraries} mapping for a given library object."
-msgstr ""
+msgstr "与えられたライブラリオブジェクト用の{#libraries}マッピングにライブラリを追加する。"
 
 # @example
 #: ../lib/yard/server/adapter.rb:88
 msgid "tag|example|Adding a new library to an adapter"
-msgstr ""
+msgstr "アダプターに新しいライブラリを追加する。"
 
 # @example Adding a new library to an adapter
 #: ../lib/yard/server/adapter.rb:88
@@ -19369,7 +19397,7 @@ msgstr ""
 # @param [LibraryVersion] library
 #: ../lib/yard/server/adapter.rb:88
 msgid "a library to add"
-msgstr ""
+msgstr "追加する為のライブラリ"
 
 # @param [LibraryVersion]
 #: ../lib/yard/server/router.rb:120 ../lib/yard/server/adapter.rb:88
@@ -19379,7 +19407,7 @@ msgstr ""
 # YARD::Server::Adapter#start
 #: ../lib/yard/server/adapter.rb:94
 msgid "Implement this method to connect your adapter to your server."
-msgstr ""
+msgstr "あなたのサーバーにあなたのアダプターを接続する為に、このメソッドを実装する。"
 
 # YARD::Server::Commands::Base
 #: ../lib/yard/server/commands/base.rb:7
