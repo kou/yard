@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-11 15:43+0900\n"
+"PO-Revision-Date: 2012-01-11 16:07+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20458,6 +20458,8 @@ msgid ""
 "This class wraps the {RackAdapter} into a Rack-compatible middleware.\n"
 "See {#initialize} for a list of options to pass via Rack's +#use+ method."
 msgstr ""
+"このクラスは、Rackと互換性のあるミドルウェアの{RackAdapter}をラップする。\n"
+"Rack の +#use+ メソッド経由で渡す為のoptionsのリストは、{#initialize}メソッドを参照。\n"
 
 # @example Using the RackMiddleware in a Rack application
 #: ../lib/yard/server/rack_adapter.rb:16
@@ -20470,7 +20472,7 @@ msgstr ""
 # @example
 #: ../lib/yard/server/rack_adapter.rb:16
 msgid "tag|example|Using the RackMiddleware in a Rack application"
-msgstr ""
+msgstr "RackアプリケーションでRackミドルウェアを使用する。"
 
 # @note
 #: ../lib/yard/server/rack_adapter.rb:16
@@ -20479,21 +20481,25 @@ msgid ""
 "read about how to return a list of libraries, see {LibraryVersion} or look\n"
 "at the example below."
 msgstr ""
+"あなたは +#use+ メソッド経由でRackWiddlewareに +:libraries+ のオプションを渡さなければならない。\n"
+"librariesのリストを返す為の方法について読むには、{LibraryVersion}又は、下の例を参照。"
 
 # YARD::Server::RackMiddleware#initialize
 #: ../lib/yard/server/rack_adapter.rb:18
 msgid "Creates a new Rack-based middleware for serving YARD documentation."
 msgstr ""
+"YARDドキュメントに提供する為に、\n"
+"新しくRackが基本となるミドルウェアを作成する。"
 
 # @return [RackMiddleware]
 #: ../lib/yard/server/rack_adapter.rb:26
 msgid "a new instance of RackMiddleware"
-msgstr ""
+msgstr "Rackミドルウェアの新しいインスタンス"
 
 # @param app
 #: ../lib/yard/server/rack_adapter.rb:26
 msgid "the next Rack middleware in the stack"
-msgstr ""
+msgstr "スタックの中の次のRackミドルウェア"
 
 # @param
 #: ../lib/yard/server/rack_adapter.rb:26
@@ -20504,19 +20510,19 @@ msgstr ""
 #: ../lib/yard/server/rack_adapter.rb:43
 msgid ""
 "A server adapter to respond to requests using the Rack server infrastructure."
-msgstr ""
+msgstr "Rackサーバーのインフラによって、リクエストに答える為のサーバーアダプター。"
 
 # YARD::Server::RackAdapter#call
 #: ../lib/yard/server/rack_adapter.rb:47
 msgid "Responds to Rack requests and builds a response with the {Router}."
-msgstr ""
+msgstr "Rackのリクエストにレスポンスし、{Router}を用いレスポンスをビルドする。"
 
 # @return [Array(Numeric,Hash,Array<String>)]
 # @return [Array(Number,Hash,Array)]
 #: ../lib/yard/server/router.rb:98 ../lib/yard/server/rack_adapter.rb:48
 #: ../lib/yard/server/static_caching.rb:33
 msgid "the Rack-style response"
-msgstr ""
+msgstr "Rack-styleのレスポンス"
 
 # YARD::Server::RackAdapter#start
 #: ../lib/yard/server/rack_adapter.rb:55
@@ -20524,6 +20530,8 @@ msgid ""
 "Starts the +Rack::Server+. This method will pass control to the server and\n"
 "block."
 msgstr ""
+"+Rack::Server+ をスタートする。\n"
+"このメソッドは、サーバーとブロックに制御を渡すだろう。"
 
 # YARD::Server::Router
 #: ../lib/yard/server/router.rb:4
