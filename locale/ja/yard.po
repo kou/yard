@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-11 17:31+0900\n"
+"PO-Revision-Date: 2012-01-11 17:42+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20839,7 +20839,7 @@ msgstr ""
 # YARD::Server::WebrickAdapter
 #: ../lib/yard/server/webrick_adapter.rb:6
 msgid "The main adapter to initialize a WEBrick server."
-msgstr ""
+msgstr "WEBrickサーバーをイニシャライズする為の主なアダプタ"
 
 # YARD::Server::WebrickAdapter#start
 #: ../lib/yard/server/webrick_adapter.rb:8
@@ -20847,31 +20847,37 @@ msgid ""
 "Initializes a WEBrick server. If {Adapter#server_options} contains a\n"
 "+:daemonize+ key set to true, the server will be daemonized."
 msgstr ""
+"WEBrickサーバーをイニシャライズする。\n"
+"{Adapter#server_options}の内容の\n"
+"+:daemonize+ キーにtrueが設定された場合、\n"
+"サーバーは、デーモンで起動される。"
 
 # YARD::Server::WebrickServlet
 #: ../lib/yard/server/webrick_adapter.rb:19
 msgid "The main WEBrick servlet implementation, accepting only GET requests."
 msgstr ""
+"主にWEBrickサーブレットの実装、取得するリクエストだけ受入れる。\n"
+"(servlet:サーバー側で動くプログラムの事)"
 
 # @param value
 #: ../lib/yard/server/webrick_adapter.rb:20
 msgid "the value to set the attribute adapter to."
-msgstr ""
+msgstr "アダプタの属性を設定する値"
 
 # YARD::Server::WebrickServlet#adapter
 #: ../lib/yard/server/webrick_adapter.rb:21
 msgid "Returns the value of attribute adapter"
-msgstr ""
+msgstr "アダプタの属性の値を返す"
 
 # YARD::Server::WebrickServlet#adapter=
 #: ../lib/yard/server/webrick_adapter.rb:21
 msgid "Sets the attribute adapter"
-msgstr ""
+msgstr "アダプタの属性を設定する"
 
 # @return [WebrickServlet]
 #: ../lib/yard/server/webrick_adapter.rb:22
 msgid "a new instance of WebrickServlet"
-msgstr ""
+msgstr "WebrickServletの新しいインスタンス"
 
 # YARD::Tags::DefaultFactory#parse_tag
 #: ../lib/yard/tags/default_factory.rb:8
