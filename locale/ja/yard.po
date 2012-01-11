@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-11 17:12+0900\n"
+"PO-Revision-Date: 2012-01-11 17:31+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20764,7 +20764,7 @@ msgstr "終わらせるオプション"
 # YARD::Server::StaticCaching
 #: ../lib/yard/server/static_caching.rb:4
 msgid "Implements static caching for requests."
-msgstr ""
+msgstr "リクエスト用の静的なキャッシュを実装する"
 
 # @see Router
 #: ../lib/yard/server/static_caching.rb:6
@@ -20784,6 +20784,11 @@ msgid ""
 "implement your own +#check_static_cache+ method and mix the module into\n"
 "the Router class."
 msgstr ""
+"キャッシュされたオブジェクトを返す為にrouterによって呼び出される。\n"
+"デフォルトで、このメソッドは、ディスクベースのキャッシュを実行する。\n"
+"キャッシュの他の形式を実行するには、\n"
+"あなた自身が +#check_static_cache+ メソッドを実装し、\n"
+"Routerクラスへモジュールをmixinする。"
 
 # YARD::Server::StaticCaching#check_static_cache
 #: ../lib/yard/server/static_caching.rb:13
@@ -20792,11 +20797,16 @@ msgid ""
 "the existence of cached data. To actually cache a response, see\n"
 "{Commands::Base#cache}."
 msgstr ""
+"次の事に留意する。キャッシュは、ここでは発生しない。\n"
+"このメソッドは、単純にキャッシュデータの存在をチェックする。\n"
+"実際にレスポンスをキャッシュするには、{Commands::Base#cache}を参照する。"
 
 # @return [nil]
 #: ../lib/yard/server/static_caching.rb:33
 msgid "if no cache is available and routing should continue"
 msgstr ""
+"キャッシュが利用できない場合、nilを返す。\n"
+"routerは継続すべきである。"
 
 # @example Implementing In-Memory Cache Checking
 #: ../lib/yard/server/static_caching.rb:33
@@ -20819,7 +20829,7 @@ msgstr ""
 # @example
 #: ../lib/yard/server/static_caching.rb:33
 msgid "tag|example|Implementing In-Memory Cache Checking"
-msgstr ""
+msgstr "メモリ内のキャッシュのチェックを実装する"
 
 # @see
 #: ../lib/yard/server/static_caching.rb:33
