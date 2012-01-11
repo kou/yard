@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-11 18:01+0900\n"
+"PO-Revision-Date: 2012-01-11 18:16+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19418,7 +19418,7 @@ msgid ""
 msgstr ""
 "これは、サーバー用にカスタムコマンドを実装する為に、\n"
 "利用されるベースコマンドクラスである。\n"
-"コマンドは、{Router}クラスによって送られ、Rack-styleレスポンスを返す。\n"
+"コマンドは、{Router}クラスによって送られ、Rackスタイルのレスポンスを返す。"
 
 # YARD::Server::Commands::Base
 #: ../lib/yard/server/commands/base.rb:11
@@ -19930,8 +19930,7 @@ msgstr ""
 "静的な資産用に検索に利用されるパスを定義する。\n"
 "追加のパスを定義するには、直接この定数を変更するよりも\n"
 "{YARD::Server.register_static_path}を利用する。\n"
-"従って、次の事に留意する。\n"
-"ドキュメントのrootのファイルは常時これらのパスより優先する。"
+"尚、ドキュメントのrootのファイルは常時これらのパスより優先する。"
 
 # YARD::Server::Commands::StaticFileCommand#favicon?
 #: ../lib/yard/server/commands/static_file_command.rb:39
