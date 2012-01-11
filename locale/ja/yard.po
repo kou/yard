@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-11 16:07+0900\n"
+"PO-Revision-Date: 2012-01-11 17:12+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20540,6 +20540,8 @@ msgid ""
 "specific\n"
 "URL and run specific {Commands::Base commands}."
 msgstr ""
+"routerクラスは、特定のURL用のリクエストを認識する為に利用されたロジックを実装し、\n"
+"特定の{Commands::Base commands}を起動する。"
 
 # YARD::Server::Router
 #: ../lib/yard/server/router.rb:7
@@ -20549,6 +20551,11 @@ msgid ""
 "options through {Adapter#initialize} or by directly modifying "
 "{Adapter#router}."
 msgstr ""
+"== サブクラス化する時の注意\n"
+"カスタムrouterを作成するには、\n"
+"このクラスをサブクラス化し、\n"
+"{Adapter#initialize}を通じてアダプタオプションへ渡すか、\n"
+"直接{Adapter#router}を変更する。"
 
 # YARD::Server::Router
 #: ../lib/yard/server/router.rb:11
@@ -20557,6 +20564,10 @@ msgid ""
 "routing, which can be done by overriding {#docs_prefix}, {#list_prefix}\n"
 "and {#search_prefix}."
 msgstr ""
+"多くの場合、カスタマイズは、\n"
+"routerで認識されるURLのプレフィックスを変更する為である。\n"
+"{#docs_prefix}、{#list_prefix}、{#search_prefix}メソッドを上書きする事で、\n"
+"実現できる。"
 
 # YARD::Server::Router
 #: ../lib/yard/server/router.rb:15
@@ -20567,6 +20578,13 @@ msgid ""
 "or create your own caching mechanism, mixin your own custom module with\n"
 "this method implemented as per {StaticCaching#check_static_cache}."
 msgstr ""
+"== カスタムキャッシュを実装する\n"
+"デフォルトで、Routerクラスは、\n"
+"+#check_static_cache+ を通じて\n"
+"全てのリクエストで静的なディスクベースのキャッシュを実行する。\n"
+"この挙動を上書きしたり、あなた自身でキャッシュのメカニズムを作成するには、\n"
+"{StaticCaching#check_static_cache}メソッドとして実装されたこのメソッドを用いて\n"
+"あなた自身のカスタムモジュールをmixinする。"
 
 # @example Creating a subclassed router
 #: ../lib/yard/server/router.rb:30
@@ -20585,22 +20603,22 @@ msgstr ""
 # @example
 #: ../lib/yard/server/router.rb:30
 msgid "tag|example|Creating a subclassed router"
-msgstr ""
+msgstr "サブクラス化されたrouterを作成する"
 
 # @return [Adapter Dependent]
 #: ../lib/yard/server/router.rb:35
 msgid "the request data coming in with the routing"
-msgstr ""
+msgstr "routerを用いやってくるデータのリクエスト"
 
 # @return [Adapter]
 #: ../lib/yard/server/router.rb:38
 msgid "the adapter used by the router"
-msgstr ""
+msgstr "routerによって利用されたアダプタ"
 
 # YARD::Server::Router#initialize
 #: ../lib/yard/server/router.rb:41
 msgid "Creates a new router for a specific adapter"
-msgstr ""
+msgstr "特定のアダプタ用に新しいrouterを作成する"
 
 # @param [Adapter]
 #: ../lib/yard/server/router.rb:43
@@ -20610,12 +20628,12 @@ msgstr ""
 # @return [Router]
 #: ../lib/yard/server/router.rb:43
 msgid "a new instance of Router"
-msgstr ""
+msgstr "Routerの新しいインスタンス"
 
 # @param [Adapter] adapter
 #: ../lib/yard/server/router.rb:43
 msgid "the adapter to route requests to"
-msgstr ""
+msgstr "リクエストを送る為のアダプタ"
 
 # YARD::Server::Router#call
 #: ../lib/yard/server/router.rb:48
@@ -20623,11 +20641,15 @@ msgid ""
 "Perform routing on a specific request, serving the request as a static\n"
 "file through {Commands::StaticFileCommand} if no route is found."
 msgstr ""
+"特定のリクエストでrouterを実行し、\n"
+"routeが見つからない場合、\n"
+"{Commands::StaticFileCommand}を通じて、\n"
+"静的なファイルとしてリクエストを提供する。"
 
 # @return [Array(Number,Hash,Array)]
 #: ../lib/yard/server/router.rb:52
 msgid "the Rack-style server response data"
-msgstr ""
+msgstr "Rack-styleサーバーが返すデータ"
 
 # YARD::Server::Router#docs_prefix
 # YARD::Server::Router#list_prefix
@@ -20635,22 +20657,22 @@ msgstr ""
 #: ../lib/yard/server/router.rb:64 ../lib/yard/server/router.rb:67
 #: ../lib/yard/server/router.rb:70
 msgid "Route Prefixes"
-msgstr ""
+msgstr "プレフィックスを送る"
 
 # @return [String]
 #: ../lib/yard/server/router.rb:64
 msgid "the URI prefix for all object documentation requests"
-msgstr ""
+msgstr "全てのオブジェクトのドキュメントのリクエスト用のURIのプレフィックス"
 
 # @return [String]
 #: ../lib/yard/server/router.rb:67
 msgid "the URI prefix for all class/method/file list requests"
-msgstr ""
+msgstr "全てのクラス/メソッド/ファイルのリストのリクエスト用のURIのプレフィックス"
 
 # @return [String]
 #: ../lib/yard/server/router.rb:70
 msgid "the URI prefix for all search requests"
-msgstr ""
+msgstr "全ての検索リクエスト用のURIプレフィックス"
 
 # @return [Array(LibraryVersion, Array<String>)]
 #: ../lib/yard/server/router.rb:77
@@ -20659,6 +20681,10 @@ msgid ""
 "by the rest of the path components in the request path. LibraryVersion\n"
 "will be nil if no matching library was found."
 msgstr ""
+"ライブラリは、リクエストのパスの中で\n"
+"そのパスの構成の残りによってフォローされる。\n"
+"見つかったライブラリが一致しなかった場合、\n"
+"LibraryVersionは、nilになるだろう。"
 
 # YARD::Server::Router#parse_library_from_path
 # YARD::Server::Router#route
@@ -20670,7 +20696,7 @@ msgstr ""
 #: ../lib/yard/server/router.rb:120 ../lib/yard/server/router.rb:138
 #: ../lib/yard/server/router.rb:149 ../lib/yard/server/router.rb:163
 msgid "Routing Methods"
-msgstr ""
+msgstr "メソッドを送る"
 
 # YARD::Server::Router#route
 #: ../lib/yard/server/router.rb:94
@@ -20678,41 +20704,43 @@ msgid ""
 "Performs routing algorithm to find which prefix is called, first\n"
 "parsing out library name/version information."
 msgstr ""
+"プレフィックスを検索する為のrouterアルゴリズムを実行する。\n"
+"ライブラリのname/version情報の出力を最初に解析する。"
 
 # @return [nil]
 #: ../lib/yard/server/router.rb:98
 msgid "if no route is matched"
-msgstr ""
+msgstr "route処理がマッチしない場合"
 
 # YARD::Server::Router#route_docs
 #: ../lib/yard/server/router.rb:117
 msgid "Routes requests from {#docs_prefix} and calls the appropriate command"
-msgstr ""
+msgstr "{#docs_prefix}からリクエストを送り、適当なコマンドを呼び出す。"
 
 # @param [Array<String>] paths
 #: ../lib/yard/server/router.rb:120
 msgid "path components (split by '/')"
-msgstr ""
+msgstr "パスの構成('/'区切り)"
 
 # @param [LibraryVersion] library
 #: ../lib/yard/server/router.rb:120
 msgid "the library to route for"
-msgstr ""
+msgstr "routeする為のライブラリ"
 
 # YARD::Server::Router#route_index
 #: ../lib/yard/server/router.rb:137
 msgid "Routes for the index of a library / multiple libraries"
-msgstr ""
+msgstr "単一のライブラリ/複数のライブラリのインデックス用に送る"
 
 # YARD::Server::Router#route_list
 #: ../lib/yard/server/router.rb:147
 msgid "Routes requests from {#list_prefix} and calls the appropriate command"
-msgstr ""
+msgstr "{#list_prefix}メソッドからリクエストを送り、適切なコマンドを呼び出す"
 
 # YARD::Server::Router#route_search
 #: ../lib/yard/server/router.rb:161
 msgid "Routes requests from {#search_prefix} and calls the appropriate command"
-msgstr ""
+msgstr "{#search_prefix}メソッドからリクエストを送り、適切なコマンドを呼び出す"
 
 # YARD::Server::Router#final_options
 #: ../lib/yard/server/router.rb:171
@@ -20720,16 +20748,18 @@ msgid ""
 "Adds extra :library/:path option keys to the adapter options.\n"
 "Use this method when passing options to a command."
 msgstr ""
+"アダプタオプションに追加の:library/:pathオプションのキーを追加する。\n"
+"このメソッドは、コマンドがオプションを解析する時に利用する。"
 
 # YARD::Server::Router#final_options
 #: ../lib/yard/server/router.rb:175
 msgid "Utility Methods"
-msgstr ""
+msgstr "ユーティリティメソッド"
 
 # @return [Hash]
 #: ../lib/yard/server/router.rb:175
 msgid "finalized options"
-msgstr ""
+msgstr "終わらせるオプション"
 
 # YARD::Server::StaticCaching
 #: ../lib/yard/server/static_caching.rb:4
