@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-12 11:45+0900\n"
+"PO-Revision-Date: 2012-01-12 11:46+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20521,7 +20521,7 @@ msgstr "Rackのリクエストにレスポンスし、{Router}を用いレスポ
 #: ../lib/yard/server/router.rb:98 ../lib/yard/server/rack_adapter.rb:48
 #: ../lib/yard/server/static_caching.rb:33
 msgid "the Rack-style response"
-msgstr "Rack-styleのレスポンス"
+msgstr "Rackスタイルのレスポンス"
 
 # YARD::Server::RackAdapter#start
 #: ../lib/yard/server/rack_adapter.rb:55
