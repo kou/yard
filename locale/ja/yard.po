@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-12 11:46+0900\n"
+"PO-Revision-Date: 2012-01-12 11:47+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -20648,7 +20648,7 @@ msgstr ""
 # @return [Array(Number,Hash,Array)]
 #: ../lib/yard/server/router.rb:52
 msgid "the Rack-style server response data"
-msgstr "Rack-styleサーバーが返すデータ"
+msgstr "Rackスタイルサーバーが返すデータ"
 
 # YARD::Server::Router#docs_prefix
 # YARD::Server::Router#list_prefix
