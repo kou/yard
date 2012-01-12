@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-12 11:47+0900\n"
+"PO-Revision-Date: 2012-01-12 11:54+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21583,7 +21583,7 @@ msgstr ""
 # @param [String] path
 #: ../lib/yard/templates/engine.rb:52
 msgid "the path name of the template"
-msgstr ""
+msgstr "テンプレートのパス名"
 
 # @param [Array<String>] full_paths
 #: ../lib/yard/templates/engine.rb:52
