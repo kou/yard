@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-11 18:49+0900\n"
+"PO-Revision-Date: 2012-01-12 11:45+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19618,7 +19618,7 @@ msgid ""
 "of status, headers, and body wrapped in an array."
 msgstr ""
 "配列でラップされた\n"
-"Rack-styleのステータス、ヘッダー、ボディのレスポンス"
+"Rackスタイルのステータス、ヘッダー、ボディのレスポンス"
 
 # YARD::Server::Commands::Base#run
 #: ../lib/yard/server/commands/base.rb:108
