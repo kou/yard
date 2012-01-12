@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-12 11:54+0900\n"
+"PO-Revision-Date: 2012-01-12 18:31+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -6598,11 +6598,11 @@ msgstr ""
 # title
 #: ../docs/WhatsNew.md:1
 msgid "What's New?"
-msgstr ""
+msgstr "What's New?"
 
 #: ../docs/WhatsNew.md:3
 msgid "# What's New in 0.7.x?"
-msgstr ""
+msgstr "# What's New in 0.7.x?"
 
 #: ../docs/WhatsNew.md:5
 msgid ""
@@ -6625,10 +6625,24 @@ msgid ""
 "(0.7.0)\n"
 "14. **Added new `-t guide` template for guide based docs** (0.7.0)"
 msgstr ""
+"1. **マクロのサポートとDSLメソッドの検知** (0.7.0)\n"
+"2. **継承された属性はすぐHTML出力で一覧できる** (0.7.0)\n"
+"3. **'app'ディレクトリは、すぐデフォルトで解析される** (0.7.0)\n"
+"4. **追加のファイル/readmesでメタデータ用(@title,@markup)のサポートが追加された** (0.7.0)\n"
+"5. **`yard list`コマンドが追加された(`yardoc --list`用のエイリアス)** (0.7.0)\n"
+"6. **`yard diff`でGitサポートが追加された** (0.7.0)\n"
+"7. **`{include:file:FILENAME}`構文** (0.7.0)\n"
+"8. **追加のファイルでオブジェクトのdocsを組み込む為の`{render:OBJECT}`構文が追加された** (0.7.0)\n"
+"9. **カスタムCSS/JS/メニュー用の改良されたテンプレートAPIが追加された** (0.7.0)\n"
+"10. **Rubyのマークアップの型(`-m ruby`)が追加された** (0.7.0)\n"
+"11. **パーサー/ハンドラーのアーキテクチャにトラッキングの状態変数が追加された** (0.7.0)\n"
+"12. **SourceParserにbefore/afterのコールバックが追加された** (0.7.0)\n"
+"13. **カスタムyardoptsファイルを指定するのに、`--yardopts FILE`ですぐに、使う事が出来る** (0.7.0)\n"
+"14. **基底となるdocstringをガイドするのに、`-t guide`テンプレートを新しく追加する** (0.7.0)"
 
 #: ../docs/WhatsNew.md:20
 msgid "## Macro support and detection of DSL methods (0.7.0)"
-msgstr ""
+msgstr "## マクロのサポートとDSLメソッドの検知 (0.7.0)"
 
 #: ../docs/WhatsNew.md:22
 msgid ""
@@ -6638,6 +6652,10 @@ msgid ""
 "methods\n"
 "or attributes in your class. Consider DataMapper's \"property\" declaration:"
 msgstr ""
+"YARDはすぐに自動的にクラスレベルメソッドの呼び出しを検知するだろう、\n"
+"`attr_accessor`の事を知るのと似ている。 ??e(英訳に自信がない..)\n"
+"簡単にあなたのクラスレベル宣言にドキュメントを追加する。\n"
+"DataMapperの\"property\"宣言を考慮する。"
 
 #: ../docs/WhatsNew.md:27
 msgid ""
@@ -6655,6 +6673,9 @@ msgid ""
 "just\n"
 "a regular method."
 msgstr ""
+"上の宣言は、`Post#title`メソッドとして作成されるだろう。\n"
+"任意の`@attribute`タグがYARDの\"property\"に伝えるのは、\"attribute\"であり、\n"
+"それは正規のメソッドではない。"
 
 #: ../docs/WhatsNew.md:37
 msgid ""
@@ -6664,6 +6685,10 @@ msgid ""
 "\"attached\" to class level methods to create implicit documentation for "
 "macros."
 msgstr ""
+"基本のDSLメソッド検知に加えて、YARDは、マクロをサポートし、\n"
+"これは、他のオブジェクトにコピーされるdocstringを作成できる。\n"
+"これらのマクロは、\n"
+"マクロ用にドキュメントを暗黙に作成し、クラスレベルメソッドに\"attached\"される。"
 
 #: ../docs/WhatsNew.md:41
 msgid ""
@@ -6672,10 +6697,12 @@ msgid ""
 "you're\n"
 "interested in this feature."
 msgstr ""
+"マクロとDSLメソッド宣言の詳細は{file:docs/GettingStarted.md}で説明されるので、\n"
+"あなたがこの機能に興味がある場合、そこで読む事ができる。"
 
 #: ../docs/WhatsNew.md:45
 msgid "## Inherited attributes now show in HTML output (0.7.0)"
-msgstr ""
+msgstr "## 継承された属性をHTML出力ですぐに調べる(0.7.0)"
 
 #: ../docs/WhatsNew.md:47
 msgid ""
@@ -6683,10 +6710,14 @@ msgid ""
 "default\n"
 "template in the same manner that inherited methods do."
 msgstr ""
+"継承された属性は、\n"
+"継承されたメソッドと同じ形式で\n"
+"デフォルトのテンプレートによって\n"
+"HTMLドキュメントですぐに現れるだろう。"
 
 #: ../docs/WhatsNew.md:50
 msgid "## The 'app' directory is now parsed by default (0.7.0)"
-msgstr ""
+msgstr "## デフォルトで'app'ディレクトリはすぐに解析される (0.7.0)"
 
 #: ../docs/WhatsNew.md:52
 msgid ""
@@ -6698,12 +6729,19 @@ msgid ""
 "We should have done this a while ago! And don't worry, YARD still checks\n"
 "lib and ext by default, too."
 msgstr ""
+"YARDは開発者のツールに書かれている、その仕事をフォローする為に試す。\n"
+"それに伴い、コードの中を検索しデフォルトのglobのリストに、\n"
+"`app/**/*.rb`が追加された。\n"
+"これで、rubydoc.infoであなたのコードを記述する時、あなたのappディレクトリを記述する為に\n"
+"`.yardopts`を作成する必要はない。\n"
+"私達は、ちょっと前にこれを行ったが心配しないで、\n"
+"YARDはまだデフォルトでlibとextもチェックする。"
 
 #: ../docs/WhatsNew.md:59
 msgid ""
 "## Added support for metadata (@title, @markup) in extra files/readmes "
 "(0.7.0)"
-msgstr ""
+msgstr "## 追加のファイルとREADMEの中でメタデータ(@title,@markup)用のサポートが追加された(0.7.0)"
 
 #: ../docs/WhatsNew.md:61
 msgid ""
@@ -6714,6 +6752,10 @@ msgid ""
 "line,\n"
 "YARD will detect and parse these tags and store it for later usage."
 msgstr ""
+"追加のファイル(README,ChangeLogs,LICENSEファイルや他のガイド)は、\n"
+"すぐに、メタデータタグをサポートする(コードのコメント中のdocstringのように)。\n"
+"`# comment`行の中のファイルの最初に@tagの値を追加する事で、\n"
+"YARDは、このタグを検知,解析し、最新の方法でそれを記録するだろう。"
 
 #: ../docs/WhatsNew.md:66
 msgid ""
@@ -6725,6 +6767,13 @@ msgid ""
 "index page, as well as any linking of the file via the `{file:Filename}`\n"
 "syntax. An example of a document with metadata would be:"
 msgstr ""
+"タグは任意のデータも任意のタグ名も含める事ができる、\n"
+"しかしながら、タグ名が@titleと@markupは、\n"
+"個々にドキュメントのタイトルとマークアップフォーマットを指定する為に\n"
+"保留される。\n"
+"タイトルは、ファイルリストメニューや\n"
+"index pageも`{file:Filename}`構文経由の任意のファイルへのリンクでも利用される。\n"
+"次は、メタデータを用いたドキュメントの例:"
 
 #: ../docs/WhatsNew.md:72
 msgid ""
@@ -6752,10 +6801,16 @@ msgid ""
 "now\n"
 "the \"best practice\" for specifying the markup format of an extra file."
 msgstr ""
+"次の事に留意する。\n"
+"YARDの前のバージョンは、\n"
+"`#!markup`のshebangを用いた追加のファイルのマークアップの指定が\n"
+"推奨された。\n"
+"しかし、今は`@markup`メタデータタグが、\n"
+"追加のファイルのマークアップフォーマットを指定するのに最善の方法である。"
 
 #: ../docs/WhatsNew.md:86
 msgid "## Added `yard list` command (alias for `yardoc --list`) (0.7.0)"
-msgstr ""
+msgstr "## `yard list`コマンドを追加する。(`yardoc --list`用のエイリアス) (0.7.0)"
 
 #: ../docs/WhatsNew.md:88
 msgid ""
@@ -6763,6 +6818,9 @@ msgid ""
 "a codebase. This can be used to grep methods/classes in a codebase from the\n"
 "command line. `yard list` now calls `yardoc --list` as a convenience command."
 msgstr ""
+"`yardoc --list`コマンドはソースコードから解析されるリストオブジェクトの為に利用される。\n"
+"これは、ソースコードの中でメソッド/クラスをgrepする為に利用できる。\n"
+"`yard list`は、すぐに便利なメソッドとして`yardoc --list`を呼び出す。"
 
 #: ../docs/WhatsNew.md:92
 msgid ""
@@ -6771,16 +6829,22 @@ msgid ""
 "of\n"
 "`yardoc --list` when possible."
 msgstr ""
+"次の事に留意する。`yardoc --list`コマンドは、\n"
+"将来、より多くの機能で満たされた`yard list`コマンドに取替えられるだろう。\n"
+"なので可能であれば`yardoc --list`の代わりに、`yard list`を利用する方がよい。"
 
 #: ../docs/WhatsNew.md:96
 msgid "## Added Git support in `yard diff` (0.7.0)"
-msgstr ""
+msgstr "## `yard diff`でGitのサポートが追加された (0.7.0)"
 
 #: ../docs/WhatsNew.md:98
 msgid ""
 "The `yard diff` command can now perform object diffing on git repositories.\n"
 "Provide the `--git` switch to `yard diff` with 2 commit/branches like so:"
 msgstr ""
+"`yard diff`コマンドは、すぐに、gitリポジトリ上でオブジェクトのdiffを実行する。\n"
+"`yard diff`に切り替える`--git`を提供する。\n"
+"次のように、2つのcommitとbrancheを切り替える。"
 
 #: ../docs/WhatsNew.md:101
 msgid ""
@@ -6797,7 +6861,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:108
 msgid "## Added `{include:file:FILENAME}` syntax (0.7.0)"
-msgstr ""
+msgstr "## `{include:file:FILENAME}`構文 (0.7.0)"
 
 #: ../docs/WhatsNew.md:110
 msgid ""
@@ -6806,11 +6870,15 @@ msgid ""
 "embedding\n"
 "Ruby source files and performing syntax highlighting on the code."
 msgstr ""
+"あなたはすぐに、\n"
+"マークアップされた追加のファイルの内容を埋め込む為の\n"
+"`{include:file:FILENAME}`構文を利用できる。\n"
+"この構文は、Rubyのソースファイルの埋め込みと構文のコードハイライトの実行をサポートする。"
 
 #: ../docs/WhatsNew.md:114
 msgid ""
 "## Added `{render:OBJECT}` syntax to embed object docs in extra files (0.7.0)"
-msgstr ""
+msgstr "## 追加のファイルでdocsオブジェクトを埋め込む為に`{render:OBJECT}`構文を追加した (0.7.0)"
 
 #: ../docs/WhatsNew.md:116
 msgid ""
@@ -6822,10 +6890,16 @@ msgid ""
 "discussed\n"
 "this syntax in more detail (with example usage)."
 msgstr ""
+"あなたは、追加のファイルの中の全てのオブジェクト(メソッド,クラス,モジュール)のドキュメント表示を\n"
+"埋め込む為に`{render:Object}`構文を利用できる。\n"
+"これは、いくつかのヘルパーメソッドやクラスの記述を必要とするかもしれない\n"
+"APIの無しをガイドベースのものを書く時に都合がいい。\n"
+"この構文の更なる詳細(例や使用法)\n"
+"{file:docs/GettingStarted.md}で説明される。"
 
 #: ../docs/WhatsNew.md:122
 msgid "## Added improved templates API for custom CSS/JS/menus (0.7.0)"
-msgstr ""
+msgstr "## CSS/JS/メニュー用に改良されたテンプレートAPIが追加された (0.7.0)"
 
 #: ../docs/WhatsNew.md:124
 msgid ""
@@ -6836,10 +6910,18 @@ msgid ""
 "In addition to custom CSS/JS, developers can also create custom menu tabs\n"
 "in both the framed and non framed version of the default theme."
 msgstr ""
+"プラグインとテンプレートの開発者は、\n"
+"template APIの抽象化のおかげで、\n"
+"すぐに、カスタマイズされたテンプレートの中の\n"
+"スタイルシートやJavaScriptのファイルを挿入できる。\n"
+"これは、{docs/Templates.md}ドキュメントの中で記述される。\n"
+"さらに、カスタムCSS/JSで、開発者は、\n"
+"フレーム有とデフォルトテーマのフレーム無しの両方のカスタムメニュータブを\n"
+"作成する事もできる。"
 
 #: ../docs/WhatsNew.md:130
 msgid "## Added Ruby markup type (`-m ruby`) (0.7.0)"
-msgstr ""
+msgstr "## Rubyマークアップ型(`-m ruby`)が追加された (0.7.0)"
 
 #: ../docs/WhatsNew.md:132
 msgid ""
@@ -6848,6 +6930,18 @@ msgid ""
 "on individual extra files using the metadata markup specification discussed\n"
 "above."
 msgstr ""
+"Rubyマークアップ型の(`-m ruby`)は、すぐに、\n"
+"全てのフォーマット用に構文のハイライトを利用する。\n"
+"globalをスイッチする\n"
+"これは、多分便利ではないが、\n"
+"\n"
+"しかし、追加と利用される\n"
+"\n"
+"\n"
+"The Ruby markup type (`-m ruby`) will now use syntax highlighting for all formatting.\n"
+"This is probably not useful as a global switch,\n"
+"but can be used on individual extra files using the metadata markup specification discussed\n"
+"above."
 
 #: ../docs/WhatsNew.md:137
 msgid ""
