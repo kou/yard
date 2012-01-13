@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-12 18:31+0900\n"
+"PO-Revision-Date: 2012-01-13 18:39+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -6932,21 +6932,14 @@ msgid ""
 msgstr ""
 "Rubyマークアップ型の(`-m ruby`)は、すぐに、\n"
 "全てのフォーマット用に構文のハイライトを利用する。\n"
-"globalをスイッチする\n"
-"これは、多分便利ではないが、\n"
-"\n"
-"しかし、追加と利用される\n"
-"\n"
-"\n"
-"The Ruby markup type (`-m ruby`) will now use syntax highlighting for all formatting.\n"
-"This is probably not useful as a global switch,\n"
-"but can be used on individual extra files using the metadata markup specification discussed\n"
-"above."
+"これは全体の切り替えとしては、恐らく便利ではないが、\n"
+"上で説明されたメタデータマークアップの指定によって\n"
+"個々の追加のファイル上で利用できる。"
 
 #: ../docs/WhatsNew.md:137
 msgid ""
 "## Added state tracking variables to Parser/Handler architecture (0.7.0)"
-msgstr ""
+msgstr "## Parser/Handlerアーキテクチャにトラッキング変数の状態が追加された (0.7.0)"
 
 #: ../docs/WhatsNew.md:139
 msgid ""
@@ -6958,10 +6951,17 @@ msgid ""
 "developer\n"
 "access to inter-file state when parsing multiple files at once."
 msgstr ""
+"パーサーとハンドラーのアーキテクチャは、現在\n"
+"ハンドラーと全ての処理段階に渡って共有する為に\n"
+"{YARD::Handlers::Base#extra_state} と {YARD::Handlers::Processor#globals}の\n"
+"変数の状態を含んでいる。\n"
+"`#extra_state`メソッドは、ファイル毎にデータを記録する為の場所を提供し、\n"
+"`#globals`メソッドは、一気に複数のファイルを解析する時に内部のファイルの状態に\n"
+"開発者がアクセスする事を許可する。"
 
 #: ../docs/WhatsNew.md:145
 msgid "## Added before/after callbacks to SourceParser (0.7.0)"
-msgstr ""
+msgstr "## SourceParserにbeforeとafterのコールバックが追加された (0.7.0)"
 
 #: ../docs/WhatsNew.md:147
 msgid ""
@@ -6971,10 +6971,15 @@ msgid ""
 "parsing of individual files. This allows plugin developers to perform\n"
 "setup/teardown (and set global state or update the {YARD::Registry})."
 msgstr ""
+"{YARD::Parser::SourceParser}クラスは、\n"
+"ファイルグロブの解析の前後のコードも個々のファイルの解析の前後も\n"
+"実行する為にすぐにコールバックを記録できる。\n"
+"これは、セットアップ/開発(全体の状態や{YARD::Registry}の更新)を実行する為、\n"
+"開発者のプラグインを受入れる。"
 
 #: ../docs/WhatsNew.md:152
 msgid "See the documentation for the following methods:"
-msgstr ""
+msgstr "次のメソッド用のドキュメントを参照"
 
 #: ../docs/WhatsNew.md:154
 msgid ""
@@ -6987,7 +6992,7 @@ msgstr ""
 #: ../docs/WhatsNew.md:159
 msgid ""
 "## Can now use `--yardopts FILE` to specify a custom yardopts file (0.7.0)"
-msgstr ""
+msgstr "## カスタムyardoptsファイルを指定するのに、`--yardopts FILE`を利用できる(0.7.0)"
 
 #: ../docs/WhatsNew.md:161
 msgid ""
@@ -6996,10 +7001,15 @@ msgid ""
 "options files. This is useful if you have multiple documentation sets, such\n"
 "as a guide documentation set and an API documentation set."
 msgstr ""
+"`yardoc`コマンドは、すぐに\n"
+"カスタム.yardopts設定ファイルを指定するのに、\n"
+"`--yardopts FILE`をサポートする。\n"
+"これは、ガイドドキュメントやAPIドキュメントのような\n"
+"複数のドキュメントのグループを持っている場合、便利である。"
 
 #: ../docs/WhatsNew.md:165
 msgid "## Added new `-t guide` template for guide based docs (0.7.0)"
-msgstr ""
+msgstr "## docstringベースのガイド用に`-t guide`テンプレートが新しく追加された (0.7.0)"
 
 #: ../docs/WhatsNew.md:167
 msgid ""
@@ -7007,6 +7017,10 @@ msgid ""
 "that\n"
 "only generates documentation for extra files. You would use it in the form:"
 msgstr ""
+"あなたは、追加のファイル用のドキュメントだけ生成する\n"
+"新しく追加された'guide'テンプレートによって\n"
+"すぐにガイドスタイルドキュメントを書く事ができる。\n"
+"あなたは、次のような形式で利用できる。"
 
 #: ../docs/WhatsNew.md:170
 msgid "    yardoc -t guide - README GettingStarted FAQ TroubleShooting LICENSE"
@@ -7017,7 +7031,7 @@ msgid ""
 "This creates the sections for the readme, a getting started, frequently "
 "asked\n"
 "questions, trouble shooting and license page."
-msgstr ""
+msgstr "これは、README,GettingStarted,FAQ,トラブルシューティング,ライセンスページ用のセクションを生成する。"
 
 #: ../docs/WhatsNew.md:175
 msgid ""
@@ -7025,6 +7039,8 @@ msgid ""
 "documentation\n"
 "using the `{render:Object}` tag discussed above."
 msgstr ""
+"クラスとメソッドドキュメントに参照する必要がある場合、\n"
+"APIドキュメントを上で説明された`{render:Object}`タグによって埋め込む事が出来る。"
 
 #: ../docs/WhatsNew.md:178
 msgid "# What's New in 0.6.x?"
@@ -7058,12 +7074,32 @@ msgid ""
 "19. **YARD::Registry is now thread local** (0.6.5)\n"
 "20. **Support for ripper gem in Ruby 1.8.7** (0.6.5)"
 msgstr ""
+"1. **RubyGemsやプロジェクト用のローカルドキュメントサーバー(`yard server`)** (0.6.0)\n"
+"2. **メソッド記述用のサポートをグループ化する** (0.6.0)\n"
+"3. **単一のファイルのテンプレートのサポート(`--one-file`)** (0.6.0)\n"
+"4. **`yard` のコマンドは、プラグインコマンドを用い実行可能となる** (0.6.0)\n"
+"5. **プロジェクトの二つのバージョンのオブジェクトのdiffを見る為の`yard diff`コマンド** (0.6.0)\n"
+"6. **`yardoc`に`--asset`オプションが追加された** (0.6.0)\n"
+"7. **新しいテンプレートAPI** (0.6.0)\n"
+"8. **HTMLテンプレートは追加のファイルのページの内容のインラインテーブルを追加する** (0.6.0)\n"
+"9. **`--use-cache`のおかげで`--incremental`は削除された** (0.6.0)\n"
+"10. **`yardoc`CLI経由で臨時のタグの記録(`--tag`, etc.)** (0.6.0)\n"
+"11. **過渡的なタグを記録する為に、`--transitive-tags`が追加された** (0.6.0)\n"
+"12. **`yardoc`がRDocのように統計値を表示するようになった(隠すには、`--no-stats`)**\n"
+"13. **`yri`定数で働くようになった** (0.6.0)\n"
+"14. **プラグインは、自動ロードされなくなった(`--plugin`引数が追加された)** (0.6.2)\n"
+"15. **`YARD::Config`APIと`~/.yard/config`設定ファイルが追加された** (0.6.2)\n"
+"16. **設定の調査/編集の為の`yard config`コマンドが追加された** (0.6.2)\n"
+"17. **`yard server -t`テンプレートのパスの引数が追加された** (0.6.2)\n"
+"18. **静的なサーバー資源用に`YARD::Server.register_static_path`が追加された** (0.6.2)\n"
+"19. **YARD::Registryがスレッドローカルになった** (0.6.5)\n"
+"20. **Ruby 1.8.7でgemのripper用のサポート** (0.6.5)"
 
 #: ../docs/WhatsNew.md:201
 msgid ""
 "## Local documentation server for RubyGems or projects (`yard server`) "
 "(0.6.0)"
-msgstr ""
+msgstr "## RubyGems又はプロジェクト用のローカルドキュメントサーバー(`yard server`) (0.6.0)"
 
 #: ../docs/WhatsNew.md:203
 msgid ""
@@ -7071,11 +7107,15 @@ msgid ""
 "either documentation for a local project or installed RubyGems. The server \n"
 "will host (by default) on http://localhost:8808."
 msgstr ""
+"新しい`yard server`コマンドはドキュメントサーバーを生みだす。\n"
+"ローカルプロジェクト用のドキュメントも既存のRubyGemsも提供できる。\n"
+"サーバーは、\n"
+"http://localhost:8808のホスト(デフォルトで)になるだろう。"
 
 #: ../docs/WhatsNew.md:207
 msgid ""
 "To serve documentation for the active project (in the current directory):"
-msgstr ""
+msgstr "アーカイブのプロジェクト用にドキュメントを提供するには、(現在のディレクトリの中の)"
 
 #: ../docs/WhatsNew.md:211
 msgid ""
@@ -7089,6 +7129,15 @@ msgid ""
 "change. \n"
 "To serve documentation for the active project in incremental mode:"
 msgstr ""
+"サーバーは、ローカルプロジェクト用にincremantal\"\"モードで起動もできる。\n"
+"すぐにこの中で、任意の修正されたソースはそれぞれのリクエストで\n"
+"更新されるだろう。\n"
+"常にそのディスク上で確実にコードを提供するサーバーを保証する。\n"
+"このやり方で本質的なあなたのコード記述する\n"
+"あなたが変更を加えるたび区切りコマンドの起動なしで、\n"
+"効果的な生のプレビューを与えるincrementaモードの\n"
+"活溌なプロジェクト用に\n"
+"ドキュメントを提供するには、次のようになる"
 
 #: ../docs/WhatsNew.md:218
 msgid "    $ yard server --reload"
@@ -7112,6 +7161,10 @@ msgid ""
 "and \n"
 "templates. To serve documentation for installed gems:"
 msgstr ""
+"ドキュメントサーバーは、\n"
+"あなたのシステムでインストールされた全てのgem用のドキュメントを提供できる。\n"
+"これは`gem server`と同様であるが、YARDの機能でテンプレート化する。\n"
+"既存のgem用にドキュメントを提供するには、次のようにタイプする。"
 
 #: ../docs/WhatsNew.md:231
 msgid ""
@@ -7132,7 +7185,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:239
 msgid "## Groups support for method listing (0.6.0)"
-msgstr ""
+msgstr "## メソッドの記述用のサポートをグループ化する (0.6.0)"
 
 #: ../docs/WhatsNew.md:241
 msgid ""
@@ -7141,6 +7194,10 @@ msgid ""
 "These groups apply lexically and are listed in the order they are defined. \n"
 "For instance, to define a group:"
 msgstr ""
+"あなたは、論理的に分けられたグループへ\n"
+"クラスとモジュールの中のメソッドを体系化できる。\n"
+"これらのグループは単語のように適用され、定義される順番で記述される。\n"
+"例えば、グループを定義するには:"
 
 #: ../docs/WhatsNew.md:245
 msgid "    # @group Rendering an Object"
@@ -7187,6 +7244,11 @@ msgid ""
 "the \n"
 "group that should not belong in any group."
 msgstr ""
+"上の例で、\"表示されるオブジェクトは\"、\"foo\"と\"bar\"上に\"Another Group\"と記述されるだろう、\n"
+"二つの他のメソッドがあるけれど、その前に\"aaa\"が来てアルファベット順になる。\n"
+"グループを終了するには、`@endgroup`を使う。\n"
+"これは新しくグループを作る為に、グループを終了する必要はない。\n"
+"任意のグループの中に所属すべきではないグループに続くオブジェクトがある場合だけである。"
 
 #: ../docs/WhatsNew.md:267
 msgid "    # @group Group 1"
@@ -7208,7 +7270,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:276
 msgid "## Single file template (`--one-file`) support (0.6.0)"
-msgstr ""
+msgstr "## 単一のファイルのテンプレート (`--one-file`)のサポート (0.6.0)"
 
 #: ../docs/WhatsNew.md:278
 msgid ""
@@ -7217,10 +7279,14 @@ msgid ""
 "for small scripts and libraries. In this case, any comments at the top of \n"
 "the script file will be recognized as a README."
 msgstr ""
+"`yardoc`は、小さいスクリプトやライブラリ用の\n"
+"単一のファイルテンプレートを生成する`--one-file`オプションが追加された。\n"
+"この場合、任意の内容の\n"
+"スクリプトファイルのトップでの任意のコメントは、READMEとして認識される。"
 
 #: ../docs/WhatsNew.md:282
 msgid "## `yard` CLI executable with pluggable commands (0.6.0)"
-msgstr ""
+msgstr "## `yard` CLI がプラグイン可能なコマンドとして実行可能になる (0.6.0)"
 
 #: ../docs/WhatsNew.md:284
 msgid ""
@@ -7237,6 +7303,9 @@ msgid ""
 "and \n"
 "access. To get a list of commands, type `yard --help`."
 msgstr ""
+"YARDは既存のものと新たなコマンドを一体化し、\n"
+"思い出したりアクセスしたりといったコマンドを単一のコマンド`yard`で実行可能になった。\n"
+"コマンドのリストを取得するには、`yard --help`とタイプする。"
 
 #: ../docs/WhatsNew.md:292
 msgid ""
@@ -7245,6 +7314,10 @@ msgid ""
 "subclassing the {YARD::CLI::Command} class and then registering this class \n"
 "with the {YARD::CLI::CommandParser.commands} list. For instance:"
 msgstr ""
+"あなたがプラグイン開発者なら、自分で`yard`コマンドを作成できる。\n"
+"それには、{YARD::CLI::Command}クラスと、その時これが記録するクラス\n"
+"{YARD::CLI::CommandParser.commands}のリストと共に最初にサブクラス化する。\n"
+"例えば、次のように:"
 
 #: ../docs/WhatsNew.md:296
 msgid "    YARD::CLI::CommandParser.commands[:my_command] = MyCommandClass"
@@ -7253,11 +7326,11 @@ msgstr ""
 #: ../docs/WhatsNew.md:298
 msgid ""
 "The above line will enable the user to execute `yard my_command [options]`."
-msgstr ""
+msgstr "上の行で、ユーザーが`yard my_command [options]`を実行する事が可能となる。"
 
 #: ../docs/WhatsNew.md:300
 msgid "## `yard diff` command to object-diff two versions of a project (0.6.0)"
-msgstr ""
+msgstr "## プロジェクトの二つのバージョンをオブジェクトのdiffするコマンド、`yard diff` (0.6.0)"
 
 #: ../docs/WhatsNew.md:302
 msgid ""
@@ -7269,6 +7342,14 @@ msgid ""
 "object diffing allows you to see what classes/methods/modules have been \n"
 "added/removed between versions of a codebase."
 msgstr ""
+"新しく実行可能な`yard`は、\n"
+"gemの二つのバージョンや、2つの作業中のコピーのような、\n"
+"同じプロジェクトの複数のバージョンに渡ってオブジェクト思考のdiffをする為の機能で、\n"
+"組み込みコマンドの一つである。\n"
+"普通のdiffのように、\n"
+"ファイルで追加/削除された行が表示される。\n"
+"diffのオブジェクトは、\n"
+"コードのバージョン間で追加/削除されたクラス/メソッド/モジュールの参照を受け入れる。"
 
 #: ../docs/WhatsNew.md:309
 msgid ""
@@ -7278,11 +7359,11 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:311
 msgid "## `yard stats` to display statistics and undocumented objects (0.6.0)"
-msgstr ""
+msgstr "## 統計値を表示する`yard stats`とそれを表示しないオブジェクトが追加された (0.6.0)"
 
 #: ../docs/WhatsNew.md:313
 msgid "YARD now outputs the following statistics when `yard stats` is run:"
-msgstr ""
+msgstr "YARDは、`yard stats`が起動する時に続く統計値を出力する。(次のように)"
 
 #: ../docs/WhatsNew.md:315
 msgid ""
@@ -7301,16 +7382,24 @@ msgid ""
 "private/protected methods in your documentation, these will not show up as \n"
 "undocumented. Therefore this metric is contextual."
 msgstr ""
+"次の事に留意する。\n"
+"統計値は、あなたが、ドキュメントの中を調べるグループを持つ事のベースとなる。\n"
+"`@private`タグを利用する場合やprivate/protectedのメソッドを表示しない場合、\n"
+"これらは、記述されないものとして表示されないだろう。\n"
+"従ってこの計測は、コンテキスト次第である。"
 
 #: ../docs/WhatsNew.md:327
 msgid ""
 "You can also specifically list all undocumented objects (and their file \n"
 "locations) with the `--list-undoc` option."
 msgstr ""
+"`--list-undoc`オプションを用い\n"
+"あなたは、全ての表示しないオブジェクト(とそのファイルの場所)\n"
+"を明確に記述できる。"
 
 #: ../docs/WhatsNew.md:330
 msgid "## Added `--asset` option to `yardoc` (0.6.0)"
-msgstr ""
+msgstr "## `yardoc`に`--asset`オプションが追加された(0.6.0)"
 
 #: ../docs/WhatsNew.md:332
 msgid ""
@@ -7322,6 +7411,16 @@ msgid ""
 "syntax in the `.yardopts` file to copy over image assets from the \n"
 "'docs/images' directory into the 'images' directory after generating HTML:"
 msgstr ""
+"`yardoc`コマンドは、\n"
+"ファイルとディレクトリ(再帰的に)に渡ってコピーする為に\n"
+"ドキュメントを生成する前のパスの出力を、\n"
+"`--asset`オプションで取得できるようになった。\n"
+"引数のフォーマットは、\n"
+"fromがソースパスでtoが目的になる場所で\n"
+"\"from:to\"となる。\n"
+"例えば、HTMLを生成する前に、\n"
+"YARDが、'docs/images'ディレクトリから'images'ディレクトリへ\n"
+"imageの資産に渡ってコピーするには、`.yardopts`ファイルで次の構文を利用する。"
 
 #: ../docs/WhatsNew.md:339
 msgid "    --asset docs/images:images"
@@ -7329,7 +7428,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:341
 msgid "## New template API (0.6.0)"
-msgstr ""
+msgstr "## 新しくなったテンプレートAPI (0.6.0)"
 
 #: ../docs/WhatsNew.md:343
 msgid ""
@@ -7337,6 +7436,11 @@ msgid ""
 "inherited template. You should no longer need to insert by index, an \n"
 "error-prone process that could break when a template is updated. Instead of:"
 msgstr ""
+"新たなテンプレートAPIは、\n"
+"継承されたテンプレートの中で簡単なセクションの挿入用に許可する。\n"
+"あなたは、もう見出しで挿入する必要がなくなったはずである。\n"
+"テンプレートが更新される時に、エラーの起きやすい処理を解消するには、\n"
+"変わりに次のようになる:"
 
 #: ../docs/WhatsNew.md:347
 msgid "    sections.last.place(:my_section).before(:another_section)"
@@ -7356,12 +7460,16 @@ msgid ""
 "md#Inserting_and_Traversing_Sections}\n"
 "document."
 msgstr ""
+"あなたは{file:docs/Templates.md#Inserting_and_Traversing_Sections}ドキュメントで、\n"
+"更に詳細を見る事が出来る。"
 
 #: ../docs/WhatsNew.md:356
 msgid ""
 "## HTML template now adds inline Table of Contents for extra files pages "
 "(0.6.0)"
 msgstr ""
+"## HTML テンプレートは追加のファイルのページ用に、\n"
+"その内容のインラインテーブルが追加された(0.6.0)"
 
 #: ../docs/WhatsNew.md:358
 msgid ""
@@ -7372,10 +7480,14 @@ msgid ""
 "headers (h1,h2,... tags) used in the document, and can be floated to the \n"
 "right or listed inline on the page."
 msgstr ""
+"コンテンツのテーブルは追加のファイルのページ用に、\n"
+"JavaScriptによって動的に生成される(READMEやこのドキュメントのように)。\n"
+"これは、ドキュメントで利用されたヘッダー(h1,h2,... tags)とは違うベースを生成し、\n"
+"右側に添えられるか、又は、ページ上でインラインが記述される。"
 
 #: ../docs/WhatsNew.md:363
 msgid "## Ad-hoc tag registration via `yardoc` CLI (`--tag`, etc.) (0.6.0)"
-msgstr ""
+msgstr "## `yardoc`CLI(`--tag`, etc.)経由での臨時のタグの記録 (0.6.0)"
 
 #: ../docs/WhatsNew.md:365
 msgid ""
@@ -7385,6 +7497,9 @@ msgid ""
 "create \n"
 "a freeform text tag, use the following:"
 msgstr ""
+"単純なメタデータタグがコマンドラインで追加され、\n"
+"事前定義された方法の数字でテンプレートで表示する為に記録される。\n"
+"例えば、フリーフォームテキストのタグを作成するには、次のようになる:"
 
 #: ../docs/WhatsNew.md:369
 msgid "    --tag my_tag_name:\"My Tag Title\""
@@ -7397,6 +7512,10 @@ msgid ""
 "(similar to `@param`) as well as various combinations. The full list of \n"
 "options are listed in `yardoc --help` under the \"Tag Options\" section."
 msgstr ""
+"あなたは、\"型\"のタグも(\"@return\"と同様),name-tagの型も(`@param`と同様),\n"
+"又、様々な組み合わせも生成できる。\n"
+"完全なタグのオプションの説明は、\n"
+"`yardoc --help`の下にある\"Tag Options\"セクションで記述される。"
 
 #: ../docs/WhatsNew.md:375
 msgid ""
@@ -7405,6 +7524,9 @@ msgid ""
 "in the templates, use the `--hide-tag` option to hide it from generated "
 "output:"
 msgstr ""
+"あなたが、データを記録する為にタグを作成する事を望み、\n"
+"しかし、テンプレートでこのデータを一覧しない場合、\n"
+"生成された出力からそれを隠すのには、`--hide-tag`オプションを使う。"
 
 #: ../docs/WhatsNew.md:378
 msgid "    --hide-tag my_tag_name"
@@ -7412,7 +7534,7 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:380
 msgid "## Added `--transitive-tags` to register transitive tags (0.6.0)"
-msgstr ""
+msgstr "## 過渡的なタグを記録するのに、`--transitive-tags`を追加された (0.6.0)"
 
 #: ../docs/WhatsNew.md:382
 msgid ""
@@ -7425,6 +7547,14 @@ msgid ""
 "a \n"
 "method will override the inherited value."
 msgstr ""
+"過渡的なタグは、namespace上で記述された時、\n"
+"全てのnamespaceの子孫に適用するタグである。\n"
+" \n"
+"Transitive tags are tags that apply to all descendants of a namespace (class \n"
+"or module) when documented on that namespace. For instance, the `@since` tag \n"
+"is a transitive tag. Applying `@since` to a class will automatically apply \n"
+"`@since` to all methods in the class. Creating a `@since` tag directly on a \n"
+"method will override the inherited value."
 
 #: ../docs/WhatsNew.md:388
 msgid ""
