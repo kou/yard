@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-13 18:39+0900\n"
+"PO-Revision-Date: 2012-01-16 19:02+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -7547,14 +7547,11 @@ msgid ""
 "a \n"
 "method will override the inherited value."
 msgstr ""
-"過渡的なタグは、namespace上で記述された時、\n"
+"transitiveタグは、namespace上(クラス又はモジュール)で記述された時、\n"
 "全てのnamespaceの子孫に適用するタグである。\n"
-" \n"
-"Transitive tags are tags that apply to all descendants of a namespace (class \n"
-"or module) when documented on that namespace. For instance, the `@since` tag \n"
-"is a transitive tag. Applying `@since` to a class will automatically apply \n"
-"`@since` to all methods in the class. Creating a `@since` tag directly on a \n"
-"method will override the inherited value."
+"例えば、`@since`タグは、transitiveタグである。\n"
+"クラスに`@since`を適用すると、クラスで全てのメソッドに`@since`が自動的に適用される。\n"
+"メソッドで直接`@since`タグを作成すると、継承された値を上書きするだろう。"
 
 #: ../docs/WhatsNew.md:388
 msgid ""
@@ -7566,11 +7563,15 @@ msgid ""
 "see \n"
 "the {YARD::Tags::Library.transitive_tags} attribute."
 msgstr ""
+"あなたは、このオプションによってコマンドライン上でtransitiveタグを指定できる。\n"
+"次の事に注意する。\n"
+"transitiveとして指定するタグは、常に存在しなければならない(組み込みまたは、作成されたタグと`--tag`オプションを用いる)。\n"
+"あなたがこのプログラムを実行したいなら、 {YARD::Tags::Library.transitive_tags} 属性を参照する。"
 
 #: ../docs/WhatsNew.md:393
 msgid ""
 "## `yardoc` now displays RDoc-like statistics (`--no-stats` to hide) (0.6.0)"
-msgstr ""
+msgstr "## `yardoc`は、RDocのような統計値の表示するようになった。(`--no-stats`で隠す) (0.6.0)"
 
 #: ../docs/WhatsNew.md:395
 msgid ""
@@ -7579,10 +7580,14 @@ msgid ""
 "stats`. \n"
 "To hide this output when yardoc is run, use `--no-stats`."
 msgstr ""
+"`yard stats`の機能概要に見られるように、\n"
+"`yardoc`は、RDocのように起動した時に統計値を表示する。\n"
+"出力は`yard stats`と打つのと同様である。\n"
+"この出力を隠すには、起動時に`--no-stats`を付ける。"
 
 #: ../docs/WhatsNew.md:399
 msgid "## `yri` now works on constants (0.6.0)"
-msgstr ""
+msgstr "## `yri`定数の処理をできるようになった (0.6.0)"
 
 #: ../docs/WhatsNew.md:401
 msgid ""
@@ -7590,10 +7595,12 @@ msgid ""
 "any \n"
 "documentation and the constant value."
 msgstr ""
+"テンプレートは、定数のテキスト一覧用に追加されました。\n"
+"これは任意のドキュメントと定数を表示する。"
 
 #: ../docs/WhatsNew.md:404
 msgid "## Plugins are no longer auto-loaded (added `--plugin` switch) (0.6.2)"
-msgstr ""
+msgstr "## プラグインは自動でロードされなくなった。(`--plugin`引数で追加できる) (0.6.2)"
 
 #: ../docs/WhatsNew.md:406
 msgid ""
@@ -7608,6 +7615,16 @@ msgid ""
 "see next item). You can also set `autoload_plugins` to a list of plugins \n"
 "to be automatically loaded on start."
 msgstr ""
+"これは非後方互換で、YARDをスタートアップする時に、\n"
+"自動的にロードされてからプラグインを無効化する変更をする。\n"
+"今後は、あなたが自分で宣言すべきである。\n"
+"これは、あなたのプロジェクトのプラグインが、\n"
+"あなたのプロジェクトのルートで`.yardopts`ファイルに`--plugin PLUGINNAME`を追加する事で利用される。\n"
+"あなたの設定ファイルで`load_plugins`にtrueが設定する事によって、\n"
+"プラグインが自動ロードするように再設定できる。\n"
+"(`yard config load_plugins true`, 事項参照)\n"
+"あなたは、起動時に自動的にロードする為にプラグインのリストを\n"
+"`autoload_plugins`に設定する事も出来る。"
 
 #: ../docs/WhatsNew.md:414
 msgid ""
@@ -7615,6 +7632,8 @@ msgid ""
 "these\n"
 "changes."
 msgstr ""
+"あなたがYARDプラグインの作者の場合、\n"
+"これらの変更をあなたのユーザーに通知するか確認してください。"
 
 #: ../docs/WhatsNew.md:417
 msgid ""
@@ -7623,11 +7642,14 @@ msgid ""
 "are parsed before commands are loaded, and therefore can add in new CLI "
 "commands."
 msgstr ""
+"次のことに留意する。\n"
+"コマンドラインで渡される`--plugin`引数(`.yardopts`経由ではない)は、\n"
+"ロードされるコマンドの前に解析され、それ自身が新しいCLIコマンドラインで追加できる。"
 
 #: ../docs/WhatsNew.md:420
 msgid ""
 "## Added `YARD::Config` API and `~/.yard/config` configuration file (0.6.2)"
-msgstr ""
+msgstr "## `YARD::Config` APIと`~/.yard/config`設定ファイルが追加された。 (0.6.2)"
 
 #: ../docs/WhatsNew.md:422
 msgid ""
@@ -7636,21 +7658,26 @@ msgid ""
 "and set via the `~/.yard/config` file. The file is encoded as a YAML file,\n"
 "and looks like:"
 msgstr ""
+"これらは、プログラムにアクセスできる新しいグローバル設定APIとなり、\n"
+"`~/.yard/config`ファイル経由で設定される。\n"
+"ファイルはYAMLファイルとしてエンコードされる、次のようになる"
 
 #: ../docs/WhatsNew.md:434
 msgid ""
 "You can also set configuration options via the command-line (see next item)."
-msgstr ""
+msgstr "あなたは、コマンドライン経由で設定オプションを設定できる。(次項参照)"
 
 #: ../docs/WhatsNew.md:436
 msgid "## Added `yard config` command to view/edit configuration (0.6.2)"
-msgstr ""
+msgstr "## 設定を一覧/編集する為に`yard config` コマンドが追加された (0.6.2)"
 
 #: ../docs/WhatsNew.md:438
 msgid ""
 "A new `yard config` command was created to view or edit the configuration\n"
 "file via the commandline."
 msgstr ""
+"新しい`yard config`コマンドが、\n"
+"コマンドライン経由で設定ファイルを一覧・編集する為に作成された。"
 
 #: ../docs/WhatsNew.md:441
 msgid ""
@@ -7658,21 +7685,27 @@ msgid ""
 "* To view a specific item use `yard config ITEMNAME`\n"
 "* To modify an item value use `yard config ITEMNAME VALUE`"
 msgstr ""
+"* 現在の設定を一覧するには、`yard config --list`を使う\n"
+"* 特定の項目(item)を一覧するには、`yard config ITEMNAME`を使う\n"
+"* 項目の値を変更するには、`yard config ITEMNAME VALUE`を使う"
 
 #: ../docs/WhatsNew.md:445
 msgid "## Added `yard server -t` template path switch (0.6.2)"
-msgstr ""
+msgstr "## `yard server -t`テンプレートパス引数が追加された (0.6.2)"
 
 #: ../docs/WhatsNew.md:447
 msgid ""
 "The `yard server` command now accepts `-t` or `--template-path` to register\n"
 "a new template path for template customization."
 msgstr ""
+"`yard server` コマンドは、\n"
+"テンプレートをカスタマイズする為に新しいテンプレートパスを記録する為、\n"
+"`-t`、又は、`--template-path`を受け入れる。"
 
 #: ../docs/WhatsNew.md:450
 msgid ""
 "## Added `YARD::Server.register_static_path` for static server assets (0.6.2)"
-msgstr ""
+msgstr "## 静的なサーバー資源用に`YARD::Sever.register_static_path`が追加された。 (0.6.2)"
 
 #: ../docs/WhatsNew.md:452
 msgid ""
@@ -7681,10 +7714,13 @@ msgid ""
 "extending the YARD::Server modules, make sure to register your asset paths\n"
 "through this method."
 msgstr ""
+"サーバーは静的な資源のパスを記録する為のコマンドをサポートするようになった。\n"
+"あなたが、YARD::Serverモジュールを拡張する場合は、\n"
+"このメソッドを通してあなたの資源のパスを記録するか確認してください。"
 
 #: ../docs/WhatsNew.md:456
 msgid "## YARD::Registry is now thread local (0.6.5)"
-msgstr ""
+msgstr "## YARD::Registryはスレッドローカルとなった (0.6.5)"
 
 #: ../docs/WhatsNew.md:458
 msgid ""
@@ -7696,10 +7732,17 @@ msgid ""
 "either access the threadlocal object directly, or synchronize threads to do\n"
 "the processing in the initial registry's thread."
 msgstr ""
+"新しいスレッドの作成は暗黙の内に、\n"
+"解析する為に利用できる新しいレジストリをロードするだろう。\n"
+"そして、他のスレッドとは独自に新しいコードオブジェクトを処理する。\n"
+"次の事に留意する。\n"
+"これはあなたがもう、スレッドを渡ってレジストリを利用する必要はないことを意味する。\n"
+"あなたは、スレッドのローカルオブジェクトに直接アクセスするか、又は、\n"
+"スレッドのレジストリの初期化の処理をする為にスレッドを同期しなければならない。"
 
 #: ../docs/WhatsNew.md:464
 msgid "## Support for ripper gem in Ruby 1.8.7 (0.6.5)"
-msgstr ""
+msgstr "## Ruby 1.8.7 でのripper gemのサポート (0.6.5)"
 
 #: ../docs/WhatsNew.md:466
 msgid ""
@@ -7711,6 +7754,10 @@ msgid ""
 "advantage\n"
 "of this functionality by performing a `gem install ripper`."
 msgstr ""
+"パフォーマンスと機能性の両面で、\n"
+"YARDはソースの解析を向上する為に`ripper`gemのRuby1.8.7の一部をサポートするようになった。\n"
+"`ripper`gemが実行可能な時、YARDは\"new-style\"のハンドラーを利用する。\n"
+"`gem install ripper`を実行する事で、この機能の恩恵を受ける事ができる。"
 
 #: ../docs/WhatsNew.md:472
 msgid ""
@@ -7735,12 +7782,25 @@ msgid ""
 "10. **Ability to specify markup format of extra files** (0.5.3)\n"
 "11. **Keyboard shortcuts for default HTML template** (0.5.4)"
 msgstr ""
+"1. **RubyとCのコードのドキュメント化をサポートする** (0.5.0)\n"
+"2. **`yaradoc -c`を用いたインクリメンタルな解析と出力生成ができるようになった** (0.5.0, 0.5.3)\n"
+"3. **`yardoc --default-return`と`yardoc --hide-void-return`が追加された** (0.5.0)\n"
+"4. **複数の構文のハイライトする言語をサポート** (0.5.0)\n"
+"5. **新しい.yardocフォーマット** (0.5.0)\n"
+"6. **ホストされた.yardoc dbsとしてyard-doc-* gem パッケージをサポートする** (0.5.1)\n"
+"7. **`yri`で追加の検索パスをサポートする** (0.5.1)\n"
+"8. **HTMLドキュメントの生成はフレーム一覧が追加されるようになった** (0.5.3)\n"
+"9. **クラスリスト用のツリービュー** (0.5.3)\n"
+"10. **追加のファイルのマークアップフォーマットを指定する機能** (0.5.3)\n"
+"11. **デフォルトのHTMLテンプレート用のキーボードショートカット** (0.5.4)"
 
 #: ../docs/WhatsNew.md:488
 msgid ""
 "Support for documenting native Ruby C code (0.5.0)\n"
 "--------------------------------------------------"
 msgstr ""
+"RubyとCのコードのドキュメント生成のサポート (0.5.0)\n"
+"--------------------------------------------------"
 
 #: ../docs/WhatsNew.md:491
 msgid ""
@@ -7750,12 +7810,20 @@ msgid ""
 "addition, the .yardoc dump for the Ruby-core classes will become available\n"
 "as an installable gem for yri support (see #3)."
 msgstr ""
+"大部分をRDocから取り入れた新しいCパーサーと共にYARDを用い\n"
+"Rubyの拡張ドキュメントを実行可能になった。\n"
+"これは、Rubyのコアと標準ライブラリを記述する事を可能にする。\n"
+"そして、http://yardoc.org/docsでホスト(アクセスできる)されるだろう。\n"
+"さらに、Rubyコアクラス用の.yardocのダンプは、\n"
+"yriのサポートに用いるインストール可能なgemとして利用可能になるだろう。(#3 参照)"
 
 #: ../docs/WhatsNew.md:497
 msgid ""
 "Incremental parsing and output generation with `yardoc -c` (0.5.0, 0.5.3)\n"
 "-------------------------------------------------------------------------"
 msgstr ""
+"`yaradoc -c`を用いたインクリメンタルな解析と出力生成 (0.5.0, 0.5.3)\n"
+"-------------------------------------------------------------------------"
 
 #: ../docs/WhatsNew.md:500
 msgid ""
@@ -7779,18 +7847,30 @@ msgid ""
 "be rebuilt and inter-file links might not hook up right, so it is best to\n"
 "perform a full rebuild at the end of such previews."
 msgstr ""
+"YARDはインクリメンタルに変更されたファイルだけ解析をする為に、\n"
+"`yardoc -c`(別名 `yardoc --use-cache`)を使う時、解析前のファイルを比較する。\n"
+"HTML(又は、他の出力フォーマット)生成は、\n"
+"変更されたファイル(\\*)から解析されるオブジェクト上で実行されるだけである。\n"
+"これにより迅速なHTMLプレビューの為に、より速い開発サイクルを作りあげる事ができる。\n"
+"ただインクリメンタルな出力生成によって覚えておいてほしいことは、\n"
+"インデックスが再構築されない事とファイル間のリンクが正しく接続されないかもしれない、\n"
+"なので、このようなプレビューの終了時に完全な再構築を実行することをお勧めします。"
 
 #: ../docs/WhatsNew.md:514
 msgid ""
 "(\\*) Only for versions prior to 0.5.3. For 0.5.3+, use `--incremental` for\n"
 "incremental HTML output."
 msgstr ""
+"(\\*) 0.5.3より前のバージョンのみ、0.5.3以上の場合は、\n"
+"インクリメンタルHTML出力用の`--incremental`を使う。"
 
 #: ../docs/WhatsNew.md:517
 msgid ""
 "Improved `yri` support to perform lookups on installed Gems (0.5.0)\n"
 "-------------------------------------------------------------------"
 msgstr ""
+"インストールされたgemを検索する為の`yri`のサポートが改良された。(0.5.0)\n"
+"-------------------------------------------------------------------"
 
 #: ../docs/WhatsNew.md:520
 msgid ""
@@ -7798,6 +7878,10 @@ msgid ""
 "by yard. Therefore, to use this command you must first parse all gems with\n"
 "YARD. To parse all gems, use the following command:"
 msgstr ""
+"実行可能な`yri`コマンドは、YARDで解析されていたgemの検索を実行できるようになった。\n"
+"したがって、このコマンドを使う為には、\n"
+"あなたは、最初に全てのgemをYARDで解析しなければならない。\n"
+"全てのgemを解析する為には、次のコマンドを利用する:"
 
 #: ../docs/WhatsNew.md:524
 msgid "    $ sudo yardoc --build-gems"
@@ -7809,15 +7893,18 @@ msgid ""
 "respective gem directory. If you do not have write access to the gem path,\n"
 "YARD will write the yardoc file to `~/.yard/gem_index/NAME-VERSION.yardoc`."
 msgstr ""
+"上のコマンドは、gemディレクトリに関係する全てのインストール済みのgem用に.yardocファイルをビルドする。\n"
+"あなたが、gemのパスへのアクセスを書き込んでいない場合、\n"
+"YARDは`~/.yard/gem_index/NAME-VERSION.yardoc`にyardocファイルを書き込むだろう。"
 
 #: ../docs/WhatsNew.md:530
 msgid ""
 "Note: you can also use `--re-build-gems` to force re-parsing of all gems."
-msgstr ""
+msgstr "注意:あなたは、全てのgemめ強制的に再解析するのに、`--re-build-gems`を使うこともできる。"
 
 #: ../docs/WhatsNew.md:532
 msgid "You can now do lookups with yri:"
-msgstr ""
+msgstr "あなたは、下のようにyriで検索できるようになった"
 
 #: ../docs/WhatsNew.md:534
 msgid "    $ yri JSON"
@@ -7829,12 +7916,16 @@ msgid ""
 "second\n"
 "time onward."
 msgstr ""
+"全ての検索は、２度目の検索をより早くする為に、\n"
+"`~/.yard/yri_cache`にキャッシュされる。"
 
 #: ../docs/WhatsNew.md:539
 msgid ""
 "Added `yardoc --default-return` and `yardoc --hide-void-return` (0.5.0)\n"
 "-----------------------------------------------------------------------"
 msgstr ""
+"`yardoc --default-return`と`yardoc --hide-void-return`が追加された (0.5.0)\n"
+"-----------------------------------------------------------------------"
 
 #: ../docs/WhatsNew.md:542
 msgid ""
@@ -7842,6 +7933,9 @@ msgid ""
 "method that has not declared a @return tag. To customize the default\n"
 "return type, you can specify:"
 msgstr ""
+"YARDは@returnタグで宣言されなかった、\n"
+"任意のデフォルトのメソッドの型を返し表示する事をデフォルトにする。\n"
+"デフォルトの返す型をカスタマイズするには、以下のように指定する:"
 
 #: ../docs/WhatsNew.md:546
 msgid "    $ yardoc --default-return 'MyDefaultType'"
@@ -7849,19 +7943,23 @@ msgstr ""
 
 #: ../docs/WhatsNew.md:548
 msgid "You can also use the empty string to list no return type."
-msgstr ""
+msgstr "あなたは、返す型が無いのを記述するのに、空の文字列を利用できる。"
 
 #: ../docs/WhatsNew.md:550
 msgid ""
 "In addition, you can use --hide-void-return to ignore any method that\n"
 "defines itself as a void type by: `@return [void]`"
 msgstr ""
+"さらに、あなたは、`@return [void]`でそれ自身をvoidの型として定義する\n"
+"任意のメソッドに--hide-void-returnを利用できる。"
 
 #: ../docs/WhatsNew.md:553
 msgid ""
 "Multiple syntax highlighting language support (0.5.0)\n"
 "-----------------------------------------------------"
 msgstr ""
+"複数の構文ハイライト用の言語サポート (0.5.0)\n"
+"-----------------------------------------------------"
 
 #: ../docs/WhatsNew.md:556
 msgid ""
@@ -7871,6 +7969,10 @@ msgid ""
 "language\n"
 "but Ruby, you can add your own support by writing your own helper method:"
 msgstr ""
+"YARDはdocstringの中のコードブロック用に、\n"
+"言語の型を指定する機能をサポートできるようになった。\n"
+"実際のハイライトサポートは、全ての言語に追加されているわけではないが\n"
+"Rubyは、あなた自身がhelperメソッドを書くことによってサポートを追加する事ができる。"
 
 #: ../docs/WhatsNew.md:560
 msgid ""
@@ -7883,7 +7985,7 @@ msgstr ""
 #: ../docs/WhatsNew.md:565
 msgid ""
 "To use this language in code blocks, prefix the block with `!!!LANGNAME`:"
-msgstr ""
+msgstr "コードブロックでこの言語を利用するには、次のように`!!!LANGNAME`を用い前に置く。"
 
 #: ../docs/WhatsNew.md:567
 msgid ""
@@ -7898,12 +8000,16 @@ msgid ""
 "By the same token. you can now use `!!!plain` to ignore highlighting for\n"
 "a specific code block."
 msgstr ""
+"同じトークンで、\n"
+"あなたは特定のコードブロック用のハイライトを無視する為に`!!!plain`が利用できるようになった。"
 
 #: ../docs/WhatsNew.md:575
 msgid ""
 "New .yardoc format (0.5.0)\n"
 "--------------------------"
 msgstr ""
+"新しい.yardocフォーマット (0.5.0)\n"
+"--------------------------"
 
 #: ../docs/WhatsNew.md:578
 msgid ""
@@ -7913,12 +8019,20 @@ msgid ""
 "does have a larger memory footprint, but this will hopefully be optimized\n"
 "downward."
 msgstr ""
+"上のyriサポートを可能にする為に、\n"
+".yardocフォーマットはファイルの代わりにディレクトリに記録される事になった。\n"
+"YARDは尚、古い.yardocファイルをロードできるが、\n"
+"しかし、それは、再セーブした場合、自動的に上書きされるだろう。\n"
+"新しい.yaradocフォーマットは、より大きいメモリ足跡をもっているが\n"
+"しかしこれは、恐らく下方修正されるだろう。"
 
 #: ../docs/WhatsNew.md:584
 msgid ""
 "Support for yard-doc-* gem packages as hosted .yardoc dbs (0.5.1)\n"
 "-----------------------------------------------------------------"
 msgstr ""
+".yardoc dbs でホストされたyard-doc-* gem パッケージ用のサポート\n"
+"-----------------------------------------------------------------"
 
 #: ../docs/WhatsNew.md:587
 msgid ""
@@ -7926,6 +8040,9 @@ msgid ""
 "packaged a .yardoc database. This will enable yri lookups or building docs\n"
 "for the gem without the code."
 msgstr ""
+"あなたは、パッケージされた.yardocデータベースを取得する為に\n"
+"yard-doc-NAMEと名付けられた特殊なYARDプラグインのgemをインストールできるようになった。\n"
+"これは、コード無しでgem用のdocstringをyriで検索、又は、ビルドを可能にするだろう。"
 
 #: ../docs/WhatsNew.md:591
 msgid ""
@@ -7933,6 +8050,10 @@ msgid ""
 "support for Ruby core classes (stdlib coming soon as `yard-doc-stdlib`).\n"
 "To install it, simply:"
 msgstr ""
+"これの主なものとしては、`yard-doc-core`パッケージである。\n"
+"これは、Rubyコアクラス用のyriサポートを可能にする。\n"
+"(標準ライブラリは`yard-doc-stdlib`としてすぐに記録される)\n"
+"インストールするには、単純に次のようになる:"
 
 #: ../docs/WhatsNew.md:595
 msgid ""
@@ -7946,6 +8067,9 @@ msgid ""
 "This will by default install the 1.9.1 core library. To install a library\n"
 "for a specific version of Ruby, use the `--version` switch on gem:"
 msgstr ""
+"これは、1.9.1のコアライブラリをデフォルトでインストールする。\n"
+"Rubyの固有のバージョンのライブラリをインストールするには、\n"
+"次のように、gemで`--version`引数を利用する:"
 
 #: ../docs/WhatsNew.md:602
 msgid "    $ sudo gem install --version '= 1.8.6' yard-doc-core"
@@ -7956,18 +8080,26 @@ msgid ""
 "Support for extra search paths in `yri` (0.5.1)\n"
 "-----------------------------------------------"
 msgstr ""
+"`yri`で追加の検索パスをサポートされた (0.5.1)\n"
+"-----------------------------------------------"
 
 #: ../docs/WhatsNew.md:607
 msgid ""
 "You can now add custom paths to non-gem .yardoc files \n"
 "by adding them as newline separated paths in `~/.yard/yri_search_paths`."
 msgstr ""
+"あなたは、gemではない.yardocファイルの\n"
+"カスタムパスを追加できるようになった。\n"
+"これは`~/.yard/yri_search_paths`のファイルの中に\n"
+"改行によって区切られたパスを追加することによって行える。"
 
 #: ../docs/WhatsNew.md:610
 msgid ""
 "Generating HTML docs now adds frames view (0.5.3)\n"
 "-------------------------------------------------"
 msgstr ""
+"HTMLのdocstringを生成するとフレームの一覧が追加されるようになった (0.5.3)\n"
+"-------------------------------------------------"
 
 #: ../docs/WhatsNew.md:613
 msgid ""
@@ -7977,12 +8109,18 @@ msgid ""
 "who\n"
 "still find frames beneficial."
 msgstr ""
+"`yardoc`はHTMLドキュメントを生成する時、\n"
+"`frames.html`ファイルを作成できるようになった。\n"
+"これは、フレームで探すのが便利だとするユーザーの為に、\n"
+"フレーム内のドキュメントを一覧する為にユーザーを受け入れる。"
 
 #: ../docs/WhatsNew.md:617
 msgid ""
 "Tree view for class list (0.5.3)\n"
 "--------------------------------"
 msgstr ""
+"クラスリスト用のツリー 一覧 (0.5.3)\n"
+"--------------------------------"
 
 #: ../docs/WhatsNew.md:620
 msgid ""
@@ -7993,18 +8131,28 @@ msgid ""
 "classes (like Rails timezone classes), they will not take up space in the\n"
 "class list unless the user looks for them."
 msgstr ""
+"クラスリストは別の乱雑なnamespaceをより体型化する為に\n"
+"拡張可能なツリー 一覧を表示できるようになった。\n"
+"あなたが、適切に重要でないクラスをnamespaceにした場合、\n"
+"(Railsのtimezome classのように)\n"
+"それら(重要でないクラス)は、ユーザーが明示しなければ、\n"
+"クラスリストのスペースを専有しない。"
 
 #: ../docs/WhatsNew.md:625
 msgid ""
 "Ability to specify markup format of extra files (0.5.3)\n"
 "-------------------------------------------------------"
 msgstr ""
+"追加のファイルのマークアップフォーマットを指定する為の機能 (0.5.3)\n"
+"-------------------------------------------------------"
 
 #: ../docs/WhatsNew.md:628
 msgid ""
 "You can now specify the markup format of an extra file (like README) at the\n"
 "top of the file with a shebang-like line:"
 msgstr ""
+"あなたは、次のshebangのような行を用いファイルのトップで\n"
+"追加のファイルの(READMEのような)固有のマークアップフォーマットを指定できるようになった。"
 
 #: ../docs/WhatsNew.md:631
 msgid ""
@@ -8016,7 +8164,7 @@ msgstr ""
 msgid ""
 "The above file contents will be rendered with a textile markup engine \n"
 "(eg. RedCloth)."
-msgstr ""
+msgstr "上のファイルの内容は、textileマークアップエンジンで表示される(つまりRedCloth)。"
 
 #: ../docs/WhatsNew.md:637
 msgid ""
@@ -8031,6 +8179,13 @@ msgid ""
 "'c', 'm' and 'f' keyboard shortcuts in the default HTML template, allowing\n"
 "for keyboard-only navigation around YARD documentation."
 msgstr ""
+"あなたは、\n"
+"'c', 'm', 'f'\n"
+"\"Class List\",\"Method List\",\"File List\"にアクセスできるようになった。\n"
+"\n"
+"You can now access the \"Class List\", \"Method List\" and \"File List\" with the\n"
+"'c', 'm' and 'f' keyboard shortcuts in the default HTML template, allowing\n"
+"for keyboard-only navigation around YARD documentation."
 
 #: ../docs/WhatsNew.md:644
 msgid ""
