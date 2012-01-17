@@ -128,8 +128,20 @@ namespace :i18n do
     system_yard_pot = "#{system_locale_base_dir}/#{base_name}.pot"
     targets = FileList["lib/**/*.rb", "templates/**/*.{erb,rb}"]
     file system_yard_pot => targets do
+      require "tempfile"
       rm_f(system_yard_pot)
-      sh("rgettext", "--output", system_yard_pot, *targets)
+      Tempfile.open(["rgettext-fix", ".rb"]) do |rgettext_fix|
+        rgettext_fix.puts(<<-RGETTEXT_FIX)
+require "rubygems"
+
+def Gem.all_load_paths
+  []
+end
+RGETTEXT_FIX
+	rgettext_fix.close
+        ruby("-r", rgettext_fix.path,
+             "-S", "rgettext", "--output", system_yard_pot, *targets)
+      end
     end
     task :system => system_yard_pot
   end
