@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: YARD 0.7.3\n"
-"POT-Creation-Date: 2011-11-20 19:03+0900\n"
-"PO-Revision-Date: 2011-11-20 19:03+0900\n"
+"POT-Creation-Date: 2012-01-18 00:21+0900\n"
+"PO-Revision-Date: 2012-01-18 00:24+0900\n"
 "Last-Translator: Kouhei Sutou <kou@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -15,122 +15,120 @@ msgstr ""
 msgid "."
 msgstr "。"
 
-#: lib/yard/tags/library.rb:166 templates/default/module/html/header.erb:2
-#: templates/default/module/html/item_summary.erb:21
+#: lib/yard/tags/library.rb:167 templates/default/module/html/header.erb:2
 msgid "Abstract"
 msgstr "抽象"
 
-#: lib/yard/tags/library.rb:167
+#: lib/yard/tags/library.rb:168
 msgid "API Visibility"
 msgstr "APIの可視性"
 
-#: lib/yard/tags/library.rb:168
+#: lib/yard/tags/library.rb:169
 msgid "Attribute (macro)"
 msgstr "属性（マクロ）"
 
-#: lib/yard/tags/library.rb:169 templates/default/module/setup.rb:91
+#: lib/yard/tags/library.rb:170 templates/default/module/setup.rb:103
 msgid "Attribute"
 msgstr "属性"
 
-#: lib/yard/tags/library.rb:170
+#: lib/yard/tags/library.rb:171
 msgid "Attribute Getter"
 msgstr "属性ゲッター"
 
-#: lib/yard/tags/library.rb:171
+#: lib/yard/tags/library.rb:172
 msgid "Attribute Setter"
 msgstr "属性セッター"
 
-#: lib/yard/tags/library.rb:172
+#: lib/yard/tags/library.rb:173
 msgid "Author"
 msgstr "作者"
 
-#: lib/yard/tags/library.rb:173 templates/default/module/html/header.erb:3
-#: templates/default/module/html/item_summary.erb:22
+#: lib/yard/tags/library.rb:174 templates/default/module/html/header.erb:3
 msgid "Deprecated"
 msgstr "非推奨"
 
-#: lib/yard/tags/library.rb:174
+#: lib/yard/tags/library.rb:175
 msgid "Example"
 msgstr "例"
 
-#: lib/yard/tags/library.rb:175
+#: lib/yard/tags/library.rb:176
 msgid "End Grouping"
 msgstr ""
 
-#: lib/yard/tags/library.rb:176
+#: lib/yard/tags/library.rb:177
 msgid "Grouping"
 msgstr ""
 
-#: lib/yard/tags/library.rb:177
+#: lib/yard/tags/library.rb:178
 msgid "Macro"
 msgstr "マクロ"
 
-#: lib/yard/tags/library.rb:178
+#: lib/yard/tags/library.rb:179
 msgid "Method (macro)"
 msgstr "メソッド（マクロ）"
 
-#: lib/yard/tags/library.rb:179
+#: lib/yard/tags/library.rb:180
 msgid "Note"
 msgstr "注意"
 
-#: lib/yard/tags/library.rb:180
+#: lib/yard/tags/library.rb:181
 msgid "Options Hash"
 msgstr "オプションのハッシュ"
 
-#: lib/yard/tags/library.rb:181
+#: lib/yard/tags/library.rb:182
 msgid "Overloads"
 msgstr "オーバーロード"
 
-#: lib/yard/tags/library.rb:182
+#: lib/yard/tags/library.rb:183
 msgid "Parameters"
 msgstr "パラメータ"
 
-#: lib/yard/tags/library.rb:183 templates/default/module/html/header.erb:4
+#: lib/yard/tags/library.rb:184 templates/default/module/html/header.erb:4
 #: templates/default/module/html/item_summary.erb:23
 msgid "Private"
 msgstr "プライベート"
 
-#: lib/yard/tags/library.rb:184
+#: lib/yard/tags/library.rb:185
 msgid "Raises"
 msgstr "発生する例外"
 
-#: lib/yard/tags/library.rb:185
+#: lib/yard/tags/library.rb:186
 msgid "Returns"
 msgstr "戻り値"
 
-#: lib/yard/tags/library.rb:186
+#: lib/yard/tags/library.rb:187
 msgid "Scope (macro)"
 msgstr "スコープ（マクロ）"
 
-#: lib/yard/tags/library.rb:187
+#: lib/yard/tags/library.rb:188
 msgid "See Also"
 msgstr "参考"
 
-#: lib/yard/tags/library.rb:188
+#: lib/yard/tags/library.rb:189
 msgid "Since"
 msgstr "初出"
 
-#: lib/yard/tags/library.rb:189
+#: lib/yard/tags/library.rb:190
 msgid "Todo Item"
 msgstr "TODO項目"
 
-#: lib/yard/tags/library.rb:190
+#: lib/yard/tags/library.rb:191
 msgid "Version"
 msgstr "バージョン"
 
-#: lib/yard/tags/library.rb:191
+#: lib/yard/tags/library.rb:192
 msgid "Visibility (macro)"
 msgstr "可視性（マクロ）"
 
-#: lib/yard/tags/library.rb:192
+#: lib/yard/tags/library.rb:193
 msgid "Yields"
 msgstr "yieldするオブジェクト"
 
-#: lib/yard/tags/library.rb:193
+#: lib/yard/tags/library.rb:194
 msgid "Yield Parameters"
 msgstr "yieldの引数"
 
-#: lib/yard/tags/library.rb:194
+#: lib/yard/tags/library.rb:195
 msgid "Yield Returns"
 msgstr "yieldの戻り値"
 
@@ -157,6 +155,16 @@ msgstr "非推奨です。"
 #: templates/default/docstring/html/note.erb:3
 msgid "Note:"
 msgstr "注意:"
+
+#: templates/default/docstring/html/private.erb:2
+msgid "This %{type} is part of a private API."
+msgstr "この%{type}はプライベートAPIの一部です。"
+
+#: templates/default/docstring/html/private.erb:3
+msgid ""
+"You should avoid using this %{type} if possible, as it may be removed or be "
+"changed in the future."
+msgstr "可能ならこの%{type}を使わないでください。将来、削除されたり変更されるかもしれません。"
 
 #: templates/default/docstring/html/returns_void.erb:1
 msgid "This method returns an undefined value."
@@ -190,7 +198,7 @@ msgstr "%{scope}属性の詳細"
 #: templates/default/module/html/attribute_summary.erb:2
 #: templates/default/module/html/method_summary.erb:5
 msgid "collapse"
-msgstr ""
+msgstr "折りたたむ"
 
 #: templates/default/module/html/box_info.erb:4
 msgid "Inherits:"
@@ -220,7 +228,7 @@ msgstr "定義場所:"
 msgid "Constant Summary"
 msgstr "定数の概要"
 
-#: templates/default/module/html/inherited_attributes.erb:6
+#: templates/default/module/html/inherited_attributes.erb:3
 msgid "Instance Attribute Summary"
 msgstr "インスタンス属性の概要"
 
@@ -244,6 +252,14 @@ msgstr "読み込み専用"
 msgid "writeonly"
 msgstr "書き込み専用"
 
+#: templates/default/module/html/item_summary.erb:21
+msgid "abstract"
+msgstr "抽象"
+
+#: templates/default/module/html/item_summary.erb:22
+msgid "deprecated"
+msgstr "非推奨"
+
 #: templates/default/module/html/method_details_list.erb:3
 msgid "%{scope} Method Details"
 msgstr "%{scope}メソッドの詳細"
@@ -252,19 +268,19 @@ msgstr "%{scope}メソッドの詳細"
 msgid "Overview"
 msgstr "概観"
 
-#: templates/default/module/setup.rb:92
+#: templates/default/module/setup.rb:104
 msgid "Method"
 msgstr "メソッド"
 
-#: templates/default/module/setup.rb:113
+#: templates/default/module/setup.rb:125
 msgid "%{scope} %{type} Summary"
 msgstr "%{scope}%{type}の概要"
 
-#: templates/default/module/setup.rb:116
+#: templates/default/module/setup.rb:128
 msgid "Class"
 msgstr "クラス"
 
-#: templates/default/module/setup.rb:117
+#: templates/default/module/setup.rb:129
 msgid "Instance"
 msgstr "インスタンス"
 
@@ -276,6 +292,10 @@ msgstr "インスタンスメソッド:"
 #: templates/default/tags/text/example.erb:3
 msgid "Examples:"
 msgstr "例:"
+
+#: templates/default/tags/html/example.erb:5
+msgid "\"tag|#{tag.tag_name}|#{tag.name}\""
+msgstr ""
 
 #: templates/default/tags/html/see.erb:2
 msgid "See Also:"
