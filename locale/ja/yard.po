@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-17 19:54+0900\n"
+"PO-Revision-Date: 2012-01-17 20:00+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -19241,7 +19241,7 @@ msgstr "ディスクからyardocファイルを削除する"
 # YARD::Registry.register
 #: ../lib/yard/registry.rb:169
 msgid "Registers a new object with the registry"
-msgstr ""
+msgstr "リジストリを用い新しいオブジェクトを記録する"
 
 # YARD::Registry.register
 # YARD::Registry.delete
@@ -19328,7 +19328,7 @@ msgstr ""
 # @example
 #: ../lib/yard/registry.rb:209
 msgid "tag|example|Returns all classes and modules"
-msgstr ""
+msgstr "全てのクラスとモジュールを返す"
 
 # @example
 #: ../lib/yard/registry.rb:209
@@ -19611,7 +19611,7 @@ msgstr "レジストリのシングルトンインスタンス"
 # YARD::Registry.instance
 #: ../lib/yard/registry.rb:340
 msgid "Legacy Methods"
-msgstr ""
+msgstr "Legacy Methods"
 
 # @return [Registry]
 #: ../lib/yard/registry.rb:340
