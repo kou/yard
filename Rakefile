@@ -155,9 +155,19 @@ namespace :i18n do
             end
           end
 
+          desc "Generate #{task_namespace} po file in #{locale}"
           task locale => po
         end
       end
+
+      desc "Generate #{task_namespace} po files"
+      tasks = supported_locales.map do |locale|
+        "i18n:po:#{task_namespace}:#{locale}"
+      end
+      task task_namespace => tasks
     end
   end
+
+  desc "Generate po files"
+  task :po => ["i18n:po:system", "i18n:po:yard"]
 end
