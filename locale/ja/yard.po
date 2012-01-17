@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-17 19:50+0900\n"
+"PO-Revision-Date: 2012-01-17 19:54+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14525,7 +14525,7 @@ msgstr ""
 # #log
 #: ../lib/yard/globals.rb:7 ../lib/yard/globals.rb:16
 msgid "Global Convenience Methods"
-msgstr ""
+msgstr "グローバルな便利メソッド"
 
 # @see
 #: ../lib/yard/globals.rb:7
