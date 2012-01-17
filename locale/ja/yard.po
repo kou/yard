@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-17 19:37+0900\n"
+"PO-Revision-Date: 2012-01-17 19:41+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -18823,13 +18823,10 @@ msgstr "コマンドライン用途の為に渡される設定"
 # YARD::Rake::YardocTask#files
 # YARD::Rake::YardocTask#files=
 #: ../lib/yard/rake/yardoc_task.rb:18
-#, fuzzy
 msgid ""
 "The Ruby source files (and any extra documentation files separated by '-')\n"
 "to process."
-msgstr ""
-"処理の為のRubyソースファイル(や、'-'によって分割される、任意の特別なドキュメ"
-"ントファイル)"
+msgstr "処理の為のRubyソースファイル(と'-'によって分割された、任意の特別なドキュメントファイル)"
 
 # @example Task files assignment
 #: ../lib/yard/rake/yardoc_task.rb:24
@@ -18842,9 +18839,8 @@ msgstr ""
 
 # @example
 #: ../lib/yard/rake/yardoc_task.rb:24
-#, fuzzy
 msgid "tag|example|Task files assignment"
-msgstr "入力からの文字列を解析する"
+msgstr "Taskのファイルを代入する"
 
 # YARD::Rake::YardocTask#before
 # YARD::Rake::YardocTask#before=
