@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-17 18:02+0900\n"
+"PO-Revision-Date: 2012-01-17 19:25+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -460,13 +460,10 @@ msgid "    $ yardoc 'app/**/*.rb' - README LICENSE FAQ"
 msgstr ""
 
 #: ../README.md:174
-#, fuzzy
 msgid ""
 "If no globs precede the '-' argument, the default glob (`lib/**/*.rb`) is\n"
 "used:"
-msgstr ""
-"もしglob無しで、'-'引数が先行する場合は、デフォルトglobは(`lib/**/*.rb`)を使"
-"う。"
+msgstr "もしglob無しで、'-'引数が先行する場合、デフォルトのglobは(`lib/**/*.rb`)を使う。"
 
 #: ../README.md:177
 msgid "    $ yardoc - README LICENSE FAQ"
