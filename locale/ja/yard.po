@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-20 22:17+0900\n"
-"PO-Revision-Date: 2012-01-17 20:00+0900\n"
+"PO-Revision-Date: 2012-01-18 09:46+0900\n"
 "Last-Translator:  <yamada@clear-code.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -14028,9 +14028,6 @@ msgid ""
 "Updates the object with the contents of another Hash object\n"
 "This method modifies the original SymbolHash object"
 msgstr ""
-"\"Updates the object with the contents of another Hash object\\n\"<= ."
-"(typo)??e\n"
-"\"This method modifies the original SymbolHash object\"\n"
 "他のハッシュオブジェクトの内容と共に、オブジェクトを更新する。\n"
 "このメソッドは、元のSymbolHashオブジェクトを変更する。"
 
@@ -19512,7 +19509,7 @@ msgstr ""
 msgid ""
 "the name (or complex path) to look for from\n"
 "+namespace+."
-msgstr "+namespace+から検索する名前(や複雑なパス)"
+msgstr "+namespace+ から検索する名前(や複雑なパス)"
 
 # @return [CodeObjects::Base]
 #: ../lib/yard/registry.rb:267
@@ -20272,8 +20269,7 @@ msgid ""
 msgstr ""
 "エラーを上げることによって、リクエストを省く。\n"
 "この例外は、すぐに、リクエストの終了とレスポンスを返す為に\n"
-"{Commands::Base#call}によってキャッチされる。\n"
-"??e typo? immedaitely => immediately"
+"{Commands::Base#call}によってキャッチされる。"
 
 # YARD::Server::NotFoundError
 #: ../lib/yard/server/adapter.rb:9
@@ -22846,10 +22842,7 @@ msgstr "+path+ を表すモジュール名"
 # @param [String] the
 #: ../lib/yard/templates/engine.rb:163
 msgid "path toe generate a module name for"
-msgstr ""
-"origin:path toe generate a module name for\n"
-"yamada-traslate:モジュール名を生成する為のパス\n"
-"??e typo? toe -> to??\n"
+msgstr "モジュール名を生成する為のパス"
 
 # @param [Symbol]
 # @param [String]
@@ -22857,7 +22850,7 @@ msgstr ""
 #: ../lib/yard/templates/helpers/markup_helper.rb:149
 #: ../lib/yard/templates/helpers/markup_helper.rb:159
 msgid "tag|param|the"
-msgstr "??c typo paramの使い方がオカシイ the?<本当は、hash + @optionを使う"
+msgstr ""
 
 # @return [String]
 #: ../lib/yard/templates/engine.rb:163
