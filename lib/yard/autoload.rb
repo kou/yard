@@ -86,6 +86,7 @@ module YARD
         autoload :ConstantHandler,        __p('handlers/ruby/legacy/constant_handler')
         autoload :ExceptionHandler,       __p('handlers/ruby/legacy/exception_handler')
         autoload :ExtendHandler,          __p('handlers/ruby/legacy/extend_handler')
+        autoload :I18NMessageHandler,     __p('handlers/ruby/legacy/i18n_message_handler')
         autoload :MacroHandler,           __p('handlers/ruby/legacy/macro_handler')
         autoload :MethodHandler,          __p('handlers/ruby/legacy/method_handler')
         autoload :MixinHandler,           __p('handlers/ruby/legacy/mixin_handler')
