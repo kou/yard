@@ -105,6 +105,7 @@ module YARD
       autoload :ConstantHandler,          __p('handlers/ruby/constant_handler')
       autoload :ExceptionHandler,         __p('handlers/ruby/exception_handler')
       autoload :ExtendHandler,            __p('handlers/ruby/extend_handler')
+      autoload :I18NMessageHandler,       __p('handlers/ruby/i18n_message_handler')
       autoload :MacroHandler,             __p('handlers/ruby/macro_handler')
       autoload :MacroHandlerMethods,      __p('handlers/ruby/macro_handler_methods')
       autoload :MethodHandler,            __p('handlers/ruby/method_handler')

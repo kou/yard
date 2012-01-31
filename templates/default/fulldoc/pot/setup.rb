@@ -85,6 +85,12 @@ def extract_documents(object)
     object.children.each do |child|
       extract_documents(child)
     end
+    messages = ((object.attributes[:i18n] || {})[:messages] || [])
+    messages.each do |message_info|
+      message = add_message(message_info[:message])
+      message[:locations] << [message_info[:file], message_info[:line]]
+      message[:comments] << object.path
+    end
   end
 
   if object.group
