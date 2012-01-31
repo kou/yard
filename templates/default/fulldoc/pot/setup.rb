@@ -124,7 +124,7 @@ end
 
 def extract_tag_name(tag)
   return if tag.name.nil?
-  return if tag.name.empty?
+  return if tag.name.is_a?(String) and tag.name.empty?
   key = "tag|#{tag.tag_name}|#{tag.name}"
   message = add_message(key)
   tag.object.files.each do |file|
