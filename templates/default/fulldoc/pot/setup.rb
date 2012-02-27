@@ -23,7 +23,7 @@ def generate_pot(relative_base_path)
     sorted_locations = (options[:locations] || []).sort_by do |location|
       location
     end
-    sorted_locations.first
+    sorted_locations.first || []
   end
   sorted_messages.each do |message, options|
     options[:comments].compact.uniq.each do |comment|
